@@ -4,11 +4,8 @@ import android.content.Context
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-<<<<<<< HEAD
-=======
 import android.text.TextUtils
 import android.widget.ImageSwitcher
->>>>>>> check
 import android.widget.Toast
 import kotlinx.android.synthetic.main.activity_info.*
 
