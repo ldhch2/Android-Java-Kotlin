@@ -1,11 +1,11 @@
-package com.akj.midtwenties
+package com.example.midtwenties
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 
-class termsOfService : AppCompatActivity() {
+class mainSetting : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_terms_of_service)
+        setContentView(R.layout.activity_main_setting)
     }
 }

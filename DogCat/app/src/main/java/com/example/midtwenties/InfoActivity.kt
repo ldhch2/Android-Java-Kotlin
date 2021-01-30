@@ -1,4 +1,4 @@
-package com.ozzing.practice
+package com.example.midtwenties
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
