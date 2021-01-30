@@ -14,11 +14,8 @@ class InfoNext: AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_splash)
-
         saveToInnerStorage("true",filename)
-
         startActivity(Intent(this, RealMainActivity::class.java))
-
         finish()
     }
 

@@ -25,7 +25,7 @@ class SplashActivity : AppCompatActivity() {
                 startActivity(Intent(this, RealMainActivity::class.java))
 
             } else {
-                startActivity(Intent(this, init_pet::class.java))
+                startActivity(Intent(this, InitPet::class.java))
             }
             Handler(Looper.getMainLooper()).postDelayed({
                 overridePendingTransition(R.anim.fade_in, R.anim.fade_out)
@@ -34,7 +34,7 @@ class SplashActivity : AppCompatActivity() {
         }
         catch (e: FileNotFoundException){
             Handler(Looper.getMainLooper()).postDelayed({
-                startActivity(Intent(this, init_pet::class.java))
+                startActivity(Intent(this, InitPet::class.java))
                 overridePendingTransition(R.anim.fade_in, R.anim.fade_out)
                 finish()
             }, 2500)
