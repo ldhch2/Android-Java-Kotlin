@@ -10,7 +10,7 @@ import kotlinx.android.synthetic.main.activity_init_pet.*
 import com.bumptech.glide.Glide
 
 
-class init_pet : AppCompatActivity() {
+class InitPet : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_init_pet)

@@ -7,7 +7,7 @@ import android.os.Handler
 import android.os.Looper
 import androidx.appcompat.app.AppCompatActivity
 
-class infoNext: AppCompatActivity() {
+class InfoNext: AppCompatActivity() {
 
     val filename="init.txt"
 

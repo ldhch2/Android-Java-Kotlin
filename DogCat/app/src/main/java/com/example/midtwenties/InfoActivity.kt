@@ -3,7 +3,6 @@ package com.example.midtwenties
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.widget.ImageSwitcher
 import android.widget.Toast
 import kotlinx.android.synthetic.main.activity_info.*
 
@@ -44,7 +43,7 @@ class InfoActivity : AppCompatActivity() {
             }
             else {
                 Toast.makeText(applicationContext, "저장되었습니다", Toast.LENGTH_SHORT).show()
-                startActivity(Intent(this, termsOfService::class.java))
+                startActivity(Intent(this, TermsOfService::class.java))
             }
         }
     }
