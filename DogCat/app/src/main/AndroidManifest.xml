@@ -16,13 +16,13 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".init_pet"></activity>
+        <activity android:name=".InitPet"></activity>
         <activity android:name=".InfoActivity"></activity>
-        <activity android:name=".termsOfService"></activity>
+        <activity android:name=".TermsOfService"></activity>
 
         <activity android:name=".RealMainActivity"></activity>
         <activity android:name=".MainActivity"></activity>
-        <activity android:name=".mainSetting"></activity>
+        <activity android:name=".MainSetting"></activity>
     </application>
 
 </manifest>

@@ -1,12 +1,10 @@
 package com.example.midtwenties
 
-import android.content.Context
 import android.content.Intent
 import android.os.Bundle
 import android.os.Handler
 import android.os.Looper
 import androidx.appcompat.app.AppCompatActivity
-import android.text.TextUtils
 import java.io.FileNotFoundException
 
 class SplashActivity : AppCompatActivity() {
@@ -27,7 +25,7 @@ class SplashActivity : AppCompatActivity() {
 <<<<<<< HEAD
         Handler(Looper.getMainLooper()).postDelayed({
             if(!checkinit){
-                startActivity(Intent(this, init_pet::class.java))
+                startActivity(Intent(this, InitPet::class.java))
 
             }
             else {
@@ -39,7 +37,7 @@ class SplashActivity : AppCompatActivity() {
                 startActivity(Intent(this, RealMainActivity::class.java))
 
             } else {
-                startActivity(Intent(this, init_pet::class.java))
+                startActivity(Intent(this, InitPet::class.java))
             }
 
             Handler(Looper.getMainLooper()).postDelayed({
@@ -49,7 +47,7 @@ class SplashActivity : AppCompatActivity() {
         }
         catch (e: FileNotFoundException){
             Handler(Looper.getMainLooper()).postDelayed({
-                startActivity(Intent(this, init_pet::class.java))
+                startActivity(Intent(this, InitPet::class.java))
                 overridePendingTransition(R.anim.fade_in, R.anim.fade_out)
                 finish()
             }, 2500)
