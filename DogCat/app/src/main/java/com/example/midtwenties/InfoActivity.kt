@@ -1,5 +1,6 @@
 package com.example.midtwenties
 
+import android.content.Context
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -15,17 +16,16 @@ class InfoActivity : AppCompatActivity() {
 
         var button1=0;
         var button2=0;
+        var info=" "
 
         femaleButton.setOnClickListener{
             Toast.makeText(applicationContext,"암컷을 입양합니다.",Toast.LENGTH_SHORT).show()
             button2=1;
         }
-
         maleButton.setOnClickListener{
             Toast.makeText(applicationContext,"수컷을 입양합니다.",Toast.LENGTH_SHORT).show()
             button2=2;
         }
-
         babyButton.setOnClickListener{
             Toast.makeText(applicationContext,"1개월-24개월",Toast.LENGTH_SHORT).show()
             petImage.setImageResource(R.drawable.baby_dog)
@@ -47,9 +47,26 @@ class InfoActivity : AppCompatActivity() {
                 Toast.makeText(applicationContext,"선택해주세요",Toast.LENGTH_SHORT).show()
             }
             else {
+                info +=petName.text.toString();
+                if(button2==1) info+=" 여자"
+                else info += " 남자"
+
+                if (button1==1) info += " 1"
+                else if (button1==2) info+= " 25"
+                else info += " 85"
+
+                saveToInnerStorage(info,"pet.txt")
                 Toast.makeText(applicationContext, "저장되었습니다", Toast.LENGTH_SHORT).show()
                 startActivity(Intent(this, termsOfService::class.java))
             }
         }
+
     }
+
+    fun saveToInnerStorage(text: String, filename: String){
+        val fileOutputStream = openFileOutput(filename, Context.MODE_APPEND)
+        fileOutputStream.write(text.toByteArray())
+        fileOutputStream.close()
+    }
+
 }
