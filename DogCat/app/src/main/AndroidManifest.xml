@@ -19,7 +19,8 @@
         <activity android:name=".init_pet"></activity>
         <activity android:name=".InfoActivity"></activity>
         <activity android:name=".termsOfService"></activity>
-        <activity android:name=".infoNext"></activity>
+
+        <activity android:name=".RealMainActivity"></activity>
         <activity android:name=".MainActivity"></activity>
         <activity android:name=".mainSetting"></activity>
     </application>
