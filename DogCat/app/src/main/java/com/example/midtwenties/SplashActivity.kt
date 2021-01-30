@@ -7,6 +7,7 @@ import android.os.Handler
 import android.os.Looper
 import androidx.appcompat.app.AppCompatActivity
 import android.text.TextUtils
+import java.io.FileNotFoundException
 
 class SplashActivity : AppCompatActivity() {
 
@@ -19,24 +20,33 @@ class SplashActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_splash)
 
-        if(loadFromInnerStorage(filename).equals("true")){
-            startActivity(Intent(this, RealMainActivity::class.java))
-        }
-        else{
-            startActivity(Intent(this, init_pet::class.java))
-        }
+        try {
+            if (loadFromInnerStorage(filename).equals("true")) {
+                startActivity(Intent(this, RealMainActivity::class.java))
 
-        Handler(Looper.getMainLooper()).postDelayed({
-            overridePendingTransition(R.anim.fade_in, R.anim.fade_out)
-            finish()
-        }, 2500)
+            } else {
+                startActivity(Intent(this, init_pet::class.java))
+            }
 
+            Handler(Looper.getMainLooper()).postDelayed({
+                overridePendingTransition(R.anim.fade_in, R.anim.fade_out)
+                finish()
+            }, 2500)
+        }
+        catch (e: FileNotFoundException){
+            Handler(Looper.getMainLooper()).postDelayed({
+                startActivity(Intent(this, init_pet::class.java))
+                overridePendingTransition(R.anim.fade_in, R.anim.fade_out)
+                finish()
+            }, 2500)
+        }
 
     }
 
     fun loadFromInnerStorage(filename: String):String{
-        val fileInputStream=openFileInput(filename)
-        return fileInputStream.reader().readText()
-    }
 
+        val fileInputStream=openFileInput(filename)
+        if(fileInputStream==null) return "false"
+        else return fileInputStream.reader().readText()
+    }
 }
