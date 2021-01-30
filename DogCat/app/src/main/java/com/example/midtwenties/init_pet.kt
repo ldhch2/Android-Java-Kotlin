@@ -1,6 +1,7 @@
 package com.example.midtwenties
 
 import android.content.Context
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
@@ -19,10 +20,12 @@ class init_pet : AppCompatActivity() {
             if(catbutton.isChecked==true){
                 Toast.makeText(applicationContext,"냥이가 선택되었습니다.",Toast.LENGTH_SHORT).show()
                 saveToInnerStorage("냥이","pet.txt")
+                startActivity(Intent(this, InfoActivity::class.java))
             }
             else if (dogbutton.isChecked==true){
                 Toast.makeText(applicationContext,"멍이가 선택되었습니다.",Toast.LENGTH_SHORT).show()
                 saveToInnerStorage("멍이","pet.txt")
+                startActivity(Intent(this, InfoActivity::class.java))
             }
             else{
                 Toast.makeText(applicationContext,"둘 중 하나를 체크해주세요",Toast.LENGTH_SHORT).show()
@@ -31,7 +34,6 @@ class init_pet : AppCompatActivity() {
 
         var checkcat=0;
         var checkdog=0;
-
 
         cat_preview.setOnClickListener {
             if(checkcat==0){
