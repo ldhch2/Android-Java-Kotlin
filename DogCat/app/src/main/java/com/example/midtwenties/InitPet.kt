@@ -19,12 +19,12 @@ class InitPet : AppCompatActivity() {
         SelectButton.setOnClickListener {
             if(catbutton.isChecked==true){
                 Toast.makeText(applicationContext,"냥이가 선택되었습니다.",Toast.LENGTH_SHORT).show()
-                saveToInnerStorage("고양이","pet.txt")
+                saveToInnerStorage("1","pet.txt")
                 startActivity(Intent(this, InfoActivity::class.java))
             }
             else if (dogbutton.isChecked==true){
                 Toast.makeText(applicationContext,"멍이가 선택되었습니다.",Toast.LENGTH_SHORT).show()
-                saveToInnerStorage("강아지","pet.txt")
+                saveToInnerStorage("2","pet.txt")
                 startActivity(Intent(this, InfoActivity::class.java))
             }
             else{
