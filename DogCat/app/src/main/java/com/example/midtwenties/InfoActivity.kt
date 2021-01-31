@@ -20,8 +20,6 @@ class InfoActivity : AppCompatActivity() {
         var button2=0;
 
         var anim =  AlphaAnimation(0.0f,1.0f)
-        anim.duration= Animation.INFINITE.toLong();
-
 
         femaleButton.setOnClickListener{
             Toast.makeText(applicationContext,"암컷을 입양합니다.",Toast.LENGTH_SHORT).show()
@@ -35,19 +33,19 @@ class InfoActivity : AppCompatActivity() {
             petImage.setImageResource(R.drawable.baby_dog)
             babyButton.startAnimation(anim);
             button1=1
-            month.setText(button1);
+            month.setText(button1.toString());
         }
         adultButton.setOnClickListener{
             petImage.setImageResource(R.drawable.adult_dog)
             adultButton.startAnimation(anim)
             button1=25
-            month.setText(button1);
+            month.setText(button1.toString());
         }
         oldButton.setOnClickListener{
             petImage.setImageResource(R.drawable.old_dog)
             oldButton.startAnimation(anim)
             button1=85
-            month.setText(button1);
+            month.setText(button1.toString());
         }
 
         saveInfo.setOnClickListener {
