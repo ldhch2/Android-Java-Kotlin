@@ -56,16 +56,17 @@
         android:id="@+id/months"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="48dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginLeft="32dp"
         android:layout_marginTop="70dp"
         android:layout_marginBottom="5dp"
         android:background="#31704200"
         android:text="개월"
         android:textSize="20sp"
         app:layout_constraintBottom_toTopOf="@+id/guideline3"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintStart_toStartOf="@id/month"
         app:layout_constraintTop_toBottomOf="@+id/gender"
-        android:layout_marginLeft="48dp" />
+        app:layout_constraintVertical_bias="0.508" />
 
     <TextView
         android:id="@+id/gender"
@@ -181,5 +182,19 @@
         app:layout_constraintTop_toBottomOf="@+id/petName"
         app:srcCompat="@drawable/female"
         android:layout_marginLeft="40dp" />
+
+    <TextView
+        android:id="@+id/month"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="48dp"
+        android:layout_marginLeft="48dp"
+        android:layout_marginTop="99dp"
+        android:layout_marginBottom="45dp"
+        android:text="??"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/babyButton"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/gender" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -5,6 +5,8 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.text.TextUtils
+import android.view.animation.AlphaAnimation
+import android.view.animation.Animation
 import android.widget.ImageSwitcher
 import android.widget.Toast
 import kotlinx.android.synthetic.main.activity_info.*
@@ -16,7 +18,10 @@ class InfoActivity : AppCompatActivity() {
 
         var button1=0;
         var button2=0;
-        var info=" "
+
+        var anim =  AlphaAnimation(0.0f,1.0f)
+        anim.duration= Animation.INFINITE.toLong();
+
 
         femaleButton.setOnClickListener{
             Toast.makeText(applicationContext,"암컷을 입양합니다.",Toast.LENGTH_SHORT).show()
@@ -27,19 +32,22 @@ class InfoActivity : AppCompatActivity() {
             button2=2;
         }
         babyButton.setOnClickListener{
-            Toast.makeText(applicationContext,"1개월-24개월",Toast.LENGTH_SHORT).show()
             petImage.setImageResource(R.drawable.baby_dog)
+            babyButton.startAnimation(anim);
             button1=1
+            month.setText(button1);
         }
         adultButton.setOnClickListener{
-            Toast.makeText(applicationContext,"25개월-84개월",Toast.LENGTH_SHORT).show()
             petImage.setImageResource(R.drawable.adult_dog)
-            button1=2
+            adultButton.startAnimation(anim)
+            button1=25
+            month.setText(button1);
         }
         oldButton.setOnClickListener{
-            Toast.makeText(applicationContext,"85개월-",Toast.LENGTH_SHORT).show()
             petImage.setImageResource(R.drawable.old_dog)
-            button1=3
+            oldButton.startAnimation(anim)
+            button1=85
+            month.setText(button1);
         }
 
         saveInfo.setOnClickListener {
@@ -47,26 +55,31 @@ class InfoActivity : AppCompatActivity() {
                 Toast.makeText(applicationContext,"선택해주세요",Toast.LENGTH_SHORT).show()
             }
             else {
-                info +=petName.text.toString();
-                if(button2==1) info+=" 여자"
-                else info += " 남자"
+                val type=loadFromInnerStorage("pet.txt")
 
-                if (button1==1) info += " 1"
-                else if (button1==2) info+= " 25"
-                else info += " 85"
+                var first = petclass(petName.text.toString(),type.toInt());
+                first.gender= button2
+                first.month=button1
 
-                saveToInnerStorage(info,"pet.txt")
+                saveToInnerStorage(first.saveinfo(),first.filename())
+                saveToInnerStorage(first.filename(),"pet.txt")
                 Toast.makeText(applicationContext, "저장되었습니다", Toast.LENGTH_SHORT).show()
                 startActivity(Intent(this, TermsOfService::class.java))
+
             }
         }
 
     }
 
     fun saveToInnerStorage(text: String, filename: String){
-        val fileOutputStream = openFileOutput(filename, Context.MODE_APPEND)
+        val fileOutputStream = openFileOutput(filename, Context.MODE_PRIVATE)
         fileOutputStream.write(text.toByteArray())
         fileOutputStream.close()
+    }
+
+    fun loadFromInnerStorage(filename: String):String{
+        val fileInputStream=openFileInput(filename)
+        return fileInputStream.reader().readText()
     }
 
 }
