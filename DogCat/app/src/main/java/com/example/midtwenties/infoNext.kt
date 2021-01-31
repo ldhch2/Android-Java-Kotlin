@@ -15,7 +15,7 @@ class InfoNext: AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_splash)
         saveToInnerStorage("true",filename)
-        startActivity(Intent(this, RealMainActivity::class.java))
+        startActivity(Intent(this, YardActivity::class.java))
         finish()
     }
 

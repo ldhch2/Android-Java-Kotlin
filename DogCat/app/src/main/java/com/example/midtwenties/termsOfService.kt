@@ -24,7 +24,7 @@ class TermsOfService : AppCompatActivity() {
 
         nextButton.setOnClickListener {
             if(checkBox1.isChecked || checkBox2.isChecked) {
-                startActivity(Intent(this, RealMainActivity::class.java))
+                startActivity(Intent(this, YardActivity::class.java))
             }
             else Toast.makeText(applicationContext,"선택해주세요.",Toast.LENGTH_SHORT).show()
         }
