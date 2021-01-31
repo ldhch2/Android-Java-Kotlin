@@ -11,9 +11,11 @@ class TermsOfService : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_terms_of_service)
 
+        checkBox1.isChecked=false;
+        checkBox2.isChecked=false;
+
         checkBox1.setOnClickListener{
             checkBox2.isChecked=false
-
         }
 
         checkBox2.setOnClickListener{
@@ -21,7 +23,7 @@ class TermsOfService : AppCompatActivity() {
         }
 
         nextButton.setOnClickListener {
-            if(checkBox1.isChecked==true || checkBox2.isChecked==true) {
+            if(checkBox1.isChecked || checkBox2.isChecked) {
                 startActivity(Intent(this, RealMainActivity::class.java))
             }
             else Toast.makeText(applicationContext,"선택해주세요.",Toast.LENGTH_SHORT).show()
