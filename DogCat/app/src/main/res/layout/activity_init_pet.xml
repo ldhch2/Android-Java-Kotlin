@@ -11,13 +11,11 @@
         android:layout_width="155dp"
         android:layout_height="162dp"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="15dp"
         android:layout_marginEnd="20dp"
-        android:layout_marginBottom="57dp"
-        app:layout_constraintBottom_toTopOf="@+id/cat_preview"
+        app:layout_constraintBottom_toTopOf="@id/guideline10"
         app:layout_constraintEnd_toStartOf="@+id/dog_image"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/radioGroup3"
+        app:layout_constraintTop_toBottomOf="@id/guideline9"
         app:srcCompat="@drawable/yoon1" />
 
     <ImageView
@@ -25,13 +23,11 @@
         android:layout_width="155dp"
         android:layout_height="162dp"
         android:layout_marginStart="20dp"
-        android:layout_marginTop="15dp"
         android:layout_marginEnd="8dp"
-        android:layout_marginBottom="57dp"
-        app:layout_constraintBottom_toTopOf="@+id/dog_preview"
+        app:layout_constraintBottom_toTopOf="@id/guideline10"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/cat_image"
-        app:layout_constraintTop_toBottomOf="@+id/radioGroup3"
+        app:layout_constraintTop_toBottomOf="@id/guideline9"
         app:srcCompat="@drawable/yoon2" />
 
     <Button
@@ -39,24 +35,28 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="20dp"
+        android:layout_marginTop="32dp"
         android:layout_marginEnd="30dp"
-        android:layout_marginBottom="30dp"
+        android:layout_marginBottom="8dp"
         android:text="냥이미리보기"
         app:layout_constraintBottom_toTopOf="@+id/SelectButton"
         app:layout_constraintEnd_toStartOf="@+id/dog_preview"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/guideline10" />
 
     <Button
         android:id="@+id/dog_preview"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="30dp"
+        android:layout_marginTop="32dp"
         android:layout_marginEnd="20dp"
-        android:layout_marginBottom="30dp"
+        android:layout_marginBottom="8dp"
         android:text="멍이미리보기"
         app:layout_constraintBottom_toTopOf="@+id/SelectButton"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/cat_preview" />
+        app:layout_constraintStart_toEndOf="@+id/cat_preview"
+        app:layout_constraintTop_toBottomOf="@id/guideline10" />
 
     <Button
         android:id="@+id/SelectButton"
@@ -64,24 +64,26 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="160dp"
         android:layout_marginEnd="160dp"
-        android:layout_marginBottom="40dp"
+        android:layout_marginBottom="28dp"
         android:text="분양하기"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent" />
 
     <RadioGroup
         android:id="@+id/radioGroup3"
-        android:layout_width="413dp"
-        android:layout_height="93dp"
+        android:layout_width="412dp"
+        android:layout_height="52dp"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="100dp"
         android:layout_marginEnd="16dp"
         android:gravity="center"
         android:orientation="horizontal"
+        app:layout_constraintBottom_toTopOf="@id/guideline9"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.515"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toTopOf="@id/guideline8">
 
         <RadioButton
             android:id="@+id/catbutton"
@@ -94,31 +96,63 @@
             android:layout_width="151dp"
             android:layout_height="wrap_content"
             android:text="멍이" />
+
     </RadioGroup>
 
-    <Button
-        android:id="@+id/testbutton"
+    <TextView
+        android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="3dp"
-        android:layout_marginEnd="3dp"
-        android:layout_marginBottom="1dp"
-        android:text="크게미리보기"
-        app:layout_constraintBottom_toTopOf="@+id/SelectButton"
-        app:layout_constraintEnd_toStartOf="@+id/dog_preview"
-        app:layout_constraintStart_toEndOf="@+id/cat_preview" />
-
-    <ImageView
-        android:id="@+id/imageView3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="88dp"
-        android:layout_marginBottom="1dp"
-        app:layout_constraintBottom_toTopOf="@+id/testbutton"
+        android:layout_marginStart="157dp"
+        android:layout_marginLeft="157dp"
+        android:layout_marginTop="34dp"
+        android:layout_marginEnd="158dp"
+        android:layout_marginRight="158dp"
+        android:layout_marginBottom="13dp"
+        android:text="펫 선택"
+        android:textSize="32sp"
+        app:layout_constraintBottom_toTopOf="@id/guideline8"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.153" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="128dp"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="128dp"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline9"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="190dp"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="190dp"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline10"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="560dp"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="560dp"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="405dp"
+        android:layout_height="361dp"
+        app:layout_constraintBottom_toTopOf="@id/guideline10"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/guideline9"
         app:srcCompat="@drawable/yoon1" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
