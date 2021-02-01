@@ -19,7 +19,7 @@
         <activity android:name=".InitPet"></activity>
         <activity android:name=".InfoActivity"></activity>
         <activity android:name=".TermsOfService"></activity>
-
+        <activity android:name=".YardActivity"></activity>
         <activity android:name=".MainActivity"></activity>
         <activity android:name=".MainSetting"></activity>
     </application>
