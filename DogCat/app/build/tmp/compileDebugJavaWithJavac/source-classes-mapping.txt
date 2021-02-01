@@ -1,0 +1,2 @@
+com/example/midtwenties/BuildConfig.java
+ com.example.midtwenties.BuildConfig

@@ -1,0 +1,558 @@
+[
+    {
+        "merged": "C:\\Users\\Lee Minyoung\\Documents\\GitHub\\Android-Java-Kotlin\\DogCat\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxxhdpi_ic_baseline_sports_esports_24.png.flat",
+        "source": "C:\\Users\\Lee Minyoung\\Documents\\GitHub\\Android-Java-Kotlin\\DogCat\\app\\build\\generated\\res\\pngs\\debug\\drawable-xxxhdpi\\ic_baseline_sports_esports_24.png"
+    },
+    {
+        "merged": "C:\\Users\\Lee Minyoung\\Documents\\GitHub\\Android-Java-Kotlin\\DogCat\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxxhdpi_ic_baseline_dehaze_24.png.flat",
+        "source": "C:\\Users\\Lee Minyoung\\Documents\\GitHub\\Android-Java-Kotlin\\DogCat\\app\\build\\generated\\res\\pngs\\debug\\drawable-xxxhdpi\\ic_baseline_dehaze_24.png"
+    },
+    {
+        "merged": "C:\\Users\\Lee Minyoung\\Documents\\GitHub\\Android-Java-Kotlin\\DogCat\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi_ic_baseline_restaurant_24.png.flat",
+        "source": "C:\\Users\\Lee Minyoung\\Documents\\GitHub\\Android-Java-Kotlin\\DogCat\\app\\build\\generated\\res\\pngs\\debug\\drawable-xxhdpi\\ic_baseline_restaurant_24.png"
+    },
+    {
+        "merged": "C:\\Users\\Lee Minyoung\\Documents\\GitHub\\Android-Java-Kotlin\\DogCat\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi_ic_baseline_restaurant_24.png.flat",
+        "source": "C:\\Users\\Lee Minyoung\\Documents\\GitHub\\Android-Java-Kotlin\\DogCat\\app\\build\\generated\\res\\pngs\\debug\\drawable-ldpi\\ic_baseline_restaurant_24.png"
+    },
+    {
+        "merged": "C:\\Users\\Lee Minyoung\\Documents\\GitHub\\Android-Java-Kotlin\\DogCat\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi_ic_baseline_pets_24.png.flat",
+        "source": "C:\\Users\\Lee Minyoung\\Documents\\GitHub\\Android-Java-Kotlin\\DogCat\\app\\build\\generated\\res\\pngs\\debug\\drawable-xhdpi\\ic_baseline_pets_24.png"
+    },
+    {
+        "merged": "C:\\Users\\Lee Minyoung\\Documents\\GitHub\\Android-Java-Kotlin\\DogCat\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi_ic_baseline_sports_esports_24.png.flat",
+        "source": "C:\\Users\\Lee Minyoung\\Documents\\GitHub\\Android-Java-Kotlin\\DogCat\\app\\build\\generated\\res\\pngs\\debug\\drawable-xhdpi\\ic_baseline_sports_esports_24.png"
+    },
+    {
+        "merged": "C:\\Users\\Lee Minyoung\\Documents\\GitHub\\Android-Java-Kotlin\\DogCat\\app\\build\\intermediates\\res\\merged\\debug\\drawable-anydpi-v21_ic_launcher_background.xml.flat",
+        "source": "C:\\Users\\Lee Minyoung\\Documents\\GitHub\\Android-Java-Kotlin\\DogCat\\app\\build\\generated\\res\\pngs\\debug\\drawable-anydpi-v21\\ic_launcher_background.xml"
+    },
+    {
+        "merged": "C:\\Users\\Lee Minyoung\\Documents\\GitHub\\Android-Java-Kotlin\\DogCat\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi_ic_launcher_background.png.flat",
+        "source": "C:\\Users\\Lee Minyoung\\Documents\\GitHub\\Android-Java-Kotlin\\DogCat\\app\\build\\generated\\res\\pngs\\debug\\drawable-xxhdpi\\ic_launcher_background.png"
+    },
+    {
+        "merged": "C:\\Users\\Lee Minyoung\\Documents\\GitHub\\Android-Java-Kotlin\\DogCat\\app\\build\\intermediates\\res\\merged\\debug\\anim_fab_open.xml.flat",
+        "source": "C:\\Users\\Lee Minyoung\\Documents\\GitHub\\Android-Java-Kotlin\\DogCat\\app\\src\\main\\res\\anim\\fab_open.xml"
+    },
+    {
+        "merged": "C:\\Users\\Lee Minyoung\\Documents\\GitHub\\Android-Java-Kotlin\\DogCat\\app\\build\\intermediates\\res\\merged\\debug\\drawable-anydpi-v21_ic_baseline_pets_24.xml.flat",
+        "source": "C:\\Users\\Lee Minyoung\\Documents\\GitHub\\Android-Java-Kotlin\\DogCat\\app\\build\\generated\\res\\pngs\\debug\\drawable-anydpi-v21\\ic_baseline_pets_24.xml"
+    },
+    {
+        "merged": "C:\\Users\\Lee Minyoung\\Documents\\GitHub\\Android-Java-Kotlin\\DogCat\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi_ic_baseline_dehaze_24.png.flat",
+        "source": "C:\\Users\\Lee Minyoung\\Documents\\GitHub\\Android-Java-Kotlin\\DogCat\\app\\build\\generated\\res\\pngs\\debug\\drawable-mdpi\\ic_baseline_dehaze_24.png"
+    },
+    {
+        "merged": "C:\\Users\\Lee Minyoung\\Documents\\GitHub\\Android-Java-Kotlin\\DogCat\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi_ic_launcher_round.png.flat",
+        "source": "C:\\Users\\Lee Minyoung\\Documents\\GitHub\\Android-Java-Kotlin\\DogCat\\app\\src\\main\\res\\mipmap-xhdpi\\ic_launcher_round.png"
+    },
+    {
+        "merged": "C:\\Users\\Lee Minyoung\\Documents\\GitHub\\Android-Java-Kotlin\\DogCat\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_my_store.xml.flat",
+        "source": "C:\\Users\\Lee Minyoung\\Documents\\GitHub\\Android-Java-Kotlin\\DogCat\\app\\src\\main\\res\\layout\\activity_my_store.xml"
+    },
+    {
+        "merged": "C:\\Users\\Lee Minyoung\\Documents\\GitHub\\Android-Java-Kotlin\\DogCat\\app\\build\\intermediates\\res\\merged\\debug\\drawable-anydpi-v21_ic_baseline_dehaze_24.xml.flat",
+        "source": "C:\\Users\\Lee Minyoung\\Documents\\GitHub\\Android-Java-Kotlin\\DogCat\\app\\build\\generated\\res\\pngs\\debug\\drawable-anydpi-v21\\ic_baseline_dehaze_24.xml"
+    },
+    {
+        "merged": "C:\\Users\\Lee Minyoung\\Documents\\GitHub\\Android-Java-Kotlin\\DogCat\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi_ic_baseline_add_24.png.flat",
+        "source": "C:\\Users\\Lee Minyoung\\Documents\\GitHub\\Android-Java-Kotlin\\DogCat\\app\\build\\generated\\res\\pngs\\debug\\drawable-ldpi\\ic_baseline_add_24.png"
+    },
+    {
+        "merged": "C:\\Users\\Lee Minyoung\\Documents\\GitHub\\Android-Java-Kotlin\\DogCat\\app\\build\\intermediates\\res\\merged\\debug\\drawable_foreground.png.flat",
+        "source": "C:\\Users\\Lee Minyoung\\Documents\\GitHub\\Android-Java-Kotlin\\DogCat\\app\\src\\main\\res\\drawable\\foreground.png"
+    },
+    {
+        "merged": "C:\\Users\\Lee Minyoung\\Documents\\GitHub\\Android-Java-Kotlin\\DogCat\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi_ic_baseline_settings_24.png.flat",
+        "source": "C:\\Users\\Lee Minyoung\\Documents\\GitHub\\Android-Java-Kotlin\\DogCat\\app\\build\\generated\\res\\pngs\\debug\\drawable-ldpi\\ic_baseline_settings_24.png"
+    },
+    {
+        "merged": "C:\\Users\\Lee Minyoung\\Documents\\GitHub\\Android-Java-Kotlin\\DogCat\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxxhdpi_ic_baseline_add_24.png.flat",
+        "source": "C:\\Users\\Lee Minyoung\\Documents\\GitHub\\Android-Java-Kotlin\\DogCat\\app\\build\\generated\\res\\pngs\\debug\\drawable-xxxhdpi\\ic_baseline_add_24.png"
+    },
+    {
+        "merged": "C:\\Users\\Lee Minyoung\\Documents\\GitHub\\Android-Java-Kotlin\\DogCat\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxxhdpi_ic_baseline_menu_24.png.flat",
+        "source": "C:\\Users\\Lee Minyoung\\Documents\\GitHub\\Android-Java-Kotlin\\DogCat\\app\\build\\generated\\res\\pngs\\debug\\drawable-xxxhdpi\\ic_baseline_menu_24.png"
+    },
+    {
+        "merged": "C:\\Users\\Lee Minyoung\\Documents\\GitHub\\Android-Java-Kotlin\\DogCat\\app\\build\\intermediates\\res\\merged\\debug\\drawable-anydpi-v21_ic_baseline_add_24.xml.flat",
+        "source": "C:\\Users\\Lee Minyoung\\Documents\\GitHub\\Android-Java-Kotlin\\DogCat\\app\\build\\generated\\res\\pngs\\debug\\drawable-anydpi-v21\\ic_baseline_add_24.xml"
+    },
+    {
+        "merged": "C:\\Users\\Lee Minyoung\\Documents\\GitHub\\Android-Java-Kotlin\\DogCat\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi_ic_launcher_background.png.flat",
+        "source": "C:\\Users\\Lee Minyoung\\Documents\\GitHub\\Android-Java-Kotlin\\DogCat\\app\\build\\generated\\res\\pngs\\debug\\drawable-mdpi\\ic_launcher_background.png"
+    },
+    {
+        "merged": "C:\\Users\\Lee Minyoung\\Documents\\GitHub\\Android-Java-Kotlin\\DogCat\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi_ic_baseline_sports_esports_24.png.flat",
+        "source": "C:\\Users\\Lee Minyoung\\Documents\\GitHub\\Android-Java-Kotlin\\DogCat\\app\\build\\generated\\res\\pngs\\debug\\drawable-ldpi\\ic_baseline_sports_esports_24.png"
+    },
+    {
+        "merged": "C:\\Users\\Lee Minyoung\\Documents\\GitHub\\Android-Java-Kotlin\\DogCat\\app\\build\\intermediates\\res\\merged\\debug\\drawable-anydpi-v21_ic_baseline_storefront_24.xml.flat",
+        "source": "C:\\Users\\Lee Minyoung\\Documents\\GitHub\\Android-Java-Kotlin\\DogCat\\app\\build\\generated\\res\\pngs\\debug\\drawable-anydpi-v21\\ic_baseline_storefront_24.xml"
+    },
+    {
+        "merged": "C:\\Users\\Lee Minyoung\\Documents\\GitHub\\Android-Java-Kotlin\\DogCat\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi_ic_baseline_pets_24.png.flat",
+        "source": "C:\\Users\\Lee Minyoung\\Documents\\GitHub\\Android-Java-Kotlin\\DogCat\\app\\build\\generated\\res\\pngs\\debug\\drawable-mdpi\\ic_baseline_pets_24.png"
+    },
+    {
+        "merged": "C:\\Users\\Lee Minyoung\\Documents\\GitHub\\Android-Java-Kotlin\\DogCat\\app\\build\\intermediates\\res\\merged\\debug\\anim_fade_in.xml.flat",
+        "source": "C:\\Users\\Lee Minyoung\\Documents\\GitHub\\Android-Java-Kotlin\\DogCat\\app\\src\\main\\res\\anim\\fade_in.xml"
+    },
+    {
+        "merged": "C:\\Users\\Lee Minyoung\\Documents\\GitHub\\Android-Java-Kotlin\\DogCat\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi_ic_baseline_settings_24.png.flat",
+        "source": "C:\\Users\\Lee Minyoung\\Documents\\GitHub\\Android-Java-Kotlin\\DogCat\\app\\build\\generated\\res\\pngs\\debug\\drawable-xxhdpi\\ic_baseline_settings_24.png"
+    },
+    {
+        "merged": "C:\\Users\\Lee Minyoung\\Documents\\GitHub\\Android-Java-Kotlin\\DogCat\\app\\build\\intermediates\\res\\merged\\debug\\drawable_background.jpg.flat",
+        "source": "C:\\Users\\Lee Minyoung\\Documents\\GitHub\\Android-Java-Kotlin\\DogCat\\app\\src\\main\\res\\drawable\\background.jpg"
+    },
+    {
+        "merged": "C:\\Users\\Lee Minyoung\\Documents\\GitHub\\Android-Java-Kotlin\\DogCat\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi_ic_baseline_storefront_24.png.flat",
+        "source": "C:\\Users\\Lee Minyoung\\Documents\\GitHub\\Android-Java-Kotlin\\DogCat\\app\\build\\generated\\res\\pngs\\debug\\drawable-xhdpi\\ic_baseline_storefront_24.png"
+    },
+    {
+        "merged": "C:\\Users\\Lee Minyoung\\Documents\\GitHub\\Android-Java-Kotlin\\DogCat\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi_ic_baseline_house_24.png.flat",
+        "source": "C:\\Users\\Lee Minyoung\\Documents\\GitHub\\Android-Java-Kotlin\\DogCat\\app\\build\\generated\\res\\pngs\\debug\\drawable-hdpi\\ic_baseline_house_24.png"
+    },
+    {
+        "merged": "C:\\Users\\Lee Minyoung\\Documents\\GitHub\\Android-Java-Kotlin\\DogCat\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi_ic_launcher_round.png.flat",
+        "source": "C:\\Users\\Lee Minyoung\\Documents\\GitHub\\Android-Java-Kotlin\\DogCat\\app\\src\\main\\res\\mipmap-hdpi\\ic_launcher_round.png"
+    },
+    {
+        "merged": "C:\\Users\\Lee Minyoung\\Documents\\GitHub\\Android-Java-Kotlin\\DogCat\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_yard.xml.flat",
+        "source": "C:\\Users\\Lee Minyoung\\Documents\\GitHub\\Android-Java-Kotlin\\DogCat\\app\\src\\main\\res\\layout\\activity_yard.xml"
+    },
+    {
+        "merged": "C:\\Users\\Lee Minyoung\\Documents\\GitHub\\Android-Java-Kotlin\\DogCat\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxxhdpi_ic_baseline_wb_sunny_24.png.flat",
+        "source": "C:\\Users\\Lee Minyoung\\Documents\\GitHub\\Android-Java-Kotlin\\DogCat\\app\\build\\generated\\res\\pngs\\debug\\drawable-xxxhdpi\\ic_baseline_wb_sunny_24.png"
+    },
+    {
+        "merged": "C:\\Users\\Lee Minyoung\\Documents\\GitHub\\Android-Java-Kotlin\\DogCat\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi_ic_baseline_menu_24.png.flat",
+        "source": "C:\\Users\\Lee Minyoung\\Documents\\GitHub\\Android-Java-Kotlin\\DogCat\\app\\build\\generated\\res\\pngs\\debug\\drawable-ldpi\\ic_baseline_menu_24.png"
+    },
+    {
+        "merged": "C:\\Users\\Lee Minyoung\\Documents\\GitHub\\Android-Java-Kotlin\\DogCat\\app\\build\\intermediates\\res\\merged\\debug\\anim_fab_close.xml.flat",
+        "source": "C:\\Users\\Lee Minyoung\\Documents\\GitHub\\Android-Java-Kotlin\\DogCat\\app\\src\\main\\res\\anim\\fab_close.xml"
+    },
+    {
+        "merged": "C:\\Users\\Lee Minyoung\\Documents\\GitHub\\Android-Java-Kotlin\\DogCat\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi_ic_baseline_restaurant_24.png.flat",
+        "source": "C:\\Users\\Lee Minyoung\\Documents\\GitHub\\Android-Java-Kotlin\\DogCat\\app\\build\\generated\\res\\pngs\\debug\\drawable-hdpi\\ic_baseline_restaurant_24.png"
+    },
+    {
+        "merged": "C:\\Users\\Lee Minyoung\\Documents\\GitHub\\Android-Java-Kotlin\\DogCat\\app\\build\\intermediates\\res\\merged\\debug\\drawable_bara.jpg.flat",
+        "source": "C:\\Users\\Lee Minyoung\\Documents\\GitHub\\Android-Java-Kotlin\\DogCat\\app\\src\\main\\res\\drawable\\bara.jpg"
+    },
+    {
+        "merged": "C:\\Users\\Lee Minyoung\\Documents\\GitHub\\Android-Java-Kotlin\\DogCat\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxxhdpi_ic_launcher_round.png.flat",
+        "source": "C:\\Users\\Lee Minyoung\\Documents\\GitHub\\Android-Java-Kotlin\\DogCat\\app\\src\\main\\res\\mipmap-xxxhdpi\\ic_launcher_round.png"
+    },
+    {
+        "merged": "C:\\Users\\Lee Minyoung\\Documents\\GitHub\\Android-Java-Kotlin\\DogCat\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi_ic_baseline_menu_24.png.flat",
+        "source": "C:\\Users\\Lee Minyoung\\Documents\\GitHub\\Android-Java-Kotlin\\DogCat\\app\\build\\generated\\res\\pngs\\debug\\drawable-hdpi\\ic_baseline_menu_24.png"
+    },
+    {
+        "merged": "C:\\Users\\Lee Minyoung\\Documents\\GitHub\\Android-Java-Kotlin\\DogCat\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxxhdpi_ic_baseline_storefront_24.png.flat",
+        "source": "C:\\Users\\Lee Minyoung\\Documents\\GitHub\\Android-Java-Kotlin\\DogCat\\app\\build\\generated\\res\\pngs\\debug\\drawable-xxxhdpi\\ic_baseline_storefront_24.png"
+    },
+    {
+        "merged": "C:\\Users\\Lee Minyoung\\Documents\\GitHub\\Android-Java-Kotlin\\DogCat\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi_ic_baseline_restaurant_24.png.flat",
+        "source": "C:\\Users\\Lee Minyoung\\Documents\\GitHub\\Android-Java-Kotlin\\DogCat\\app\\build\\generated\\res\\pngs\\debug\\drawable-mdpi\\ic_baseline_restaurant_24.png"
+    },
+    {
+        "merged": "C:\\Users\\Lee Minyoung\\Documents\\GitHub\\Android-Java-Kotlin\\DogCat\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi_ic_baseline_storefront_24.png.flat",
+        "source": "C:\\Users\\Lee Minyoung\\Documents\\GitHub\\Android-Java-Kotlin\\DogCat\\app\\build\\generated\\res\\pngs\\debug\\drawable-ldpi\\ic_baseline_storefront_24.png"
+    },
+    {
+        "merged": "C:\\Users\\Lee Minyoung\\Documents\\GitHub\\Android-Java-Kotlin\\DogCat\\app\\build\\intermediates\\res\\merged\\debug\\drawable_male.png.flat",
+        "source": "C:\\Users\\Lee Minyoung\\Documents\\GitHub\\Android-Java-Kotlin\\DogCat\\app\\src\\main\\res\\drawable\\male.png"
+    },
+    {
+        "merged": "C:\\Users\\Lee Minyoung\\Documents\\GitHub\\Android-Java-Kotlin\\DogCat\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi_ic_baseline_storefront_24.png.flat",
+        "source": "C:\\Users\\Lee Minyoung\\Documents\\GitHub\\Android-Java-Kotlin\\DogCat\\app\\build\\generated\\res\\pngs\\debug\\drawable-hdpi\\ic_baseline_storefront_24.png"
+    },
+    {
+        "merged": "C:\\Users\\Lee Minyoung\\Documents\\GitHub\\Android-Java-Kotlin\\DogCat\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxxhdpi_ic_baseline_restaurant_24.png.flat",
+        "source": "C:\\Users\\Lee Minyoung\\Documents\\GitHub\\Android-Java-Kotlin\\DogCat\\app\\build\\generated\\res\\pngs\\debug\\drawable-xxxhdpi\\ic_baseline_restaurant_24.png"
+    },
+    {
+        "merged": "C:\\Users\\Lee Minyoung\\Documents\\GitHub\\Android-Java-Kotlin\\DogCat\\app\\build\\intermediates\\res\\merged\\debug\\drawable_yoon2.jpeg.flat",
+        "source": "C:\\Users\\Lee Minyoung\\Documents\\GitHub\\Android-Java-Kotlin\\DogCat\\app\\src\\main\\res\\drawable\\yoon2.jpeg"
+    },
+    {
+        "merged": "C:\\Users\\Lee Minyoung\\Documents\\GitHub\\Android-Java-Kotlin\\DogCat\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi_ic_baseline_add_24.png.flat",
+        "source": "C:\\Users\\Lee Minyoung\\Documents\\GitHub\\Android-Java-Kotlin\\DogCat\\app\\build\\generated\\res\\pngs\\debug\\drawable-mdpi\\ic_baseline_add_24.png"
+    },
+    {
+        "merged": "C:\\Users\\Lee Minyoung\\Documents\\GitHub\\Android-Java-Kotlin\\DogCat\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi_ic_baseline_dehaze_24.png.flat",
+        "source": "C:\\Users\\Lee Minyoung\\Documents\\GitHub\\Android-Java-Kotlin\\DogCat\\app\\build\\generated\\res\\pngs\\debug\\drawable-xhdpi\\ic_baseline_dehaze_24.png"
+    },
+    {
+        "merged": "C:\\Users\\Lee Minyoung\\Documents\\GitHub\\Android-Java-Kotlin\\DogCat\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi_ic_launcher_background.png.flat",
+        "source": "C:\\Users\\Lee Minyoung\\Documents\\GitHub\\Android-Java-Kotlin\\DogCat\\app\\build\\generated\\res\\pngs\\debug\\drawable-hdpi\\ic_launcher_background.png"
+    },
+    {
+        "merged": "C:\\Users\\Lee Minyoung\\Documents\\GitHub\\Android-Java-Kotlin\\DogCat\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-mdpi_ic_launcher_round.png.flat",
+        "source": "C:\\Users\\Lee Minyoung\\Documents\\GitHub\\Android-Java-Kotlin\\DogCat\\app\\src\\main\\res\\mipmap-mdpi\\ic_launcher_round.png"
+    },
+    {
+        "merged": "C:\\Users\\Lee Minyoung\\Documents\\GitHub\\Android-Java-Kotlin\\DogCat\\app\\build\\intermediates\\res\\merged\\debug\\drawable-anydpi-v21_ic_baseline_wb_sunny_24.xml.flat",
+        "source": "C:\\Users\\Lee Minyoung\\Documents\\GitHub\\Android-Java-Kotlin\\DogCat\\app\\build\\generated\\res\\pngs\\debug\\drawable-anydpi-v21\\ic_baseline_wb_sunny_24.xml"
+    },
+    {
+        "merged": "C:\\Users\\Lee Minyoung\\Documents\\GitHub\\Android-Java-Kotlin\\DogCat\\app\\build\\intermediates\\res\\merged\\debug\\drawable_cat_image.jpeg.flat",
+        "source": "C:\\Users\\Lee Minyoung\\Documents\\GitHub\\Android-Java-Kotlin\\DogCat\\app\\src\\main\\res\\drawable\\cat_image.jpeg"
+    },
+    {
+        "merged": "C:\\Users\\Lee Minyoung\\Documents\\GitHub\\Android-Java-Kotlin\\DogCat\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi_ic_baseline_arrow_back_24.png.flat",
+        "source": "C:\\Users\\Lee Minyoung\\Documents\\GitHub\\Android-Java-Kotlin\\DogCat\\app\\build\\generated\\res\\pngs\\debug\\drawable-hdpi\\ic_baseline_arrow_back_24.png"
+    },
+    {
+        "merged": "C:\\Users\\Lee Minyoung\\Documents\\GitHub\\Android-Java-Kotlin\\DogCat\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxxhdpi_ic_launcher.png.flat",
+        "source": "C:\\Users\\Lee Minyoung\\Documents\\GitHub\\Android-Java-Kotlin\\DogCat\\app\\src\\main\\res\\mipmap-xxxhdpi\\ic_launcher.png"
+    },
+    {
+        "merged": "C:\\Users\\Lee Minyoung\\Documents\\GitHub\\Android-Java-Kotlin\\DogCat\\app\\build\\intermediates\\res\\merged\\debug\\drawable-anydpi-v21_ic_baseline_arrow_back_24.xml.flat",
+        "source": "C:\\Users\\Lee Minyoung\\Documents\\GitHub\\Android-Java-Kotlin\\DogCat\\app\\build\\generated\\res\\pngs\\debug\\drawable-anydpi-v21\\ic_baseline_arrow_back_24.xml"
+    },
+    {
+        "merged": "C:\\Users\\Lee Minyoung\\Documents\\GitHub\\Android-Java-Kotlin\\DogCat\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi_ic_baseline_arrow_back_24.png.flat",
+        "source": "C:\\Users\\Lee Minyoung\\Documents\\GitHub\\Android-Java-Kotlin\\DogCat\\app\\build\\generated\\res\\pngs\\debug\\drawable-mdpi\\ic_baseline_arrow_back_24.png"
+    },
+    {
+        "merged": "C:\\Users\\Lee Minyoung\\Documents\\GitHub\\Android-Java-Kotlin\\DogCat\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi_ic_baseline_pets_24.png.flat",
+        "source": "C:\\Users\\Lee Minyoung\\Documents\\GitHub\\Android-Java-Kotlin\\DogCat\\app\\build\\generated\\res\\pngs\\debug\\drawable-hdpi\\ic_baseline_pets_24.png"
+    },
+    {
+        "merged": "C:\\Users\\Lee Minyoung\\Documents\\GitHub\\Android-Java-Kotlin\\DogCat\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxxhdpi_ic_launcher_background.png.flat",
+        "source": "C:\\Users\\Lee Minyoung\\Documents\\GitHub\\Android-Java-Kotlin\\DogCat\\app\\build\\generated\\res\\pngs\\debug\\drawable-xxxhdpi\\ic_launcher_background.png"
+    },
+    {
+        "merged": "C:\\Users\\Lee Minyoung\\Documents\\GitHub\\Android-Java-Kotlin\\DogCat\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxxhdpi_ic_baseline_house_24.png.flat",
+        "source": "C:\\Users\\Lee Minyoung\\Documents\\GitHub\\Android-Java-Kotlin\\DogCat\\app\\build\\generated\\res\\pngs\\debug\\drawable-xxxhdpi\\ic_baseline_house_24.png"
+    },
+    {
+        "merged": "C:\\Users\\Lee Minyoung\\Documents\\GitHub\\Android-Java-Kotlin\\DogCat\\app\\build\\intermediates\\res\\merged\\debug\\drawable_yoon1.jpeg.flat",
+        "source": "C:\\Users\\Lee Minyoung\\Documents\\GitHub\\Android-Java-Kotlin\\DogCat\\app\\src\\main\\res\\drawable\\yoon1.jpeg"
+    },
+    {
+        "merged": "C:\\Users\\Lee Minyoung\\Documents\\GitHub\\Android-Java-Kotlin\\DogCat\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi_ic_baseline_settings_24.png.flat",
+        "source": "C:\\Users\\Lee Minyoung\\Documents\\GitHub\\Android-Java-Kotlin\\DogCat\\app\\build\\generated\\res\\pngs\\debug\\drawable-hdpi\\ic_baseline_settings_24.png"
+    },
+    {
+        "merged": "C:\\Users\\Lee Minyoung\\Documents\\GitHub\\Android-Java-Kotlin\\DogCat\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi_ic_baseline_arrow_back_24.png.flat",
+        "source": "C:\\Users\\Lee Minyoung\\Documents\\GitHub\\Android-Java-Kotlin\\DogCat\\app\\build\\generated\\res\\pngs\\debug\\drawable-ldpi\\ic_baseline_arrow_back_24.png"
+    },
+    {
+        "merged": "C:\\Users\\Lee Minyoung\\Documents\\GitHub\\Android-Java-Kotlin\\DogCat\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxxhdpi_ic_baseline_arrow_back_24.png.flat",
+        "source": "C:\\Users\\Lee Minyoung\\Documents\\GitHub\\Android-Java-Kotlin\\DogCat\\app\\build\\generated\\res\\pngs\\debug\\drawable-xxxhdpi\\ic_baseline_arrow_back_24.png"
+    },
+    {
+        "merged": "C:\\Users\\Lee Minyoung\\Documents\\GitHub\\Android-Java-Kotlin\\DogCat\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi_ic_baseline_add_24.png.flat",
+        "source": "C:\\Users\\Lee Minyoung\\Documents\\GitHub\\Android-Java-Kotlin\\DogCat\\app\\build\\generated\\res\\pngs\\debug\\drawable-hdpi\\ic_baseline_add_24.png"
+    },
+    {
+        "merged": "C:\\Users\\Lee Minyoung\\Documents\\GitHub\\Android-Java-Kotlin\\DogCat\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi_ic_baseline_pets_24.png.flat",
+        "source": "C:\\Users\\Lee Minyoung\\Documents\\GitHub\\Android-Java-Kotlin\\DogCat\\app\\build\\generated\\res\\pngs\\debug\\drawable-ldpi\\ic_baseline_pets_24.png"
+    },
+    {
+        "merged": "C:\\Users\\Lee Minyoung\\Documents\\GitHub\\Android-Java-Kotlin\\DogCat\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_terms_of_service.xml.flat",
+        "source": "C:\\Users\\Lee Minyoung\\Documents\\GitHub\\Android-Java-Kotlin\\DogCat\\app\\src\\main\\res\\layout\\activity_terms_of_service.xml"
+    },
+    {
+        "merged": "C:\\Users\\Lee Minyoung\\Documents\\GitHub\\Android-Java-Kotlin\\DogCat\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi_ic_baseline_dehaze_24.png.flat",
+        "source": "C:\\Users\\Lee Minyoung\\Documents\\GitHub\\Android-Java-Kotlin\\DogCat\\app\\build\\generated\\res\\pngs\\debug\\drawable-ldpi\\ic_baseline_dehaze_24.png"
+    },
+    {
+        "merged": "C:\\Users\\Lee Minyoung\\Documents\\GitHub\\Android-Java-Kotlin\\DogCat\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi_ic_baseline_house_24.png.flat",
+        "source": "C:\\Users\\Lee Minyoung\\Documents\\GitHub\\Android-Java-Kotlin\\DogCat\\app\\build\\generated\\res\\pngs\\debug\\drawable-xxhdpi\\ic_baseline_house_24.png"
+    },
+    {
+        "merged": "C:\\Users\\Lee Minyoung\\Documents\\GitHub\\Android-Java-Kotlin\\DogCat\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi_ic_baseline_wb_sunny_24.png.flat",
+        "source": "C:\\Users\\Lee Minyoung\\Documents\\GitHub\\Android-Java-Kotlin\\DogCat\\app\\build\\generated\\res\\pngs\\debug\\drawable-xhdpi\\ic_baseline_wb_sunny_24.png"
+    },
+    {
+        "merged": "C:\\Users\\Lee Minyoung\\Documents\\GitHub\\Android-Java-Kotlin\\DogCat\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi_ic_launcher.png.flat",
+        "source": "C:\\Users\\Lee Minyoung\\Documents\\GitHub\\Android-Java-Kotlin\\DogCat\\app\\src\\main\\res\\mipmap-hdpi\\ic_launcher.png"
+    },
+    {
+        "merged": "C:\\Users\\Lee Minyoung\\Documents\\GitHub\\Android-Java-Kotlin\\DogCat\\app\\build\\intermediates\\res\\merged\\debug\\drawable_female.png.flat",
+        "source": "C:\\Users\\Lee Minyoung\\Documents\\GitHub\\Android-Java-Kotlin\\DogCat\\app\\src\\main\\res\\drawable\\female.png"
+    },
+    {
+        "merged": "C:\\Users\\Lee Minyoung\\Documents\\GitHub\\Android-Java-Kotlin\\DogCat\\app\\build\\intermediates\\res\\merged\\debug\\drawable-anydpi-v24_ic_launcher_foreground.xml.flat",
+        "source": "C:\\Users\\Lee Minyoung\\Documents\\GitHub\\Android-Java-Kotlin\\DogCat\\app\\build\\generated\\res\\pngs\\debug\\drawable-anydpi-v24\\ic_launcher_foreground.xml"
+    },
+    {
+        "merged": "C:\\Users\\Lee Minyoung\\Documents\\GitHub\\Android-Java-Kotlin\\DogCat\\app\\build\\intermediates\\res\\merged\\debug\\drawable_dog_image.jpeg.flat",
+        "source": "C:\\Users\\Lee Minyoung\\Documents\\GitHub\\Android-Java-Kotlin\\DogCat\\app\\src\\main\\res\\drawable\\dog_image.jpeg"
+    },
+    {
+        "merged": "C:\\Users\\Lee Minyoung\\Documents\\GitHub\\Android-Java-Kotlin\\DogCat\\app\\build\\intermediates\\res\\merged\\debug\\raw_yoon.gif.flat",
+        "source": "C:\\Users\\Lee Minyoung\\Documents\\GitHub\\Android-Java-Kotlin\\DogCat\\app\\src\\main\\res\\raw\\yoon.gif"
+    },
+    {
+        "merged": "C:\\Users\\Lee Minyoung\\Documents\\GitHub\\Android-Java-Kotlin\\DogCat\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi_ic_baseline_menu_24.png.flat",
+        "source": "C:\\Users\\Lee Minyoung\\Documents\\GitHub\\Android-Java-Kotlin\\DogCat\\app\\build\\generated\\res\\pngs\\debug\\drawable-xhdpi\\ic_baseline_menu_24.png"
+    },
+    {
+        "merged": "C:\\Users\\Lee Minyoung\\Documents\\GitHub\\Android-Java-Kotlin\\DogCat\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxhdpi_ic_launcher_round.png.flat",
+        "source": "C:\\Users\\Lee Minyoung\\Documents\\GitHub\\Android-Java-Kotlin\\DogCat\\app\\src\\main\\res\\mipmap-xxhdpi\\ic_launcher_round.png"
+    },
+    {
+        "merged": "C:\\Users\\Lee Minyoung\\Documents\\GitHub\\Android-Java-Kotlin\\DogCat\\app\\build\\intermediates\\res\\merged\\debug\\drawable-anydpi-v21_ic_baseline_restaurant_24.xml.flat",
+        "source": "C:\\Users\\Lee Minyoung\\Documents\\GitHub\\Android-Java-Kotlin\\DogCat\\app\\build\\generated\\res\\pngs\\debug\\drawable-anydpi-v21\\ic_baseline_restaurant_24.xml"
+    },
+    {
+        "merged": "C:\\Users\\Lee Minyoung\\Documents\\GitHub\\Android-Java-Kotlin\\DogCat\\app\\build\\intermediates\\res\\merged\\debug\\drawable-anydpi-v21_ic_baseline_wash_24.xml.flat",
+        "source": "C:\\Users\\Lee Minyoung\\Documents\\GitHub\\Android-Java-Kotlin\\DogCat\\app\\build\\generated\\res\\pngs\\debug\\drawable-anydpi-v21\\ic_baseline_wash_24.xml"
+    },
+    {
+        "merged": "C:\\Users\\Lee Minyoung\\Documents\\GitHub\\Android-Java-Kotlin\\DogCat\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi_ic_baseline_wb_sunny_24.png.flat",
+        "source": "C:\\Users\\Lee Minyoung\\Documents\\GitHub\\Android-Java-Kotlin\\DogCat\\app\\build\\generated\\res\\pngs\\debug\\drawable-xxhdpi\\ic_baseline_wb_sunny_24.png"
+    },
+    {
+        "merged": "C:\\Users\\Lee Minyoung\\Documents\\GitHub\\Android-Java-Kotlin\\DogCat\\app\\build\\intermediates\\res\\merged\\debug\\drawable-anydpi-v21_ic_baseline_house_24.xml.flat",
+        "source": "C:\\Users\\Lee Minyoung\\Documents\\GitHub\\Android-Java-Kotlin\\DogCat\\app\\build\\generated\\res\\pngs\\debug\\drawable-anydpi-v21\\ic_baseline_house_24.xml"
+    },
+    {
+        "merged": "C:\\Users\\Lee Minyoung\\Documents\\GitHub\\Android-Java-Kotlin\\DogCat\\app\\build\\intermediates\\res\\merged\\debug\\drawable_edge.xml.flat",
+        "source": "C:\\Users\\Lee Minyoung\\Documents\\GitHub\\Android-Java-Kotlin\\DogCat\\app\\src\\main\\res\\drawable\\edge.xml"
+    },
+    {
+        "merged": "C:\\Users\\Lee Minyoung\\Documents\\GitHub\\Android-Java-Kotlin\\DogCat\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi_ic_baseline_sports_esports_24.png.flat",
+        "source": "C:\\Users\\Lee Minyoung\\Documents\\GitHub\\Android-Java-Kotlin\\DogCat\\app\\build\\generated\\res\\pngs\\debug\\drawable-mdpi\\ic_baseline_sports_esports_24.png"
+    },
+    {
+        "merged": "C:\\Users\\Lee Minyoung\\Documents\\GitHub\\Android-Java-Kotlin\\DogCat\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ground.jpg.flat",
+        "source": "C:\\Users\\Lee Minyoung\\Documents\\GitHub\\Android-Java-Kotlin\\DogCat\\app\\src\\main\\res\\drawable\\ground.jpg"
+    },
+    {
+        "merged": "C:\\Users\\Lee Minyoung\\Documents\\GitHub\\Android-Java-Kotlin\\DogCat\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi_ic_baseline_house_24.png.flat",
+        "source": "C:\\Users\\Lee Minyoung\\Documents\\GitHub\\Android-Java-Kotlin\\DogCat\\app\\build\\generated\\res\\pngs\\debug\\drawable-ldpi\\ic_baseline_house_24.png"
+    },
+    {
+        "merged": "C:\\Users\\Lee Minyoung\\Documents\\GitHub\\Android-Java-Kotlin\\DogCat\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxxhdpi_ic_baseline_settings_24.png.flat",
+        "source": "C:\\Users\\Lee Minyoung\\Documents\\GitHub\\Android-Java-Kotlin\\DogCat\\app\\build\\generated\\res\\pngs\\debug\\drawable-xxxhdpi\\ic_baseline_settings_24.png"
+    },
+    {
+        "merged": "C:\\Users\\Lee Minyoung\\Documents\\GitHub\\Android-Java-Kotlin\\DogCat\\app\\build\\intermediates\\res\\merged\\debug\\font_sdsamliphopangchebasic.otf.flat",
+        "source": "C:\\Users\\Lee Minyoung\\Documents\\GitHub\\Android-Java-Kotlin\\DogCat\\app\\src\\main\\res\\font\\sdsamliphopangchebasic.otf"
+    },
+    {
+        "merged": "C:\\Users\\Lee Minyoung\\Documents\\GitHub\\Android-Java-Kotlin\\DogCat\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi_ic_baseline_menu_24.png.flat",
+        "source": "C:\\Users\\Lee Minyoung\\Documents\\GitHub\\Android-Java-Kotlin\\DogCat\\app\\build\\generated\\res\\pngs\\debug\\drawable-xxhdpi\\ic_baseline_menu_24.png"
+    },
+    {
+        "merged": "C:\\Users\\Lee Minyoung\\Documents\\GitHub\\Android-Java-Kotlin\\DogCat\\app\\build\\intermediates\\res\\merged\\debug\\drawable_adult_dog.png.flat",
+        "source": "C:\\Users\\Lee Minyoung\\Documents\\GitHub\\Android-Java-Kotlin\\DogCat\\app\\src\\main\\res\\drawable\\adult_dog.png"
+    },
+    {
+        "merged": "C:\\Users\\Lee Minyoung\\Documents\\GitHub\\Android-Java-Kotlin\\DogCat\\app\\build\\intermediates\\res\\merged\\debug\\drawable_baby.png.flat",
+        "source": "C:\\Users\\Lee Minyoung\\Documents\\GitHub\\Android-Java-Kotlin\\DogCat\\app\\src\\main\\res\\drawable\\baby.png"
+    },
+    {
+        "merged": "C:\\Users\\Lee Minyoung\\Documents\\GitHub\\Android-Java-Kotlin\\DogCat\\app\\build\\intermediates\\res\\merged\\debug\\drawable-anydpi-v21_ic_baseline_sports_esports_24.xml.flat",
+        "source": "C:\\Users\\Lee Minyoung\\Documents\\GitHub\\Android-Java-Kotlin\\DogCat\\app\\build\\generated\\res\\pngs\\debug\\drawable-anydpi-v21\\ic_baseline_sports_esports_24.xml"
+    },
+    {
+        "merged": "C:\\Users\\Lee Minyoung\\Documents\\GitHub\\Android-Java-Kotlin\\DogCat\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi_ic_baseline_sports_esports_24.png.flat",
+        "source": "C:\\Users\\Lee Minyoung\\Documents\\GitHub\\Android-Java-Kotlin\\DogCat\\app\\build\\generated\\res\\pngs\\debug\\drawable-xxhdpi\\ic_baseline_sports_esports_24.png"
+    },
+    {
+        "merged": "C:\\Users\\Lee Minyoung\\Documents\\GitHub\\Android-Java-Kotlin\\DogCat\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi_ic_baseline_add_24.png.flat",
+        "source": "C:\\Users\\Lee Minyoung\\Documents\\GitHub\\Android-Java-Kotlin\\DogCat\\app\\build\\generated\\res\\pngs\\debug\\drawable-xxhdpi\\ic_baseline_add_24.png"
+    },
+    {
+        "merged": "C:\\Users\\Lee Minyoung\\Documents\\GitHub\\Android-Java-Kotlin\\DogCat\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi_ic_baseline_wash_24.png.flat",
+        "source": "C:\\Users\\Lee Minyoung\\Documents\\GitHub\\Android-Java-Kotlin\\DogCat\\app\\build\\generated\\res\\pngs\\debug\\drawable-mdpi\\ic_baseline_wash_24.png"
+    },
+    {
+        "merged": "C:\\Users\\Lee Minyoung\\Documents\\GitHub\\Android-Java-Kotlin\\DogCat\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi_ic_baseline_wash_24.png.flat",
+        "source": "C:\\Users\\Lee Minyoung\\Documents\\GitHub\\Android-Java-Kotlin\\DogCat\\app\\build\\generated\\res\\pngs\\debug\\drawable-ldpi\\ic_baseline_wash_24.png"
+    },
+    {
+        "merged": "C:\\Users\\Lee Minyoung\\Documents\\GitHub\\Android-Java-Kotlin\\DogCat\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_splash.xml.flat",
+        "source": "C:\\Users\\Lee Minyoung\\Documents\\GitHub\\Android-Java-Kotlin\\DogCat\\app\\src\\main\\res\\layout\\activity_splash.xml"
+    },
+    {
+        "merged": "C:\\Users\\Lee Minyoung\\Documents\\GitHub\\Android-Java-Kotlin\\DogCat\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi_ic_baseline_wash_24.png.flat",
+        "source": "C:\\Users\\Lee Minyoung\\Documents\\GitHub\\Android-Java-Kotlin\\DogCat\\app\\build\\generated\\res\\pngs\\debug\\drawable-xhdpi\\ic_baseline_wash_24.png"
+    },
+    {
+        "merged": "C:\\Users\\Lee Minyoung\\Documents\\GitHub\\Android-Java-Kotlin\\DogCat\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-mdpi_ic_launcher.png.flat",
+        "source": "C:\\Users\\Lee Minyoung\\Documents\\GitHub\\Android-Java-Kotlin\\DogCat\\app\\src\\main\\res\\mipmap-mdpi\\ic_launcher.png"
+    },
+    {
+        "merged": "C:\\Users\\Lee Minyoung\\Documents\\GitHub\\Android-Java-Kotlin\\DogCat\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi_ic_baseline_storefront_24.png.flat",
+        "source": "C:\\Users\\Lee Minyoung\\Documents\\GitHub\\Android-Java-Kotlin\\DogCat\\app\\build\\generated\\res\\pngs\\debug\\drawable-mdpi\\ic_baseline_storefront_24.png"
+    },
+    {
+        "merged": "C:\\Users\\Lee Minyoung\\Documents\\GitHub\\Android-Java-Kotlin\\DogCat\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi_ic_baseline_wash_24.png.flat",
+        "source": "C:\\Users\\Lee Minyoung\\Documents\\GitHub\\Android-Java-Kotlin\\DogCat\\app\\build\\generated\\res\\pngs\\debug\\drawable-hdpi\\ic_baseline_wash_24.png"
+    },
+    {
+        "merged": "C:\\Users\\Lee Minyoung\\Documents\\GitHub\\Android-Java-Kotlin\\DogCat\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi_ic_baseline_pets_24.png.flat",
+        "source": "C:\\Users\\Lee Minyoung\\Documents\\GitHub\\Android-Java-Kotlin\\DogCat\\app\\build\\generated\\res\\pngs\\debug\\drawable-xxhdpi\\ic_baseline_pets_24.png"
+    },
+    {
+        "merged": "C:\\Users\\Lee Minyoung\\Documents\\GitHub\\Android-Java-Kotlin\\DogCat\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi_ic_baseline_house_24.png.flat",
+        "source": "C:\\Users\\Lee Minyoung\\Documents\\GitHub\\Android-Java-Kotlin\\DogCat\\app\\build\\generated\\res\\pngs\\debug\\drawable-mdpi\\ic_baseline_house_24.png"
+    },
+    {
+        "merged": "C:\\Users\\Lee Minyoung\\Documents\\GitHub\\Android-Java-Kotlin\\DogCat\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi_ic_baseline_add_24.png.flat",
+        "source": "C:\\Users\\Lee Minyoung\\Documents\\GitHub\\Android-Java-Kotlin\\DogCat\\app\\build\\generated\\res\\pngs\\debug\\drawable-xhdpi\\ic_baseline_add_24.png"
+    },
+    {
+        "merged": "C:\\Users\\Lee Minyoung\\Documents\\GitHub\\Android-Java-Kotlin\\DogCat\\app\\build\\intermediates\\res\\merged\\debug\\raw_a.gif.flat",
+        "source": "C:\\Users\\Lee Minyoung\\Documents\\GitHub\\Android-Java-Kotlin\\DogCat\\app\\src\\main\\res\\raw\\a.gif"
+    },
+    {
+        "merged": "C:\\Users\\Lee Minyoung\\Documents\\GitHub\\Android-Java-Kotlin\\DogCat\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi_ic_launcher_background.png.flat",
+        "source": "C:\\Users\\Lee Minyoung\\Documents\\GitHub\\Android-Java-Kotlin\\DogCat\\app\\build\\generated\\res\\pngs\\debug\\drawable-xhdpi\\ic_launcher_background.png"
+    },
+    {
+        "merged": "C:\\Users\\Lee Minyoung\\Documents\\GitHub\\Android-Java-Kotlin\\DogCat\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxhdpi_ic_launcher.png.flat",
+        "source": "C:\\Users\\Lee Minyoung\\Documents\\GitHub\\Android-Java-Kotlin\\DogCat\\app\\src\\main\\res\\mipmap-xxhdpi\\ic_launcher.png"
+    },
+    {
+        "merged": "C:\\Users\\Lee Minyoung\\Documents\\GitHub\\Android-Java-Kotlin\\DogCat\\app\\build\\intermediates\\res\\merged\\debug\\drawable_old.png.flat",
+        "source": "C:\\Users\\Lee Minyoung\\Documents\\GitHub\\Android-Java-Kotlin\\DogCat\\app\\src\\main\\res\\drawable\\old.png"
+    },
+    {
+        "merged": "C:\\Users\\Lee Minyoung\\Documents\\GitHub\\Android-Java-Kotlin\\DogCat\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi_ic_baseline_settings_24.png.flat",
+        "source": "C:\\Users\\Lee Minyoung\\Documents\\GitHub\\Android-Java-Kotlin\\DogCat\\app\\build\\generated\\res\\pngs\\debug\\drawable-mdpi\\ic_baseline_settings_24.png"
+    },
+    {
+        "merged": "C:\\Users\\Lee Minyoung\\Documents\\GitHub\\Android-Java-Kotlin\\DogCat\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxxhdpi_ic_baseline_wash_24.png.flat",
+        "source": "C:\\Users\\Lee Minyoung\\Documents\\GitHub\\Android-Java-Kotlin\\DogCat\\app\\build\\generated\\res\\pngs\\debug\\drawable-xxxhdpi\\ic_baseline_wash_24.png"
+    },
+    {
+        "merged": "C:\\Users\\Lee Minyoung\\Documents\\GitHub\\Android-Java-Kotlin\\DogCat\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi_ic_baseline_house_24.png.flat",
+        "source": "C:\\Users\\Lee Minyoung\\Documents\\GitHub\\Android-Java-Kotlin\\DogCat\\app\\build\\generated\\res\\pngs\\debug\\drawable-xhdpi\\ic_baseline_house_24.png"
+    },
+    {
+        "merged": "C:\\Users\\Lee Minyoung\\Documents\\GitHub\\Android-Java-Kotlin\\DogCat\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_main.xml.flat",
+        "source": "C:\\Users\\Lee Minyoung\\Documents\\GitHub\\Android-Java-Kotlin\\DogCat\\app\\src\\main\\res\\layout\\activity_main.xml"
+    },
+    {
+        "merged": "C:\\Users\\Lee Minyoung\\Documents\\GitHub\\Android-Java-Kotlin\\DogCat\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi_ic_baseline_dehaze_24.png.flat",
+        "source": "C:\\Users\\Lee Minyoung\\Documents\\GitHub\\Android-Java-Kotlin\\DogCat\\app\\build\\generated\\res\\pngs\\debug\\drawable-xxhdpi\\ic_baseline_dehaze_24.png"
+    },
+    {
+        "merged": "C:\\Users\\Lee Minyoung\\Documents\\GitHub\\Android-Java-Kotlin\\DogCat\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi_ic_baseline_wb_sunny_24.png.flat",
+        "source": "C:\\Users\\Lee Minyoung\\Documents\\GitHub\\Android-Java-Kotlin\\DogCat\\app\\build\\generated\\res\\pngs\\debug\\drawable-mdpi\\ic_baseline_wb_sunny_24.png"
+    },
+    {
+        "merged": "C:\\Users\\Lee Minyoung\\Documents\\GitHub\\Android-Java-Kotlin\\DogCat\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_main_setting.xml.flat",
+        "source": "C:\\Users\\Lee Minyoung\\Documents\\GitHub\\Android-Java-Kotlin\\DogCat\\app\\src\\main\\res\\layout\\activity_main_setting.xml"
+    },
+    {
+        "merged": "C:\\Users\\Lee Minyoung\\Documents\\GitHub\\Android-Java-Kotlin\\DogCat\\app\\build\\intermediates\\res\\merged\\debug\\font_sdsamliphopangcheoutline.otf.flat",
+        "source": "C:\\Users\\Lee Minyoung\\Documents\\GitHub\\Android-Java-Kotlin\\DogCat\\app\\src\\main\\res\\font\\sdsamliphopangcheoutline.otf"
+    },
+    {
+        "merged": "C:\\Users\\Lee Minyoung\\Documents\\GitHub\\Android-Java-Kotlin\\DogCat\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi_ic_baseline_sports_esports_24.png.flat",
+        "source": "C:\\Users\\Lee Minyoung\\Documents\\GitHub\\Android-Java-Kotlin\\DogCat\\app\\build\\generated\\res\\pngs\\debug\\drawable-hdpi\\ic_baseline_sports_esports_24.png"
+    },
+    {
+        "merged": "C:\\Users\\Lee Minyoung\\Documents\\GitHub\\Android-Java-Kotlin\\DogCat\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi_ic_baseline_storefront_24.png.flat",
+        "source": "C:\\Users\\Lee Minyoung\\Documents\\GitHub\\Android-Java-Kotlin\\DogCat\\app\\build\\generated\\res\\pngs\\debug\\drawable-xxhdpi\\ic_baseline_storefront_24.png"
+    },
+    {
+        "merged": "C:\\Users\\Lee Minyoung\\Documents\\GitHub\\Android-Java-Kotlin\\DogCat\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-anydpi-v26_ic_launcher_round.xml.flat",
+        "source": "C:\\Users\\Lee Minyoung\\Documents\\GitHub\\Android-Java-Kotlin\\DogCat\\app\\src\\main\\res\\mipmap-anydpi-v26\\ic_launcher_round.xml"
+    },
+    {
+        "merged": "C:\\Users\\Lee Minyoung\\Documents\\GitHub\\Android-Java-Kotlin\\DogCat\\app\\build\\intermediates\\res\\merged\\debug\\drawable_baby_dog.png.flat",
+        "source": "C:\\Users\\Lee Minyoung\\Documents\\GitHub\\Android-Java-Kotlin\\DogCat\\app\\src\\main\\res\\drawable\\baby_dog.png"
+    },
+    {
+        "merged": "C:\\Users\\Lee Minyoung\\Documents\\GitHub\\Android-Java-Kotlin\\DogCat\\app\\build\\intermediates\\res\\merged\\debug\\drawable-anydpi-v21_ic_baseline_settings_24.xml.flat",
+        "source": "C:\\Users\\Lee Minyoung\\Documents\\GitHub\\Android-Java-Kotlin\\DogCat\\app\\build\\generated\\res\\pngs\\debug\\drawable-anydpi-v21\\ic_baseline_settings_24.xml"
+    },
+    {
+        "merged": "C:\\Users\\Lee Minyoung\\Documents\\GitHub\\Android-Java-Kotlin\\DogCat\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_init_pet.xml.flat",
+        "source": "C:\\Users\\Lee Minyoung\\Documents\\GitHub\\Android-Java-Kotlin\\DogCat\\app\\src\\main\\res\\layout\\activity_init_pet.xml"
+    },
+    {
+        "merged": "C:\\Users\\Lee Minyoung\\Documents\\GitHub\\Android-Java-Kotlin\\DogCat\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi_ic_baseline_wb_sunny_24.png.flat",
+        "source": "C:\\Users\\Lee Minyoung\\Documents\\GitHub\\Android-Java-Kotlin\\DogCat\\app\\build\\generated\\res\\pngs\\debug\\drawable-hdpi\\ic_baseline_wb_sunny_24.png"
+    },
+    {
+        "merged": "C:\\Users\\Lee Minyoung\\Documents\\GitHub\\Android-Java-Kotlin\\DogCat\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_info.xml.flat",
+        "source": "C:\\Users\\Lee Minyoung\\Documents\\GitHub\\Android-Java-Kotlin\\DogCat\\app\\src\\main\\res\\layout\\activity_info.xml"
+    },
+    {
+        "merged": "C:\\Users\\Lee Minyoung\\Documents\\GitHub\\Android-Java-Kotlin\\DogCat\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxxhdpi_ic_baseline_pets_24.png.flat",
+        "source": "C:\\Users\\Lee Minyoung\\Documents\\GitHub\\Android-Java-Kotlin\\DogCat\\app\\build\\generated\\res\\pngs\\debug\\drawable-xxxhdpi\\ic_baseline_pets_24.png"
+    },
+    {
+        "merged": "C:\\Users\\Lee Minyoung\\Documents\\GitHub\\Android-Java-Kotlin\\DogCat\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi_ic_baseline_arrow_back_24.png.flat",
+        "source": "C:\\Users\\Lee Minyoung\\Documents\\GitHub\\Android-Java-Kotlin\\DogCat\\app\\build\\generated\\res\\pngs\\debug\\drawable-xhdpi\\ic_baseline_arrow_back_24.png"
+    },
+    {
+        "merged": "C:\\Users\\Lee Minyoung\\Documents\\GitHub\\Android-Java-Kotlin\\DogCat\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi_ic_baseline_settings_24.png.flat",
+        "source": "C:\\Users\\Lee Minyoung\\Documents\\GitHub\\Android-Java-Kotlin\\DogCat\\app\\build\\generated\\res\\pngs\\debug\\drawable-xhdpi\\ic_baseline_settings_24.png"
+    },
+    {
+        "merged": "C:\\Users\\Lee Minyoung\\Documents\\GitHub\\Android-Java-Kotlin\\DogCat\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-anydpi-v26_ic_launcher.xml.flat",
+        "source": "C:\\Users\\Lee Minyoung\\Documents\\GitHub\\Android-Java-Kotlin\\DogCat\\app\\src\\main\\res\\mipmap-anydpi-v26\\ic_launcher.xml"
+    },
+    {
+        "merged": "C:\\Users\\Lee Minyoung\\Documents\\GitHub\\Android-Java-Kotlin\\DogCat\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi_ic_launcher.png.flat",
+        "source": "C:\\Users\\Lee Minyoung\\Documents\\GitHub\\Android-Java-Kotlin\\DogCat\\app\\src\\main\\res\\mipmap-xhdpi\\ic_launcher.png"
+    },
+    {
+        "merged": "C:\\Users\\Lee Minyoung\\Documents\\GitHub\\Android-Java-Kotlin\\DogCat\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi_ic_baseline_arrow_back_24.png.flat",
+        "source": "C:\\Users\\Lee Minyoung\\Documents\\GitHub\\Android-Java-Kotlin\\DogCat\\app\\build\\generated\\res\\pngs\\debug\\drawable-xxhdpi\\ic_baseline_arrow_back_24.png"
+    },
+    {
+        "merged": "C:\\Users\\Lee Minyoung\\Documents\\GitHub\\Android-Java-Kotlin\\DogCat\\app\\build\\intermediates\\res\\merged\\debug\\drawable-anydpi-v21_ic_baseline_menu_24.xml.flat",
+        "source": "C:\\Users\\Lee Minyoung\\Documents\\GitHub\\Android-Java-Kotlin\\DogCat\\app\\build\\generated\\res\\pngs\\debug\\drawable-anydpi-v21\\ic_baseline_menu_24.xml"
+    },
+    {
+        "merged": "C:\\Users\\Lee Minyoung\\Documents\\GitHub\\Android-Java-Kotlin\\DogCat\\app\\build\\intermediates\\res\\merged\\debug\\drawable_adult.png.flat",
+        "source": "C:\\Users\\Lee Minyoung\\Documents\\GitHub\\Android-Java-Kotlin\\DogCat\\app\\src\\main\\res\\drawable\\adult.png"
+    },
+    {
+        "merged": "C:\\Users\\Lee Minyoung\\Documents\\GitHub\\Android-Java-Kotlin\\DogCat\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi_ic_baseline_dehaze_24.png.flat",
+        "source": "C:\\Users\\Lee Minyoung\\Documents\\GitHub\\Android-Java-Kotlin\\DogCat\\app\\build\\generated\\res\\pngs\\debug\\drawable-hdpi\\ic_baseline_dehaze_24.png"
+    },
+    {
+        "merged": "C:\\Users\\Lee Minyoung\\Documents\\GitHub\\Android-Java-Kotlin\\DogCat\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi_ic_baseline_wash_24.png.flat",
+        "source": "C:\\Users\\Lee Minyoung\\Documents\\GitHub\\Android-Java-Kotlin\\DogCat\\app\\build\\generated\\res\\pngs\\debug\\drawable-xxhdpi\\ic_baseline_wash_24.png"
+    },
+    {
+        "merged": "C:\\Users\\Lee Minyoung\\Documents\\GitHub\\Android-Java-Kotlin\\DogCat\\app\\build\\intermediates\\res\\merged\\debug\\anim_fade_out.xml.flat",
+        "source": "C:\\Users\\Lee Minyoung\\Documents\\GitHub\\Android-Java-Kotlin\\DogCat\\app\\src\\main\\res\\anim\\fade_out.xml"
+    },
+    {
+        "merged": "C:\\Users\\Lee Minyoung\\Documents\\GitHub\\Android-Java-Kotlin\\DogCat\\app\\build\\intermediates\\res\\merged\\debug\\drawable_background_withcloud.jpg.flat",
+        "source": "C:\\Users\\Lee Minyoung\\Documents\\GitHub\\Android-Java-Kotlin\\DogCat\\app\\src\\main\\res\\drawable\\background_withcloud.jpg"
+    },
+    {
+        "merged": "C:\\Users\\Lee Minyoung\\Documents\\GitHub\\Android-Java-Kotlin\\DogCat\\app\\build\\intermediates\\res\\merged\\debug\\drawable_old_dog.png.flat",
+        "source": "C:\\Users\\Lee Minyoung\\Documents\\GitHub\\Android-Java-Kotlin\\DogCat\\app\\src\\main\\res\\drawable\\old_dog.png"
+    },
+    {
+        "merged": "C:\\Users\\Lee Minyoung\\Documents\\GitHub\\Android-Java-Kotlin\\DogCat\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi_ic_baseline_wb_sunny_24.png.flat",
+        "source": "C:\\Users\\Lee Minyoung\\Documents\\GitHub\\Android-Java-Kotlin\\DogCat\\app\\build\\generated\\res\\pngs\\debug\\drawable-ldpi\\ic_baseline_wb_sunny_24.png"
+    },
+    {
+        "merged": "C:\\Users\\Lee Minyoung\\Documents\\GitHub\\Android-Java-Kotlin\\DogCat\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi_ic_launcher_background.png.flat",
+        "source": "C:\\Users\\Lee Minyoung\\Documents\\GitHub\\Android-Java-Kotlin\\DogCat\\app\\build\\generated\\res\\pngs\\debug\\drawable-ldpi\\ic_launcher_background.png"
+    },
+    {
+        "merged": "C:\\Users\\Lee Minyoung\\Documents\\GitHub\\Android-Java-Kotlin\\DogCat\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi_ic_baseline_menu_24.png.flat",
+        "source": "C:\\Users\\Lee Minyoung\\Documents\\GitHub\\Android-Java-Kotlin\\DogCat\\app\\build\\generated\\res\\pngs\\debug\\drawable-mdpi\\ic_baseline_menu_24.png"
+    },
+    {
+        "merged": "C:\\Users\\Lee Minyoung\\Documents\\GitHub\\Android-Java-Kotlin\\DogCat\\app\\build\\intermediates\\res\\merged\\debug\\drawable_yard.png.flat",
+        "source": "C:\\Users\\Lee Minyoung\\Documents\\GitHub\\Android-Java-Kotlin\\DogCat\\app\\src\\main\\res\\drawable\\yard.png"
+    },
+    {
+        "merged": "C:\\Users\\Lee Minyoung\\Documents\\GitHub\\Android-Java-Kotlin\\DogCat\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi_ic_baseline_restaurant_24.png.flat",
+        "source": "C:\\Users\\Lee Minyoung\\Documents\\GitHub\\Android-Java-Kotlin\\DogCat\\app\\build\\generated\\res\\pngs\\debug\\drawable-xhdpi\\ic_baseline_restaurant_24.png"
+    }
+]
