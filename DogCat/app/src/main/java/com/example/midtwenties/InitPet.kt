@@ -36,31 +36,29 @@ class InitPet : AppCompatActivity() {
         var checkdog=0;
 
         cat_preview.setOnClickListener {
-            if(checkcat==0){
-                Glide.with(this).load(R.raw.yoon).into(cat_image)
+            if(checkcat==0 || checkdog==1) {
+                Glide.with(this).load(R.raw.yoon).into(imageView3)
+                imageView3.visibility=View.VISIBLE
                 checkcat=1
+                checkdog=0
             }
             else{
-                cat_image.setImageResource(R.drawable.yoon1)
+                imageView3.visibility=View.INVISIBLE
                 checkcat=0
             }
         }
         dog_preview.setOnClickListener {
-            if(checkdog==0) {
-                Glide.with(this).load(R.raw.a).into(dog_image)
+            if(checkdog==0 || checkcat==1) {
+                Glide.with(this).load(R.raw.a).into(imageView3)
+                imageView3.visibility=View.VISIBLE
                 checkdog=1
+                checkcat=0
             }
             else{
-                dog_image.setImageResource(R.drawable.yoon2)
+                imageView3.visibility=View.INVISIBLE
                 checkdog=0
             }
         }
-
-        testbutton.setOnClickListener {
-            if(imageView3.visibility==View.VISIBLE) imageView3.visibility=View.INVISIBLE
-            else imageView3.visibility=View.VISIBLE
-        }
-
     }
 
     fun saveToInnerStorage(text: String, filename: String){
