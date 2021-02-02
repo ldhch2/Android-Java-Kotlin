@@ -4,18 +4,25 @@
 
     <application
         android:allowBackup="true"
+        android:hardwareAccelerated="false"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.NoActionBar">
+
         <activity android:name="com.example.midtwenties.SplashActivity">
+        </activity>
+        <activity android:name=".PetState">
+
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".FeedActivity" />
+
         <activity android:name=".InitPet"></activity>
         <activity android:name=".InfoActivity"></activity>
         <activity android:name=".TermsOfService"></activity>
@@ -25,6 +32,8 @@
         </activity>
         <activity android:name=".MainActivity"></activity>
         <activity android:name=".MainSetting"></activity>
+
+
     </application>
 
 </manifest>
