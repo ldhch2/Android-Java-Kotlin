@@ -16,6 +16,12 @@ class Petclass(val name: String, val kind: Int) { // kind: 고양이 1, 강아�
     fun filename():String{
         return String.format("%s.txt",this.name)
     }
+
+    fun checkstate(){
+        this.hunger-=this.character.hunger_weight.toInt()
+        this.wash-=this.character.wash_weight.toInt()
+        this.play-=this.character.play_weight.toInt()
+    }
 }
 
 open abstract class Charactor{
