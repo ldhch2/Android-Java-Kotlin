@@ -27,6 +27,7 @@ open abstract class Charactor{
 }
 
 class Perfect:Charactor(){
+
     override var type: Int=0
     override var hunger_weight:Float=1.0F
     override var wash_weight:Float=1.0F
