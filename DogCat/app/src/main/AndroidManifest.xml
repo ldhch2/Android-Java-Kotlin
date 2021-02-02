@@ -9,19 +9,22 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.NoActionBar">
-        <activity android:name="com.example.midtwenties.SplashActivity">
+        <activity android:name=".FeedStore"></activity>
+        <activity android:name=".BowlStore" />
+        <activity android:name=".HouseStore" />
+        <activity android:name=".ToyStore" />
+        <activity android:name=".SplashActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".InitPet"></activity>
-        <activity android:name=".InfoActivity"></activity>
-        <activity android:name=".TermsOfService"></activity>
-
-        <activity android:name=".MainActivity"></activity>
-        <activity android:name=".MainSetting"></activity>
+        <activity android:name=".InitPet" />
+        <activity android:name=".InfoActivity" />
+        <activity android:name=".TermsOfService" />
+        <activity android:name=".MainActivity" />
+        <activity android:name=".MainSetting" />
     </application>
 
 </manifest>
