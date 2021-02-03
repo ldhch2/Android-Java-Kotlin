@@ -10,7 +10,6 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.NoActionBar">
-        <activity android:name=".InfoNext"></activity>
         <activity android:name=".SplashActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -20,8 +19,8 @@
         </activity>
         <activity android:name=".InitPet" />
         <activity android:name=".InfoActivity" />
-        <activity android:name=".InfoNext" />
         <activity android:name=".TermsOfService" />
+        <activity android:name=".InfoNext"/>
         <activity android:name=".YardActivity" />
         <activity android:name=".MainActivity" />
         <activity android:name=".MainSetting" />

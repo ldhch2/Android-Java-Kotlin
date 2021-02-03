@@ -26,7 +26,7 @@ class TermsOfService : AppCompatActivity() {
         nextButton.setOnClickListener {
             if(checkBox1.isChecked || checkBox2.isChecked) {
                 saveToInnerStorage(checkBox1.isChecked.toString(),"check.txt")
-                startActivity(Intent(this, YardActivity::class.java))
+                startActivity(Intent(this, InfoNext::class.java))
             }
             else Toast.makeText(applicationContext,"선택해주세요.",Toast.LENGTH_SHORT).show()
         }

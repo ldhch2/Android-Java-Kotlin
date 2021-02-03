@@ -22,14 +22,11 @@ class InfoNext : AppCompatActivity() {
     var arrayNature = arrayOf("지나치게 경계함", "지나치게 소심함", "지나치게 까다로움", "지나치게 활발함", "지나치게 게으름")
 
     override fun onCreate(savedInstanceState: Bundle?) {
-        //Imageview initPet = findViewById(R.id.initPet)
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_info_next)
         
-        Glide.with(this).load(R.drawable.doggy).into(imagePet)
+        Glide.with(this).load(R.raw.doggy).into(imagePet)
         saveToInnerStorage("true", filename)
-        startActivity(Intent(this, YardActivity::class.java))
-        finish()
     }
 
 
