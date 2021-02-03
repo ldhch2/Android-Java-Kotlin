@@ -20,7 +20,7 @@ class PetState : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_pet_state)
+        setContentView(R.layout.activity_main)
 
         val stateAdapter=StateAdapter(this, stateList)
         stateRecyclerView.adapter = stateAdapter
