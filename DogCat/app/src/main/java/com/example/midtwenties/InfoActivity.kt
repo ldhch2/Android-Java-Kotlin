@@ -55,7 +55,7 @@ class InfoActivity : AppCompatActivity() {
             else {
                 val type=loadFromInnerStorage("pet.txt")
 
-                var first = petclass(petName.text.toString(),type.toInt());
+                var first = Petclass(petName.text.toString(),type.toInt());
                 first.gender= button2
                 first.month=button1
 
