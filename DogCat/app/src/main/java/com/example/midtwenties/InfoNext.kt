@@ -23,9 +23,10 @@ class InfoNext : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         //Imageview initPet = findViewById(R.id.initPet)
-        Glide.with(this).load(R.drawable.doggy).into(imagePet)
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_info_next)
+        
+        Glide.with(this).load(R.drawable.doggy).into(imagePet)
         saveToInnerStorage("true", filename)
         startActivity(Intent(this, YardActivity::class.java))
         finish()
