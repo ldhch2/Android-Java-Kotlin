@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.drawerlayout.widget.DrawerLayout android:id="@+id/drawerLayout"
+<androidx.drawerlayout.widget.DrawerLayout android:id="@+id/drawerState"
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -54,87 +54,91 @@
             app:layout_constraintTop_toTopOf="parent" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 
-    <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:id="@+id/fabMain"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="end|bottom"
-        android:layout_margin="16dp"
-        android:src="@drawable/ic_baseline_menu_24"
-        app:backgroundTint="#88D0F1"
-        app:elevation="6dp"
-        app:fabSize="normal"
-        app:pressedTranslationZ="12dp"
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/fabMain"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end|bottom"
+            android:layout_margin="16dp"
+            android:src="@drawable/ic_baseline_menu_24"
+            app:backgroundTint="#434343"
+            app:elevation="6dp"
+            app:fabSize="normal"
+            app:pressedTranslationZ="12dp"
 
-        />
+            />
 
-    <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:id="@+id/fab_sub1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="end|bottom"
-        android:layout_marginRight="20dp"
-        android:layout_marginBottom="80dp"
-        android:src="@drawable/ic_baseline_storefront_24"
-        android:visibility="invisible"
-        app:backgroundTint="#ffffff"
-        app:borderWidth="0dp"
-        app:elevation="6dp"
-        app:fabSize="normal"
-        app:pressedTranslationZ="12dp"
-        tools:ignore="MissingConstraints,VectorDrawableCompat" />
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/fab_sub1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end|bottom"
+            android:layout_marginRight="20dp"
+            android:layout_marginBottom="80dp"
+            android:backgroundTint="#8E8E8E"
+            android:src="@drawable/ic_baseline_storefront_24"
+            android:tint="#ffffff"
+            android:visibility="invisible"
+            app:borderWidth="0dp"
+            app:elevation="6dp"
+            app:fabSize="normal"
+            app:pressedTranslationZ="12dp"
+            tools:ignore="MissingConstraints,VectorDrawableCompat" />
 
-    <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:id="@+id/fab_sub2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="end|bottom"
-        android:layout_marginRight="20dp"
-        android:layout_marginBottom="130dp"
-        android:backgroundTint="#ffffff"
-        android:visibility="invisible"
-        app:borderWidth="0dp"
-        app:fabSize="normal"
-        app:srcCompat="@drawable/ic_baseline_sports_esports_24"
-        tools:ignore="MissingConstraints,VectorDrawableCompat" />
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/fab_sub2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end|bottom"
+            android:layout_marginRight="20dp"
+            android:layout_marginBottom="130dp"
+            android:backgroundTint="#8E8E8E"
+            android:tint="#ffffff"
+            android:visibility="invisible"
+            app:borderWidth="0dp"
+            app:fabSize="normal"
+            app:srcCompat="@drawable/ic_baseline_sports_esports_24"
+            tools:ignore="MissingConstraints,VectorDrawableCompat" />
 
-    <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:id="@+id/fab_sub3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_above="@+id/showState"
-        android:layout_gravity="end|bottom"
-        android:layout_marginRight="20dp"
-        android:layout_marginBottom="180dp"
-        android:backgroundTint="#ffffff"
-        android:visibility="invisible"
-        app:borderWidth="0dp"
-        app:fabSize="normal"
-        app:srcCompat="@drawable/ic_baseline_pets_24"
-        tools:ignore="MissingConstraints,VectorDrawableCompat" />
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/fab_sub3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/fabMain"
+            android:layout_gravity="end|bottom"
+            android:layout_marginRight="20dp"
+            android:layout_marginBottom="230dp"
+            android:backgroundTint="#8E8E8E"
+            android:tint="#ffffff"
+            android:visibility="invisible"
+            app:borderWidth="0dp"
+            app:fabSize="normal"
+            app:srcCompat="@drawable/ic_baseline_settings_24"
+            tools:ignore="MissingConstraints,VectorDrawableCompat" />
 
-    <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:id="@+id/showState"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_above="@+id/fabMain"
-        android:layout_gravity="end|bottom"
-        android:layout_marginRight="20dp"
-        android:layout_marginBottom="230dp"
-        android:backgroundTint="#8E8E8E"
-        android:tint="#ffffff"
-        android:visibility="visible"
-        app:borderWidth="0dp"
-        app:fabSize="normal"
-        app:srcCompat="@drawable/ic_baseline_settings_24"
-        tools:ignore="MissingConstraints,VectorDrawableCompat" />
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/showState"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/showState"
+            android:layout_gravity="end|bottom"
+            android:layout_marginRight="20dp"
+            android:layout_marginBottom="180dp"
+            android:backgroundTint="#8E8E8E"
+            android:tint="#ffffff"
+            android:visibility="invisible"
+            app:borderWidth="0dp"
+            app:fabSize="normal"
+            app:srcCompat="@drawable/ic_baseline_pets_24"
+            tools:ignore="MissingConstraints,VectorDrawableCompat" />
 </androidx.coordinatorlayout.widget.CoordinatorLayout>
 
     <androidx.constraintlayout.widget.ConstraintLayout
         xmlns:app="http://schemas.android.com/apk/res-auto"
         xmlns:tools="http://schemas.android.com/tools"
         android:orientation="vertical"
-        android:layout_width="280dp"
+        android:layout_width="260dp"
         android:layout_height="match_parent"
         android:weightSum="100"
         android:layout_gravity="start"
@@ -150,6 +154,7 @@
             android:textColor="#777777"
             android:textStyle="bold"
             android:layout_marginTop="20dp"
+            android:layout_marginBottom="20dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"

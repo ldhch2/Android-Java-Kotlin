@@ -70,7 +70,7 @@ class MainActivity : AppCompatActivity() {
                 Toast.makeText(this,"click",Toast.LENGTH_LONG).show()
             }
             showState.setOnClickListener() {
-                drawerLayout.openDrawer(GravityCompat.START)
+                drawerState.openDrawer(GravityCompat.START)
             }
         }
 
