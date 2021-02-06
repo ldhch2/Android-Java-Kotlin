@@ -8,9 +8,14 @@ import android.widget.Toast
 import kotlinx.android.synthetic.main.activity_terms_of_service.*
 
 class TermsOfService : AppCompatActivity() {
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_terms_of_service)
+
+
+
+        val next=Intent(this,YardActivity::class.java)
 
         checkBox1.isChecked=false;
         checkBox2.isChecked=false;
@@ -25,8 +30,14 @@ class TermsOfService : AppCompatActivity() {
 
         nextButton.setOnClickListener {
             if(checkBox1.isChecked || checkBox2.isChecked) {
+
+                val get=intent.getStringExtra("정보")
+
                 saveToInnerStorage(checkBox1.isChecked.toString(),"check.txt")
-                startActivity(Intent(this, InfoNext::class.java))
+                saveToInnerStorage("True","init.txt")
+                val name= get!!.split(" ")
+                saveToInnerStorage(String.format("%s.txt",name[0]),"pet.txt")
+                saveToInnerStorage(get,String.format("%s.txt",name[0]))
                 startActivity(Intent(this, YardActivity::class.java))
             }
             else Toast.makeText(applicationContext,"선택해주세요.",Toast.LENGTH_SHORT).show()

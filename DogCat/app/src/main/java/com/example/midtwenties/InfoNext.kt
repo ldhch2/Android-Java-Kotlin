@@ -12,21 +12,28 @@ import java.util.Random
 import android.view.View
 import kotlinx.android.synthetic.main.activity_info_next.*
 
-
 class InfoNext : AppCompatActivity() {
 
     val random = Random()
     val num = random.nextInt(5)
     val filename = "init.txt"
 
-    var arrayNature = arrayOf("지나치게 경계함", "지나치게 소심함", "지나치게 까다로움", "지나치게 활발함", "지나치게 게으름")
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_info_next)
-        
+
+
+        val next=Intent(this,TermsOfService::class.java)
+
         Glide.with(this).load(R.raw.doggy).into(imagePet)
-        saveToInnerStorage("true", filename)
+
+        val get=intent.getStringExtra("정보")
+        next.putExtra("정보",String.format("%s %d 0 0 0",get,num))
+
+        Glide.with(this).load(R.raw.doggy).into(imagePet)
+        button10.setOnClickListener {
+            startActivity(next)
+        }
     }
 
 
