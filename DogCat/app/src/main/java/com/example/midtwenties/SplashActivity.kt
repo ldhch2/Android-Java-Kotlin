@@ -22,7 +22,7 @@ class SplashActivity : AppCompatActivity() {
         setContentView(R.layout.activity_splash)
         try {
             if (loadFromInnerStorage(filename).equals("false")) {
-                startActivity(Intent(this, YardActivity::class.java))
+                startActivity(Intent(this, MainActivity::class.java))
 
             } else {
                 startActivity(Intent(this, InitPet::class.java))
