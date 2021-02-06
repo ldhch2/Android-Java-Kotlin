@@ -10,42 +10,27 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.NoActionBar">
-<<<<<<< HEAD
-        <activity android:name=".InfoNext"></activity>
-        <activity android:name=".SplashActivity">
-=======
+
+        <activity android:name=".SplashActivity"/>
         <activity android:name=".FeedStore"></activity>
         <activity android:name=".BowlStore" />
         <activity android:name=".HouseStore" />
         <activity android:name=".ToyStore" />
-        <activity android:name=".SplashActivity">
-
-        </activity>
-        <activity android:name=".InfoNext"></activity>
-        <activity android:name=".SplashActivity"></activity>
         <activity android:name=".InitPet" />
         <activity android:name=".InfoActivity" />
-        <activity android:name=".TermsOfService" />
         <activity android:name=".MainActivity" />
         <activity android:name=".MainSetting" />
+
+
         <activity android:name=".MyStore">
->>>>>>> yyy
+
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-<<<<<<< HEAD
-        <activity android:name=".InitPet" />
-        <activity android:name=".InfoActivity" />
-        <activity android:name=".InfoNext" />
-        <activity android:name=".TermsOfService" />
         <activity android:name=".YardActivity" />
-        <activity android:name=".MainActivity" />
-        <activity android:name=".MainSetting" />
-=======
->>>>>>> yyy
     </application>
 
 </manifest>

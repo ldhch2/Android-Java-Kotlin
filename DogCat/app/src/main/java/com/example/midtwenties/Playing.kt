@@ -8,6 +8,7 @@ import android.view.MotionEvent
 import android.view.View
 import android.view.ViewGroup
 import android.widget.*
+import androidx.core.content.ContextCompat
 import com.bumptech.glide.Glide
 import kotlinx.android.synthetic.main.activity_playing.*
 import java.nio.file.Files.list
@@ -24,45 +25,22 @@ class Playing : AppCompatActivity() {
 
         }
 
-        val list = findViewById<ListView>(R.id.list)
+       val items = mutableListOf<ListViewItem>()
 
-        list.adapter = MyCustomAdapter(this)
+        items.add(ListViewItem(ContextCompat.getDrawable(this,R.drawable.adult_dog)!!, "aa","aa"))
+        items.add(ListViewItem(ContextCompat.getDrawable(this,R.drawable.adult_dog)!!, "aa","aa"))
+        items.add(ListViewItem(ContextCompat.getDrawable(this,R.drawable.adult_dog)!!, "aa","aa"))
 
-        val apater = ArrayAdapter(this, android.R.layout.list,arrayOfList)
+        val adapter = ListViewAdapter(items)
+        list.adapter = adapter
 
-        list.onItemClickListener = AdapterView.OnItemClickListener{ parent,view,position,id ->
-            val selectItem = parent.getItemAtPosition(position) as String
-            selectName.text = selectItem
-
-        }
-    }
-
-    private class MyCustomAdapter(context: Context) : BaseAdapter(){
-        private val mContext: Context
-        private val names = arrayListOf<String>(
-                "A","B","C"
-        )
-
-        init {
-            mContext = context
-        }
-        override fun getCount(): Int{
-            return names.size
-        }
-
-        override fun getItemId(posision: Int): Long{
-            return position.toLong()
-        }
-        override fun getItem(position: Int): Any{
-            val selectItem = names.get(position)
-            return selectItem
-        }
-        override fun getView(position: Int, view: View?, viewGroup: ViewGroup?):View {
-            val layoutInflater = LayoutInflater.from(mContext)
-            val rowMain = layoutInflater.inflate(R.layout.activity_playing.viewGroup,false)
-
+        list.setOnItemClickListener{parent: AdapterView<*>, view: View, position: Int, id: Long ->
+            val item = parent.getItemAtPosition(position) as ListViewItem
 
         }
 
     }
+
+
+
 }
