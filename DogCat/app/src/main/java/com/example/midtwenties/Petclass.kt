@@ -6,32 +6,27 @@ class PetClass (info: String) { // kind: 고양이 1, 강아지 2
     var month=0
     var gender=0 // gender: 여자 1, 남자 2
     var character:Character=Perfect()// 성격에 따라 번호 매겨줘
-    var food=0
-    var wash=0
-    var play=0
-    var sleep=0
-    var happy=0
-    var health=0
-    var mood=0
-
+    var state:PetState= PetState()
     init {
         val arr=info.split(" ")
         this.name=arr[0]
         this.kind=arr[1].toInt()
         this.month=arr[2].toInt()
         this.gender=arr[3].toInt()
+
         val num=arr[4].toInt()
-        this.food=arr[5].toInt()
-        this.wash=arr[6].toInt()
-        this.play=arr[7].toInt()
-        this.sleep=arr[8].toInt()
-        this.happy=arr[9].toInt()
-        this.health=arr[10].toInt()
-        this.mood=arr[11].toInt()
+
+        character = if (num==1) Perfect()
+        else if (num==2) Foodfight()
+        else if (num==3) Naughty()
+        else if (num==4) Cleaner()
+        else Perfect()
+
+        state= PetState(arr[5].toInt(),arr[6].toInt(),arr[7].toInt(),arr[8].toInt(),arr[9].toInt(),arr[10].toInt(),arr[11].toInt())
     }
 
     fun saveinfo():String{
-        return String.format("%s %d %d %d %d %d %d %d %d %d %d %d",this.name,this.kind,this.month,this.gender,this.character.type,this.food,this.wash,this.play,this.sleep,this.happy,this.health,this.mood)
+        return String.format("%s %d %d %d %d %s",this.name,this.kind,this.month,this.gender,this.character.type,state.info())
     }
 
     fun filename():String{
@@ -84,4 +79,12 @@ class Cleaner:Character(){
     override var hunger_weight:Float=1.0F
     override var wash_weight:Float=3.0F
     override var play_weight:Float=1.0F
+}
+
+
+class PetState(var food:Int=0,var wash:Int=0,var play:Int=0,var sleep:Int=0,var happy:Int=0,var health:Int=0,var mood:Int=0){
+
+    fun info():String{
+        return String.format("%d %d %d %d %d %d %d",this.food,this.wash,this.play,this.sleep,this.happy,this.health,this.mood)
+    }
 }
