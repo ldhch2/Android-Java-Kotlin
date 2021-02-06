@@ -25,6 +25,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e89668a4-7f1e-45ff-91dc-78cfe3ac6a18" name="Default Changelist" comment="">
+<<<<<<< HEAD
       <change afterPath="$PROJECT_DIR$/app/src/main/java/com/example/midtwenties/InfoNext.kt" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_info_next.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/6.5/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.5/fileHashes/fileHashes.lock" afterDir="false" />
@@ -32,6 +33,29 @@
       <change beforePath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/midtwenties/infoNext.kt" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/local.properties" beforeDir="false" afterPath="$PROJECT_DIR$/local.properties" afterDir="false" />
+=======
+<<<<<<< Updated upstream
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/example/midtwenties/BowlStore.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/example/midtwenties/FeedStore.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/example/midtwenties/HouseStore.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/example/midtwenties/ToyStore.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_bowl_store.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_feed_store.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_house_store.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_toy_store.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/6.5/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.5/fileHashes/fileHashes.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/midtwenties/MyStore.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/midtwenties/MyStore.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_my_store.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_my_store.xml" afterDir="false" />
+=======
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" afterDir="false" />
+>>>>>>> Stashed changes
+>>>>>>> yyy
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -61,7 +85,11 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../../App_programming" />
   </component>
   <component name="RecentsManager">
+<<<<<<< HEAD
     <key name="android.template.-415758023">
+=======
+    <key name="android.template.-2099567759">
+>>>>>>> yyy
       <recent name="com.example.midtwenties" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
@@ -161,6 +189,7 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
+<<<<<<< HEAD
     <state x="671" y="320" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1612208086704">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -170,6 +199,16 @@
     </state>
     <state x="549" y="167" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1612071876375" />
     <state x="686" y="211" key="FileChooserDialogImpl/0.0.1920.1040/1920.54.1024.1240@0.0.1920.1040" timestamp="1612357892473" />
+=======
+    <state x="480" y="0" key="#app" timestamp="1612193111875">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="480" y="0" key="#app/0.0.1536.824@0.0.1536.824" timestamp="1612193111875" />
+    <state x="549" y="167" key="FileChooserDialogImpl" timestamp="1612193218984">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="549" y="167" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1612193218984" />
+>>>>>>> yyy
     <state width="1491" height="210" key="GridCell.Tab.0.bottom" timestamp="1612071224420">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -186,5 +225,9 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state width="1491" height="210" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1612071224420" />
+    <state x="425" y="187" key="run.anything.popup" timestamp="1612199908201">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="425" y="187" key="run.anything.popup/0.0.1536.824@0.0.1536.824" timestamp="1612199908201" />
   </component>
 </project>
