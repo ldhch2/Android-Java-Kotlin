@@ -17,7 +17,6 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-<<<<<<< Updated upstream
         <activity android:name=".InitPet" />
         <activity android:name=".InfoActivity" />
         <activity android:name=".TermsOfService" />
@@ -25,14 +24,6 @@
         <activity android:name=".YardActivity" />
         <activity android:name=".MainActivity" />
         <activity android:name=".MainSetting" />
-=======
-        <activity android:name=".InitPet"/>
-        <activity android:name=".InfoActivity"/>
-        <activity android:name=".TermsOfService"/>
-        <activity android:name=".YardActivity"/>
-        <activity android:name=".MainActivity"/>
-        <activity android:name=".MainSetting"/>
->>>>>>> Stashed changes
     </application>
 
 </manifest>
