@@ -82,9 +82,9 @@ class Cleaner:Character(){
 }
 
 
-class PetState(var food:Int=0,var wash:Int=0,var play:Int=0,var sleep:Int=0,var happy:Int=0,var health:Int=0,var mood:Int=0){
+class PetState(var full:Int=0,var clean:Int=0,var excited:Int=0,var awake:Int=0,var happy:Int=0,var healthy:Int=0,var relaxed:Int=0){
 
     fun info():String{
-        return String.format("%d %d %d %d %d %d %d",this.food,this.wash,this.play,this.sleep,this.happy,this.health,this.mood)
+        return String.format("%d %d %d %d %d %d %d",this.full,this.clean,this.excited,this.awake,this.happy,this.healthy,this.relaxed)
     }
 }

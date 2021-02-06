@@ -20,14 +20,18 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
+        val filename=loadFromInnerStorage("pet.txt")
+        val temp=filename.split('\n')
+        val pet=PetClass(loadFromInnerStorage(temp[0]))
+
         var stateList = arrayListOf<State>(
-                State("hungry", "full", 40),
-                State("dirty", "clean", 15),
-                State("bored", "excited", 85),
-                State("sleepy", "awake", 25),
-                State("sad", "happy", 60),
-                State("sick", "healthy", 0),
-                State("anxious", "relaxed", 5)
+                State("hungry", "full", pet.state.full),
+                State("dirty", "clean", pet.state.clean),
+                State("bored", "excited", pet.state.excited),
+                State("sleepy", "awake", pet.state.awake),
+                State("sad", "happy", pet.state.happy),
+                State("sick", "healthy", pet.state.healthy),
+                State("anxious", "relaxed", pet.state.relaxed)
         )
 
         val stateAdapter=StateAdapter(this, stateList)
@@ -75,4 +79,10 @@ class MainActivity : AppCompatActivity() {
         }
 
     }
+
+    fun loadFromInnerStorage(filename: String):String{
+        val fileInputStream=openFileInput(filename)
+        return fileInputStream.reader().readText()
+    }
+
 }

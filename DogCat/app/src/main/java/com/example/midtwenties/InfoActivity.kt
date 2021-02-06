@@ -78,9 +78,5 @@ class InfoActivity : AppCompatActivity() {
         fileOutputStream.close()
     }
 
-    fun loadFromInnerStorage(filename: String):String{
-        val fileInputStream=openFileInput(filename)
-        return fileInputStream.reader().readText()
-    }
 
 }

@@ -38,7 +38,7 @@ class TermsOfService : AppCompatActivity() {
                 val name= get!!.split(" ")
                 saveToInnerStorage(String.format("%s.txt",name[0]),"pet.txt")
                 saveToInnerStorage(get,String.format("%s.txt",name[0]))
-                startActivity(Intent(this, YardActivity::class.java))
+                startActivity(Intent(this, MainActivity::class.java))
             }
             else Toast.makeText(applicationContext,"선택해주세요.",Toast.LENGTH_SHORT).show()
         }
