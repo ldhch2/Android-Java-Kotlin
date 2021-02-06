@@ -25,20 +25,6 @@ class Playing : AppCompatActivity() {
 
         }
 
-       val items = mutableListOf<ListViewItem>()
-
-        items.add(ListViewItem(ContextCompat.getDrawable(this,R.drawable.adult_dog)!!, "aa","aa"))
-        items.add(ListViewItem(ContextCompat.getDrawable(this,R.drawable.adult_dog)!!, "aa","aa"))
-        items.add(ListViewItem(ContextCompat.getDrawable(this,R.drawable.adult_dog)!!, "aa","aa"))
-
-        val adapter = ListViewAdapter(items)
-        list.adapter = adapter
-
-        list.setOnItemClickListener{parent: AdapterView<*>, view: View, position: Int, id: Long ->
-            val item = parent.getItemAtPosition(position) as ListViewItem
-
-        }
-
     }
 
 

@@ -1,4 +1,4 @@
-package com.example.midtwenties
+/*package com.example.midtwenties
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
@@ -22,4 +22,4 @@ class ContactsListAdapter(private val itemList : List<Contacts>) : RecyclerView.
         }
     }
 
-}
+}*/
