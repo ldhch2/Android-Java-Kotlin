@@ -2,6 +2,7 @@ package com.example.midtwenties
 
 import android.content.Context
 import android.content.Intent
+import android.icu.text.IDNA
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
@@ -11,21 +12,26 @@ import com.bumptech.glide.Glide
 
 
 class InitPet : AppCompatActivity() {
+
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_init_pet)
+
+
+        val next=Intent(this,InfoActivity::class.java);
 
         imageView3.visibility=View.INVISIBLE
         SelectButton.setOnClickListener {
             if(catbutton.isChecked==true){
                 Toast.makeText(applicationContext,"냥이가 선택되었습니다.",Toast.LENGTH_SHORT).show()
-                saveToInnerStorage("1","pet.txt")
-                startActivity(Intent(this, InfoActivity::class.java))
+                next.putExtra("종류",1)
+                startActivity(next)
             }
             else if (dogbutton.isChecked==true){
                 Toast.makeText(applicationContext,"멍이가 선택되었습니다.",Toast.LENGTH_SHORT).show()
-                saveToInnerStorage("2","pet.txt")
-                startActivity(Intent(this, InfoActivity::class.java))
+                next.putExtra("종류",2)
+                startActivity(next)
             }
             else{
                 Toast.makeText(applicationContext,"둘 중 하나를 체크해주세요",Toast.LENGTH_SHORT).show()
@@ -60,11 +66,4 @@ class InitPet : AppCompatActivity() {
             }
         }
     }
-
-    fun saveToInnerStorage(text: String, filename: String){
-        val fileOutputStream = openFileOutput(filename, Context.MODE_PRIVATE)
-        fileOutputStream.write(text.toByteArray())
-        fileOutputStream.close()
-    }
-
 }

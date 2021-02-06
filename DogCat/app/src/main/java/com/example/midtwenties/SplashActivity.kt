@@ -21,7 +21,7 @@ class SplashActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_splash)
         try {
-            if (loadFromInnerStorage(filename).equals("true")) {
+            if (loadFromInnerStorage(filename).equals("false")) {
                 startActivity(Intent(this, YardActivity::class.java))
 
             } else {

@@ -12,12 +12,17 @@ import android.widget.Toast
 import kotlinx.android.synthetic.main.activity_info.*
 
 class InfoActivity : AppCompatActivity() {
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_info)
 
         var button1=0;
         var button2=0;
+
+
+        val next=Intent(this,InfoNext::class.java)
+
 
         var anim =  AlphaAnimation(0.0f,1.0f)
 
@@ -29,6 +34,7 @@ class InfoActivity : AppCompatActivity() {
             Toast.makeText(applicationContext,"수컷을 입양합니다.",Toast.LENGTH_SHORT).show()
             button2=2;
         }
+
         babyButton.setOnClickListener{
             petImage.setImageResource(R.drawable.baby_dog)
             babyButton.startAnimation(anim);
@@ -53,20 +59,17 @@ class InfoActivity : AppCompatActivity() {
                 Toast.makeText(applicationContext,"선택해주세요",Toast.LENGTH_SHORT).show()
             }
             else {
-                val type=loadFromInnerStorage("pet.txt")
 
-                var first = Petclass(petName.text.toString(),type.toInt());
-                first.gender= button2
-                first.month=button1
+                val get=intent.getIntExtra("종류",1)
 
-                saveToInnerStorage(first.saveinfo(),first.filename())
-                saveToInnerStorage(first.filename(),"pet.txt")
+                val info=String.format("%s %d %d %d",petName.text.toString(),get,button1,button2)
+
+                next.putExtra("정보",info)
+
                 Toast.makeText(applicationContext, "저장되었습니다", Toast.LENGTH_SHORT).show()
-                startActivity(Intent(this, TermsOfService::class.java))
-
+                startActivity(next)
             }
         }
-
     }
 
     fun saveToInnerStorage(text: String, filename: String){
