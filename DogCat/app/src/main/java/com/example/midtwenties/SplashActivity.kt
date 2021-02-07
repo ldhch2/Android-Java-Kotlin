@@ -21,8 +21,13 @@ class SplashActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_splash)
         try {
+<<<<<<< Updated upstream
             if (loadFromInnerStorage(filename).equals("false")) {
                 startActivity(Intent(this, YardActivity::class.java))
+=======
+            if (loadFromInnerStorage(filename).equals("True")) {
+                startActivity(Intent(this, MainActivity::class.java))
+>>>>>>> Stashed changes
 
             } else {
                 startActivity(Intent(this, InitPet::class.java))

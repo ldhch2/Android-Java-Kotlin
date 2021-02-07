@@ -2,20 +2,24 @@ package com.example.midtwenties
 
 import StateAdapter
 import android.content.Intent
+import android.os.Build
 import android.os.Bundle
 import kotlinx.android.synthetic.main.activity_main.*
 import android.view.View
 import android.view.animation.AnimationUtils
 import android.widget.Button
 import android.widget.Toast
+import androidx.annotation.RequiresApi
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.GravityCompat
 import androidx.drawerlayout.widget.DrawerLayout
 import androidx.recyclerview.widget.LinearLayoutManager
+import kotlinx.android.synthetic.main.state.*
 
 class MainActivity : AppCompatActivity() {
 
     var isOpen = false
+    @RequiresApi(Build.VERSION_CODES.LOLLIPOP)
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
@@ -33,13 +37,13 @@ class MainActivity : AppCompatActivity() {
         val stateAdapter=StateAdapter(this, stateList)
         stateRecyclerView.adapter = stateAdapter
 
+
         val lm = LinearLayoutManager(this)
         stateRecyclerView.layoutManager = lm
         stateRecyclerView.setHasFixedSize(true)
 
         val fabOpen = AnimationUtils.loadAnimation(this,R.anim.fab_open)
         val fabClose = AnimationUtils.loadAnimation(this,R.anim.fab_close)
-
 
         fabMain.setOnClickListener{
             if(isOpen){
@@ -69,8 +73,21 @@ class MainActivity : AppCompatActivity() {
             fab_sub1.setOnClickListener{
                 Toast.makeText(this,"click",Toast.LENGTH_LONG).show()
             }
+
             showState.setOnClickListener() {
+<<<<<<< Updated upstream
                 drawerLayout.openDrawer(GravityCompat.START)
+=======
+                drawerState.openDrawer(GravityCompat.START)
+                /*
+                if(stateList[0].degree<20){
+                    progressBar.setProgress(R.drawable.progressbar_danger)
+                }
+
+                else progressBar.setProgress(R.drawable.progressbar)
+
+                 */
+>>>>>>> Stashed changes
             }
         }
 

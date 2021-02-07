@@ -28,7 +28,11 @@ class InfoNext : AppCompatActivity() {
         Glide.with(this).load(R.raw.doggy).into(imagePet)
 
         val get=intent.getStringExtra("정보")
+<<<<<<< Updated upstream
         next.putExtra("정보",String.format("%s %d 0 0 0 0 0 0 0",get,num))
+=======
+        next.putExtra("정보",String.format("%s %d 19 50 50 50 50 50 50",get,num))
+>>>>>>> Stashed changes
 
         Glide.with(this).load(R.raw.doggy).into(imagePet)
         button10.setOnClickListener {

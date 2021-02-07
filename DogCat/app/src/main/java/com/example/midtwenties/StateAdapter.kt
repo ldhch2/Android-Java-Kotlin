@@ -10,6 +10,7 @@ import com.example.midtwenties.State
 
 class StateAdapter(val context:Context, val stateList: ArrayList<State>):
         RecyclerView.Adapter<StateAdapter.Holder>() {
+
         inner class Holder(itemView: View?) : RecyclerView.ViewHolder(itemView!!) {
                 val start = itemView?.findViewById<TextView>(R.id.startTv)
                 val end = itemView?.findViewById<TextView>(R.id.endTv)
