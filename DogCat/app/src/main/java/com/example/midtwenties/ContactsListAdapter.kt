@@ -15,7 +15,7 @@ class ContactsListAdapter(val context: Context, val itemList : ArrayList<StoreCo
     inner class Holder(itemView: View?) : RecyclerView.ViewHolder(itemView!!){
         val imagename = itemView?.findViewById<ImageView>(R.id.imagename)
         val itemname = itemView?.findViewById<TextView>(R.id.itemname)
-        val price = itemView?.findViewById<TextView>(R.id.price)
+        val price = itemView?.findViewById<TextView>(R.id.option1_price)
         val buybutton = itemView?.findViewById<Button>(R.id.buybutton)
         val option1 = itemView?.findViewById<RadioButton>(R.id.option1)
         val option2 = itemView?.findViewById<RadioButton>(R.id.option2)
@@ -49,7 +49,7 @@ class ContactsListAdapter(val context: Context, val itemList : ArrayList<StoreCo
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): Holder {
-        val view = LayoutInflater.from(context).inflate(R.layout.storecontacts, parent, false)
+        val view = LayoutInflater.from(context).inflate(R.layout.activity_store_contacts, parent, false)
         return Holder(view)
     }
 
