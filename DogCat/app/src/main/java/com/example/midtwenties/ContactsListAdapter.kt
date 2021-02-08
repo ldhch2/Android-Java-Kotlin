@@ -1,5 +1,3 @@
-package com.example.midtwenties
-
 import android.content.Context
 import android.view.LayoutInflater
 import android.view.View
@@ -27,7 +25,15 @@ class ContactsListAdapter(val context: Context, val itemList : ArrayList<StoreCo
 
 
         fun bind(item: StoreContacts, context: Context) {
-         //   imagename?.srcCompat = item.imagename
+
+            if(item.imagename != ""){
+                val resourceId = context.resources.getIdentifier(item.imagename,"drawable",context.packageName)
+                imagename?.setImageResource(resourceId)
+            } else {
+                imagename?.setImageResource(R.mipmap.ic_launcher)
+            }
+
+        //    imagename?.srcCompat = item.imagename
             itemname?.text = item.name
             price?.text = item.price.toString()
             buybutton?.text=item.buy

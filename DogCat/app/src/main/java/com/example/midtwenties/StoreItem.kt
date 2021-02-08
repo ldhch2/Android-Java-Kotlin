@@ -3,7 +3,9 @@ package com.example.midtwenties
 import ContactsListAdapter
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import androidx.recyclerview.widget.LinearLayoutManager
 import kotlinx.android.synthetic.main.activity_bowl_store.*
+import kotlinx.android.synthetic.main.activity_pet_state.*
 
 
 class StoreItem : AppCompatActivity() {
@@ -21,6 +23,10 @@ class StoreItem : AppCompatActivity() {
 
         val adapter = ContactsListAdapter(this, contactsList)
         BowlRecyclerview.adapter = adapter
+
+        val lay = LinearLayoutManager(this)
+        stateRecyclerView.layoutManager = lay
+        stateRecyclerView.setHasFixedSize(true)
 
     }
 }
