@@ -14,9 +14,7 @@ class StoreItem : AppCompatActivity() {
             StoreContacts("aa","공",500,"구매","빨강색","파란색","초록색"),
             StoreContacts("aa","삑삑이",500,"구매","빨강색","파란색","초록색"),
             StoreContacts("aa","뽁뽁이",500,"구매","빨강색","파란색","초록색")
-
     )
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_bowl_store)
@@ -27,6 +25,7 @@ class StoreItem : AppCompatActivity() {
         val lay = LinearLayoutManager(this)
         stateRecyclerView.layoutManager = lay
         stateRecyclerView.setHasFixedSize(true)
+
 
     }
 }
