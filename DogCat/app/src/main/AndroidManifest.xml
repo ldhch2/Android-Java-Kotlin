@@ -10,20 +10,10 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.NoActionBar">
-        <activity android:name=".StoreItem">
-
-        </activity>
-        <activity android:name=".ListActivity" />
         <activity android:name=".test" />
         <activity android:name=".SplashActivity" />
         <activity android:name=".FeedStore" />
-        <activity android:name=".BowlStore" >
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
+        <activity android:name=".BowlStore" />
         <activity android:name=".HouseStore" />
         <activity android:name=".ToyStore" />
         <activity android:name=".InitPet" />
@@ -32,7 +22,11 @@
         <activity android:name=".MainSetting" />
         <activity android:name=".TermsOfService" />
         <activity android:name=".MyStore">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
 
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
         </activity>
         <activity android:name=".YardActivity" />
     </application>

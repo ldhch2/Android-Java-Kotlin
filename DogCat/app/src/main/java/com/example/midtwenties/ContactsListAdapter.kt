@@ -7,10 +7,8 @@ import android.widget.ImageView
 import android.widget.RadioButton
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
-import kotlinx.android.synthetic.main.storecontacts.view.*
 import com.example.midtwenties.StoreContacts
 import com.example.midtwenties.R
-import com.example.midtwenties.StoreItem
 
 class ContactsListAdapter(val context: Context, val itemList : ArrayList<StoreContacts>) :
     RecyclerView.Adapter<ContactsListAdapter.Holder>()  {
@@ -23,7 +21,6 @@ class ContactsListAdapter(val context: Context, val itemList : ArrayList<StoreCo
         val option2 = itemView?.findViewById<RadioButton>(R.id.option2)
         val option3 = itemView?.findViewById<RadioButton>(R.id.option3)
 
-
         fun bind(item: StoreContacts, context: Context) {
 
             if(item.imagename != ""){
@@ -32,14 +29,18 @@ class ContactsListAdapter(val context: Context, val itemList : ArrayList<StoreCo
             } else {
                 imagename?.setImageResource(R.mipmap.ic_launcher)
             }
-
-        //    imagename?.srcCompat = item.imagename
             itemname?.text = item.name
             price?.text = item.price.toString()
             buybutton?.text=item.buy
-            option1?.text = item.option1
-            option2?.text = item.option2
-            option3?.text=item.option3
+
+            if(item.option1 != "") option1?.text = item.option1
+            else option1?.setVisibility(View.INVISIBLE)
+
+            if(item.option2 != "") option2?.text = item.option2
+            else option2?.setVisibility(View.INVISIBLE)
+
+            if(item.option3 != "") option3?.text = item.option3
+            else option3?.setVisibility(View.INVISIBLE)
         }
     }
 

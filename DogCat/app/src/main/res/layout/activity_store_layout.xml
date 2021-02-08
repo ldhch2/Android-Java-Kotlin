@@ -7,11 +7,11 @@
     android:layout_height="match_parent">
 
     <TextView
-        android:id="@+id/feedStore2"
+        android:id="@+id/StoreType"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:gravity="center"
-        android:text="밥그릇/물그릇"
+        android:text="상점"
         android:textSize="30sp"
         app:layout_constraintBottom_toTopOf="@+id/guideline21"
         app:layout_constraintEnd_toEndOf="parent"
@@ -40,7 +40,7 @@
         app:layout_constraintGuide_percent="0.1" />
 
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/BowlRecyclerview"
+        android:id="@+id/StoreRecyclerview"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         app:layout_constraintBottom_toBottomOf="parent"
