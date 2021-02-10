@@ -6,11 +6,16 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.ProgressBar
 import android.widget.TextView
+<<<<<<< Updated upstream
 import androidx.core.widget.ContentLoadingProgressBar
+=======
+import androidx.core.view.isVisible
+>>>>>>> Stashed changes
 import androidx.recyclerview.widget.RecyclerView
 import com.example.midtwenties.PetState
 import com.example.midtwenties.R
 import com.example.midtwenties.State
+import kotlinx.android.synthetic.main.state.*
 
 class StateAdapter(val context:Context, val stateList: ArrayList<State>):
         RecyclerView.Adapter<StateAdapter.Holder>() {
@@ -18,12 +23,20 @@ class StateAdapter(val context:Context, val stateList: ArrayList<State>):
                 val start = itemView?.findViewById<TextView>(R.id.startTv)
                 val end = itemView?.findViewById<TextView>(R.id.endTv)
                 val degree = itemView?.findViewById<ProgressBar>(R.id.progressBar)
+                val bool = itemView?.findViewById<ProgressBar>(R.id.progressBarDanger)
 
                 fun bind (state: State, context: Context) {
                         /* TextView와 String 데이터를 연결한다. */
                         start?.text = state.start
                         end?.text = state.end
-                        degree?.progress=state.degree
+                        if(state.degree<20){
+                                degree?.isVisible=false
+                                bool?.progress=state.degree
+                        }
+                        else{
+                                bool?.isVisible=false
+                                degree?.progress=state.degree
+                        }
                 }
         }
 

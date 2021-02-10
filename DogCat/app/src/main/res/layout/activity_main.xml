@@ -14,7 +14,7 @@
         android:layout_height="match_parent">
 
         <Button
-            android:id="@+id/button3"
+            android:id="@+id/washwash"
             android:layout_width="wrap_content"
             android:layout_height="60dp"
             android:layout_marginTop="50dp"
@@ -24,11 +24,11 @@
             app:backgroundTint="#777777"
             app:iconTint="#2196F3"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toEndOf="@+id/button2"
+            app:layout_constraintStart_toEndOf="@+id/feedfeed"
             app:layout_constraintTop_toTopOf="parent" />
 
         <Button
-            android:id="@+id/button1"
+            android:id="@+id/walkwalk"
             android:layout_width="wrap_content"
             android:layout_height="60dp"
             android:layout_marginTop="50dp"
@@ -37,20 +37,20 @@
             android:textColor="#FFFFFF"
             app:backgroundTint="#777777"
             app:iconTint="#CA2828"
-            app:layout_constraintEnd_toStartOf="@+id/button2"
+            app:layout_constraintEnd_toStartOf="@+id/feedfeed"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
         <Button
-            android:id="@+id/button2"
+            android:id="@+id/feedfeed"
             android:layout_width="wrap_content"
             android:layout_marginTop="50dp"
             android:layout_height="60dp"
             android:text="밥먹기"
             app:backgroundTint="#777777"
             app:iconTint="#4CAF50"
-            app:layout_constraintEnd_toStartOf="@+id/button3"
-            app:layout_constraintStart_toEndOf="@+id/button1"
+            app:layout_constraintEnd_toStartOf="@+id/washwash"
+            app:layout_constraintStart_toEndOf="@+id/walkwalk"
             app:layout_constraintTop_toTopOf="parent" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 
