@@ -157,7 +157,7 @@
         android:layout_gravity="start"
         android:background="@drawable/paper"
         android:gravity="center"
-        tools:context=".PetState">
+        tools:context=".MainActivity">
 
         <TextView
             android:id="@+id/stateTextView"

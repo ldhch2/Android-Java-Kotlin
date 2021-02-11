@@ -14,8 +14,6 @@
         <activity android:name=".RegisterActivity"/>
         <activity android:name="com.example.midtwenties.SplashActivity"></activity>
         <activity android:name=".InfoNext"/>
-        <activity android:name=".PetState">
-        </activity>
         <activity android:name=".FeedActivity" />
         <activity android:name=".InitPet"></activity>
         <activity android:name=".InfoActivity"></activity>
