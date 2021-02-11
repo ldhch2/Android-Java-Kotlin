@@ -25,11 +25,7 @@ class CheckActivity : AppCompatActivity() {
         signature.setImageBitmap(bitmap)
 
         check.setOnClickListener{
-<<<<<<< Updated upstream
-            startActivity(Intent(this, RegisterActivity::class.java))
-=======
             startActivity(Intent(this, MainActivity::class.java))
->>>>>>> Stashed changes
         }
     }
 }

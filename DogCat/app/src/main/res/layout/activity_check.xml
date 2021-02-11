@@ -7,20 +7,11 @@
     tools:context=".CheckActivity">
 
     <ImageView
-<<<<<<< Updated upstream
-        android:id="@+id/signature"
-        android:background="@drawable/state_border"
-=======
         android:id="@+id/imageView4"
->>>>>>> Stashed changes
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-<<<<<<< Updated upstream
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-=======
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
@@ -36,20 +27,12 @@
         android:layout_marginBottom="85dp"
         app:layout_constraintBottom_toBottomOf="@+id/imageView4"
         app:layout_constraintStart_toStartOf="parent"
->>>>>>> Stashed changes
         app:srcCompat="@drawable/ic_launcher_foreground" />
 
     <Button
         android:id="@+id/check"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-<<<<<<< Updated upstream
-        android:text="확인"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/signature" />
-=======
         android:layout_marginBottom="80dp"
         android:text="확인"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -103,5 +86,4 @@
         app:layout_constraintBottom_toBottomOf="@+id/textView"
         app:layout_constraintStart_toEndOf="@+id/textView"
         app:layout_constraintTop_toTopOf="@+id/textView" />
->>>>>>> Stashed changes
 </androidx.constraintlayout.widget.ConstraintLayout>
