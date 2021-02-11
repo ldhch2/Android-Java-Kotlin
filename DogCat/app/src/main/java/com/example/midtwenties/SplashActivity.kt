@@ -1,12 +1,12 @@
 package com.example.midtwenties
 
-import android.content.Context
 import android.content.Intent
 import android.os.Bundle
 import android.os.Handler
 import android.os.Looper
 import androidx.appcompat.app.AppCompatActivity
-import android.text.TextUtils
+import android.view.animation.AnimationUtils
+import kotlinx.android.synthetic.main.activity_splash.*
 import java.io.FileNotFoundException
 
 class SplashActivity : AppCompatActivity() {
@@ -20,6 +20,10 @@ class SplashActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_splash)
+
+        val animation = AnimationUtils.loadAnimation(this, R.anim.fade_in)
+        titleView1.startAnimation(animation)
+
         try {
             if (loadFromInnerStorage(filename).equals("false")) {
                 startActivity(Intent(this, MainActivity::class.java))
