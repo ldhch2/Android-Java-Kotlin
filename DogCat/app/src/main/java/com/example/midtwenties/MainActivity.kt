@@ -27,6 +27,8 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
+=======
 =======
         var stateList = arrayListOf<State>(
             State("hungry", "full", 40),
@@ -37,6 +39,23 @@ class MainActivity : AppCompatActivity() {
             State("sick", "healthy", 0),
             State("anxious", "relaxed", 5)
         )
+
+        /* 여기가 안돼
+        val filename=loadFromInnerStorage("pet.txt")
+        val temp=filename.split('\n')
+        val pet=PetClass(loadFromInnerStorage(temp[0]))
+
+>>>>>>> Stashed changes
+        var stateList = arrayListOf<State>(
+            State("hungry", "full", 40),
+            State("dirty", "clean", 15),
+            State("bored", "excited", 85),
+            State("sleepy", "awake", 25),
+            State("sad", "happy", 60),
+            State("sick", "healthy", 0),
+            State("anxious", "relaxed", 5)
+        )
+        */
 
         val stateAdapter=StateAdapter(this, stateList)
         stateRecyclerView.adapter = stateAdapter
@@ -53,10 +72,17 @@ class MainActivity : AppCompatActivity() {
 
         }
         feedfeed.setOnClickListener{
+<<<<<<< Updated upstream
             startActivity(Intent(this,FeedActivity::class.java))
         }
         washwash.setOnClickListener{
            // startActivity(Intent(this,WashActivity::class.java))
+=======
+            startActivity(Intent(this, FeedActivity::class.java))
+        }
+        washwash.setOnClickListener{
+            // startActivity(Intent(this,WashActivity::class.java))
+>>>>>>> Stashed changes
         }
 
         fabMain.setOnClickListener{
@@ -65,7 +91,7 @@ class MainActivity : AppCompatActivity() {
                 fab_sub2.startAnimation(fabClose)
                 fab_sub3.startAnimation(fabClose)
                 showState.startAnimation(fabClose)
-
+                registerButton.startAnimation(fabClose)
 
                 isOpen=false
             }
@@ -74,12 +100,13 @@ class MainActivity : AppCompatActivity() {
                 fab_sub2.startAnimation(fabOpen)
                 fab_sub3.startAnimation(fabOpen)
                 showState.startAnimation(fabOpen)
-
+                registerButton.startAnimation(fabOpen)
 
                 fab_sub1.isClickable
                 fab_sub2.isClickable
                 fab_sub3.isClickable
                 showState.isClickable
+                registerButton.isClickable
 
                 isOpen = true
             }
@@ -87,6 +114,15 @@ class MainActivity : AppCompatActivity() {
             fab_sub1.setOnClickListener{
                 Toast.makeText(this,"click",Toast.LENGTH_LONG).show()
             }
+<<<<<<< Updated upstream
+=======
+            showState.setOnClickListener() {
+                drawerState.openDrawer(GravityCompat.START)
+            }
+            registerButton.setOnClickListener(){
+                startActivity(Intent(this,RegisterActivity::class.java))
+            }
+>>>>>>> Stashed changes
         }
 <<<<<<< Updated upstream
 

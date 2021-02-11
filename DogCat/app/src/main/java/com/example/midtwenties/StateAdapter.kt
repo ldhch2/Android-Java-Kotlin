@@ -1,11 +1,16 @@
 import android.content.Context
+<<<<<<< Updated upstream
 import android.os.Parcel
 import android.os.Parcelable
+=======
+import android.content.Intent
+>>>>>>> Stashed changes
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ProgressBar
 import android.widget.TextView
+<<<<<<< Updated upstream
 <<<<<<< Updated upstream
 import androidx.core.widget.ContentLoadingProgressBar
 =======
@@ -13,6 +18,11 @@ import androidx.core.view.isVisible
 >>>>>>> Stashed changes
 import androidx.recyclerview.widget.RecyclerView
 import com.example.midtwenties.PetState
+=======
+import androidx.core.view.isVisible
+import androidx.recyclerview.widget.RecyclerView
+import com.example.midtwenties.FeedActivity
+>>>>>>> Stashed changes
 import com.example.midtwenties.R
 import com.example.midtwenties.State
 import kotlinx.android.synthetic.main.state.*
@@ -39,6 +49,10 @@ class StateAdapter(val context:Context, val stateList: ArrayList<State>):
                         }
                 }
         }
+
+
+
+
 
         override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): Holder {
                 val view= LayoutInflater.from(context).inflate(R.layout.state,parent,false)

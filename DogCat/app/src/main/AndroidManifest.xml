@@ -11,6 +11,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.NoActionBar">
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 =======
         <activity android:name=".CheckActivity"></activity>
         <activity android:name=".RegisterActivity">
@@ -19,6 +20,10 @@
 >>>>>>> Stashed changes
 
         <activity android:name="com.example.midtwenties.SplashActivity">
+=======
+        <activity android:name=".InfoNext"/>
+        <activity android:name=".SplashActivity">
+>>>>>>> Stashed changes
         </activity>
 <<<<<<< Updated upstream
         <activity android:name=".PetState">
@@ -53,11 +58,30 @@
         <activity android:name=".InitPet" />
         <activity android:name=".InfoActivity" />
         <activity android:name=".TermsOfService" />
+<<<<<<< Updated upstream
         <activity android:name=".MainActivity"></activity>
         <activity android:name=".FeedActivity" />
         <activity android:name=".MainSetting" />
         <activity android:name=".MyStore" />
         <activity android:name=".YardActivity" />
+>>>>>>> Stashed changes
+=======
+        <activity android:name=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".MainSetting" />
+        <activity android:name=".MyStore">
+        </activity>
+        <activity android:name=".YardActivity" />
+        <activity android:name=".FeedActivity" />
+        <activity android:name=".RegisterActivity">
+
+        </activity>
+        <activity android:name=".CheckActivity"/>
 >>>>>>> Stashed changes
     </application>
 
