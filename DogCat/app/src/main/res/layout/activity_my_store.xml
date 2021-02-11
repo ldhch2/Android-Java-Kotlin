@@ -79,10 +79,10 @@
         app:layout_constraintTop_toTopOf="@+id/guideline7" />
 
     <Button
-        android:id="@+id/nutritionButton"
+        android:id="@+id/clothesButton"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:text="영양제"
+        android:text="옷+악세사리"
         app:backgroundTint="#00BCD4"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/guideline9"
