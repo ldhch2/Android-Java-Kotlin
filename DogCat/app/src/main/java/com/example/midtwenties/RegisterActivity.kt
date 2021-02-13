@@ -32,7 +32,6 @@ class RegisterActivity : AppCompatActivity() {
             /* uri 전송 방법 */
             val signPath = saveBitmap(signature)
 
-
             val intent = Intent(this,PetIDActivity::class.java)
             /* uri 전송 방법  */
             intent.putExtra("signature", signPath)
