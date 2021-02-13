@@ -16,10 +16,12 @@ class PetClass (info: String) { // kind: 고양이 1, 강아지 2
 
         val num=arr[4].toInt()
 
-        character = if (num==1) Perfect()
-        else if (num==2) Foodfight()
-        else if (num==3) Naughty()
-        else if (num==4) Cleaner()
+        character = if (num==0) Perfect()
+        else if (num==1) Foodfight()
+        else if (num==2) Naughty()
+        else if (num==3) Cleaner()
+        else if (num==4) Lazy()
+        else if (num==5) Coward()
         else Perfect()
 
         state= PetState(arr[5].toInt(),arr[6].toInt(),arr[7].toInt(),arr[8].toInt(),arr[9].toInt(),arr[10].toInt(),arr[11].toInt())
@@ -44,6 +46,7 @@ class PetClass (info: String) { // kind: 고양이 1, 강아지 2
 open abstract class Character{
 
     abstract var type:Int
+    abstract val info:String
     abstract var hunger_weight:Float
     abstract var wash_weight:Float
     abstract var play_weight:Float
@@ -55,14 +58,16 @@ class Perfect:Character(){
     override var hunger_weight:Float=1.0F
     override var wash_weight:Float=1.0F
     override var play_weight:Float=1.0F
+    override val info= "완벽함 - 완벽한 상태입니다"
 }
 
-class Foodfight: Character() {
+class Foodfight:Character() {
 
     override var type: Int=1
     override var hunger_weight:Float=3.0F
     override var wash_weight:Float=1.0F
     override var play_weight:Float=1.0F
+    override val info="먹보\n-\n많이 먹어요.\n자주 먹여줘야합니다."
 }
 
 class Naughty:Character(){
@@ -71,6 +76,7 @@ class Naughty:Character(){
     override var hunger_weight:Float=1.0F
     override var wash_weight:Float=1.0F
     override var play_weight:Float=3.0F
+    override var info= "장난꾸러기\n-\n관심이 많이 요구됩니다."
 }
 
 class Cleaner:Character(){
@@ -79,7 +85,27 @@ class Cleaner:Character(){
     override var hunger_weight:Float=1.0F
     override var wash_weight:Float=3.0F
     override var play_weight:Float=1.0F
+    override var info = "깔끔쟁이\n-\n지나치게 깔끔합니다.\n목욕을 자주 시켜줘야해요."
 }
+
+class Lazy:Character(){
+
+    override var type: Int=4
+    override var hunger_weight:Float=1.0F
+    override var wash_weight:Float=3.0F
+    override var play_weight:Float=1.0F
+    override var info = "늘보\n-\n지나치게 게을러요.\n희한하게 관심을 덜 요구합니다."
+}
+
+class Coward:Character(){
+
+    override var type: Int=5
+    override var hunger_weight:Float=1.0F
+    override var wash_weight:Float=3.0F
+    override var play_weight:Float=1.0F
+    override var info = "겁쟁이\n-\n겁이 많아요.\n세상을 알아가는데\n시간이 많이 필요합니다."
+}
+
 
 
 class PetState(var full:Int=0,var clean:Int=0,var excited:Int=0,var awake:Int=0,var happy:Int=0,var healthy:Int=0,var relaxed:Int=0){
