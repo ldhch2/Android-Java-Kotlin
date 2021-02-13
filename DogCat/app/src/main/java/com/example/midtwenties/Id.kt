@@ -1,3 +1,3 @@
 package com.example.midtwenties
 
-class Id(val imagename: String, val name: String)
+class Id(val imageURI: String, val name: String)
