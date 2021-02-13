@@ -1,4 +1,4 @@
-package com.midtwenties.midtwenties
+package com.midtwenties.dogcat
 
 import androidx.test.platform.app.InstrumentationRegistry
 import androidx.test.ext.junit.runners.AndroidJUnit4

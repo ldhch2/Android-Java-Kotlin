@@ -1,4 +1,4 @@
-package com.midtwenties.midtwenties
+package com.midtwenties.dogcat
 
 class Petclass(val name: String, val kind: Int) { // kind: 고양이 1, 강아지 2
     var month=0
