@@ -26,7 +26,6 @@ class MainActivity : AppCompatActivity() {
         val temp=filename.split('\n')
         val pet=PetClass(loadFromInnerStorage(temp[0]))
 
-
         var stateList = arrayListOf<State>(
                 State("hungry", "full", pet.state.full),
                 State("dirty", "clean", pet.state.clean),

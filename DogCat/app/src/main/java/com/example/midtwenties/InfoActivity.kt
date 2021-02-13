@@ -5,6 +5,9 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.text.TextUtils
+import android.view.KeyEvent
+import android.view.KeyEvent.KEYCODE_ENTER
+import android.view.View
 import android.view.animation.AlphaAnimation
 import android.view.animation.Animation
 import android.widget.ImageSwitcher
@@ -52,6 +55,16 @@ class InfoActivity : AppCompatActivity() {
             oldButton.startAnimation(anim)
             button1=85
             month.setText(button1.toString());
+        }
+
+        petName.setOnKeyListener { v, keyCode, event ->
+            if (event.action == KeyEvent.ACTION_DOWN && keyCode == KEYCODE_ENTER) {
+                Toast.makeText(applicationContext,"완료됐습니다",Toast.LENGTH_SHORT).show()
+                return@setOnKeyListener  true
+            }
+            else{
+                return@setOnKeyListener false
+            }
         }
 
         saveInfo.setOnClickListener {
