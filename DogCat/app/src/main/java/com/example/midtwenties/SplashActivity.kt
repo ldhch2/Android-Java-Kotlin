@@ -21,8 +21,21 @@ class SplashActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_splash)
 
-        val animation = AnimationUtils.loadAnimation(this, R.anim.fade_in)
-        titleView1.startAnimation(animation)
+        val animation1 = AnimationUtils.loadAnimation(this, R.anim.fade_in)
+        Handler(Looper.getMainLooper()).postDelayed({
+            overridePendingTransition(R.anim.fade_out, R.anim.fade_in)
+            //titleView1.startAnimation(animation1)
+        }, 2000)
+
+        //val animation2 = AnimationUtils.loadAnimation(this, R.anim.fade_in)
+        Handler(Looper.getMainLooper()).postDelayed({
+            overridePendingTransition(R.anim.fade_out, R.anim.fade_in)
+            //titleImage1.startAnimation(animation1)
+        }, 3000)
+
+        Handler(Looper.getMainLooper()).postDelayed({
+            titleImage2.startAnimation(animation1)
+        }, 4000)
 
         try {
             if (loadFromInnerStorage(filename).equals("false")) {
@@ -34,7 +47,7 @@ class SplashActivity : AppCompatActivity() {
             Handler(Looper.getMainLooper()).postDelayed({
                 overridePendingTransition(R.anim.fade_in, R.anim.fade_out)
                 finish()
-            }, 2500)
+            }, 11000)
         }
         catch (e: FileNotFoundException){
             Handler(Looper.getMainLooper()).postDelayed({
