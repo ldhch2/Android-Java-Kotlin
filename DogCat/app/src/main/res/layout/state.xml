@@ -55,4 +55,19 @@
         app:layout_constraintTop_toTopOf="parent"
         tools:progress="0" />
 
+    <ProgressBar
+        android:id="@+id/progressBarDanger"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="0dp"
+        android:layout_height="32dp"
+        android:layout_marginLeft="24dp"
+        android:layout_marginRight="24dp"
+        android:progressDrawable="@drawable/progressbar_danger"
+        android:scrollbarSize="4dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:progress="0" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

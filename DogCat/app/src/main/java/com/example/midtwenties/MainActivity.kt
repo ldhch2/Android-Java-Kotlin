@@ -20,6 +20,17 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
+        var stateList = arrayListOf<State>(
+            State("hungry", "full", 40),
+            State("dirty", "clean", 15),
+            State("bored", "excited", 85),
+            State("sleepy", "awake", 25),
+            State("sad", "happy", 60),
+            State("sick", "healthy", 0),
+            State("anxious", "relaxed", 5)
+        )
+
+        /* 여기가 안돼
         val filename=loadFromInnerStorage("pet.txt")
         val temp=filename.split('\n')
         val pet=PetClass(loadFromInnerStorage(temp[0]))
@@ -33,6 +44,7 @@ class MainActivity : AppCompatActivity() {
                 State("sick", "healthy", pet.state.healthy),
                 State("anxious", "relaxed", pet.state.relaxed)
         )
+        */
 
         val stateAdapter=StateAdapter(this, stateList)
         stateRecyclerView.adapter = stateAdapter
@@ -44,6 +56,15 @@ class MainActivity : AppCompatActivity() {
         val fabOpen = AnimationUtils.loadAnimation(this,R.anim.fab_open)
         val fabClose = AnimationUtils.loadAnimation(this,R.anim.fab_close)
 
+        walkwalk.setOnClickListener{
+
+        }
+        feedfeed.setOnClickListener{
+            startActivity(Intent(this, FeedActivity::class.java))
+        }
+        washwash.setOnClickListener{
+            // startActivity(Intent(this,WashActivity::class.java))
+        }
 
         fabMain.setOnClickListener{
             if(isOpen){
@@ -51,7 +72,7 @@ class MainActivity : AppCompatActivity() {
                 fab_sub2.startAnimation(fabClose)
                 fab_sub3.startAnimation(fabClose)
                 showState.startAnimation(fabClose)
-
+                registerButton.startAnimation(fabClose)
 
                 isOpen=false
             }
@@ -60,12 +81,13 @@ class MainActivity : AppCompatActivity() {
                 fab_sub2.startAnimation(fabOpen)
                 fab_sub3.startAnimation(fabOpen)
                 showState.startAnimation(fabOpen)
-
+                registerButton.startAnimation(fabOpen)
 
                 fab_sub1.isClickable
                 fab_sub2.isClickable
                 fab_sub3.isClickable
                 showState.isClickable
+                registerButton.isClickable
 
                 isOpen = true
             }
@@ -75,6 +97,9 @@ class MainActivity : AppCompatActivity() {
             }
             showState.setOnClickListener() {
                 drawerState.openDrawer(GravityCompat.START)
+            }
+            registerButton.setOnClickListener(){
+                startActivity(Intent(this,RegisterActivity::class.java))
             }
         }
 
