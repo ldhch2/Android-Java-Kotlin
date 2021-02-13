@@ -10,7 +10,9 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
 import androidx.annotation.RequiresApi
+import java.text.SimpleDateFormat
 import java.time.LocalDate
+import java.util.*
 
 class YardActivity : AppCompatActivity() {
 
@@ -18,9 +20,10 @@ class YardActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_yard)
-        Toast.makeText(this,"ㅆㅆㅆㅆㅆ" , Toast.LENGTH_LONG).show()
         var date = ""
+        val today=SimpleDateFormat("yyyy-MM-dd",Locale.KOREA).format(Date())
         var countDate = 0
+        var flag = false
         try {
             val readdate =loadFromInnerStorage("attendancefile.txt")
             var arr=readdate.split("/")
@@ -28,12 +31,13 @@ class YardActivity : AppCompatActivity() {
             countDate = arr[1].toInt() + 1
             Toast.makeText(this,"파일 있음", Toast.LENGTH_LONG).show()
         } catch(e: Exception) {
-            date = LocalDate.now().toString()
+            date = today
             countDate = 1
+            flag = true
             Toast.makeText(this,"파일 없음", Toast.LENGTH_LONG).show()
         }
         if(countDate == 8) countDate = 1
-        if(date != LocalDate.now().toString()) {
+        if( !date.equals(today) || flag == true) {
             Toast.makeText(this,"오늘 출석 안함", Toast.LENGTH_LONG).show()
 
             val writedate = date + "/" + countDate
@@ -41,6 +45,7 @@ class YardActivity : AppCompatActivity() {
 
             var intent = Intent(this, AttendancePopup::class.java)
             intent.putExtra("countDate", countDate)
+
             startActivityForResult(intent, 1)
         }
         else {
