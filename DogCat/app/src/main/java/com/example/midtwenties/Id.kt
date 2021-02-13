@@ -1,4 +1,5 @@
 package com.example.midtwenties
-import java.net.URI
 
-class Id(val imageURI: URI, val name: String)
+import android.net.Uri
+
+class Id(val imageURI: Uri, val name: String)
