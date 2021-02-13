@@ -20,6 +20,9 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
+        val next=Intent(this,StoreItem::class.java)
+
+
         val filename=loadFromInnerStorage("pet.txt")
         val temp=filename.split('\n')
         val pet=PetClass(loadFromInnerStorage(temp[0]))
@@ -72,7 +75,9 @@ class MainActivity : AppCompatActivity() {
 
             fab_sub1.setOnClickListener{
                 Toast.makeText(this,"click",Toast.LENGTH_LONG).show()
+                startActivity(next)
             }
+
             showState.setOnClickListener() {
                 drawerState.openDrawer(GravityCompat.START)
             }

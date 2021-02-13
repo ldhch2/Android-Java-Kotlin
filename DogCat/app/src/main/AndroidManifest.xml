@@ -18,18 +18,14 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".FeedStore"/>
-        <activity android:name=".BowlStore" />
-        <activity android:name=".HouseStore" />
-        <activity android:name=".ToyStore" />
         <activity android:name=".InitPet" />
         <activity android:name=".InfoActivity" />
         <activity android:name=".TermsOfService" />
         <activity android:name=".MainActivity"/>
         <activity android:name=".MainSetting" />
         <activity android:name=".MyStore">
-
         </activity>
+        <activity android:name=".StoreItem"/>
         <activity android:name=".YardActivity" />
     </application>
 

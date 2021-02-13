@@ -38,7 +38,7 @@ class SplashActivity : AppCompatActivity() {
         }, 4000)
 
         try {
-            if (loadFromInnerStorage(filename).equals("false")) {
+            if (loadFromInnerStorage(filename).equals("True")) {
                 startActivity(Intent(this, MainActivity::class.java))
 
             } else {
