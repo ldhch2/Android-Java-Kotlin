@@ -32,12 +32,8 @@ class InfoNext : AppCompatActivity() {
         saveToInnerStorage(get,"test.txt")
 
         var next=Intent(this,RegisterActivity::class.java)
-        next.putExtra("정보",String.format("%s %d 50 50 50 50 50 50 50",get,num))
-        val next=Intent(this,TermsOfService::class.java)
-
+        next.putExtra("정보",String.format("%s %d 50 50 50 50 50 50 50",get,numb))
         Glide.with(this).load(R.raw.doggy).into(imagePet)
-
-        val get=intent.getStringExtra("정보")
 
         var character:Character = if (numb==0) Perfect()
         else if (numb==1) Foodfight()

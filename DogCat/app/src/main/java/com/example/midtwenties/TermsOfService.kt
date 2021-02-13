@@ -16,8 +16,7 @@ class TermsOfService : AppCompatActivity() {
         var get=intent.getStringExtra("정보").toString()
         saveToInnerStorage(get,"test6.txt")
 
-        //val next=Intent(this,YardActivity::class.java)
-        val next=Intent(this,IDListActivity::class.java)
+        val next=Intent(this,YardActivity::class.java)
 
         checkBox1.isChecked=false;
         checkBox2.isChecked=false;
