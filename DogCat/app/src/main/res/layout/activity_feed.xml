@@ -16,7 +16,7 @@
         app:srcCompat="@drawable/bara" />
 
     <ImageView
-        android:id="@+id/imageView8"
+        android:id="@+id/empty_bowl"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -24,6 +24,17 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/guideline11"
         app:srcCompat="@drawable/empty_bowl" />
+
+    <ImageView
+        android:id="@+id/full_bowl"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/guideline11"
+        app:srcCompat="@drawable/full_bowl" />
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/feedButton"

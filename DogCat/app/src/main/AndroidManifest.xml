@@ -10,12 +10,22 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.NoActionBar">
+        <activity android:name=".CheckActivity"></activity>
+        <activity android:name=".RegisterActivity"/>
+        <activity android:name="com.example.midtwenties.SplashActivity"></activity>
         <activity android:name=".InfoNext"/>
-        <activity android:name=".SplashActivity">
+        <activity android:name=".FeedActivity" />
+        <activity android:name=".InitPet"></activity>
+        <activity android:name=".InfoActivity"></activity>
+        <activity android:name=".TermsOfService"></activity>
+        <activity android:name=".YardActivity">
+        </activity>
+        <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
+<<<<<<< HEAD
             </intent-filter>
         </activity>
         <activity android:name=".InitPet" />
@@ -27,6 +37,10 @@
         </activity>
         <activity android:name=".StoreItem"/>
         <activity android:name=".YardActivity" />
+=======
+            </intent-filter></activity>
+        <activity android:name=".MainSetting"></activity>
+>>>>>>> e6be8161263d114874afa7786072c63111c8e633
     </application>
 
 </manifest>
