@@ -4,11 +4,15 @@ import android.content.Context
 import android.content.ContextWrapper
 import android.content.Intent
 import android.graphics.Bitmap
+import android.graphics.Canvas
+import android.graphics.Color
 import android.net.Uri
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import com.github.gcacace.signaturepad.views.SignaturePad
+import android.view.View
+import androidx.core.view.ViewCompat.setBackground
 import kotlinx.android.synthetic.main.activity_pet_id.*
+import kotlinx.android.synthetic.main.activity_terms_of_service.view.*
 import java.io.File
 import java.io.FileOutputStream
 import java.io.IOException
@@ -29,15 +33,11 @@ class PetIDActivity : AppCompatActivity() {
         val uri: Uri? =intent1.getParcelableExtra("signature")
         signature.setImageURI(uri)
 
-        var imagePad: SignaturePad =findViewById(R.id.imagePad)
-
-        check.setOnClickListener{
-            val cardBitmap = imagePad.signatureBitmap
-            val cardURI = bitmapToURI(cardBitmap)
-
-            val ur=cardURI.toString()
-            next.putExtra("imageURI", ur)
-
+        save.setOnClickListener{
+            val cardBitmap =captureView(findViewById(R.id.idcardView), idcardView.height, idcardView.width)
+            val cardURI=bitmapToURI(cardBitmap)
+            val imageuri=cardURI.toString()
+            next.putExtra("imageURI", imageuri)
             startActivity(next)
         }
 
@@ -67,4 +67,11 @@ class PetIDActivity : AppCompatActivity() {
         fileOutputStream.close()
     }
 
+    fun captureView(view: View, height: Int, width: Int): Bitmap {
+        val bitmap = Bitmap.createBitmap(width, height, Bitmap.Config.ARGB_8888)
+        val canvas = Canvas(bitmap)
+        canvas.drawColor(Color.TRANSPARENT)
+        view.draw(canvas)
+        return bitmap
+    }
 }
