@@ -12,7 +12,6 @@
     android:scrollbarSize="10dp"
     android:scrollbarStyle="outsideInset">
 
-
     <TextView
         android:id="@+id/startTv"
         android:layout_width="wrap_content"
