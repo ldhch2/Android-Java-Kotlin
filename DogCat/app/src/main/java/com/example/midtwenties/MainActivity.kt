@@ -20,11 +20,9 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-<<<<<<< HEAD
         val next=Intent(this,StoreItem::class.java)
 
 
-=======
         var stateList = arrayListOf<State>(
             State("hungry", "full", 40),
             State("dirty", "clean", 15),
