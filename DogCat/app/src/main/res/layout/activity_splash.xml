@@ -24,30 +24,31 @@
 
 
     <ImageView
-        android:id="@+id/imageView9"
+        android:id="@+id/titleImage2"
         android:layout_width="84dp"
-        android:layout_height="94dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="334dp"
+        android:layout_marginLeft="334dp"
+        android:layout_marginTop="27dp"
+        android:layout_marginBottom="35dp"
         android:rotation="30"
-        app:srcCompat="@drawable/catfoot"
-        tools:layout_editor_absoluteX="334dp"
-        tools:layout_editor_absoluteY="95dp" />
+        app:layout_constraintBottom_toBottomOf="@+id/titleView1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/titleImage1"
+        app:srcCompat="@drawable/catfoot" />
 
     <ImageView
-        android:id="@+id/imageView10"
+        android:id="@+id/titleImage1"
         android:layout_width="73dp"
         android:layout_height="81dp"
+        android:layout_marginTop="68dp"
+        android:layout_marginBottom="75dp"
         android:rotation="8"
-        app:srcCompat="@drawable/dogfoot"
-        tools:layout_editor_absoluteX="296dp"
-        tools:layout_editor_absoluteY="68dp" />
-
-    <TextView
-        android:id="@+id/titleView2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="TextView"
-        tools:layout_editor_absoluteX="84dp"
-        tools:layout_editor_absoluteY="265dp" />
+        app:layout_constraintBottom_toBottomOf="@+id/titleView1"
+        app:layout_constraintEnd_toStartOf="@+id/titleImage2"
+        app:layout_constraintStart_toStartOf="@+id/titleImage2"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/dogfoot" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
