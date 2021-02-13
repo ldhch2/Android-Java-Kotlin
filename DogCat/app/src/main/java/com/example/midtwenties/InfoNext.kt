@@ -10,6 +10,7 @@ import androidx.appcompat.app.AppCompatActivity
 import com.bumptech.glide.Glide
 import java.util.Random
 import android.view.View
+import android.widget.Toast
 import android.widget.EditText
 import com.example.midtwenties.PetClass
 import kotlinx.android.synthetic.main.activity_info_next.*
@@ -24,11 +25,15 @@ class InfoNext : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_info_next)
 
-        val next=Intent(this,TermsOfService::class.java)
 
         Glide.with(this).load(R.raw.doggy).into(imagePet)
 
-        val get=intent.getStringExtra("정보")
+        val get=intent.getStringExtra("정보").toString()
+        saveToInnerStorage(get,"test.txt")
+
+        var next=Intent(this,RegisterActivity::class.java)
+        next.putExtra("정보",String.format("%s %d 50 50 50 50 50 50 50",get,numb))
+        Glide.with(this).load(R.raw.doggy).into(imagePet)
 
         var character:Character = if (numb==0) Perfect()
         else if (numb==1) Foodfight()

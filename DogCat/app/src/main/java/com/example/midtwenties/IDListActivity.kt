@@ -14,8 +14,16 @@ class IDListActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_id_list)
 
+        val filename=loadFromInnerStorage("pet.txt")
+        val temp=filename.split('\n')
+        val pet=PetClass(loadFromInnerStorage(temp[0]))
+
+
+
+
+
         var idList = arrayListOf<Id>(
-            //   Id(imageuri, "bara")
+            Id(pet.card, pet.name)
         )
 
 
@@ -32,6 +40,10 @@ class IDListActivity : AppCompatActivity() {
         }
     }
 
+    fun loadFromInnerStorage(filename: String):String{
+        val fileInputStream=openFileInput(filename)
+        return fileInputStream.reader().readText()
+    }
 
 
 }

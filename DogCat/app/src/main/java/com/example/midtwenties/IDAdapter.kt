@@ -30,6 +30,6 @@ class IDAdapter(val context:Context, val IdList:ArrayList<Id>):
     }
 
     override fun onBindViewHolder(holder: Holder, position: Int) {
-        holder?.bind(IdList[position], context)
+        holder.bind(IdList[position], context)
     }
 }

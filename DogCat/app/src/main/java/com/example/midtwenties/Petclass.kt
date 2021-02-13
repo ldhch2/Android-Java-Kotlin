@@ -1,5 +1,8 @@
 package com.example.midtwenties
 
+import android.net.Uri
+import androidx.core.net.toUri
+
 class PetClass (info: String) { // kind: 고양이 1, 강아지 2
     var name=""
     var kind=0
@@ -7,14 +10,16 @@ class PetClass (info: String) { // kind: 고양이 1, 강아지 2
     var gender=0 // gender: 여자 1, 남자 2
     var character:Character=Perfect()// 성격에 따라 번호 매겨줘
     var state:PetState= PetState()
+    lateinit var card: Uri
+
     init {
         val arr=info.split(" ")
         this.name=arr[0]
         this.kind=arr[1].toInt()
         this.month=arr[2].toInt()
         this.gender=arr[3].toInt()
-
         val num=arr[4].toInt()
+        card=arr[12].toUri()
 
         character = if (num==0) Perfect()
         else if (num==1) Foodfight()
@@ -28,7 +33,7 @@ class PetClass (info: String) { // kind: 고양이 1, 강아지 2
     }
 
     fun saveinfo():String{
-        return String.format("%s %d %d %d %d %s",this.name,this.kind,this.month,this.gender,this.character.type,state.info())
+        return String.format("%s %d %d %d %d %s %s",this.name,this.kind,this.month,this.gender,this.character.type,state.info(),card.toString())
     }
 
     fun filename():String{

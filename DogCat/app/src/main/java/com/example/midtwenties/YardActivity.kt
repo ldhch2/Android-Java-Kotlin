@@ -16,7 +16,6 @@ import java.util.*
 
 class YardActivity : AppCompatActivity() {
 
-    @RequiresApi(Build.VERSION_CODES.O)
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_yard)
@@ -25,21 +24,17 @@ class YardActivity : AppCompatActivity() {
         var countDate = 0
         var flag = false
         try {
-            val readdate =loadFromInnerStorage("attendancefile.txt")
-            var arr=readdate.split("/")
+            val readDate = loadFromInnerStorage("attendancefile.txt")
+            var arr = readDate.split("/")
             date = arr[0].toString()
             countDate = arr[1].toInt() + 1
-            Toast.makeText(this,"파일 있음", Toast.LENGTH_LONG).show()
         } catch(e: Exception) {
             date = today
             countDate = 1
             flag = true
-            Toast.makeText(this,"파일 없음", Toast.LENGTH_LONG).show()
         }
-        if(countDate == 8) countDate = 1
-        if( !date.equals(today) || flag == true) {
-            Toast.makeText(this,"오늘 출석 안함", Toast.LENGTH_LONG).show()
-
+        if(countDate == 6) countDate = 1
+        if(!date.equals(today) || flag == true) {
             val writedate = date + "/" + countDate
             saveToInnerStorage(writedate,"attendancefile.txt")
 
@@ -47,40 +42,6 @@ class YardActivity : AppCompatActivity() {
             intent.putExtra("countDate", countDate)
 
             startActivityForResult(intent, 1)
-        }
-        else {
-            Toast.makeText(this,"오늘 출석 함", Toast.LENGTH_LONG).show()
-        }
-    }
-
-    @RequiresApi(Build.VERSION_CODES.O)
-    fun checkAttendance() {
-        var date = ""
-        var countDate = 0
-        try {
-            val readdate =loadFromInnerStorage("attendancefile.txt")
-            var arr=readdate.split("/")
-            date = arr[0].toString()
-            countDate = arr[1].toInt() + 1
-            Toast.makeText(this,"파일 있음", Toast.LENGTH_LONG).show()
-        } catch(e: Exception) {
-            date = LocalDate.now().toString()
-            countDate = 1
-            Toast.makeText(this,"파일 없음", Toast.LENGTH_LONG).show()
-        }
-        if(countDate == 8) countDate = 1
-        if(date != LocalDate.now().toString()) {
-            Toast.makeText(this,"오늘 출석 안함", Toast.LENGTH_LONG).show()
-
-            val writedate = date + "/" + countDate
-            saveToInnerStorage(writedate,"attendancefile.txt")
-
-            var intent = Intent(this, AttendancePopup::class.java)
-            intent.putExtra("countDate", countDate)
-            startActivityForResult(intent, 1)
-        }
-        else {
-            Toast.makeText(this,"오늘 출석 함", Toast.LENGTH_LONG).show()
         }
     }
 
