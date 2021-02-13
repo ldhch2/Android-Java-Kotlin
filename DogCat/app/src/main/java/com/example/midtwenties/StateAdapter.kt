@@ -18,7 +18,6 @@ class StateAdapter(val context:Context, val stateList: ArrayList<State>):
                 val bool = itemView?.findViewById<ProgressBar>(R.id.progressBarDanger)
 
                 fun bind (state: State, context: Context) {
-                        /* TextView와 String 데이터를 연결한다. */
                         start?.text = state.start
                         end?.text = state.end
                         if(state.degree<20){
