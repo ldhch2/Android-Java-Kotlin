@@ -20,10 +20,16 @@ class PetIDActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_pet_id)
-        val intent= intent
+        val intent1= intent
+
+        val next=Intent(this,TermsOfService::class.java)
+
+        val get=intent.getStringExtra("정보").toString()
+        saveToInnerStorage(get,"test5.txt")
+        next.putExtra("정보",get)
 
         /* uri 전송 방법*/
-        val uri: Uri? =intent.getParcelableExtra("signature")
+        val uri: Uri? =intent1.getParcelableExtra("signature")
         signature.setImageURI(uri)
 
         /* bitmap 전송 방법
@@ -34,13 +40,15 @@ class PetIDActivity : AppCompatActivity() {
         var imagePad: SignaturePad =findViewById(R.id.imagePad)
 
         check.setOnClickListener{
-            val cardImage = imagePad.signatureBitmap
-            val cardPath = bitmapToURI(cardImage)
-            intent.putExtra("imageURI", cardPath)
-            var pet=PetClass("a")
-            pet.card=cardPath
-            startActivity(Intent(this, MainActivity::class.java))
+            val cardBitmap = imagePad.signatureBitmap
+            val cardURI = bitmapToURI(cardBitmap)
+
+            val ur=cardURI.toString()
+            next.putExtra("imageURI", ur)
+
+            startActivity(next)
         }
+
     }
 
     fun bitmapToURI(bitmap: Bitmap): Uri {
@@ -60,4 +68,11 @@ class PetIDActivity : AppCompatActivity() {
 
        return Uri.parse(file.absolutePath)
     }
+
+    fun saveToInnerStorage(text: String, filename: String) {
+        val fileOutputStream = openFileOutput(filename, Context.MODE_PRIVATE)
+        fileOutputStream.write(text.toByteArray())
+        fileOutputStream.close()
+    }
+
 }
