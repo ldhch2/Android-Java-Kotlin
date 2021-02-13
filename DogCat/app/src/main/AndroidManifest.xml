@@ -11,6 +11,11 @@
         android:theme="@style/Theme.AppCompat.NoActionBar">
 
         <activity android:name=".SplashActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
         </activity>
         <activity android:name=".RegisterActivity"/>
         <activity android:name=".PetIDActivity"/>
@@ -19,16 +24,9 @@
         <activity android:name=".InitPet"/>
         <activity android:name=".InfoActivity"/>
         <activity android:name=".TermsOfService"/>
-        <activity android:name=".YardActivity">
-            <intent-filter>
-            <action android:name="android.intent.action.MAIN" />
-
-            <category android:name="android.intent.category.LAUNCHER" />
-        </intent-filter>
-        </activity>
+        <activity android:name=".YardActivity"></activity>
         <activity android:name=".MainActivity"/>
         <activity android:name=".MainSetting" />
-        <activity android:name=".MyStore"/>
         <activity android:name=".StoreItem"/>
         <activity android:name=".AttendancePopup"/>
     </application>

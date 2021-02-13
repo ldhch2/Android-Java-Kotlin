@@ -36,9 +36,7 @@ class PetIDActivity : AppCompatActivity() {
         check.setOnClickListener{
             val cardImage = imagePad.signatureBitmap
             val cardPath = bitmapToURI(cardImage)
-            intent.putExtra("imageURI", cardPath)
-            var pet=PetClass("a")
-            pet.card=cardPath
+
             startActivity(Intent(this, MainActivity::class.java))
         }
     }
