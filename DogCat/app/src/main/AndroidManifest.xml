@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.midtwenties">
-
     <application
         android:allowBackup="true"
         android:hardwareAccelerated="false"
@@ -18,18 +17,19 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".CheckActivity"/>
         <activity android:name=".RegisterActivity"/>
+        <activity android:name=".PetIDActivity"/>
         <activity android:name=".InfoNext"/>
         <activity android:name=".FeedActivity" />
         <activity android:name=".InitPet"/>
         <activity android:name=".InfoActivity"/>
         <activity android:name=".TermsOfService"/>
         <activity android:name=".YardActivity"/>
-        <activity android:name=".MainActivity"/>
+        <activity android:name=".MainActivity">
+
+        </activity>
         <activity android:name=".MainSetting" />
         <activity android:name=".MyStore"/>
         <activity android:name=".StoreItem"/>
     </application>
-
 </manifest>

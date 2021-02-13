@@ -8,6 +8,7 @@ import android.graphics.Color
 import android.net.Uri
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import com.github.gcacace.signaturepad.views.SignaturePad
 import kotlinx.android.synthetic.main.activity_register.*
 import java.io.File
 import java.io.FileOutputStream
@@ -19,7 +20,7 @@ class RegisterActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_register)
 
-        //var signaturePad:SignaturePad=findViewById(R.id.signaturePad)
+        var signaturePad: SignaturePad =findViewById(R.id.signaturePad)
         signaturePad.setPenColor(Color.BLACK)
 
         clearButton.setOnClickListener{
@@ -28,20 +29,20 @@ class RegisterActivity : AppCompatActivity() {
         saveButton.setOnClickListener{
             val signature = signaturePad.signatureBitmap
 
-            /* uri 전송 방법
+            /* uri 전송 방법 */
             val signPath = saveBitmap(signature)
-            */
 
-            val intent = Intent(this,CheckActivity::class.java)
-            /* uri 전송 방법
+
+            val intent = Intent(this,PetIDActivity::class.java)
+            /* uri 전송 방법  */
             intent.putExtra("signature", signPath)
-            */
-            intent.putExtra("signature", signature)
+
+        //    intent.putExtra("signature", signature)
             startActivity(intent)
         }
     }
 
-    /* uri 저장 방법
+    /* uri 저장 방법 */
     fun saveBitmap(bitmap: Bitmap): Uri {
         val wrapper = ContextWrapper(applicationContext)
 
@@ -59,5 +60,5 @@ class RegisterActivity : AppCompatActivity() {
 
         return Uri.parse(file.absolutePath)
     }
-    */
+
 }
