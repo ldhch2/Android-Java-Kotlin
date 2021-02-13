@@ -14,24 +14,6 @@ class MyStore : AppCompatActivity() {
         back.setOnClickListener{
             startActivity(Intent(this,MainActivity::class.java))
         }
-        toyButton.setOnClickListener {
-            startActivity(Intent(this, ToyStore::class.java))
-        }
-        houseButton.setOnClickListener {
-            startActivity(Intent(this, HouseStore::class.java))
-        }
-        bowlButton.setOnClickListener {
-            startActivity(Intent(this, BowlStore::class.java))
-        }
-        feedButton.setOnClickListener {
-            startActivity(Intent(this, FeedStore::class.java))
-        }
-        nutritionButton.setOnClickListener {
-
-        }
-        padButton.setOnClickListener {
-
-        }
     }
 
 
