@@ -25,11 +25,15 @@ class InitPet : AppCompatActivity() {
                 Toast.makeText(applicationContext,"냥이가 선택되었습니다.",Toast.LENGTH_SHORT).show()
                 next.putExtra("종류",1)
                 startActivity(next)
+                overridePendingTransition(R.anim.fade_in, R.anim.fade_out)
+                finish()
             }
             else if (dogbutton.isChecked==true){
                 Toast.makeText(applicationContext,"멍이가 선택되었습니다.",Toast.LENGTH_SHORT).show()
                 next.putExtra("종류",2)
                 startActivity(next)
+                overridePendingTransition(R.anim.fade_in, R.anim.fade_out)
+                finish()
             }
             else{
                 Toast.makeText(applicationContext,"둘 중 하나를 체크해주세요",Toast.LENGTH_SHORT).show()

@@ -27,12 +27,12 @@ class SplashActivity : AppCompatActivity() {
         titleImage2.visibility= View.INVISIBLE
 
         val animation1 = AnimationUtils.loadAnimation(this, R.anim.fade_in)
+
         Handler(Looper.getMainLooper()).postDelayed({
             titleView1.visibility = View.VISIBLE
             titleView1.startAnimation(animation1)
         }, 1000)
 
-        //val animation2 = AnimationUtils.loadAnimation(this, R.anim.fade_in)
         Handler(Looper.getMainLooper()).postDelayed({
             //overridePendingTransition(R.anim.fade_out, R.anim.fade_in)
             titleImage1.visibility= View.VISIBLE
@@ -44,16 +44,19 @@ class SplashActivity : AppCompatActivity() {
         }, 3000)
 
         try {
-            if (loadFromInnerStorage(filename).equals("True")) {
-                startActivity(Intent(this, MainActivity::class.java))
-
-            } else {
-                startActivity(Intent(this, InitPet::class.java))
-            }
-            Handler(Looper.getMainLooper()).postDelayed({
-                overridePendingTransition(R.anim.fade_in, R.anim.fade_out)
-                finish()
-            }, 5000)
+                if (loadFromInnerStorage(filename).equals("True")) {
+                    Handler(Looper.getMainLooper()).postDelayed({
+                        startActivity(Intent(this, MainActivity::class.java))
+                        overridePendingTransition(R.anim.fade_in, R.anim.fade_out)
+                        finish()
+                    },5000)
+                } else {
+                    Handler(Looper.getMainLooper()).postDelayed({
+                        startActivity(Intent(this, InitPet::class.java))
+                        overridePendingTransition(R.anim.fade_in, R.anim.fade_out)
+                        finish()
+                    }, 5000)
+                }
         }
         catch (e: FileNotFoundException){
             Handler(Looper.getMainLooper()).postDelayed({
@@ -66,7 +69,7 @@ class SplashActivity : AppCompatActivity() {
     }
 
     fun loadFromInnerStorage(filename: String):String{
-        val fileInputStream=openFileInput(filename)
+        val fileInputStream = openFileInput(filename)
         if(fileInputStream==null) return "false"
         else return fileInputStream.reader().readText()
     }
