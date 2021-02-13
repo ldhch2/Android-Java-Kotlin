@@ -22,22 +22,10 @@ class MainActivity : AppCompatActivity() {
 
         val next=Intent(this,StoreItem::class.java)
 
-
-        var stateList = arrayListOf<State>(
-            State("hungry", "full", 40),
-            State("dirty", "clean", 15),
-            State("bored", "excited", 85),
-            State("sleepy", "awake", 25),
-            State("sad", "happy", 60),
-            State("sick", "healthy", 0),
-            State("anxious", "relaxed", 5)
-        )
-
-        /* 여기가 안돼
->>>>>>> e6be8161263d114874afa7786072c63111c8e633
         val filename=loadFromInnerStorage("pet.txt")
         val temp=filename.split('\n')
         val pet=PetClass(loadFromInnerStorage(temp[0]))
+
 
         var stateList = arrayListOf<State>(
                 State("hungry", "full", pet.state.full),
@@ -48,7 +36,6 @@ class MainActivity : AppCompatActivity() {
                 State("sick", "healthy", pet.state.healthy),
                 State("anxious", "relaxed", pet.state.relaxed)
         )
-        */
 
         val stateAdapter=StateAdapter(this, stateList)
         stateRecyclerView.adapter = stateAdapter
