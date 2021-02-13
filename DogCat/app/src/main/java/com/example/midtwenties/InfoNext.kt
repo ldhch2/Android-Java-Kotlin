@@ -25,7 +25,6 @@ class InfoNext : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_info_next)
 
-
         Glide.with(this).load(R.raw.doggy).into(imagePet)
 
         val get=intent.getStringExtra("정보").toString()
@@ -33,7 +32,7 @@ class InfoNext : AppCompatActivity() {
 
         var next=Intent(this,RegisterActivity::class.java)
         next.putExtra("정보",String.format("%s %d 50 50 50 50 50 50 50",get,numb))
-        Glide.with(this).load(R.raw.doggy).into(imagePet)
+        //Glide.with(this).load(R.raw.doggy).into(imagePet)
 
         var character:Character = if (numb==0) Perfect()
         else if (numb==1) Foodfight()
@@ -45,9 +44,9 @@ class InfoNext : AppCompatActivity() {
 
         characterView2.text=character.info.toString()
 
-        next.putExtra("정보",String.format("%s %d 50 50 50 50 50 50 50",get,numb))
+        //next.putExtra("정보",String.format("%s %d 50 50 50 50 50 50 50",get,numb))
 
-        Glide.with(this).load(R.raw.doggy).into(imagePet)
+        //Glide.with(this).load(R.raw.doggy).into(imagePet)
         button10.setOnClickListener {
             startActivity(next)
         }

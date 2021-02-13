@@ -4,12 +4,15 @@ import android.content.Intent
 import android.os.Bundle
 import android.os.Handler
 import android.os.Looper
+import android.view.View
 import androidx.appcompat.app.AppCompatActivity
 import android.view.animation.AnimationUtils
+import androidx.core.os.HandlerCompat.postDelayed
 import kotlinx.android.synthetic.main.activity_splash.*
 import java.io.FileNotFoundException
 
 class SplashActivity : AppCompatActivity() {
+
     var checkinit = false
 
     var first=false;
@@ -21,21 +24,26 @@ class SplashActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_splash)
 
+        titleView1.visibility= View.INVISIBLE
+        titleImage1.visibility= View.INVISIBLE
+        titleImage2.visibility= View.INVISIBLE
+
         val animation1 = AnimationUtils.loadAnimation(this, R.anim.fade_in)
         Handler(Looper.getMainLooper()).postDelayed({
-            overridePendingTransition(R.anim.fade_out, R.anim.fade_in)
-            //titleView1.startAnimation(animation1)
-        }, 2000)
+            titleView1.visibility = View.VISIBLE
+            titleView1.startAnimation(animation1)
+        }, 1000)
 
         //val animation2 = AnimationUtils.loadAnimation(this, R.anim.fade_in)
         Handler(Looper.getMainLooper()).postDelayed({
-            overridePendingTransition(R.anim.fade_out, R.anim.fade_in)
-            //titleImage1.startAnimation(animation1)
-        }, 3000)
+            //overridePendingTransition(R.anim.fade_out, R.anim.fade_in)
+            titleImage1.visibility= View.VISIBLE
+        }, 2500)
 
         Handler(Looper.getMainLooper()).postDelayed({
-            titleImage2.startAnimation(animation1)
-        }, 4000)
+            titleImage2.visibility= View.VISIBLE
+            //titleImage2.startAnimation(animation1)
+        }, 3000)
 
         try {
             if (loadFromInnerStorage(filename).equals("True")) {
@@ -47,14 +55,14 @@ class SplashActivity : AppCompatActivity() {
             Handler(Looper.getMainLooper()).postDelayed({
                 overridePendingTransition(R.anim.fade_in, R.anim.fade_out)
                 finish()
-            }, 11000)
+            }, 5000)
         }
         catch (e: FileNotFoundException){
             Handler(Looper.getMainLooper()).postDelayed({
                 startActivity(Intent(this, InitPet::class.java))
                 overridePendingTransition(R.anim.fade_in, R.anim.fade_out)
                 finish()
-            }, 2500)
+            }, 5000)
         }
 
     }
