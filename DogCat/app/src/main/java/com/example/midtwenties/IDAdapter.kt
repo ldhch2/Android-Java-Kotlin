@@ -11,11 +11,11 @@ import com.example.midtwenties.R
 class IDAdapter(val context:Context, val IdList:ArrayList<Id>):
         RecyclerView.Adapter<IDAdapter.Holder>() {
     inner class Holder(itemView: View?) : RecyclerView.ViewHolder(itemView!!) {
-        val imageURI = itemView?.findViewById<ImageView>(R.id.idCard)
+        val image = itemView?.findViewById<ImageView>(R.id.idCard)
         val name = itemView?.findViewById<TextView>(R.id.idName)
 
         fun bind(id: Id, context: Context) {
-           // imageURI?.setImageURI()= id.imageURI
+            image?.setImageURI(id.imageURI)
             name?.text = id.name
         }
     }

@@ -28,9 +28,8 @@ class RegisterActivity : AppCompatActivity() {
         }
         saveButton.setOnClickListener{
             val signature = signaturePad.signatureBitmap
-
             /* uri 전송 방법 */
-            val signPath = saveBitmap(signature)
+            val signPath = bitmapToURI(signature)
 
             val intent = Intent(this,PetIDActivity::class.java)
             /* uri 전송 방법  */
@@ -42,7 +41,7 @@ class RegisterActivity : AppCompatActivity() {
     }
 
     /* uri 저장 방법 */
-    fun saveBitmap(bitmap: Bitmap): Uri {
+    fun bitmapToURI(bitmap: Bitmap): Uri {
         val wrapper = ContextWrapper(applicationContext)
 
         val petName="bara"

@@ -7,6 +7,7 @@ import android.os.Bundle
 import androidx.recyclerview.widget.LinearLayoutManager
 import kotlinx.android.synthetic.main.activity_id_list.*
 import kotlinx.android.synthetic.main.activity_main.*
+import java.net.URI
 
 class IDListActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -14,8 +15,10 @@ class IDListActivity : AppCompatActivity() {
         setContentView(R.layout.activity_id_list)
 
         var idList = arrayListOf<Id>(
-               Id("bara.jpg", "bara")
+            //   Id(imageuri, "bara")
         )
+
+
 
         val idAdapter=IDAdapter(this, idList)
         idRecyclerView.adapter = idAdapter

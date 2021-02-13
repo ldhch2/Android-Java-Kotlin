@@ -6,6 +6,18 @@
     android:layout_height="match_parent"
     tools:context=".PetIDActivity">
 
+    <com.github.gcacace.signaturepad.views.SignaturePad
+        android:id="@+id/imagePad"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView4"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/imageView4"
+        app:layout_constraintTop_toTopOf="@+id/imageView4"
+        app:layout_constraintVertical_bias="0.0"
+        tools:ignore="MissingConstraints" />
+
     <ImageView
         android:id="@+id/imageView4"
         android:layout_width="wrap_content"
