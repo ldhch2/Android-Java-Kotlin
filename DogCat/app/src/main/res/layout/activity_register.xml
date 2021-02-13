@@ -4,10 +4,20 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:layout_margin="15dp"
-    android:layout_marginBottom="50dp"
-    android:background="@drawable/papers"
+    android:background="@drawable/background"
     tools:context=".RegisterActivity">
+
+    <ImageView
+        android:id="@+id/papers"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_margin="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/papers" />
 
     <com.github.gcacace.signaturepad.views.SignaturePad
         android:id="@+id/signaturePad"
@@ -78,7 +88,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.3" />
+        app:layout_constraintGuide_percent="0.35" />
 
     <TextView
         android:id="@+id/textView6"
@@ -102,7 +112,7 @@
         android:layout_marginTop="30dp"
         android:layout_marginEnd="50dp"
         android:layout_marginRight="50dp"
-        android:text="  어쩌구 저쩌구 대충 동의하고 신고하고 그런데 여기다가 무슨 말을 써야할지 도통 모르겠고 그치만 몇줄 써야 디자인이 가능하니까 일단 아무말이나 쓰는데 이정도 썼으면 됐겠지 싶다."
+        android:text="  동의서가 생각보다 길지 않아야 할 것 같다. 아무래도 폰 사이즈마다 다르겠지만 딱 세줄 정도가 적당할 것으로 보인다 인정?"
         android:textColor="#000000"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -132,7 +142,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.85" />
+        app:layout_constraintGuide_percent="0.75" />
 
     <Button
         android:id="@+id/clearButton"
@@ -157,5 +167,6 @@
         android:textSize="12sp"
         app:layout_constraintBottom_toTopOf="@+id/guideline29"
         app:layout_constraintEnd_toEndOf="parent" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

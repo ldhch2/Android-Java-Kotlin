@@ -34,6 +34,7 @@
         android:layout_marginTop="8dp"
         android:layout_marginBottom="8dp"
         android:text="TextView"
+        android:textColor="#000000"
         android:textSize="18sp"
         app:layout_constraintBottom_toTopOf="@+id/guideline19"
         app:layout_constraintStart_toStartOf="@+id/guideline20"
@@ -57,6 +58,7 @@
         android:id="@+id/option1_price"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:textColor="#000000"
         android:text="가격"
         android:textSize="18sp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -77,18 +79,24 @@
             android:id="@+id/option1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:buttonTint="#8e8e8e"
+            android:textColor="#000000"
             android:text="RadioButton" />
 
         <RadioButton
             android:id="@+id/option2"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:buttonTint="#8e8e8e"
+            android:textColor="#000000"
             android:text="RadioButton" />
 
         <RadioButton
             android:id="@+id/option3"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:buttonTint="#8e8e8e"
+            android:textColor="#000000"
             android:text="RadioButton" />
     </RadioGroup>
 

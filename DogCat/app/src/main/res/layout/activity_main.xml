@@ -5,6 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity"
+    android:background="@drawable/background"
     xmlns:app="http://schemas.android.com/apk/res-auto">
     <androidx.coordinatorlayout.widget.CoordinatorLayout
         android:layout_width="match_parent"
@@ -70,7 +71,7 @@
         />
 
         <com.google.android.material.floatingactionbutton.FloatingActionButton
-            android:id="@+id/registerButton"
+            android:id="@+id/homeButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="end|bottom"
@@ -78,13 +79,13 @@
             android:layout_marginBottom="280dp"
             android:backgroundTint="#8E8E8E"
             android:clickable="true"
-            app:srcCompat="@drawable/ic_baseline_add_24"
             android:tint="#ffffff"
             android:visibility="invisible"
             app:borderWidth="0dp"
             app:elevation="6dp"
             app:fabSize="normal"
             app:pressedTranslationZ="12dp"
+            app:srcCompat="@drawable/ic_baseline_house_24"
             tools:ignore="MissingConstraints,VectorDrawableCompat" />
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
