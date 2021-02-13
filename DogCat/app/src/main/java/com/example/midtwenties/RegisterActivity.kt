@@ -8,6 +8,7 @@ import android.graphics.Color
 import android.net.Uri
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.widget.Toast
 import com.github.gcacace.signaturepad.views.SignaturePad
 import kotlinx.android.synthetic.main.activity_register.*
 import java.io.File
@@ -20,6 +21,14 @@ class RegisterActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_register)
 
+        val next = Intent(this,PetIDActivity::class.java)
+
+
+        val info=intent.getStringExtra("정보").toString()
+        saveToInnerStorage(info,"test2.txt")
+
+        saveToInnerStorage("aaaa","test3.txt")
+
         var signaturePad: SignaturePad =findViewById(R.id.signaturePad)
         signaturePad.setPenColor(Color.BLACK)
 
@@ -28,21 +37,21 @@ class RegisterActivity : AppCompatActivity() {
         }
         saveButton.setOnClickListener{
             val signature = signaturePad.signatureBitmap
-
             /* uri 전송 방법 */
-            val signPath = saveBitmap(signature)
+            val signPath = bitmapToURI(signature)
 
-            val intent = Intent(this,PetIDActivity::class.java)
             /* uri 전송 방법  */
-            intent.putExtra("signature", signPath)
+
+            next.putExtra("signature", signPath)
+            next.putExtra("정보",info)
 
         //    intent.putExtra("signature", signature)
-            startActivity(intent)
+            startActivity(next)
         }
     }
 
     /* uri 저장 방법 */
-    fun saveBitmap(bitmap: Bitmap): Uri {
+    fun bitmapToURI(bitmap: Bitmap): Uri {
         val wrapper = ContextWrapper(applicationContext)
 
         val petName="bara"
@@ -58,6 +67,12 @@ class RegisterActivity : AppCompatActivity() {
         }
 
         return Uri.parse(file.absolutePath)
+    }
+
+    fun saveToInnerStorage(text: String, filename: String) {
+        val fileOutputStream = openFileOutput(filename, Context.MODE_PRIVATE)
+        fileOutputStream.write(text.toByteArray())
+        fileOutputStream.close()
     }
 
 }

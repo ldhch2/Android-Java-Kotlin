@@ -13,9 +13,11 @@ class TermsOfService : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_terms_of_service)
 
+        var get=intent.getStringExtra("정보").toString()
+        saveToInnerStorage(get,"test6.txt")
 
-
-        val next=Intent(this,YardActivity::class.java)
+        //val next=Intent(this,YardActivity::class.java)
+        val next=Intent(this,IDListActivity::class.java)
 
         checkBox1.isChecked=false;
         checkBox2.isChecked=false;
@@ -31,14 +33,14 @@ class TermsOfService : AppCompatActivity() {
         nextButton.setOnClickListener {
             if(checkBox1.isChecked || checkBox2.isChecked) {
 
-                val get=intent.getStringExtra("정보")
+                get+=" "+intent.getStringExtra("imageURI").toString()
 
                 saveToInnerStorage(checkBox1.isChecked.toString(),"check.txt")
                 saveToInnerStorage("True","init.txt")
-                val name= get!!.split(" ")
+                val name= get.split(" ")
                 saveToInnerStorage(String.format("%s.txt",name[0]),"pet.txt")
                 saveToInnerStorage(get,String.format("%s.txt",name[0]))
-                startActivity(Intent(this, MainActivity::class.java))
+                startActivity(next)
             }
             else Toast.makeText(applicationContext,"선택해주세요.",Toast.LENGTH_SHORT).show()
         }
