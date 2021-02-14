@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/background"
     tools:context=".InitPet">
 
     <ImageView
@@ -89,12 +90,16 @@
             android:id="@+id/catbutton"
             android:layout_width="220dp"
             android:layout_height="wrap_content"
+            android:buttonTint="#8e8e8e"
+            android:textColor="#000000"
             android:text="냥이" />
 
         <RadioButton
             android:id="@+id/dogbutton"
             android:layout_width="151dp"
             android:layout_height="wrap_content"
+            android:buttonTint="#8e8e8e"
+            android:textColor="#000000"
             android:text="멍이" />
 
     </RadioGroup>
@@ -110,6 +115,7 @@
         android:layout_marginRight="158dp"
         android:layout_marginBottom="13dp"
         android:text="펫 선택"
+        android:textColor="#000000"
         android:textSize="32sp"
         app:layout_constraintBottom_toTopOf="@id/guideline8"
         app:layout_constraintEnd_toEndOf="parent"
