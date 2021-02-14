@@ -72,12 +72,19 @@ class InfoActivity : AppCompatActivity() {
                 Toast.makeText(applicationContext,"선택해주세요",Toast.LENGTH_SHORT).show()
             }
             else {
+<<<<<<< Updated upstream:DogCat/app/src/main/java/com/example/midtwenties/InfoActivity.kt
 
                 val get=intent.getIntExtra("종류",1)
 
                 val info=String.format("%s %d %d %d",petName.text.toString(),get,button1,button2)
 
                 next.putExtra("정보",info)
+=======
+                val get=intent.getIntExtra("kind",1)
+                val info=String.format("%s %d %d %d",petName.text.toString(),get,button1,button2)
+                next.putExtra("info",info)
+                Toast.makeText(applicationContext, "저장되었습니다", Toast.LENGTH_SHORT).show()
+>>>>>>> Stashed changes:DogCat/app/src/main/java/com/midtwenties/dogcat/InfoActivity.kt
 
                 Toast.makeText(applicationContext, "저장되었습니다", Toast.LENGTH_SHORT).show()
                 startActivity(next)

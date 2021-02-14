@@ -19,7 +19,16 @@ class RegisterActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_register)
 
+<<<<<<< Updated upstream:DogCat/app/src/main/java/com/example/midtwenties/RegisterActivity.kt
         //var signaturePad:SignaturePad=findViewById(R.id.signaturePad)
+=======
+        val next = Intent(this, PetIDActivity::class.java)
+
+
+        val info=intent.getStringExtra("info").toString()
+
+        var signaturePad: SignaturePad =findViewById(R.id.signaturePad)
+>>>>>>> Stashed changes:DogCat/app/src/main/java/com/midtwenties/dogcat/RegisterActivity.kt
         signaturePad.setPenColor(Color.BLACK)
 
         clearButton.setOnClickListener{
@@ -28,6 +37,7 @@ class RegisterActivity : AppCompatActivity() {
         saveButton.setOnClickListener{
             val signature = signaturePad.signatureBitmap
 
+<<<<<<< Updated upstream:DogCat/app/src/main/java/com/example/midtwenties/RegisterActivity.kt
             /* uri 전송 방법
             val signPath = saveBitmap(signature)
             */
@@ -38,6 +48,11 @@ class RegisterActivity : AppCompatActivity() {
             */
             intent.putExtra("signature", signature)
             startActivity(intent)
+=======
+            next.putExtra("signature", signPath)
+            next.putExtra("info",info)
+            startActivity(next)
+>>>>>>> Stashed changes:DogCat/app/src/main/java/com/midtwenties/dogcat/RegisterActivity.kt
         }
     }
 
