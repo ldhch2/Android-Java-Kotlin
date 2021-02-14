@@ -72,10 +72,9 @@ class InfoActivity : AppCompatActivity() {
                 Toast.makeText(applicationContext,"선택해주세요",Toast.LENGTH_SHORT).show()
             }
             else {
-                val get=intent.getIntExtra("종류",1)
+                val get=intent.getIntExtra("kind",1)
                 val info=String.format("%s %d %d %d",petName.text.toString(),get,button1,button2)
-                next.putExtra("정보",info)
-                Toast.makeText(applicationContext,info,Toast.LENGTH_LONG).show()
+                next.putExtra("info",info)
                 Toast.makeText(applicationContext, "저장되었습니다", Toast.LENGTH_SHORT).show()
 
                 startActivity(next)

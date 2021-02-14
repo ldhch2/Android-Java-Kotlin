@@ -23,10 +23,7 @@ class RegisterActivity : AppCompatActivity() {
         val next = Intent(this, PetIDActivity::class.java)
 
 
-        val info=intent.getStringExtra("정보").toString()
-        saveToInnerStorage(info,"test2.txt")
-
-        saveToInnerStorage("aaaa","test3.txt")
+        val info=intent.getStringExtra("info").toString()
 
         var signaturePad: SignaturePad =findViewById(R.id.signaturePad)
         signaturePad.setPenColor(Color.BLACK)
@@ -39,7 +36,7 @@ class RegisterActivity : AppCompatActivity() {
             val signPath = bitmapToURI(signature)
 
             next.putExtra("signature", signPath)
-            next.putExtra("정보",info)
+            next.putExtra("info",info)
             startActivity(next)
         }
     }
