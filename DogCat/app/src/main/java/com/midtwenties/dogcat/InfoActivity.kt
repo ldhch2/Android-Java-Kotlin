@@ -21,9 +21,7 @@ class InfoActivity : AppCompatActivity() {
         var button1=0;
         var button2=0;
 
-
         val next=Intent(this, InfoNext::class.java)
-
 
         var anim =  AlphaAnimation(0.0f,1.0f)
 
@@ -74,13 +72,15 @@ class InfoActivity : AppCompatActivity() {
                 Toast.makeText(applicationContext,"선택해주세요",Toast.LENGTH_SHORT).show()
             }
             else {
-
                 val get=intent.getIntExtra("종류",1)
                 val info=String.format("%s %d %d %d",petName.text.toString(),get,button1,button2)
                 next.putExtra("정보",info)
                 Toast.makeText(applicationContext,info,Toast.LENGTH_LONG).show()
                 Toast.makeText(applicationContext, "저장되었습니다", Toast.LENGTH_SHORT).show()
+
                 startActivity(next)
+                overridePendingTransition(R.anim.fade_in, R.anim.fade_out)
+                finish()
             }
         }
     }
