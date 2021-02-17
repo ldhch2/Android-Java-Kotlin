@@ -8,10 +8,7 @@ import android.content.Intent
 import android.os.Build
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.widget.Toast
-import androidx.annotation.RequiresApi
 import java.text.SimpleDateFormat
-import java.time.LocalDate
 import java.util.*
 
 class YardActivity : AppCompatActivity() {
@@ -20,7 +17,7 @@ class YardActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_yard)
         var date = ""
-        val today=SimpleDateFormat("yyyy-MM-dd",Locale.KOREA).format(Date())
+        val today = SimpleDateFormat("yyyy-MM-dd",Locale.KOREA).format(Date())
         var countDate = 0
         var flag = false
         try {
@@ -35,7 +32,7 @@ class YardActivity : AppCompatActivity() {
         }
         if(countDate == 6) countDate = 1
         if(!date.equals(today) || flag == true) {
-            val writedate = date + "/" + countDate
+            val writedate = today + "/" + countDate.toString()
             saveToInnerStorage(writedate,"attendancefile.txt")
 
             var intent = Intent(this, AttendancePopup::class.java)
