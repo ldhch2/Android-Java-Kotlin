@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/background"
     tools:context=".StoreItem">
 
     <TextView
@@ -13,6 +14,7 @@
         android:gravity="center"
         android:text="상점"
         android:textSize="30sp"
+        android:textColor="#000000"
         app:layout_constraintBottom_toTopOf="@+id/guideline01"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
