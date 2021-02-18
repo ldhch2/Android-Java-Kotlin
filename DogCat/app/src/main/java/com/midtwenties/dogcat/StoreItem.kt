@@ -18,11 +18,12 @@ class StoreItem : AppCompatActivity() {
             StoreContacts("", "룰룰루", 500, "구매", "빨강색", "파란색", "초록색")
     )
     var houseList = arrayListOf<StoreContacts>(
+            StoreContacts("freecushion", "기본 쿠션", 0, "구매", "소형", "중형", "대형"),
             StoreContacts("pinkbasichouse", "Pink 베이직 홈", 500, "구매", "소형", "중형", "대형"),
             StoreContacts("bluebasichouse", "Blue 베이직 홈", 500, "구매", "소형", "중형", "대형"),
             StoreContacts("brownbasichouse", "Brown 베이직 홈", 500, "구매", "소형", "중형", "대형"),
-            StoreContacts("", "캣타워", 500, "구매", "빨강색", "파란색", "초록색"),
-            StoreContacts("", "룰룰루", 500, "구매", "빨강색", "파란색", "초록색")
+            StoreContacts("princesshouse", "프린세스 홈", 1000, "구매", "빨강색", "파란색", "초록색"),
+            StoreContacts("", "캣타워", 500, "구매", "빨강색", "파란색", "초록색")
     )
     var bowlList = arrayListOf<StoreContacts>(
             StoreContacts("", "그릇 세트", 500, "구매", "빨강색", "파란색", ""),
