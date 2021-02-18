@@ -18,9 +18,9 @@ class StoreItem : AppCompatActivity() {
             StoreContacts("", "룰룰루", 500, "구매", "빨강색", "파란색", "초록색")
     )
     var houseList = arrayListOf<StoreContacts>(
-            StoreContacts("redhouse", "Red 심플 홈", 500, "구매", "소형", "중형", "대형"),
-            StoreContacts("bluehouse", "Blue 심플 홈", 500, "구매", "소형", "중형", "대형"),
-            StoreContacts("yellowhouse", "Yellow 심플 홈", 500, "구매", "소형", "중형", "대형"),
+            StoreContacts("pinkbasichouse", "Pink 베이직 홈", 500, "구매", "소형", "중형", "대형"),
+            StoreContacts("bluebasichouse", "Blue 베이직 홈", 500, "구매", "소형", "중형", "대형"),
+            StoreContacts("brownbasichouse", "Brown 베이직 홈", 500, "구매", "소형", "중형", "대형"),
             StoreContacts("", "캣타워", 500, "구매", "빨강색", "파란색", "초록색"),
             StoreContacts("", "룰룰루", 500, "구매", "빨강색", "파란색", "초록색")
     )
