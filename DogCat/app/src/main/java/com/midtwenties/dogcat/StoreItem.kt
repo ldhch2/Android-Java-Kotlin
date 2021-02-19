@@ -23,7 +23,7 @@ class StoreItem : AppCompatActivity() {
             StoreContacts("bluebasichouse", "Blue 베이직 홈", 500, "구매", "소형", "중형", "대형"),
             StoreContacts("brownbasichouse", "Brown 베이직 홈", 500, "구매", "소형", "중형", "대형"),
             StoreContacts("princesshouse", "프린세스 홈", 1000, "구매", "빨강색", "파란색", "초록색"),
-            StoreContacts("", "캣타워", 500, "구매", "빨강색", "파란색", "초록색")
+            StoreContacts("cattowerpre", "[Premium] 캣타워", 2000, "구매", "빨강색", "파란색", "초록색")
     )
     var bowlList = arrayListOf<StoreContacts>(
             StoreContacts("", "그릇 세트", 500, "구매", "빨강색", "파란색", ""),
@@ -37,8 +37,10 @@ class StoreItem : AppCompatActivity() {
             StoreContacts("catyum", "고양이 사료", 10000, "구매", "1kg", "3kg", "5kg"),
             StoreContacts("dogyumpre", "[Premium] 강아지 사료", 15000, "구매", "1kg", "3kg", "5kg"),
             StoreContacts("catyumpre", "[Premium] 고양이 사료", 15000, "구매", "1kg", "3kg", "5kg"),
-            StoreContacts("", "뼈다귀(강아지용)", 500, "구매", "", "", ""),
-            StoreContacts("", "참치(고양이용)", 500, "구매", "", "", "")
+            StoreContacts("doggum", "개껌 (강아지용)", 500, "구매", "", "", ""),
+            StoreContacts("yellowchu", "닭가슴살 츄르 (고양이용)", 500, "구매", "", "", ""),
+            StoreContacts("orangechu", "연어 츄르 (고양이용)", 500, "구매", "", "", ""),
+            StoreContacts("pinkchu", "참치 츄르 (고양이용)", 500, "구매", "", "", "")
     )
     var clothesList = arrayListOf<StoreContacts>(
             StoreContacts("", "심플 옷", 500, "구매", "빨강색", "파란색", ""),
