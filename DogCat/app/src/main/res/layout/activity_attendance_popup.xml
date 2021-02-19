@@ -1,12 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_gravity="center"
-    android:background="@drawable/background"
-    android:orientation="vertical"
+    android:background="#F4F9F3"
     android:layout_width="300dp"
-    android:layout_height="wrap_content" >
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:orientation="vertical">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -16,7 +15,7 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="40dp"
-            android:background="#A0C377"
+            android:background="#22741C"
             android:gravity="center"
             android:text="출석 보상"
             android:textColor="#fff"
@@ -26,14 +25,14 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="110dp"
+        android:layout_height="wrap_content"
         android:orientation="horizontal"
         android:padding="12dp">
 
         <LinearLayout
             android:id="@+id/layoutDay1"
             android:layout_width="wrap_content"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             android:layout_weight="20"
             android:background="@drawable/state_border"
             android:orientation="vertical"
@@ -42,7 +41,7 @@
             <TextView
                 android:id="@+id/textView01"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="20dp"
                 android:gravity="center"
                 android:text="1일차"
                 android:textColor="#1D5038"
@@ -51,7 +50,7 @@
             <ImageView
                 android:id="@+id/imageView9"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="50dp"
                 app:srcCompat="@drawable/dogfoot" />
 
         </LinearLayout>
@@ -59,7 +58,7 @@
         <LinearLayout
             android:id="@+id/layoutDay2"
             android:layout_width="wrap_content"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             android:layout_weight="20"
             android:background="@drawable/state_border"
             android:orientation="vertical"
@@ -68,7 +67,7 @@
             <TextView
                 android:id="@+id/textView02"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="20dp"
                 android:gravity="center"
                 android:text="2일차"
                 android:textColor="#1D5038" />
@@ -76,14 +75,14 @@
             <ImageView
                 android:id="@+id/imageView11"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="50dp"
                 app:srcCompat="@drawable/catfoot" />
         </LinearLayout>
 
         <LinearLayout
             android:id="@+id/layoutDay3"
             android:layout_width="wrap_content"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             android:layout_weight="20"
             android:background="@drawable/state_border"
             android:orientation="vertical"
@@ -92,7 +91,7 @@
             <TextView
                 android:id="@+id/textView03"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="20dp"
                 android:gravity="center"
                 android:text="3일차"
                 android:textColor="#1D5038" />
@@ -100,14 +99,14 @@
             <ImageView
                 android:id="@+id/imageView12"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="50dp"
                 app:srcCompat="@drawable/dogfoot" />
         </LinearLayout>
 
         <LinearLayout
             android:id="@+id/layoutDay4"
             android:layout_width="wrap_content"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             android:layout_weight="20"
             android:background="@drawable/state_border"
             android:orientation="vertical"
@@ -116,7 +115,7 @@
             <TextView
                 android:id="@+id/textView04"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="20dp"
                 android:gravity="center"
                 android:text="4일차"
                 android:textColor="#1D5038" />
@@ -124,14 +123,14 @@
             <ImageView
                 android:id="@+id/imageView13"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="50dp"
                 app:srcCompat="@drawable/catfoot" />
         </LinearLayout>
 
         <LinearLayout
             android:id="@+id/layoutDay5"
             android:layout_width="wrap_content"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             android:layout_weight="20"
             android:background="@drawable/state_border"
             android:orientation="vertical"
@@ -140,7 +139,7 @@
             <TextView
                 android:id="@+id/textView05"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="20dp"
                 android:gravity="center"
                 android:text="5일차"
                 android:textColor="#1D5038" />
@@ -148,31 +147,32 @@
             <ImageView
                 android:id="@+id/imageView14"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="50dp"
                 app:srcCompat="@drawable/dogfoot" />
         </LinearLayout>
     </LinearLayout>
 
     <View
-        android:background="#66dbdbdb"
         android:layout_width="match_parent"
-        android:layout_height="1dp" />
+        android:layout_height="1dp"
+        android:background="#66dbdbdb" />
 
     <LinearLayout
-        android:orientation="horizontal"
-        android:gravity="center"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:padding="10dp">
 
         <Button
             android:id="@+id/closeButton"
             android:layout_width="match_parent"
             android:layout_height="40dp"
-            android:background="#F4F9F3"
+            android:background="#A0C377"
             android:gravity="center"
             android:padding="10dp"
             android:text="출석하기"
-            android:textColor="#A0C377"
+            android:textColor="#fff"
             android:textSize="15sp" />
     </LinearLayout>
 </LinearLayout>
