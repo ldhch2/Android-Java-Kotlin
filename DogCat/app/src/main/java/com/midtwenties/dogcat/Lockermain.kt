@@ -13,6 +13,9 @@ class Lockermain : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
+        val filename=loadFromInnerStorage("pet.txt")
+        val temp=filename.split('\n')
+        val pet= PetClass(loadFromInnerStorage(temp[0]))
 
 
 
@@ -40,6 +43,11 @@ class Lockermain : AppCompatActivity() {
                 if (seekBar?.progress!! >=95) finish()
             }
         })
+    }
+
+    fun loadFromInnerStorage(filename: String):String{
+        val fileInputStream=openFileInput(filename)
+        return fileInputStream.reader().readText()
     }
 
 
