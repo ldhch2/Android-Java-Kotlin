@@ -31,4 +31,4 @@
         <activity android:name=".AttendancePopup"/>
         <activity android:name=".IDListActivity"></activity>
     </application>
-</manifest>
+</manifest> 
