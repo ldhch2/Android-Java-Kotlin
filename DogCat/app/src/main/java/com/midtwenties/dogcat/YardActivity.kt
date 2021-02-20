@@ -45,7 +45,6 @@ class YardActivity : AppCompatActivity() {
 
         var countDate = preference.getInt("count",0)
         val date = preference.getString("date",today).toString()
->>>>>>> mh
 
         if(date != today || countDate==0) {
             countDate+=1
