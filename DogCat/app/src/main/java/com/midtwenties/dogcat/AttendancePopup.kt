@@ -10,6 +10,7 @@ import android.widget.LinearLayout
 import kotlinx.android.synthetic.main.activity_attendance_popup.*
 
 class AttendancePopup : AppCompatActivity() {
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         // 타이틀바 없애기
@@ -47,6 +48,7 @@ class AttendancePopup : AppCompatActivity() {
             finish()
         }
     }
+
     override fun onTouchEvent(event: MotionEvent?): Boolean {
         if(event?.action == MotionEvent.ACTION_OUTSIDE) {
             return false

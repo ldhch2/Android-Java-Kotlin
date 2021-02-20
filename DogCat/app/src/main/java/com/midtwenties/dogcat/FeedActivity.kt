@@ -17,7 +17,7 @@ class FeedActivity : AppCompatActivity() {
         }
 
         feedButton.setOnClickListener(){
-            full_bowl.isVisible=true
+            //full_bowl.isVisible=true
         }
     }
 }
