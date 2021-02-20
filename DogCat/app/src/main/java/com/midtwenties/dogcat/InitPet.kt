@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import android.widget.Toast
+import androidx.core.view.isVisible
 import kotlinx.android.synthetic.main.activity_init_pet.*
 import com.bumptech.glide.Glide
 
@@ -16,21 +17,31 @@ class InitPet : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_init_pet)
 
-
         val next=Intent(this, InfoActivity::class.java);
 
-        imageView3.visibility=View.INVISIBLE
+        previewDog.isVisible=false
+        previewCat.isVisible=false
+
+        dogbutton.setOnClickListener{
+            catbutton.isChecked=false
+            dogbutton.isChecked=true
+        }
+
+        catbutton.setOnClickListener{
+            dogbutton.isChecked=false
+            catbutton.isChecked=true
+        }
 
         SelectButton.setOnClickListener {
-            if(catbutton.isChecked==true){
-                Toast.makeText(applicationContext,"냥이가 선택되었습니다.",Toast.LENGTH_SHORT).show()
-                next.putExtra("kind",1)
+            if (dogbutton.isChecked==true) {
+                Toast.makeText(applicationContext, "멍이가 선택되었습니다.", Toast.LENGTH_SHORT).show()
+                next.putExtra("kind", 1)
                 startActivity(next)
                 overridePendingTransition(R.anim.fade_in, R.anim.fade_out)
                 finish()
             }
-            else if (dogbutton.isChecked==true){
-                Toast.makeText(applicationContext,"멍이가 선택되었습니다.",Toast.LENGTH_SHORT).show()
+            else if(catbutton.isChecked==true){
+                Toast.makeText(applicationContext,"냥이가 선택되었습니다.",Toast.LENGTH_SHORT).show()
                 next.putExtra("kind",2)
                 startActivity(next)
                 overridePendingTransition(R.anim.fade_in, R.anim.fade_out)
@@ -45,26 +56,26 @@ class InitPet : AppCompatActivity() {
         var checkdog=0;
 
         cat_preview.setOnClickListener {
-            if(checkcat==0 || checkdog==1) {
-                Glide.with(this).load(R.raw.yoon).into(imageView3)
-                imageView3.visibility=View.VISIBLE
+            if(checkcat==0) {
                 checkcat=1
-                checkdog=0
+                cat_image.isVisible=false
+                previewCat.isVisible=true
             }
             else{
-                imageView3.visibility=View.INVISIBLE
+                previewCat.isVisible=false
+                cat_image.isVisible=true
                 checkcat=0
             }
         }
         dog_preview.setOnClickListener {
-            if(checkdog==0 || checkcat==1) {
-                Glide.with(this).load(R.raw.a).into(imageView3)
-                imageView3.visibility=View.VISIBLE
+            if(checkdog==0) {
                 checkdog=1
-                checkcat=0
+                dog_image.isVisible=false
+                previewDog.isVisible=true
             }
             else{
-                imageView3.visibility=View.INVISIBLE
+                previewDog.isVisible=false
+                dog_image.isVisible=true
                 checkdog=0
             }
         }

@@ -22,11 +22,13 @@ class InfoNext : AppCompatActivity() {
         val imagePet: ImageView = findViewById(R.id.imagePet)
         Glide.with(this).load(R.raw.doggy).into(imagePet)
 
-        val get=intent.getStringExtra("정보").toString()
+        val get=intent.getStringExtra("info").toString()
         saveToInnerStorage(get,"test.txt")
 
         var next=Intent(this, RegisterActivity::class.java)
-        next.putExtra("정보",String.format("%s %d 50 50 50 50 50 50 50",get,numb))
+        next.putExtra("info",String.format("%s %d 50 50 50 50 50 50 50",get,numb))
+        var kind: Int = intent.getIntExtra("kind",0)
+        next.putExtra("kind", kind)
 
         var character: Character = if (numb==0) Perfect()
         else if (numb==1) Foodfight()

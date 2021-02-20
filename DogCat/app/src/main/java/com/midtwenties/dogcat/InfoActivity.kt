@@ -10,6 +10,7 @@ import android.view.KeyEvent
 import android.view.KeyEvent.KEYCODE_ENTER
 import android.view.animation.AlphaAnimation
 import android.widget.Toast
+import androidx.core.view.isVisible
 import kotlinx.android.synthetic.main.activity_info.*
 
 class InfoActivity : AppCompatActivity() {
@@ -17,6 +18,10 @@ class InfoActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_info)
+        var kind: Int = intent.getIntExtra("kind",0)
+
+        if(kind==1) catImage.isVisible=false
+        else if(kind==2) dogImage.isVisible=false
 
         var button1=0;
         var button2=0;
@@ -39,19 +44,22 @@ class InfoActivity : AppCompatActivity() {
         }
 
         babyButton.setOnClickListener{
-            petImage.setImageResource(R.drawable.baby_dog)
+            dogImage.setImageResource(R.drawable.baby_dog)
+            catImage.setImageResource(R.drawable.baby_dog)
             babyButton.startAnimation(anim);
             button1= 1
             month.setText(button1.toString());
         }
         adultButton.setOnClickListener{
-            petImage.setImageResource(R.drawable.adult_dog)
+            dogImage.setImageResource(R.drawable.adult_dog)
+            catImage.setImageResource(R.drawable.adult_dog)
             adultButton.startAnimation(anim)
             button1=25
             month.setText(button1.toString());
         }
         oldButton.setOnClickListener{
-            petImage.setImageResource(R.drawable.old_dog)
+            dogImage.setImageResource(R.drawable.old_dog)
+            catImage.setImageResource(R.drawable.old_dog)
             oldButton.startAnimation(anim)
             button1=85
             month.setText(button1.toString());
@@ -69,12 +77,12 @@ class InfoActivity : AppCompatActivity() {
 
         saveInfo.setOnClickListener {
             if(button1==0 || button2==0 || TextUtils.isEmpty(petName.text.toString())){
-                Toast.makeText(applicationContext,"선택해주세요",Toast.LENGTH_SHORT).show()
+                Toast.makeText(applicationContext,"모든 정보를 입력해주세요",Toast.LENGTH_SHORT).show()
             }
             else {
-                val get=intent.getIntExtra("종류",1)
-                val info=String.format("%s %d %d %d",petName.text.toString(),get,button1,button2)
-                next.putExtra("정보",info)
+                val info=String.format("%s %d %d %d",petName.text.toString(),kind,button1,button2)
+                next.putExtra("info", info)
+                next.putExtra("kind", kind)
                 Toast.makeText(applicationContext, "저장되었습니다", Toast.LENGTH_SHORT).show()
 
                 startActivity(next)
