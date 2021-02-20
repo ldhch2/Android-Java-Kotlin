@@ -28,7 +28,7 @@
         <activity android:name=".MainActivity"/>
         <activity android:name=".MainSetting" />
         <activity android:name=".StoreItem"/>
-        <activity android:name=".AttendancePopup"/>
+        <activity android:name=".AttendancePopup" />
         <activity android:name=".IDListActivity"></activity>
     </application>
 </manifest>
