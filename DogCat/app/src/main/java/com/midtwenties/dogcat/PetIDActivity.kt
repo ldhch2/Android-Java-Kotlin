@@ -22,15 +22,13 @@ class PetIDActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_pet_id)
-        val intent1= intent
 
         val next=Intent(this,TermsOfService::class.java)
 
-        val get=intent.getStringExtra("정보").toString()
-        saveToInnerStorage(get,"test5.txt")
-        next.putExtra("정보",get)
+        val get=intent.getStringExtra("info").toString()
+        next.putExtra("info",get)
 
-        val uri: Uri? =intent1.getParcelableExtra("signature")
+        val uri: Uri? =intent.getParcelableExtra("signature")
         signature.setImageURI(uri)
 
         save.setOnClickListener{

@@ -9,12 +9,16 @@ import kotlinx.android.synthetic.main.activity_terms_of_service.*
 
 class TermsOfService : AppCompatActivity() {
 
+    val init = "init"
+    val screen = "screen"
+
+    val prefernce by lazy { getSharedPreferences("setting_data",Context.MODE_PRIVATE) }
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_terms_of_service)
 
-        var get=intent.getStringExtra("정보").toString()
-        saveToInnerStorage(get,"test6.txt")
+        var get=intent.getStringExtra("info").toString()
 
         val next=Intent(this,YardActivity::class.java)
 
@@ -34,16 +38,18 @@ class TermsOfService : AppCompatActivity() {
 
                 get+=" "+intent.getStringExtra("imageURI").toString()
 
-                saveToInnerStorage(checkBox1.isChecked.toString(),"check.txt")
-                saveToInnerStorage("True","init.txt")
                 val name= get.split(" ")
                 saveToInnerStorage(String.format("%s.txt",name[0]),"pet.txt")
                 saveToInnerStorage(get,String.format("%s.txt",name[0]))
+
+                prefernce.edit().putBoolean(screen,checkBox1.isChecked).apply()
+                prefernce.edit().putBoolean(init,true).apply()
+
                 startActivity(next)
+                finish()
             }
             else Toast.makeText(applicationContext,"선택해주세요.",Toast.LENGTH_SHORT).show()
         }
-
     }
 
     fun saveToInnerStorage(text: String, filename: String){

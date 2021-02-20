@@ -1,5 +1,6 @@
 package com.midtwenties.dogcat
 
+import android.content.Context
 import android.content.Intent
 import android.os.Bundle
 import android.os.Handler
@@ -13,10 +14,11 @@ import java.io.FileNotFoundException
 class SplashActivity : AppCompatActivity() {
 
     var checkinit = false
-
     var first=false;
+    val init = "init"
 
-    val filename="init.txt"
+    val prefernce by lazy { getSharedPreferences("setting_data", Context.MODE_PRIVATE) }
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -44,9 +46,9 @@ class SplashActivity : AppCompatActivity() {
         }, 3000)
 
         try {
-                if (loadFromInnerStorage(filename).equals("True")) {
+                if (prefernce.getBoolean(init,false)) {
                     Handler(Looper.getMainLooper()).postDelayed({
-                        startActivity(Intent(this, MainActivity::class.java))
+                        startActivity(Intent(this, YardActivity::class.java))
                         overridePendingTransition(R.anim.fade_in, R.anim.fade_out)
                         finish()
                     },5000)

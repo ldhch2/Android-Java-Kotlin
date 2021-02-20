@@ -28,7 +28,6 @@
         android:layout_marginTop="5dp"
         android:layout_marginEnd="50dp"
         android:layout_marginRight="50dp"
-        android:layout_marginBottom="5dp"
         android:background="@drawable/state_border"
         android:visibility="visible"
         app:layout_constraintBottom_toTopOf="@+id/saveButton"
@@ -41,10 +40,10 @@
 
     <ImageView
         android:id="@+id/imageView10"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="20dp"
-        android:layout_marginRight="20dp"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginEnd="30dp"
+        android:layout_marginRight="30dp"
         app:layout_constraintBottom_toTopOf="@+id/guideline28"
         app:layout_constraintEnd_toStartOf="@+id/guideline26"
         app:layout_constraintTop_toTopOf="@+id/guideline27"
@@ -60,7 +59,7 @@
         android:text="바라"
         android:textColor="#8e8e8e"
         android:textSize="24sp"
-        android:textStyle="bold|italic"
+        android:textStyle="bold"
         app:layout_constraintStart_toStartOf="@+id/guideline26"
         app:layout_constraintTop_toTopOf="@+id/guideline27" />
 
@@ -112,7 +111,7 @@
         android:layout_marginTop="30dp"
         android:layout_marginEnd="50dp"
         android:layout_marginRight="50dp"
-        android:text="  동의서가 생각보다 길지 않아야 할 것 같다. 아무래도 폰 사이즈마다 다르겠지만 딱 세줄 정도가 적당할 것으로 보인다 인정?"
+        android:text=" 입양은 평생의 반려동물을 맞이하는 것입니다. 새로운 환경에 적응하는 데 다양한 어려움을 겪을 수 있으니, 책임감을 가지고 새 가족을 맞이하시길 바랍니다."
         android:textColor="#000000"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -135,14 +134,14 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.5" />
+        app:layout_constraintGuide_percent="0.48" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline29"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.75" />
+        app:layout_constraintGuide_percent="0.8" />
 
     <Button
         android:id="@+id/clearButton"
@@ -163,10 +162,12 @@
         android:layout_marginEnd="85dp"
         android:layout_marginRight="85dp"
         android:layout_marginBottom="5dp"
+        android:layout_marginTop="5dp"
         android:text="서명"
         android:textSize="12sp"
         app:layout_constraintBottom_toTopOf="@+id/guideline29"
-        app:layout_constraintEnd_toEndOf="parent" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/signaturePad" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
