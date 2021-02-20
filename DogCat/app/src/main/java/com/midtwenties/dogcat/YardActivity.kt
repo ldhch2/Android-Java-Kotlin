@@ -26,16 +26,16 @@ class YardActivity : AppCompatActivity() {
         val today=SimpleDateFormat("yyyy-MM-dd",Locale.KOREA).format(Date())
         var countDate = 0
         var flag = false
+
         try {
-            val readDate = loadFromInnerStorage("attendancefile.txt")
-            var arr = readDate.split("/")
-            date = arr[0].toString()
-            countDate = arr[1].toInt() + 1
+            val date = prefernce.getString("date",null)
+            val count= prefernce.getString("count",0)
         } catch(e: Exception) {
             date = today
             countDate = 1
             flag = true
         }
+
         if(countDate == 6) countDate = 1
         if(!date.equals(today) || flag == true) {
             val writedate = date + "/" + countDate
