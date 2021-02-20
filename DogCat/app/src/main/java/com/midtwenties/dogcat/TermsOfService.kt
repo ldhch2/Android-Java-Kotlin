@@ -46,6 +46,7 @@ class TermsOfService : AppCompatActivity() {
                 prefernce.edit().putBoolean(init,true).apply()
 
                 startActivity(next)
+                finish()
             }
             else Toast.makeText(applicationContext,"선택해주세요.",Toast.LENGTH_SHORT).show()
         }

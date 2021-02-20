@@ -18,7 +18,6 @@ class YardActivity : AppCompatActivity() {
 
     val prefernce by lazy { getSharedPreferences("setting_data", Context.MODE_PRIVATE) }
 
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_yard)
@@ -85,6 +84,7 @@ class YardActivity : AppCompatActivity() {
         alBuilder.setTitle("Exit")
         alBuilder.show()
     }
+
     fun saveToInnerStorage(text: String, filename: String){
         val fileOutputStream = openFileOutput(filename, Context.MODE_PRIVATE)
         fileOutputStream.write(text.toByteArray())
