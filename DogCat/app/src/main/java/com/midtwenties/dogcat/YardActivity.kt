@@ -28,6 +28,8 @@ class YardActivity : AppCompatActivity() {
         var countDate = preference.getInt("count",0)
         val date = preference.getString("date",today).toString()
 
+        if (countDate==6) countDate=1
+
         if(date != today || countDate==0) {
             countDate+=1
             preference.edit().putString("date",date).apply()
