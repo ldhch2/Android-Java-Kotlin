@@ -18,6 +18,7 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
         val next=Intent(this, StoreItem::class.java)
+        val hospital = Intent(this, HospitalActivity::class.java)
 
         val filename=loadFromInnerStorage("pet.txt")
         val temp=filename.split('\n')
@@ -82,6 +83,9 @@ class MainActivity : AppCompatActivity() {
             fab_sub1.setOnClickListener{
                 Toast.makeText(this,"click",Toast.LENGTH_LONG).show()
                 startActivity(next)
+            }
+            fab_sub3.setOnClickListener{
+                startActivity(hospital)
             }
 
             showState.setOnClickListener() {
