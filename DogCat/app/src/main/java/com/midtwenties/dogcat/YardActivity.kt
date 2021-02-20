@@ -18,6 +18,7 @@ class YardActivity : AppCompatActivity() {
 
     val preference by lazy { getSharedPreferences("setting_data", Context.MODE_PRIVATE) }
 
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_yard)
@@ -27,9 +28,8 @@ class YardActivity : AppCompatActivity() {
         var countDate = preference.getInt("count",0)
         val date = preference.getString("date",today).toString()
 
-        if(countDate == 6) countDate = 1
-
-        if(!date.equals(today)) {
+        if(date != today || countDate==0) {
+            countDate+=1
             preference.edit().putString("date",date).apply()
             preference.edit().putInt("count",countDate).apply()
 
@@ -44,7 +44,6 @@ class YardActivity : AppCompatActivity() {
         temporaryMain.setOnClickListener{
             startActivity(Intent(this, MainActivity::class.java))
         }
-
 
         when {
             preference.getBoolean("screen", false) -> {
