@@ -23,24 +23,6 @@ class YardActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_yard)
 
-        var date = ""
-        val today = SimpleDateFormat("yyyy-MM-dd",Locale.KOREA).format(Date())
-        var countDate = 0
-        var flag = false
-
-        try {
-            val date = preference.getString("date",null)
-            val count= preference.getString("count",0)
-        } catch(e: Exception) {
-            date = today
-            countDate = 1
-            flag = true
-        }
-
-        if(countDate == 6) countDate = 1
-        if(!date.equals(today) || flag == true) {
-            val writedate = today + "/" + countDate.toString()
-            saveToInnerStorage(writedate,"attendancefile.txt")
         val today=SimpleDateFormat("yyyy-MM-dd",Locale.KOREA).format(Date())
 
         var countDate = preference.getInt("count",0)
