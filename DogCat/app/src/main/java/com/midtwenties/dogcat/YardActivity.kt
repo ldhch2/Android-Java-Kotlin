@@ -29,8 +29,8 @@ class YardActivity : AppCompatActivity() {
         var flag = false
 
         try {
-            val date = prefernce.getString("date",null)
-            val count= prefernce.getString("count",0)
+            val date = preference.getString("date",null)
+            val count= preference.getString("count",0)
         } catch(e: Exception) {
             date = today
             countDate = 1
