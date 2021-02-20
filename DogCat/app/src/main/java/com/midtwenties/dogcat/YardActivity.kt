@@ -16,34 +16,25 @@ import kotlinx.android.synthetic.main.activity_yard.*
 
 class YardActivity : AppCompatActivity() {
 
-    val prefernce by lazy { getSharedPreferences("setting_data", Context.MODE_PRIVATE) }
+    val preference by lazy { getSharedPreferences("setting_data", Context.MODE_PRIVATE) }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_yard)
 
-        var date = ""
         val today=SimpleDateFormat("yyyy-MM-dd",Locale.KOREA).format(Date())
-        var countDate = 0
-        var flag = false
 
-        try {
-            val date = prefernce.getString("date",null)
-            val count= prefernce.getString("count",0)
-        } catch(e: Exception) {
-            date = today
-            countDate = 1
-            flag = true
-        }
+        var countDate = preference.getInt("count",0)
+        val date = preference.getString("date",today).toString()
 
         if(countDate == 6) countDate = 1
-        if(!date.equals(today) || flag == true) {
-            val writedate = date + "/" + countDate
-            saveToInnerStorage(writedate,"attendancefile.txt")
 
-            var intent = Intent(this, AttendancePopup::class.java)
+        if(!date.equals(today)) {
+            preference.edit().putString("date",date).apply()
+            preference.edit().putInt("count",countDate).apply()
+
+            val intent = Intent(this, AttendancePopup::class.java)
             intent.putExtra("countDate", countDate)
-
             startActivityForResult(intent, 1)
         }
 
@@ -56,7 +47,7 @@ class YardActivity : AppCompatActivity() {
 
 
         when {
-            prefernce.getBoolean("screen", false) -> {
+            preference.getBoolean("screen", false) -> {
                 if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
                     startForegroundService(Intent(applicationContext, ScreenService::class.java))
                 } else {

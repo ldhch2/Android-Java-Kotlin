@@ -27,13 +27,13 @@ class InfoActivity : AppCompatActivity() {
 
         femaleButton.setOnClickListener{
             Toast.makeText(applicationContext,"암컷을 입양합니다.",Toast.LENGTH_SHORT).show()
-            femaleButton.setColorFilter(Color.YELLOW)
+            femaleButton.setColorFilter(Color.parseColor("#A17432"))
             maleButton.setColorFilter(Color.BLACK)
             button2=1;
         }
         maleButton.setOnClickListener{
             Toast.makeText(applicationContext,"수컷을 입양합니다.",Toast.LENGTH_SHORT).show()
-            maleButton.setColorFilter(Color.YELLOW)
+            maleButton.setColorFilter(Color.parseColor("#A17432"))
             femaleButton.setColorFilter(Color.BLACK)
             button2=2;
         }
