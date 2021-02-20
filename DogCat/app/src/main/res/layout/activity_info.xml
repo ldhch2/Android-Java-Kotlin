@@ -21,13 +21,13 @@
     <ImageView
         android:id="@+id/petImage"
         style="@style/ShapeAppearance.MaterialComponents.LargeComponent"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:background="@drawable/edge"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:layout_marginTop="20dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/guideline"
-        app:srcCompat="@drawable/bara" />
+        app:srcCompat="@drawable/basiccat" />
 
     <TextView
         android:id="@+id/petInfo"
@@ -45,8 +45,8 @@
         android:id="@+id/name"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="48dp"
-        android:layout_marginTop="200dp"
+        android:layout_marginStart="60dp"
+        android:layout_marginTop="260dp"
         android:background="#31704200"
         android:text="이름"
         android:textSize="20sp"
@@ -73,14 +73,12 @@
         android:id="@+id/gender"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="48dp"
-        android:layout_marginTop="48dp"
+        android:layout_marginTop="60dp"
         android:background="#31704200"
         android:text="성별"
         android:textSize="20sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/name"
-        android:layout_marginLeft="48dp" />
+        app:layout_constraintStart_toStartOf="@+id/name"
+        app:layout_constraintTop_toBottomOf="@+id/name" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline"
@@ -158,28 +156,29 @@
         android:id="@+id/petName"
         android:layout_width="157dp"
         android:layout_height="46dp"
-        android:layout_marginStart="32dp"
-        android:layout_marginLeft="32dp"
-        android:layout_marginTop="195dp"
+        android:layout_marginLeft="60dp"
+        android:cursorVisible="true"
         android:hint="이름을 입력하세요"
         android:textColor="#000000"
         android:textColorHint="#8e8e8e"
+        android:textCursorDrawable="@drawable/cursor_color"
         android:textSize="18sp"
+        app:backgroundTint="#A17432"
         app:layout_constraintStart_toEndOf="@+id/name"
-        app:layout_constraintTop_toTopOf="@+id/guideline" />
+        app:layout_constraintTop_toTopOf="@+id/name" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.78" />
+        app:layout_constraintGuide_percent="0.77" />
 
     <ImageView
         android:id="@+id/femaleButton"
         android:layout_width="50dp"
         android:layout_height="91dp"
-        android:layout_marginStart="40dp"
+        android:layout_marginStart="70dp"
         android:layout_marginTop="35dp"
         app:layout_constraintStart_toEndOf="@+id/gender"
         app:layout_constraintTop_toBottomOf="@+id/petName"
@@ -191,10 +190,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:background="#31704200"
-        android:layout_marginStart="48dp"
         android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="@+id/months"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/gender"
         app:layout_constraintTop_toTopOf="@+id/months"
         tools:text="     " />
 
