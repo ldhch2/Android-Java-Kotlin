@@ -1,10 +1,13 @@
 package com.midtwenties.dogcat
 
 import android.annotation.SuppressLint
+import android.app.Activity
 import android.app.AlertDialog
+import android.app.Service
 import android.content.Context
 import android.content.DialogInterface
 import android.content.Intent
+import android.os.Build
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import java.text.SimpleDateFormat
@@ -13,9 +16,13 @@ import kotlinx.android.synthetic.main.activity_yard.*
 
 class YardActivity : AppCompatActivity() {
 
+    val prefernce by lazy { getSharedPreferences("setting_data", Context.MODE_PRIVATE) }
+
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_yard)
+
         var date = ""
         val today = SimpleDateFormat("yyyy-MM-dd",Locale.KOREA).format(Date())
         var countDate = 0
@@ -47,7 +54,20 @@ class YardActivity : AppCompatActivity() {
         temporaryMain.setOnClickListener{
             startActivity(Intent(this, MainActivity::class.java))
         }
+
+
+        when {
+            prefernce.getBoolean("screen", false) -> {
+                if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+                    startForegroundService(Intent(applicationContext, ScreenService::class.java))
+                } else {
+                    startService(Intent(applicationContext, ScreenService::class.java))
+                }
+            }
+            else -> stopService(Intent(applicationContext, ScreenService::class.java))
+        }
     }
+
 
     @SuppressLint("MissingSuperCall")
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
