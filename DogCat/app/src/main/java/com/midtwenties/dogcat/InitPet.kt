@@ -20,17 +20,18 @@ class InitPet : AppCompatActivity() {
         val next=Intent(this, InfoActivity::class.java);
 
         imageView3.visibility=View.INVISIBLE
+
         SelectButton.setOnClickListener {
             if(catbutton.isChecked==true){
                 Toast.makeText(applicationContext,"냥이가 선택되었습니다.",Toast.LENGTH_SHORT).show()
-                next.putExtra("종류",1)
+                next.putExtra("kind",1)
                 startActivity(next)
                 overridePendingTransition(R.anim.fade_in, R.anim.fade_out)
                 finish()
             }
             else if (dogbutton.isChecked==true){
                 Toast.makeText(applicationContext,"멍이가 선택되었습니다.",Toast.LENGTH_SHORT).show()
-                next.putExtra("종류",2)
+                next.putExtra("kind",2)
                 startActivity(next)
                 overridePendingTransition(R.anim.fade_in, R.anim.fade_out)
                 finish()
