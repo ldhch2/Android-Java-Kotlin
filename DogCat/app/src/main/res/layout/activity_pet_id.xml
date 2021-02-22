@@ -24,9 +24,10 @@
             android:background="@drawable/backgroundcrop"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.498"
+            app:layout_constraintVertical_bias="0.0"
             app:srcCompat="@drawable/idcardwbg" />
 
         <ImageView
@@ -35,7 +36,7 @@
             android:layout_height="56dp"
             android:layout_marginStart="72dp"
             android:layout_marginLeft="72dp"
-            android:layout_marginBottom="48dp"
+            android:layout_marginBottom="32dp"
             app:layout_constraintBottom_toBottomOf="@+id/petIdCard"
             app:layout_constraintStart_toStartOf="@+id/petIdCard"
             app:srcCompat="@drawable/ic_launcher_foreground" />
@@ -53,12 +54,12 @@
             app:srcCompat="@drawable/bara" />
 
         <TextView
-            android:id="@+id/textView"
+            android:id="@+id/petidName"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="88dp"
-            android:layout_marginLeft="88dp"
-            android:layout_marginTop="108dp"
+            android:layout_marginStart="100dp"
+            android:layout_marginLeft="100dp"
+            android:layout_marginTop="105dp"
             android:text="바라"
             android:textColor="#000000"
             android:textStyle="bold"
@@ -66,28 +67,40 @@
             app:layout_constraintTop_toTopOf="@+id/petIdCard" />
 
         <TextView
-            android:id="@+id/textView2"
+            android:id="@+id/petidDay"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginEnd="132dp"
-            android:layout_marginRight="132dp"
+            android:layout_marginEnd="124dp"
+            android:layout_marginRight="124dp"
             android:layout_marginBottom="48dp"
             android:text="2021.02.11"
             android:textColor="#000000"
+            android:textSize="12sp"
             app:layout_constraintBottom_toBottomOf="@+id/petIdCard"
             app:layout_constraintEnd_toEndOf="@+id/petIdCard" />
 
         <TextView
-            android:id="@+id/textView5"
+            android:id="@+id/petidGender"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="30dp"
             android:layout_marginLeft="30dp"
             android:text="女"
             android:textColor="#000000"
-            app:layout_constraintBottom_toBottomOf="@+id/textView"
-            app:layout_constraintStart_toEndOf="@+id/textView"
-            app:layout_constraintTop_toTopOf="@+id/textView" />
+            app:layout_constraintBottom_toBottomOf="@+id/petidName"
+            app:layout_constraintStart_toEndOf="@+id/petidName"
+            app:layout_constraintTop_toTopOf="@+id/petidName" />
+
+        <TextView
+            android:id="@+id/petidBirthday"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="210123-01"
+            android:textColor="#000000"
+            app:layout_constraintBottom_toTopOf="@+id/signature"
+            app:layout_constraintEnd_toEndOf="@+id/petidGender"
+            app:layout_constraintStart_toStartOf="@+id/petidName"
+            app:layout_constraintTop_toBottomOf="@+id/petidName" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 
     <Button
