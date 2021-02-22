@@ -9,8 +9,8 @@
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline13"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
         android:orientation="vertical"
         app:layout_constraintGuide_percent="0.5" />
 
@@ -19,10 +19,20 @@
         android:layout_width="0dp"
         android:layout_height="0dp"
         app:layout_constraintBottom_toTopOf="@+id/guideline8"
-        app:layout_constraintEnd_toStartOf="@+id/cat_image"
+        app:layout_constraintEnd_toStartOf="@+id/guideline13"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/guideline7"
+        app:layout_constraintTop_toBottomOf="@+id/guideline7"
         app:srcCompat="@drawable/basicdog" />
+
+    <ImageView
+        android:id="@+id/previewDog"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/guideline8"
+        app:layout_constraintEnd_toStartOf="@+id/guideline13"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/guideline7"
+        app:srcCompat="@drawable/basiccat" />
 
     <ImageView
         android:id="@+id/cat_image"
@@ -30,15 +40,26 @@
         android:layout_height="0dp"
         app:layout_constraintBottom_toTopOf="@+id/guideline8"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/dog_image"
+        app:layout_constraintStart_toEndOf="@+id/guideline13"
         app:layout_constraintTop_toTopOf="@+id/guideline7"
         app:srcCompat="@drawable/basiccat" />
+
+    <ImageView
+        android:id="@+id/previewCat"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/guideline8"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/guideline13"
+        app:layout_constraintTop_toTopOf="@+id/guideline7"
+        app:srcCompat="@drawable/basicdog" />
 
     <Button
         android:id="@+id/cat_preview"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="냥이미리보기"
+        app:backgroundTint="#CCB493"
         app:layout_constraintBottom_toTopOf="@+id/guideline7"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="@+id/guideline13"
@@ -49,6 +70,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="멍이미리보기"
+        app:backgroundTint="#CCB493"
         app:layout_constraintBottom_toTopOf="@+id/guideline7"
         app:layout_constraintEnd_toStartOf="@+id/guideline13"
         app:layout_constraintStart_toStartOf="parent"
@@ -59,46 +81,43 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="분양하기"
+        app:backgroundTint="#A17432"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/radioGroup" />
+        app:layout_constraintTop_toTopOf="@+id/guideline9" />
 
-    <RadioGroup
-        android:id="@+id/radioGroup"
-        android:layout_width="0dp"
+    <CheckBox
+        android:id="@+id/dogbutton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:buttonTint="#CCB493"
         android:gravity="center"
-        android:orientation="horizontal"
+        android:text="멍이"
+        android:textColor="#000000"
         app:layout_constraintBottom_toTopOf="@+id/guideline9"
-        app:layout_constraintEnd_toEndOf="@id/guideline15"
-        app:layout_constraintStart_toStartOf="@+id/guideline14"
-        app:layout_constraintTop_toTopOf="@+id/guideline8">
+        app:layout_constraintEnd_toStartOf="@+id/guideline13"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/guideline8" />
 
-        <RadioButton
-            android:id="@+id/catbutton"
-            android:layout_height="wrap_content"
-            android:layout_weight="9"
-            android:buttonTint="#8e8e8e"
-            android:includeFontPadding="false"
-            android:text="멍이"
-            android:textColor="#000000" />
-
-        <RadioButton
-            android:id="@+id/dogbutton"
-            android:layout_height="wrap_content"
-            android:buttonTint="#8e8e8e"
-            android:gravity="center_vertical|end"
-            android:includeFontPadding="false"
-            android:text="냥이"
-            android:textColor="#000000" />
-
-    </RadioGroup>
+    <CheckBox
+        android:id="@+id/catbutton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:buttonTint="#CCB493"
+        android:gravity="center"
+        android:text="냥이"
+        android:textColor="#000000"
+        app:layout_constraintBottom_toTopOf="@+id/guideline9"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/guideline13"
+        app:layout_constraintTop_toBottomOf="@+id/guideline8" />
 
     <TextView
         android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="30dp"
+        android:layout_marginTop="40dp"
         android:text="펫 선택"
         android:textColor="#000000"
         android:textSize="32sp"
@@ -111,37 +130,29 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.3" />
+        app:layout_constraintGuide_begin="219dp" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline8"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.6" />
+        android:visibility="visible"
+        app:layout_constraintGuide_percent="0.7" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline9"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.7" />
+        app:layout_constraintGuide_percent="0.8" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline10"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.2" />
-
-    <ImageView
-        android:id="@+id/imageView3"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        app:layout_constraintBottom_toBottomOf="@+id/radioGroup"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/guideline10" />
+        app:layout_constraintGuide_begin="146dp" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline14"
@@ -156,6 +167,8 @@
         android:layout_height="wrap_content"
         android:orientation="vertical"
         app:layout_constraintGuide_percent="0.82" />
+
+
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

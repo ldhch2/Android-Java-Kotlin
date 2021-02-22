@@ -8,7 +8,11 @@ import android.graphics.Color
 import android.net.Uri
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.widget.Toast
+import androidx.core.view.isVisible
+import com.bumptech.glide.Glide
 import com.github.gcacace.signaturepad.views.SignaturePad
+import kotlinx.android.synthetic.main.activity_info.*
 import kotlinx.android.synthetic.main.activity_register.*
 import java.io.File
 import java.io.FileOutputStream
@@ -21,9 +25,11 @@ class RegisterActivity : AppCompatActivity() {
         setContentView(R.layout.activity_register)
 
         val next = Intent(this, PetIDActivity::class.java)
-
-
         val info=intent.getStringExtra("info").toString()
+        var kind: Int = intent.getIntExtra("kind",0)
+        if(kind==1) Glide.with(this).load(R.drawable.basicdog).into(petImage)
+        else if(kind==2) Glide.with(this).load(R.drawable.basiccat).into(petImage)
+
 
         var signaturePad: SignaturePad =findViewById(R.id.signaturePad)
         signaturePad.setPenColor(Color.BLACK)
@@ -37,6 +43,7 @@ class RegisterActivity : AppCompatActivity() {
 
             next.putExtra("signature", signPath)
             next.putExtra("info",info)
+            next.putExtra("kind",kind)
             startActivity(next)
         }
     }

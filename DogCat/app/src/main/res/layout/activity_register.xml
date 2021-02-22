@@ -39,7 +39,7 @@
 
 
     <ImageView
-        android:id="@+id/imageView10"
+        android:id="@+id/petImage"
         android:layout_width="100dp"
         android:layout_height="100dp"
         android:layout_marginEnd="30dp"

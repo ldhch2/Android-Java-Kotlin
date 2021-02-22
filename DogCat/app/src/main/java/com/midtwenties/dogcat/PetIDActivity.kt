@@ -11,7 +11,10 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import androidx.core.view.ViewCompat.setBackground
+import com.bumptech.glide.Glide
 import kotlinx.android.synthetic.main.activity_pet_id.*
+import kotlinx.android.synthetic.main.activity_pet_id.petImage
+import kotlinx.android.synthetic.main.activity_register.*
 import kotlinx.android.synthetic.main.activity_terms_of_service.view.*
 import java.io.File
 import java.io.FileOutputStream
@@ -24,9 +27,13 @@ class PetIDActivity : AppCompatActivity() {
         setContentView(R.layout.activity_pet_id)
 
         val next=Intent(this,TermsOfService::class.java)
+        var kind: Int = intent.getIntExtra("kind",0)
+        if(kind==1) Glide.with(this).load(R.drawable.basicdog).into(petImage)
+        else if(kind==2) Glide.with(this).load(R.drawable.basiccat).into(petImage)
 
         val get=intent.getStringExtra("info").toString()
         next.putExtra("info",get)
+
 
         val uri: Uri? =intent.getParcelableExtra("signature")
         signature.setImageURI(uri)
