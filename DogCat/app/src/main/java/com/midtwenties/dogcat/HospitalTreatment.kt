@@ -3,7 +3,9 @@ package com.example.midtwenties
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.TextView
+import com.midtwenties.dogcat.R
 import java.util.Random
+import kotlinx.android.synthetic.main.activity_hospital_treatment.*
 
 class HospitalTreatment : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -13,7 +15,6 @@ class HospitalTreatment : AppCompatActivity() {
         val random = Random()
         val num = random.nextInt(6)
         var tt = findViewById<TextView>(R.id.textView3)
-
 
         if(num == 0){
             tt.setText("장염인 것 같습니다.")
