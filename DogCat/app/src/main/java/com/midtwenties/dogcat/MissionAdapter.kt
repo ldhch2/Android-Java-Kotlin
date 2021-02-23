@@ -8,6 +8,7 @@ import android.view.ViewGroup
 import android.widget.ProgressBar
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
+import com.midtwenties.dogcat.R
 
 class MissionAdapter(val context: Context, val MissionList: ArrayList<Mission>):
         RecyclerView.Adapter<MissionAdapter.Holder>() {
