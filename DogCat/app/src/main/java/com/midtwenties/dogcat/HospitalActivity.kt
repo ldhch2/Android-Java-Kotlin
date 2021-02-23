@@ -3,7 +3,6 @@ package com.midtwenties.dogcat
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import com.example.midtwenties.HospitalTreatment
 import kotlinx.android.synthetic.main.activity_hospital.*
 
 class HospitalActivity : AppCompatActivity() {
@@ -14,7 +13,7 @@ class HospitalActivity : AppCompatActivity() {
         back.setOnClickListener {
             startActivity(Intent(this, MainActivity::class.java))
         }
-        room1.setOnClickListener {
+        goButton1.setOnClickListener {
             startActivity(Intent(this, HospitalTreatment::class.java))
         }
 

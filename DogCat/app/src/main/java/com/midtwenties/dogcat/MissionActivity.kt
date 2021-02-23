@@ -1,9 +1,8 @@
-package com.example.midtwenties
+package com.midtwenties.dogcat
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.midtwenties.dogcat.R
 import kotlinx.android.synthetic.main.activity_mission.*
 
 class MissionActivity : AppCompatActivity() {

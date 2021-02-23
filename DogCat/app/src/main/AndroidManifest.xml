@@ -12,59 +12,30 @@
         android:roundIcon="@drawable/logo"
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.NoActionBar">
-<<<<<<< Updated upstream
         <activity android:name=".Lockermain"></activity>
-<!--
-        <service
-            android:name=".ScreenService"
-            android:enabled="true"
-            android:exported="true" />
--->
         <activity android:name=".SplashActivity">
-=======
-        <activity android:name=".MissionActivity">
->>>>>>> Stashed changes
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-<<<<<<< Updated upstream
+        <activity android:name=".HospitalActivity" />
+        <activity android:name=".HospitalTreatment" />
+        <activity android:name=".MissionActivity" />
         <activity android:name=".RegisterActivity" />
         <activity android:name=".PetIDActivity" />
         <activity android:name=".InfoNext" />
         <activity android:name=".FeedActivity" />
-=======
-        <activity android:name=".HospitalTreatment"></activity>
-        <activity android:name=".Hospital_Treatment" />
         <activity android:name=".AttendancePopup" />
         <activity android:name=".StoreItem" />
-        <activity android:name=".test" />
-        <activity android:name=".SplashActivity" />
-        <activity android:name=".ItemList">
-
-        </activity>
-        <activity android:name=".StoreItem" />
-        <activity android:name=".ListActivity" />
-        <activity android:name=".test" />
-        <activity android:name=".SplashActivity" />
-        <activity android:name=".FeedStore" />
-        <activity android:name=".BowlStore" />
-        <activity android:name=".HouseStore" />
-        <activity android:name=".ToyStore" />
->>>>>>> Stashed changes
         <activity android:name=".InitPet" />
         <activity android:name=".InfoActivity" />
         <activity android:name=".TermsOfService" />
         <activity android:name=".YardActivity" />
         <activity android:name=".MainActivity" />
         <activity android:name=".MainSetting" />
-<<<<<<< Updated upstream
-        <activity android:name=".StoreItem" />
-        <activity android:name=".AttendancePopup" />
         <activity android:name=".IDListActivity" />
-
         <receiver
             android:name=".Receiver"
             android:exported="true">
@@ -72,11 +43,6 @@
                 <action android:name="android.intent.action.BOOT_COMPLETED" />
             </intent-filter>
         </receiver>
-=======
-        <activity android:name=".TermsOfService" />
-        <activity android:name=".MyStore" />
-        <activity android:name=".YardActivity"></activity>
->>>>>>> Stashed changes
     </application>
 
 </manifest>

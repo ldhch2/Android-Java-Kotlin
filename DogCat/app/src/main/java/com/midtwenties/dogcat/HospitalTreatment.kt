@@ -1,9 +1,8 @@
-package com.example.midtwenties
+package com.midtwenties.dogcat
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.TextView
-import com.midtwenties.dogcat.R
 import java.util.Random
 import kotlinx.android.synthetic.main.activity_hospital_treatment.*
 
@@ -11,6 +10,10 @@ class HospitalTreatment : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_hospital_treatment)
+
+        back.setOnClickListener {
+            finish()
+        }
 
         val random = Random()
         val num = random.nextInt(6)
