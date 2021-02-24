@@ -105,7 +105,7 @@
         app:layout_constraintGuide_percent="0.95" />
 
     <TextView
-        android:id="@+id/textView9"
+        android:id="@+id/room1"
         android:layout_width="wrap_content"
         android:layout_height="0dp"
         android:gravity="bottom"
@@ -118,7 +118,7 @@
         app:layout_constraintTop_toTopOf="@+id/guideline01" />
 
     <TextView
-        android:id="@+id/textView10"
+        android:id="@+id/room2"
         android:layout_width="wrap_content"
         android:layout_height="0dp"
         android:gravity="bottom"
@@ -131,7 +131,7 @@
         app:layout_constraintTop_toTopOf="@+id/guideline01" />
 
     <TextView
-        android:id="@+id/textView11"
+        android:id="@+id/room3"
         android:layout_width="wrap_content"
         android:layout_height="0dp"
         android:gravity="bottom"
@@ -246,7 +246,7 @@
         app:layout_constraintBottom_toTopOf="@+id/guideline03"
         app:layout_constraintEnd_toStartOf="@+id/guideline08"
         app:layout_constraintStart_toStartOf="@+id/guideline07"
-        app:layout_constraintTop_toBottomOf="@+id/textView10"
+        app:layout_constraintTop_toBottomOf="@+id/room2"
         app:srcCompat="@drawable/hospitaldoor" />
 
     <ImageView
@@ -256,7 +256,7 @@
         app:layout_constraintBottom_toTopOf="@+id/guideline03"
         app:layout_constraintEnd_toStartOf="@+id/guideline09"
         app:layout_constraintStart_toStartOf="@+id/guideline08"
-        app:layout_constraintTop_toBottomOf="@+id/textView11"
+        app:layout_constraintTop_toBottomOf="@+id/room3"
         app:srcCompat="@drawable/hospitaldoor" />
 
 

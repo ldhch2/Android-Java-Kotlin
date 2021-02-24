@@ -13,5 +13,9 @@ class HospitalActivity : AppCompatActivity() {
         back.setOnClickListener {
             onBackPressed()
         }
+        goButton1.setOnClickListener {
+            startActivity(Intent(this, HospitalTreatment::class.java))
+        }
+
     }
 }
