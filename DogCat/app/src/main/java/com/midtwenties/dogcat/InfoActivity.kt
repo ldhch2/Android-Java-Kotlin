@@ -82,7 +82,6 @@ class InfoActivity : AppCompatActivity() {
             else {
                 val info=String.format("%s %d %d %d",petName.text.toString(),kind,button1,button2)
                 next.putExtra("info", info)
-                next.putExtra("kind", kind)
                 Toast.makeText(applicationContext, "저장되었습니다", Toast.LENGTH_SHORT).show()
 
                 startActivity(next)

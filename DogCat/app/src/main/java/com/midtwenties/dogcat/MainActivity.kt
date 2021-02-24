@@ -49,6 +49,9 @@ class MainActivity : AppCompatActivity() {
         washwash.setOnClickListener{
             startActivity(Intent(this,WashActivity::class.java))
         }
+        stateButton.setOnClickListener{
+            drawerState.openDrawer(GravityCompat.START)
+        }
 
         fabMain.setOnClickListener{
             if(isOpen){

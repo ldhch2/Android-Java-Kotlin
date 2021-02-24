@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity"
-    android:background="@drawable/background"
+    android:background="@drawable/room"
     xmlns:app="http://schemas.android.com/apk/res-auto">
     <androidx.coordinatorlayout.widget.CoordinatorLayout
         android:layout_width="match_parent"
@@ -82,6 +82,25 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:srcCompat="@drawable/basicdog" />
 
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guideline5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.1" />
+
+            <Button
+                android:id="@+id/stateButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="200dp"
+                android:shadowRadius="100"
+                android:background="@drawable/edge"
+                app:backgroundTint="#31A0C377"
+                android:text="             HP"
+                android:textColor="#A0C377"
+                app:layout_constraintEnd_toStartOf="@+id/guideline5"
+                app:layout_constraintTop_toTopOf="parent" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -178,7 +197,9 @@
             app:fabSize="normal"
             app:srcCompat="@drawable/ic_baseline_pets_24"
             tools:ignore="MissingConstraints,VectorDrawableCompat" />
-</androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/drawer"
@@ -187,7 +208,7 @@
         android:layout_height="match_parent"
         android:weightSum="100"
         android:layout_gravity="start"
-        android:background="@drawable/paper"
+        android:background="@drawable/background"
         android:gravity="center"
         tools:context=".MainActivity">
 
@@ -199,6 +220,7 @@
             android:textColor="#777777"
             android:textStyle="bold"
             android:layout_marginTop="20dp"
+            android:layout_marginBottom="20dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
