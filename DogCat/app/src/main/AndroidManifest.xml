@@ -12,13 +12,13 @@
         android:roundIcon="@drawable/logo"
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.NoActionBar">
-        <activity android:name=".Lockermain"></activity>
-<!--
+        <activity android:name=".Lockermain" />
+        <!--
         <service
             android:name=".ScreenService"
             android:enabled="true"
             android:exported="true" />
--->
+        -->
         <activity android:name=".SplashActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -30,16 +30,18 @@
         <activity android:name=".PetIDActivity" />
         <activity android:name=".InfoNext" />
         <activity android:name=".FeedActivity" />
+        <activity android:name=".HangoutPopup" />
+        <activity android:name=".HospitalActivity" />
         <activity android:name=".InitPet" />
         <activity android:name=".InfoActivity" />
         <activity android:name=".TermsOfService" />
         <activity android:name=".YardActivity" />
+        <activity android:name=".WashActivity"/>
         <activity android:name=".MainActivity" />
         <activity android:name=".MainSetting" />
         <activity android:name=".StoreItem" />
         <activity android:name=".AttendancePopup" />
         <activity android:name=".IDListActivity" />
-
         <receiver
             android:name=".Receiver"
             android:exported="true">

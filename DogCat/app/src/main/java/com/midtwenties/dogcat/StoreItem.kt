@@ -48,11 +48,11 @@ class StoreItem : AppCompatActivity() {
             StoreContacts("", "옷옷", 500, "구매", "빨강색", "파란색", "초록색")
     )
     fun reset() {
-        goToyStore.isEnabled=true
-        goHouseStore.isEnabled=true
-        goBowlStore.isEnabled=true
-        goFeedStore.isEnabled=true
-        goClothesStore.isEnabled=true
+        goToyStore.isSelected=false
+        goHouseStore.isSelected=false
+        goBowlStore.isSelected=false
+        goFeedStore.isSelected=false
+        goClothesStore.isSelected=false
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -63,37 +63,37 @@ class StoreItem : AppCompatActivity() {
         storeType.text = "상점"
 
         back.setOnClickListener{
-            startActivity(Intent(this, MainActivity::class.java))
+            onBackPressed()
         }
         goToyStore.setOnClickListener{
             reset()
             val adapter = ContactsListAdapter(this, toyList)
             StoreRecyclerview.adapter = adapter
-            goToyStore.isEnabled=false
+            goToyStore.isSelected=false
         }
         goHouseStore.setOnClickListener{
             reset()
             val adapter = ContactsListAdapter(this, houseList)
             StoreRecyclerview.adapter = adapter
-            goHouseStore.isEnabled=false
+            goHouseStore.isSelected=false
         }
         goBowlStore.setOnClickListener{
             reset()
             val adapter = ContactsListAdapter(this, bowlList)
             StoreRecyclerview.adapter = adapter
-            goBowlStore.isEnabled=false
+            goBowlStore.isSelected=false
         }
         goFeedStore.setOnClickListener{
             reset()
             val adapter = ContactsListAdapter(this, feedList)
             StoreRecyclerview.adapter = adapter
-            goFeedStore.isEnabled=false
+            goFeedStore.isSelected=false
         }
         goClothesStore.setOnClickListener {
             reset()
             val adapter = ContactsListAdapter(this, clothesList)
             StoreRecyclerview.adapter = adapter
-            goClothesStore.isEnabled =false
+            goClothesStore.isSelected =false
         }
 
         val lay = LinearLayoutManager(this)

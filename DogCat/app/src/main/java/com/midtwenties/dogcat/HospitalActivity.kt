@@ -11,7 +11,7 @@ class HospitalActivity : AppCompatActivity() {
         setContentView(R.layout.activity_hospital)
 
         back.setOnClickListener {
-            startActivity(Intent(this, MainActivity::class.java))
+            onBackPressed()
         }
     }
 }
