@@ -5,11 +5,11 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/background"
-    tools:context=".Wash">
+    tools:context=".WashActivity">
 
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:id="@+id/button4"
+        android:id="@+id/backButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="24dp"
@@ -21,15 +21,16 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/ic_baseline_arrow_back_24" />
+
     <ImageView
-        android:id="@+id/imageView6"
-        android:layout_width="207dp"
-        android:layout_height="225dp"
+        android:id="@+id/beforeWashing"
+        android:layout_width="267dp"
+        android:layout_height="346dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/adult_dog" />
+        app:srcCompat="@drawable/basiccat" />
 
     <Button
         android:id="@+id/wash"
@@ -37,20 +38,18 @@
         android:layout_height="wrap_content"
         android:layout_marginBottom="80dp"
         android:text="씻기 시작"
+        android:background="@drawable/beige_button"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
     <ImageView
-        android:id="@+id/imageView7"
+        android:id="@+id/washing"
         android:layout_width="267dp"
         android:layout_height="346dp"
-        android:background="#00FFFFFF"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.58" />
+        app:layout_constraintTop_toTopOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

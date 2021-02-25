@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -8,49 +9,100 @@
     tools:context=".MainActivity">
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fabMain"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end|bottom"
+        android:layout_margin="16dp"
+        android:src="@drawable/ic_baseline_menu_24"
+        app:backgroundTint="#A17432"
+        app:elevation="6dp"
+        app:fabSize="normal"
+        app:pressedTranslationZ="12dp"
+        tools:ignore="MissingConstraints" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/idcardList"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="8dp"
-        android:layout_marginRight="8dp"
-        android:layout_marginBottom="24dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/temporaryMain"
+        android:layout_gravity="end|bottom"
+        android:layout_marginRight="20dp"
+        android:layout_marginBottom="80dp"
         android:clickable="true"
         android:src="@drawable/idcard"
-        android:visibility="visible"
-        app:backgroundTint="#808080"
-        app:fabSize="mini"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/temporaryMain" />
+        app:backgroundTint="#CCB493"
+        android:tint="#ffffff"
+        android:visibility="invisible"
+        app:borderWidth="0dp"
+        app:elevation="6dp"
+        app:fabSize="normal"
+        app:pressedTranslationZ="12dp"
+        tools:ignore="MissingConstraints,VectorDrawableCompat" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/itemButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end|bottom"
+        android:layout_marginRight="20dp"
+        android:layout_marginBottom="130dp"
+        android:tint="#ffffff"
+        android:visibility="invisible"
+        app:backgroundTint="#CCB493"
+        app:borderWidth="0dp"
+        app:fabSize="normal"
+        app:srcCompat="@android:drawable/ic_dialog_dialer"
+        tools:ignore="MissingConstraints,VectorDrawableCompat" />
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/temporaryMain"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="8dp"
-        android:layout_marginRight="8dp"
-        android:layout_marginBottom="24dp"
-        android:clickable="true"
         android:src="@drawable/ic_baseline_pets_24"
-        android:visibility="visible"
-        app:backgroundTint="#808080"
-        app:fabSize="mini"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/floatingActionButton3" />
-
-    <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:id="@+id/floatingActionButton3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="8dp"
-        android:layout_marginRight="8dp"
-        android:layout_marginBottom="24dp"
-        android:src="@drawable/ic_baseline_settings_24"
-        android:clickable="true"
-        android:visibility="visible"
-        app:backgroundTint="#808080"
-        app:fabSize="mini"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintVertical_bias="1.0" />
+        android:layout_above="@+id/showState"
+        android:layout_gravity="end|bottom"
+        android:layout_marginRight="20dp"
+        android:layout_marginBottom="180dp"
+        app:backgroundTint="#CCB493"
+        android:tint="#ffffff"
+        android:visibility="invisible"
+        app:borderWidth="0dp"
+        app:fabSize="normal"
+        tools:ignore="MissingConstraints,VectorDrawableCompat" />
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="129dp"
+            android:layout_height="0dp"
+            android:layout_marginTop="235dp"
+            android:layout_marginEnd="220dp"
+            android:layout_marginRight="220dp"
+            android:layout_marginBottom="109dp"
+            app:layout_constraintBottom_toTopOf="@+id/imageView2"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/basiccat" />
+
+        <ImageView
+            android:id="@+id/imageView2"
+            android:layout_width="124dp"
+            android:layout_height="0dp"
+            android:layout_marginStart="112dp"
+            android:layout_marginLeft="112dp"
+            android:layout_marginEnd="113dp"
+            android:layout_marginRight="113dp"
+            android:layout_marginBottom="121dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/imageView"
+            app:layout_constraintTop_toBottomOf="@+id/imageView"
+            app:srcCompat="@drawable/basicdog" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
