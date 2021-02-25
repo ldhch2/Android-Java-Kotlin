@@ -16,6 +16,8 @@ class HospitalActivity : AppCompatActivity() {
         goButton1.setOnClickListener {
             startActivity(Intent(this, HospitalTreatment::class.java))
         }
-
+        goButton3.setOnClickListener {
+            startActivity(Intent(this, HospitalNutrition::class.java))
+        }
     }
 }
