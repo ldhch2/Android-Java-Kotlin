@@ -5,24 +5,25 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/background"
-    tools:context=".TermsOfService">
+    tools:context=".HangoutPopup">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:layout_margin="50dp"
-        android:background="@drawable/mycolor"
+        android:background="@drawable/edge"
         android:orientation="vertical"
         tools:layout_editor_absoluteX="50dp">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
+
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
-                android:background="#708E4D"
+                android:background="@drawable/brown_upper_button"
                 android:gravity="center"
                 android:text="잠금화면을 사용하시겠습니까?"
                 android:textColor="#fff"
@@ -35,13 +36,14 @@
             android:layout_gravity="center"
             android:orientation="horizontal"
             android:padding="15dp">
+
             <TextView
                 android:id="@+id/textView13"
                 android:layout_width="wrap_content"
                 android:layout_height="50dp"
                 android:layout_weight="1"
                 android:gravity="center"
-                android:text="잠금화면 사용 여부는 설정에서\n언제든지 바꾸실 수 있습니다."
+                android:text="잠금화면 사용 여부는 설정에서 언제든지 바꾸실 수 있습니다."
                 android:textColor="@color/black"
                 android:textSize="18sp" />
         </LinearLayout>
@@ -52,6 +54,7 @@
             android:gravity="center"
             android:orientation="horizontal"
             android:padding="12dp">
+
             <Button
                 android:id="@+id/yesButton"
                 android:layout_width="match_parent"
@@ -59,11 +62,12 @@
                 android:layout_marginEnd="5dp"
                 android:layout_marginRight="5dp"
                 android:layout_weight="1"
-                android:background="#B5CD97"
+                android:background="@drawable/beige_button"
                 android:gravity="center"
                 android:text="네"
                 android:textColor="#FFFFFF"
                 android:textSize="18sp" />
+
             <Button
                 android:id="@+id/noButton"
                 android:layout_width="match_parent"
@@ -71,7 +75,7 @@
                 android:layout_marginStart="5dp"
                 android:layout_marginLeft="5dp"
                 android:layout_weight="1"
-                android:background="#B5CD97"
+                android:background="@drawable/beige_button"
                 android:text="아니요"
                 android:textSize="18sp" />
         </LinearLayout>

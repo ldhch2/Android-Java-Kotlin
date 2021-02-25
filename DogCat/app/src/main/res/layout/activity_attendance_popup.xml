@@ -11,7 +11,7 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:layout_margin="50dp"
-        android:background="@drawable/mycolor"
+        android:background="@drawable/edge"
         android:orientation="vertical">
 
         <LinearLayout
@@ -21,7 +21,7 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="40dp"
-                android:background="#708E4D"
+                android:background="@drawable/brown_upper_button"
                 android:gravity="center"
                 android:text="출석 보상"
                 android:textColor="#fff"
@@ -170,7 +170,7 @@
                 android:id="@+id/closeButton"
                 android:layout_width="match_parent"
                 android:layout_height="40dp"
-                android:background="#B5CD97"
+                android:background="@drawable/beige_button"
                 android:gravity="center"
                 android:text="출석하기"
                 android:textColor="#FFFFFF"
