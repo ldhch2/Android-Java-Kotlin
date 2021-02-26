@@ -55,21 +55,25 @@ class YardActivity : AppCompatActivity() {
         val fabOpen = AnimationUtils.loadAnimation(this, R.anim.fab_open)
         val fabClose = AnimationUtils.loadAnimation(this, R.anim.fab_close)
 
+        pet01.setOnClickListener{
+            startActivity(Intent(this, MainActivity::class.java))
+        }
+
         fabMain.setOnClickListener {
             if (isOpen) {
                 idcardList.startAnimation(fabClose)
                 itemButton.startAnimation(fabClose)
-                temporaryMain.startAnimation(fabClose)
+                mainSetting.startAnimation(fabClose)
 
                 isOpen = false
             } else {
                 idcardList.startAnimation(fabOpen)
                 itemButton.startAnimation(fabOpen)
-                temporaryMain.startAnimation(fabOpen)
+                mainSetting.startAnimation(fabOpen)
 
                 idcardList.isClickable
                 itemButton.isClickable
-                temporaryMain.isClickable
+                mainSetting.isClickable
 
                 isOpen = true
             }
@@ -77,8 +81,8 @@ class YardActivity : AppCompatActivity() {
             idcardList.setOnClickListener {
                 startActivity(Intent(this, IDListActivity::class.java))
             }
-            temporaryMain.setOnClickListener {
-                startActivity(Intent(this, MainActivity::class.java))
+            mainSetting.setOnClickListener {
+                startActivity(Intent(this, MainSetting::class.java))
             }
         }
     }

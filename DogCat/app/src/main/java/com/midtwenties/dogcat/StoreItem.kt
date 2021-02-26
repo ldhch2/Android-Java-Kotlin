@@ -62,7 +62,7 @@ class StoreItem : AppCompatActivity() {
         val storeType = findViewById<TextView>(R.id.StoreType)
         storeType.text = "상점"
 
-        back.setOnClickListener{
+        backButton.setOnClickListener{
             onBackPressed()
         }
         goToyStore.setOnClickListener{

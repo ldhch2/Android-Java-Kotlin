@@ -27,7 +27,7 @@ class HospitalNutrition : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_hospital_nutrition)
 
-        back.setOnClickListener {
+        backButton.setOnClickListener {
             onBackPressed()
         }
 

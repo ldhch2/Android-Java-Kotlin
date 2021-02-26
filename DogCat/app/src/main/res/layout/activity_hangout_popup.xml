@@ -24,6 +24,7 @@
                 android:layout_height="50dp"
                 android:background="@drawable/brown_upper_button"
                 android:gravity="center"
+                android:fontFamily="@font/title"
                 android:text="선  택"
                 android:textColor="#fff"
                 android:textSize="20sp" />
@@ -41,9 +42,11 @@
                 android:layout_height="50dp"
                 android:layout_weight="1"
                 android:gravity="center"
+                android:fontFamily="@font/bae"
+                android:textSize="28sp"
+                android:textStyle="bold"
                 android:text="외출의 목적은?"
-                android:textColor="@color/black"
-                android:textSize="18sp" />
+                android:textColor="@color/black" />
         </LinearLayout>
 
         <LinearLayout
@@ -61,9 +64,11 @@
                 android:layout_weight="1"
                 android:background="@drawable/beige_button"
                 android:gravity="center"
+                android:fontFamily="@font/bae"
+                android:textSize="28sp"
+                android:textStyle="bold"
                 android:text="병원"
-                android:textColor="#FFFFFF"
-                android:textSize="18sp" />
+                android:textColor="#FFFFFF" />
             <Button
                 android:id="@+id/walkButton"
                 android:layout_width="match_parent"
@@ -72,8 +77,10 @@
                 android:layout_marginLeft="5dp"
                 android:layout_weight="1"
                 android:background="@drawable/beige_button"
-                android:text="산책"
-                android:textSize="18sp" />
+                android:fontFamily="@font/bae"
+                android:textSize="28sp"
+                android:textStyle="bold"
+                android:text="산책" />
         </LinearLayout>
     </LinearLayout>
 </LinearLayout>

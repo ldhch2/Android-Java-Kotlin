@@ -15,7 +15,8 @@
         android:layout_gravity="end|bottom"
         android:layout_margin="16dp"
         android:src="@drawable/ic_baseline_menu_24"
-        app:backgroundTint="#A17432"
+        android:tint="#ffffff"
+        app:backgroundTint="#63451A"
         app:elevation="6dp"
         app:fabSize="normal"
         app:pressedTranslationZ="12dp"
@@ -33,7 +34,6 @@
         android:clickable="true"
         android:src="@drawable/idcard"
         app:backgroundTint="#CCB493"
-        android:tint="#ffffff"
         android:visibility="invisible"
         app:borderWidth="0dp"
         app:elevation="6dp"
@@ -57,8 +57,8 @@
         tools:ignore="MissingConstraints,VectorDrawableCompat" />
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:id="@+id/temporaryMain"
-        android:src="@drawable/ic_baseline_pets_24"
+        android:id="@+id/mainSetting"
+        android:src="@drawable/ic_baseline_settings_24"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_above="@+id/showState"
@@ -76,33 +76,19 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-        <ImageView
-            android:id="@+id/imageView"
-            android:layout_width="129dp"
-            android:layout_height="0dp"
-            android:layout_marginTop="235dp"
-            android:layout_marginEnd="220dp"
-            android:layout_marginRight="220dp"
-            android:layout_marginBottom="109dp"
-            app:layout_constraintBottom_toTopOf="@+id/imageView2"
+        <ImageButton
+            android:id="@+id/pet01"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_marginTop="288dp"
+            android:layout_marginEnd="184dp"
+            android:layout_marginRight="184dp"
+            android:background="@android:color/transparent"
+            android:scaleType="centerCrop"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:srcCompat="@drawable/basiccat" />
 
-        <ImageView
-            android:id="@+id/imageView2"
-            android:layout_width="124dp"
-            android:layout_height="0dp"
-            android:layout_marginStart="112dp"
-            android:layout_marginLeft="112dp"
-            android:layout_marginEnd="113dp"
-            android:layout_marginRight="113dp"
-            android:layout_marginBottom="121dp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="@+id/imageView"
-            app:layout_constraintTop_toBottomOf="@+id/imageView"
-            app:srcCompat="@drawable/basicdog" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </androidx.coordinatorlayout.widget.CoordinatorLayout>
