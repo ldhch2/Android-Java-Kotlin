@@ -117,7 +117,6 @@ class ItemList : AppCompatActivity() {
 
         val gridLayoutManager = GridLayoutManager(applicationContext,3)
         itemRecyclerView.layoutManager = gridLayoutManager
-
     }
 }
 

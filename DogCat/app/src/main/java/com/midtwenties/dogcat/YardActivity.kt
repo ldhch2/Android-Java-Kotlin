@@ -81,6 +81,9 @@ class YardActivity : AppCompatActivity() {
             idcardList.setOnClickListener {
                 startActivity(Intent(this, IDListActivity::class.java))
             }
+            itemButton.setOnClickListener{
+                startActivity(Intent(this,ItemList::class.java))
+            }
             mainSetting.setOnClickListener {
                 startActivity(Intent(this, MainSetting::class.java))
             }
