@@ -21,13 +21,13 @@ class MainActivity : AppCompatActivity() {
         val pet= PetClass(loadFromInnerStorage(temp[0]))
 
         var stateList = arrayListOf<State>(
-                State("hungry", "full", pet.state.full),
-                State("dirty", "clean", pet.state.clean),
-                State("bored", "excited", pet.state.excited),
-                State("sleepy", "awake", pet.state.awake),
-                State("sad", "happy", pet.state.happy),
-                State("sick", "healthy", pet.state.healthy),
-                State("anxious", "relaxed", pet.state.relaxed)
+                State("배고파요", "배불러요", pet.state.full),
+                State("찝찝해요", "개운해요", pet.state.clean),
+                State("지루해요", "신나요", pet.state.excited),
+                State("졸려요", "상쾌해요", pet.state.awake),
+                State("슬퍼요", "행복해요", pet.state.happy),
+                State("아파요", "건강해요", pet.state.healthy),
+                State("불안해요", "편안해요", pet.state.relaxed)
         )
 
         val stateAdapter=StateAdapter(this, stateList)
@@ -56,7 +56,6 @@ class MainActivity : AppCompatActivity() {
         fabMain.setOnClickListener{
             if(isOpen){
                 storeButton.startAnimation(fabClose)
-                itemButton.startAnimation(fabClose)
                 playButton.startAnimation(fabClose)
                 showState.startAnimation(fabClose)
                 homeButton.startAnimation(fabClose)
@@ -65,12 +64,10 @@ class MainActivity : AppCompatActivity() {
             }
             else{
                 storeButton.startAnimation(fabOpen)
-                itemButton.startAnimation(fabOpen)
                 playButton.startAnimation(fabOpen)
                 showState.startAnimation(fabOpen)
                 homeButton.startAnimation(fabOpen)
                 storeButton.isClickable
-                itemButton.isClickable
                 playButton.isClickable
                 showState.isClickable
                 homeButton.isClickable
@@ -84,11 +81,8 @@ class MainActivity : AppCompatActivity() {
             showState.setOnClickListener() {
                 drawerState.openDrawer(GravityCompat.START)
             }
-            playButton.setOnClickListener{
-               // 놀아주기로
-            }
-            itemButton.setOnClickListener{
-                // 내 아이템함으로
+            playButton.setOnClickListener {
+                startActivity(Intent(this,PlayActivity::class.java))
             }
             storeButton.setOnClickListener{
                 startActivity(Intent(this, StoreItem::class.java))

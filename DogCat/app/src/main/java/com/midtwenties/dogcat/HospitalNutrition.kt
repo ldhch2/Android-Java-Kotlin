@@ -27,8 +27,8 @@ class HospitalNutrition : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_hospital_nutrition)
 
-        back.setOnClickListener {
-            finish()
+        backButton.setOnClickListener {
+            onBackPressed()
         }
 
         val adapter = NutritionListAdapter(this, nutritionList)

@@ -27,7 +27,7 @@ class IDListActivity : AppCompatActivity() {
         idRecyclerView.layoutManager = lm
         idRecyclerView.setHasFixedSize(true)
 
-        back.setOnClickListener{
+        backButton.setOnClickListener{
             startActivity(Intent(this, YardActivity::class.java))
         }
     }

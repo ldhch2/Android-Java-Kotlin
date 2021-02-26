@@ -33,17 +33,17 @@ class SplashActivity : AppCompatActivity() {
         Handler(Looper.getMainLooper()).postDelayed({
             titleView1.visibility = View.VISIBLE
             titleView1.startAnimation(animation1)
-        }, 1000)
+        }, 1200)
 
         Handler(Looper.getMainLooper()).postDelayed({
             //overridePendingTransition(R.anim.fade_out, R.anim.fade_in)
             titleImage1.visibility= View.VISIBLE
-        }, 2500)
+        }, 1350)
 
         Handler(Looper.getMainLooper()).postDelayed({
             titleImage2.visibility= View.VISIBLE
             //titleImage2.startAnimation(animation1)
-        }, 3000)
+        }, 1500)
 
         try {
                 if (prefernce.getBoolean(init,false)) {

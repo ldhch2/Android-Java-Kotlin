@@ -11,7 +11,7 @@ class HospitalTreatment : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_hospital_treatment)
 
-        back.setOnClickListener {
+        backButton.setOnClickListener {
             finish()
         }
 

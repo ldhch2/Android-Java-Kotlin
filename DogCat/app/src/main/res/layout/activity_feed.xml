@@ -7,14 +7,42 @@
     android:background="@drawable/background"
     tools:context=".FeedActivity">
 
-    <ImageView
-        android:id="@+id/imageView7"
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline22"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:layout_constraintBottom_toTopOf="@+id/guideline11"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.60" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline21"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.75" />
+
+    <ImageView
+        android:id="@+id/ground"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/guideline22"
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@color/grey" />
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="300dp"
+        android:layout_height="300dp"
+        app:layout_constraintBottom_toTopOf="@+id/guideline21"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:srcCompat="@drawable/bara" />
+        app:srcCompat="@drawable/basicdog" />
+
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/feedButton"
@@ -24,28 +52,22 @@
         android:layout_marginRight="20dp"
         android:layout_marginBottom="20dp"
         android:clickable="true"
-        app:backgroundTint="#808080"
+        app:backgroundTint="#63451A"
         app:fabSize="normal"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:srcCompat="@drawable/ic_baseline_restaurant_24" />
 
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/guideline11"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.5" />
-
     <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:id="@+id/returnButton"
+        android:id="@+id/backButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="20dp"
-        android:layout_marginLeft="20dp"
-        android:layout_marginTop="20dp"
+        android:layout_marginStart="18dp"
+        android:layout_marginLeft="18dp"
+        android:layout_marginTop="18dp"
         android:clickable="true"
-        app:backgroundTint="#808080"
+        app:backgroundTint="#716666"
+        app:fabSize="mini"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/ic_baseline_arrow_back_24" />
@@ -59,9 +81,11 @@
         android:rotation="14"
         android:scaleType="fitCenter"
 
-        app:srcCompat="@drawable/emptybowldog"
+        app:layout_constraintBottom_toBottomOf="@+id/ground"
 
-        tools:layout_editor_absoluteX="91dp"
-        tools:layout_editor_absoluteY="477dp" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/ground"
+        app:srcCompat="@drawable/emptybowldog" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

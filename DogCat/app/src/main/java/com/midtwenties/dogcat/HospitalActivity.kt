@@ -10,7 +10,7 @@ class HospitalActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_hospital)
 
-        back.setOnClickListener {
+        backButton.setOnClickListener {
             onBackPressed()
         }
         goButton1.setOnClickListener {

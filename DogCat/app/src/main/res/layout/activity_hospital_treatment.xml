@@ -8,15 +8,15 @@
     tools:context=".HospitalTreatment">
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:id="@+id/back"
+        android:id="@+id/backButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginLeft="8dp"
+        android:layout_marginStart="18dp"
+        android:layout_marginLeft="18dp"
+        android:layout_marginTop="18dp"
         android:clickable="true"
-        app:backgroundTint="#AEAAAA"
+        app:backgroundTint="#716666"
         app:fabSize="mini"
-        app:layout_constraintBottom_toTopOf="@id/guideline01"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/ic_baseline_arrow_back_24" />
@@ -27,6 +27,7 @@
         android:layout_height="wrap_content"
         android:gravity="center"
         android:text="진료실"
+        android:fontFamily="@font/title"
         android:textColor="#000000"
         android:textSize="30sp"
         android:textStyle="bold"

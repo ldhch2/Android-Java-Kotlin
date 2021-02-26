@@ -16,7 +16,7 @@ class WashActivity : AppCompatActivity() {
         }
         wash.setOnClickListener{
             Toast.makeText(this,"선택", Toast.LENGTH_SHORT).show()
-            Glide.with(this).load(R.raw.wash).into(beforeWashing)
+            Glide.with(this).load(R.raw.wash).into(washing)
         }
     }
 }
