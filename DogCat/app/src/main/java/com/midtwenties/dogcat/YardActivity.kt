@@ -98,12 +98,22 @@ class YardActivity : AppCompatActivity() {
     }
     override fun onBackPressed() {
         val alBuilder = AlertDialog.Builder(this)
-        alBuilder.setMessage("Are you sure you want to exit?")
-        alBuilder.setNegativeButton("okay") { dialogInterface, which -> finish() }
-        alBuilder.setPositiveButton("cancel", DialogInterface.OnClickListener { dialogInterface, i -> return@OnClickListener })
-        alBuilder.setTitle("Exit")
+/*        dialog = builder.create()
+
+        dialog.getButton(AlertDialog.BUTTON_NEGATIVE).setTextColor(WHAT);
+        dialog.getButton(AlertDialog.BUTTON_POSITIVE).setTextColor(WHAT);
+
+ */
+        alBuilder.setMessage("즐거웠어! 다음에 또 올거지?")
+        alBuilder.setNegativeButton("금방 또 올게!" ) { dialogInterface, which -> finish() }
+        alBuilder.setPositiveButton("좀 더 있을까?", DialogInterface.OnClickListener { dialogInterface, i -> return@OnClickListener })
+        alBuilder.setTitle("안녕!")
         alBuilder.show()
+
+        //val textView = alBuilder.findViewById(android.R.id.message)
     }
+
+
         fun saveToInnerStorage(text: String, filename: String) {
             val fileOutputStream = openFileOutput(filename, Context.MODE_PRIVATE)
             fileOutputStream.write(text.toByteArray())

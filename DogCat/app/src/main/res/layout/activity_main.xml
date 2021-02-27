@@ -16,7 +16,7 @@
                 android:id="@+id/washwash"
                 android:layout_width="100dp"
                 android:layout_height="80dp"
-                android:layout_marginTop="80dp"
+                android:layout_marginTop="40dp"
                 android:background="@drawable/washicon"
                 app:layout_constraintEnd_toStartOf="@+id/feedfeed"
                 app:layout_constraintStart_toEndOf="@+id/playplay"
@@ -27,7 +27,7 @@
                 android:layout_width="100dp"
                 android:layout_height="80dp"
                 android:layout_marginLeft="40dp"
-                android:layout_marginTop="80dp"
+                android:layout_marginTop="40dp"
                 android:background="@drawable/hangouticon"
                 app:layout_constraintEnd_toStartOf="@+id/washwash"
                 app:layout_constraintStart_toStartOf="parent"
@@ -37,7 +37,7 @@
                 android:id="@+id/feedfeed"
                 android:layout_width="100dp"
                 android:layout_height="80dp"
-                android:layout_marginTop="80dp"
+                android:layout_marginTop="40dp"
                 android:layout_marginRight="40dp"
                 android:background="@drawable/feedicon"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -104,10 +104,12 @@
 
             <ImageView
                 android:id="@+id/imageView3"
-                android:layout_width="300dp"
-                android:layout_height="300dp"
+                android:layout_width="200dp"
+                android:layout_height="200dp"
+                android:layout_marginBottom="48dp"
                 app:layout_constraintBottom_toTopOf="@+id/guideline11"
                 app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.498"
                 app:layout_constraintStart_toStartOf="parent"
                 app:srcCompat="@drawable/basicdog" />
 

@@ -56,9 +56,10 @@
             android:text="바라"
             android:textColor="#000000"
             android:textStyle="bold"
-            android:layout_marginRight="30dp"
             app:layout_constraintBottom_toBottomOf="@+id/petidGender"
+
             app:layout_constraintEnd_toStartOf="@+id/petidGender"
+            app:layout_constraintStart_toStartOf="@+id/signature"
             app:layout_constraintTop_toTopOf="@+id/petidGender" />
 
         <TextView
@@ -69,7 +70,7 @@
             android:text="2021.02.11"
             android:textColor="#000000"
             android:textSize="12sp"
-            android:layout_marginLeft="15dp"
+            android:layout_marginLeft="12dp"
             android:layout_marginBottom="45dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="@+id/guideline24" />
@@ -78,13 +79,13 @@
             android:id="@+id/petidGender"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginRight="40dp"
+            android:layout_marginBottom="10dp"
             android:fontFamily="@font/title"
             android:text="女"
             android:textColor="#000000"
-            android:layout_marginBottom="10dp"
             app:layout_constraintBottom_toTopOf="@+id/petidBirthday"
-            app:layout_constraintEnd_toStartOf="@+id/guideline24" />
+            app:layout_constraintEnd_toEndOf="@+id/petidBirthday"
+            app:layout_constraintStart_toEndOf="@+id/petidBirthday" />
 
         <TextView
             android:id="@+id/petidBirthday"

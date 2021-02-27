@@ -29,20 +29,29 @@ class SplashActivity : AppCompatActivity() {
         titleImage1.visibility= View.INVISIBLE
         titleImage2.visibility= View.INVISIBLE
 
-        val animation1 = AnimationUtils.loadAnimation(this, R.anim.fade_in)
+        //val animation1 = AnimationUtils.loadAnimation(this, R.anim.fade_in)
 
         Handler(Looper.getMainLooper()).postDelayed({
             titleView1.visibility = View.VISIBLE
-            titleView1.startAnimation(animation1)
+            //titleView1.startAnimation(animation1)
             //overridePendingTransition(R.anim.fade_out, R.anim.fade_in)
+
+        }, 1000)
+
+        Handler(Looper.getMainLooper()).postDelayed({
             titleImage1.visibility= View.VISIBLE
-        }, 1500)
+        }, 1100)
+
 
         Handler(Looper.getMainLooper()).postDelayed({
             titleView2.visibility=View.VISIBLE
-            titleImage2.visibility= View.VISIBLE
+            //titleImage2.visibility= View.VISIBLE
             //titleImage2.startAnimation(animation1)
-        }, 2000)
+        }, 1500)
+
+        Handler(Looper.getMainLooper()).postDelayed({
+            titleImage2.visibility= View.VISIBLE
+        }, 1600)
 
         try {
                 if (prefernce.getBoolean(init,false)) {
@@ -50,13 +59,13 @@ class SplashActivity : AppCompatActivity() {
                         startActivity(Intent(this, YardActivity::class.java))
                         overridePendingTransition(R.anim.fade_in, R.anim.fade_out)
                         finish()
-                    },5000)
+                    },3000)
                 } else {
                     Handler(Looper.getMainLooper()).postDelayed({
                         startActivity(Intent(this, InitPet::class.java))
                         overridePendingTransition(R.anim.fade_in, R.anim.fade_out)
                         finish()
-                    }, 5000)
+                    }, 3000)
                 }
         }
         catch (e: FileNotFoundException){
@@ -64,7 +73,7 @@ class SplashActivity : AppCompatActivity() {
                 startActivity(Intent(this, InitPet::class.java))
                 overridePendingTransition(R.anim.fade_in, R.anim.fade_out)
                 finish()
-            }, 5000)
+            }, 3000)
         }
 
     }

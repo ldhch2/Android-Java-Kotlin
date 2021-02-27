@@ -60,7 +60,7 @@
         android:fontFamily="@font/title"
         android:text="바라"
         android:textColor="#8e8e8e"
-        android:textSize="24sp"
+        android:textSize="20sp"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="@+id/guideline26"
         app:layout_constraintTop_toTopOf="@+id/guideline27" />
