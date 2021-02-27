@@ -18,7 +18,6 @@ class ScreenService : Service() {
     private val ANDROID_CHANNEL_ID="com.midtwenties.dogcat"
     private val NOTIFICATION_ID=9999
 
-
     override fun onCreate() {
         super.onCreate()
 
