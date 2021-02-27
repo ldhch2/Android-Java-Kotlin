@@ -25,6 +25,7 @@ class SplashActivity : AppCompatActivity() {
         setContentView(R.layout.activity_splash)
 
         titleView1.visibility= View.INVISIBLE
+        titleView2.visibility=View.INVISIBLE
         titleImage1.visibility= View.INVISIBLE
         titleImage2.visibility= View.INVISIBLE
 
@@ -33,17 +34,15 @@ class SplashActivity : AppCompatActivity() {
         Handler(Looper.getMainLooper()).postDelayed({
             titleView1.visibility = View.VISIBLE
             titleView1.startAnimation(animation1)
-        }, 1200)
-
-        Handler(Looper.getMainLooper()).postDelayed({
             //overridePendingTransition(R.anim.fade_out, R.anim.fade_in)
             titleImage1.visibility= View.VISIBLE
-        }, 1350)
+        }, 1500)
 
         Handler(Looper.getMainLooper()).postDelayed({
+            titleView2.visibility=View.VISIBLE
             titleImage2.visibility= View.VISIBLE
             //titleImage2.startAnimation(animation1)
-        }, 1500)
+        }, 2000)
 
         try {
                 if (prefernce.getBoolean(init,false)) {

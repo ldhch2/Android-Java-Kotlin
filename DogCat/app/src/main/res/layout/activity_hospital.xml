@@ -220,33 +220,9 @@
         app:srcCompat="@drawable/basicdog" />
 
     <ImageView
-        android:id="@+id/imageView15"
-        android:layout_width="50dp"
-        android:layout_height="0dp"
-        android:layout_margin="3dp"
-        android:rotation="315"
-        app:layout_constraintBottom_toBottomOf="@+id/StoreType"
-        app:layout_constraintStart_toEndOf="@+id/StoreType"
-        app:layout_constraintTop_toTopOf="@+id/StoreType"
-        app:layout_constraintVertical_bias="0.0"
-        app:srcCompat="@drawable/hospital_icon" />
-
-    <ImageView
-        android:id="@+id/imageView16"
-        android:layout_width="50dp"
-        android:layout_height="0dp"
-        android:layout_margin="3dp"
-        android:rotation="315"
-        app:layout_constraintBottom_toBottomOf="@+id/StoreType"
-        app:layout_constraintEnd_toStartOf="@+id/StoreType"
-        app:layout_constraintTop_toTopOf="@+id/StoreType"
-        app:layout_constraintVertical_bias="0.0"
-        app:srcCompat="@drawable/hospital_icon" />
-
-    <ImageView
         android:id="@+id/imageView17"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_height="0dp"
         app:layout_constraintBottom_toTopOf="@+id/guideline03"
         app:layout_constraintEnd_toStartOf="@+id/guideline07"
         app:layout_constraintTop_toTopOf="@+id/guideline02"
@@ -255,7 +231,7 @@
     <ImageView
         android:id="@+id/imageView18"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_height="0dp"
         app:layout_constraintBottom_toTopOf="@+id/guideline03"
         app:layout_constraintEnd_toStartOf="@+id/guideline08"
         app:layout_constraintStart_toStartOf="@+id/guideline07"
@@ -265,7 +241,7 @@
     <ImageView
         android:id="@+id/imageView19"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_height="0dp"
         app:layout_constraintBottom_toTopOf="@+id/guideline03"
         app:layout_constraintEnd_toStartOf="@+id/guideline09"
         app:layout_constraintStart_toStartOf="@+id/guideline08"
