@@ -7,10 +7,11 @@ import android.widget.ImageView
 import android.widget.RadioButton
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
+import com.midtwenties.dogcat.Iteminfo
 import com.midtwenties.dogcat.StoreContacts
 import com.midtwenties.dogcat.R
 
-class ContactsListAdapter(val context: Context, val itemList : ArrayList<StoreContacts>) :
+class ContactsListAdapter(val context: Context, val itemList : ArrayList<Iteminfo>) :
     RecyclerView.Adapter<ContactsListAdapter.Holder>()  {
     inner class Holder(itemView: View?) : RecyclerView.ViewHolder(itemView!!){
         val imagename = itemView?.findViewById<ImageView>(R.id.imagename)
@@ -21,7 +22,7 @@ class ContactsListAdapter(val context: Context, val itemList : ArrayList<StoreCo
         val option2 = itemView?.findViewById<RadioButton>(R.id.option2)
         val option3 = itemView?.findViewById<RadioButton>(R.id.option3)
 
-        fun bind(item: StoreContacts, context: Context) {
+        fun bind(item: Iteminfo, context: Context) {
 
             if(item.imagename != ""){
                 val resourceId = context.resources.getIdentifier(item.imagename,"drawable",context.packageName)
@@ -31,7 +32,7 @@ class ContactsListAdapter(val context: Context, val itemList : ArrayList<StoreCo
             }
             itemname?.text = item.name
             price?.text = item.price.toString()
-            buybutton?.text=item.buy
+            buybutton?.text="구매"
 
             if(item.option1 != "") option1?.text = item.option1
             else option1?.setVisibility(View.INVISIBLE)

@@ -1,6 +1,7 @@
 package com.midtwenties.dogcat
 
 import ContactsListAdapter
+import android.content.ClipData
 import android.content.Intent
 import android.graphics.Color
 import androidx.appcompat.app.AppCompatActivity
@@ -10,43 +11,44 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import kotlinx.android.synthetic.main.activity_store_item.*
 
 class StoreItem : AppCompatActivity() {
-    var toyList = arrayListOf<StoreContacts>(
-            StoreContacts("", "공", 500, "구매", "빨강색", "파란색", ""),
-            StoreContacts("", "삑삑이", 500, "구매", "빨강색", "파란색", "초록색"),
-            StoreContacts("", "뽁뽁이", 500, "구매", "빨강색", "파란색", "초록색"),
-            StoreContacts("", "공공공", 500, "구매", "빨강색", "파란색", "초록색"),
-            StoreContacts("", "룰룰루", 500, "구매", "빨강색", "파란색", "초록색")
+    var toyList = arrayListOf<Iteminfo>(
+            Iteminfo("공"),
+            Iteminfo("오뚝이"),
+            Iteminfo("터그"),
+            Iteminfo("낚시대"),
+            Iteminfo("인형")
     )
-    var houseList = arrayListOf<StoreContacts>(
-            StoreContacts("freecushion", "기본 쿠션", 0, "구매", "소형", "중형", "대형"),
-            StoreContacts("pinkbasichouse", "Pink 베이직 홈", 500, "구매", "소형", "중형", "대형"),
-            StoreContacts("bluebasichouse", "Blue 베이직 홈", 500, "구매", "소형", "중형", "대형"),
-            StoreContacts("brownbasichouse", "Brown 베이직 홈", 500, "구매", "소형", "중형", "대형"),
-            StoreContacts("princesshouse", "프린세스 홈", 1000, "구매", "빨강색", "파란색", "초록색"),
-            StoreContacts("cattowerpre", "[Premium] 캣타워", 2000, "구매", "빨강색", "파란색", "초록색")
+    var houseList = arrayListOf<Iteminfo>(
+            Iteminfo("기본 쿠션"),
+            Iteminfo("Pink 베이직 홈"),
+            Iteminfo("Blue 베이직 홈"),
+            Iteminfo("Brown 베이직 홈"),
+            Iteminfo("프린세스 홈"),
+            Iteminfo("[Premium] 캣타워")
     )
-    var bowlList = arrayListOf<StoreContacts>(
-            StoreContacts("", "그릇 세트", 500, "구매", "빨강색", "파란색", ""),
-            StoreContacts("", "밥그릇", 500, "구매", "빨강색", "파란색", "초록색"),
-            StoreContacts("", "물그릇", 500, "구매", "빨강색", "파란색", "초록색"),
-            StoreContacts("", "밥밥", 500, "구매", "빨강색", "파란색", "초록색"),
-            StoreContacts("", "물물", 500, "구매", "빨강색", "파란색", "초록색")
+    var householdList = arrayListOf<Iteminfo>(
+            Iteminfo("멍샴푸"),
+            Iteminfo("냥삼푸"),
+            Iteminfo("칫솔"),
+            Iteminfo("치약"),
+            Iteminfo("배변푸드"),
     )
-    var feedList = arrayListOf<StoreContacts>(
-            StoreContacts("dogyum", "강아지 사료", 10000, "구매", "1kg", "3kg", "5kg"),
-            StoreContacts("catyum", "고양이 사료", 10000, "구매", "1kg", "3kg", "5kg"),
-            StoreContacts("dogyumpre", "[Premium] 강아지 사료", 15000, "구매", "1kg", "3kg", "5kg"),
-            StoreContacts("catyumpre", "[Premium] 고양이 사료", 15000, "구매", "1kg", "3kg", "5kg"),
-            StoreContacts("doggum", "개껌 (강아지용)", 500, "구매", "", "", ""),
-            StoreContacts("yellowchu", "닭가슴살 츄르 (고양이용)", 500, "구매", "", "", ""),
-            StoreContacts("orangechu", "연어 츄르 (고양이용)", 500, "구매", "", "", ""),
-            StoreContacts("pinkchu", "참치 츄르 (고양이용)", 500, "구매", "", "", "")
+    var feedList = arrayListOf<Iteminfo>(
+            Iteminfo("강아지 사료"),
+            Iteminfo("고양이 사료"),
+            Iteminfo("[Premium] 강아지 사료"),
+            Iteminfo("[Premium] 고양이 사료"),
+            Iteminfo("개껌 (강아지용)"),
+            Iteminfo("닭가슴살 츄르 (고양이용)"),
+            Iteminfo("연어 츄르 (고양이용)"),
+            Iteminfo("참치 츄르 (고양이용)")
     )
-    var clothesList = arrayListOf<StoreContacts>(
-            StoreContacts("", "심플 옷", 500, "구매", "빨강색", "파란색", ""),
-            StoreContacts("", "목줄", 500, "구매", "빨강색", "파란색", "초록색"),
-            StoreContacts("", "옷옷", 500, "구매", "빨강색", "파란색", "초록색")
+    var clothesList = arrayListOf<Iteminfo>(
+            Iteminfo("목줄"),
+            Iteminfo("심플 옷"),
+            Iteminfo("옷옷")
     )
+
     fun reset() {
         goToyStore.isEnabled=true
         goHouseStore.isEnabled=true
@@ -76,12 +78,6 @@ class StoreItem : AppCompatActivity() {
             val adapter = ContactsListAdapter(this, houseList)
             StoreRecyclerview.adapter = adapter
             goHouseStore.isEnabled=false
-        }
-        goBowlStore.setOnClickListener{
-            reset()
-            val adapter = ContactsListAdapter(this, bowlList)
-            StoreRecyclerview.adapter = adapter
-            goBowlStore.isEnabled=false
         }
         goFeedStore.setOnClickListener{
             reset()
