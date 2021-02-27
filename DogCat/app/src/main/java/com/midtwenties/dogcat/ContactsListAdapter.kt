@@ -8,7 +8,6 @@ import android.widget.RadioButton
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.midtwenties.dogcat.Iteminfo
-import com.midtwenties.dogcat.StoreContacts
 import com.midtwenties.dogcat.R
 
 class ContactsListAdapter(val context: Context, val itemList : ArrayList<Iteminfo>) :
@@ -55,7 +54,7 @@ class ContactsListAdapter(val context: Context, val itemList : ArrayList<Iteminf
     }
 
     override fun onBindViewHolder(holder: Holder, position: Int) {
-        holder?.bind(itemList[position],context)
+        holder.bind(itemList[position],context)
     }
 
 }
