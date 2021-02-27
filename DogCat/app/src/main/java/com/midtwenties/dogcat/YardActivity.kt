@@ -1,59 +1,98 @@
 package com.midtwenties.dogcat
 
-import android.annotation.SuppressLint
-import android.app.AlertDialog
+import android.view.animation.AnimationUtils
 import android.content.Context
 import android.content.DialogInterface
 import android.content.Intent
+import android.os.Build
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import androidx.appcompat.app.AlertDialog
+import kotlinx.android.synthetic.main.activity_main.*
 import java.text.SimpleDateFormat
 import java.util.*
 import kotlinx.android.synthetic.main.activity_yard.*
+import kotlinx.android.synthetic.main.activity_yard.fabMain
+import kotlinx.android.synthetic.main.activity_yard.itemButton
 
 class YardActivity : AppCompatActivity() {
+
+    val preference by lazy { getSharedPreferences("setting_data", Context.MODE_PRIVATE) }
+    var isOpen = false
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_yard)
-        var date = ""
-        val today = SimpleDateFormat("yyyy-MM-dd",Locale.KOREA).format(Date())
-        var countDate = 0
-        var flag = false
-        try {
-            val readDate = loadFromInnerStorage("attendancefile.txt")
-            var arr = readDate.split("/")
-            date = arr[0].toString()
-            countDate = arr[1].toInt() + 1
-        } catch(e: Exception) {
-            date = today
-            countDate = 1
-            flag = true
-        }
-        if(countDate == 6) countDate = 1
-        if(!date.equals(today) || flag == true) {
-            val writedate = today + "/" + countDate.toString()
-            saveToInnerStorage(writedate,"attendancefile.txt")
 
-            var intent = Intent(this, AttendancePopup::class.java)
+        val today = SimpleDateFormat("yyyy-MM-dd", Locale.KOREA).format(Date())
+
+        var countDate = preference.getInt("count", 0)
+        val date = preference.getString("date", today).toString()
+
+        if (countDate == 6) countDate = 1
+
+        if (date != today || countDate == 0) {
+            countDate += 1
+            preference.edit().putString("date", date).apply()
+            preference.edit().putInt("count", countDate).apply()
+
+            val intent = Intent(this, AttendancePopup::class.java)
             intent.putExtra("countDate", countDate)
-
             startActivityForResult(intent, 1)
         }
 
-        idcardList.setOnClickListener{
-            startActivity(Intent(this, IDListActivity::class.java))
+        when {
+            preference.getBoolean("screen", false) -> {
+                if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+                    startForegroundService(Intent(applicationContext, ScreenService::class.java))
+                } else {
+                    startService(Intent(applicationContext, ScreenService::class.java))
+                }
+            }
+            else -> stopService(Intent(applicationContext, ScreenService::class.java))
         }
-        temporaryMain.setOnClickListener{
+
+        val fabOpen = AnimationUtils.loadAnimation(this, R.anim.fab_open)
+        val fabClose = AnimationUtils.loadAnimation(this, R.anim.fab_close)
+
+        pet01.setOnClickListener{
             startActivity(Intent(this, MainActivity::class.java))
         }
-    }
 
-    @SuppressLint("MissingSuperCall")
-    override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
-        if(requestCode == 1) {
-            if(resultCode == RESULT_OK) {
-                var result = data?.getStringExtra("result")
+        fabMain.setOnClickListener {
+            if (isOpen) {
+                mainSetting.startAnimation(fabClose)
+                idcardList.startAnimation(fabClose)
+                itemButton.startAnimation(fabClose)
+                storeButton.startAnimation(fabClose)
+
+                isOpen = false
+
+            } else {
+                mainSetting.startAnimation(fabOpen)
+                idcardList.startAnimation(fabOpen)
+                itemButton.startAnimation(fabOpen)
+                storeButton.startAnimation(fabOpen)
+
+                mainSetting.isClickable
+                idcardList.isClickable
+                itemButton.isClickable
+                storeButton.isClickable
+
+                isOpen = true
+            }
+
+            mainSetting.setOnClickListener {
+                startActivity(Intent(this, MainSetting::class.java))
+            }
+            idcardList.setOnClickListener {
+                startActivity(Intent(this, IDListActivity::class.java))
+            }
+            itemButton.setOnClickListener{
+                startActivity(Intent(this,ItemList::class.java))
+            }
+            storeButton.setOnClickListener {
+                startActivity(Intent(this, StoreItem::class.java))
             }
         }
     }
@@ -65,16 +104,16 @@ class YardActivity : AppCompatActivity() {
         alBuilder.setTitle("Exit")
         alBuilder.show()
     }
-    fun saveToInnerStorage(text: String, filename: String){
-        val fileOutputStream = openFileOutput(filename, Context.MODE_PRIVATE)
-        fileOutputStream.write(text.toByteArray())
-        fileOutputStream.close()
-    }
+        fun saveToInnerStorage(text: String, filename: String) {
+            val fileOutputStream = openFileOutput(filename, Context.MODE_PRIVATE)
+            fileOutputStream.write(text.toByteArray())
+            fileOutputStream.close()
+        }
 
-    fun loadFromInnerStorage(filename: String):String{
-        val fileInputStream=openFileInput(filename)
-        return fileInputStream.reader().readText()
-    }
+        fun loadFromInnerStorage(filename: String): String {
+            val fileInputStream = openFileInput(filename)
+            return fileInputStream.reader().readText()
+        }
 
 }
 

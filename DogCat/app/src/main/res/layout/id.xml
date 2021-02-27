@@ -15,7 +15,7 @@
 
     <ImageView
         android:id="@+id/idCard"
-        android:layout_width="393dp"
+        android:layout_width="280dp"
         android:layout_height="105dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/guideline12"
@@ -34,14 +34,15 @@
 
     <TextView
         android:id="@+id/idName"
-        android:layout_width="3dp"
-        android:layout_height="26dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:textColor="#000000"
-        android:textSize="18sp"
+        android:fontFamily="@font/bae"
+        android:textSize="24sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/guideline12"
+        app:layout_constraintStart_toEndOf="@+id/idCard"
         app:layout_constraintTop_toTopOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

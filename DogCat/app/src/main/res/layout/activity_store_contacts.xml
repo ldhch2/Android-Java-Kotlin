@@ -35,7 +35,9 @@
         android:layout_marginBottom="8dp"
         android:text="TextView"
         android:textColor="#000000"
-        android:textSize="18sp"
+        android:fontFamily="@font/bae"
+        android:textSize="32sp"
+        android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/guideline19"
         app:layout_constraintStart_toStartOf="@+id/guideline20"
         app:layout_constraintTop_toTopOf="parent" />
@@ -58,10 +60,12 @@
         android:id="@+id/option1_price"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textColor="#000000"
         android:text="가격"
-        android:textSize="18sp"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:fontFamily="@font/bae"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:textColor="#000000"
+        app:layout_constraintBottom_toTopOf="@+id/buybutton"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/radioGroup"
         app:layout_constraintTop_toTopOf="@+id/guideline19" />
@@ -81,6 +85,9 @@
             android:layout_height="wrap_content"
             android:buttonTint="#8e8e8e"
             android:textColor="#000000"
+            android:fontFamily="@font/bae"
+            android:textSize="24sp"
+            android:textStyle="bold"
             android:text="RadioButton" />
 
         <RadioButton
@@ -88,6 +95,9 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:buttonTint="#8e8e8e"
+            android:fontFamily="@font/bae"
+            android:textSize="24sp"
+            android:textStyle="bold"
             android:textColor="#000000"
             android:text="RadioButton" />
 
@@ -97,6 +107,9 @@
             android:layout_height="wrap_content"
             android:buttonTint="#8e8e8e"
             android:textColor="#000000"
+            android:fontFamily="@font/bae"
+            android:textSize="24sp"
+            android:textStyle="bold"
             android:text="RadioButton" />
     </RadioGroup>
 
@@ -106,9 +119,13 @@
         android:layout_height="wrap_content"
         android:layout_marginEnd="8dp"
         android:layout_marginRight="8dp"
+        android:layout_marginBottom="8dp"
         android:text="구매"
-        app:layout_constraintBottom_toTopOf="@+id/guideline19"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:background="@drawable/grey_button"
+        android:fontFamily="@font/bae"
+        android:textSize="26sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

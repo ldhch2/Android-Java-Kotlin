@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#F1F1E0"
+    android:background="#170E00"
     tools:context=".SplashActivity">
 
 
@@ -12,13 +12,18 @@
         android:id="@+id/titleView1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="124dp"
-        android:fontFamily="@font/sdsamliphopangcheoutline"
+        android:layout_marginTop="200dp"
+        android:fontFamily="@font/bae"
         android:gravity="center|center_horizontal"
-        android:text="멍이 냥이"
-        android:textColor="#000000"
-        android:textSize="70dp"
+        android:text="멍멍냥냥"
+        android:shadowColor="#F4C99A"
+        android:shadowRadius="5.0"
+        android:shadowDx="5.0"
+        android:shadowDy="5.0"
+        android:textColor="#f1f1e0"
+        android:textSize="100dp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -26,15 +31,15 @@
         android:id="@+id/titleImage2"
         android:layout_width="84dp"
         android:layout_height="0dp"
-        android:layout_marginStart="228dp"
-        android:layout_marginLeft="228dp"
+        android:layout_marginStart="184dp"
+        android:layout_marginLeft="184dp"
         android:layout_marginTop="27dp"
         android:layout_marginBottom="35dp"
         android:rotation="30"
         app:layout_constraintBottom_toBottomOf="@+id/titleView1"
         app:layout_constraintStart_toStartOf="@+id/titleView1"
         app:layout_constraintTop_toTopOf="@+id/titleImage1"
-        app:layout_constraintVertical_bias="1.0"
+        app:layout_constraintVertical_bias="0.0"
         app:srcCompat="@drawable/catfoot" />
 
     <ImageView
@@ -46,9 +51,10 @@
         android:rotation="8"
         app:layout_constraintBottom_toBottomOf="@+id/titleView1"
         app:layout_constraintEnd_toStartOf="@+id/titleImage2"
-        app:layout_constraintHorizontal_bias="0.72"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/titleImage2"
         app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.965"
         app:srcCompat="@drawable/dogfoot" />
 
 

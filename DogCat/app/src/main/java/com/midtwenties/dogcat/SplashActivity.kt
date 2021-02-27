@@ -1,5 +1,6 @@
 package com.midtwenties.dogcat
 
+import android.content.Context
 import android.content.Intent
 import android.os.Bundle
 import android.os.Handler
@@ -13,10 +14,11 @@ import java.io.FileNotFoundException
 class SplashActivity : AppCompatActivity() {
 
     var checkinit = false
-
     var first=false;
+    val init = "init"
 
-    val filename="init.txt"
+    val prefernce by lazy { getSharedPreferences("setting_data", Context.MODE_PRIVATE) }
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -31,22 +33,22 @@ class SplashActivity : AppCompatActivity() {
         Handler(Looper.getMainLooper()).postDelayed({
             titleView1.visibility = View.VISIBLE
             titleView1.startAnimation(animation1)
-        }, 1000)
+        }, 1200)
 
         Handler(Looper.getMainLooper()).postDelayed({
             //overridePendingTransition(R.anim.fade_out, R.anim.fade_in)
             titleImage1.visibility= View.VISIBLE
-        }, 2500)
+        }, 1350)
 
         Handler(Looper.getMainLooper()).postDelayed({
             titleImage2.visibility= View.VISIBLE
             //titleImage2.startAnimation(animation1)
-        }, 3000)
+        }, 1500)
 
         try {
-                if (loadFromInnerStorage(filename).equals("True")) {
+                if (prefernce.getBoolean(init,false)) {
                     Handler(Looper.getMainLooper()).postDelayed({
-                        startActivity(Intent(this, MainActivity::class.java))
+                        startActivity(Intent(this, YardActivity::class.java))
                         overridePendingTransition(R.anim.fade_in, R.anim.fade_out)
                         finish()
                     },5000)

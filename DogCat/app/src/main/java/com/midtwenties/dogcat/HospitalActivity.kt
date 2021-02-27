@@ -10,8 +10,14 @@ class HospitalActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_hospital)
 
-        back.setOnClickListener {
-            startActivity(Intent(this, MainActivity::class.java))
+        backButton.setOnClickListener {
+            onBackPressed()
+        }
+        goButton1.setOnClickListener {
+            startActivity(Intent(this, HospitalTreatment::class.java))
+        }
+        goButton3.setOnClickListener {
+            startActivity(Intent(this, HospitalNutrition::class.java))
         }
     }
 }
