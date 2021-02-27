@@ -11,8 +11,6 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import kotlinx.android.synthetic.main.activity_feed.*
-import kotlinx.android.synthetic.main.activity_item_contacts.*
 import kotlinx.android.synthetic.main.activity_item_contacts.view.*
 import kotlinx.android.synthetic.main.activity_item_popup.*
 import kotlinx.android.synthetic.main.activity_item_popup.backButton
@@ -54,7 +52,7 @@ class ItemPopup : AppCompatActivity() {
     }
 
 
-    override fun onCreate(savedInstanceState: Bundle?) {
+    override fun onCreate(savedInstanceState: Bundle?){
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_item_popup)
 
@@ -66,12 +64,30 @@ class ItemPopup : AppCompatActivity() {
             val adapter = ItemNewListAdapter(this, itemToylist)
             SeparateRecyclerView.adapter = adapter
 
+            clickbutton.setOnClickListener {
+                if(adapter.flag) {
+                    Toast.makeText(this, "선택되었습니다.", Toast.LENGTH_SHORT).show()
+                }
+                else{
+                    Toast.makeText(this,"아이템을 선택해주세요.",Toast.LENGTH_SHORT).show()
+                }
+            }
+
         }
         else if(type == 2){
             val text = findViewById<TextView>(R.id.textView2)
             text.text="내 사료"
             val adapter = ItemNewListAdapter(this, itemFeedlist)
             SeparateRecyclerView.adapter = adapter
+
+            clickbutton.setOnClickListener {
+                if(adapter.flag) {
+                    Toast.makeText(this, "선택되었습니다.", Toast.LENGTH_SHORT).show()
+                }
+                else{
+                    Toast.makeText(this,"아이템을 선택해주세요.",Toast.LENGTH_SHORT).show()
+                }
+            }
 
         }
         else if(type == 3){
@@ -80,8 +96,15 @@ class ItemPopup : AppCompatActivity() {
             val adapter = ItemNewListAdapter(this, itemBowllist)
             SeparateRecyclerView.adapter = adapter
 
+            clickbutton.setOnClickListener {
+                if(adapter.flag) {
+                    Toast.makeText(this, "선택되었습니다.", Toast.LENGTH_SHORT).show()
+                }
+                else{
+                    Toast.makeText(this,"아이템을 선택해주세요.",Toast.LENGTH_SHORT).show()
+                }
+            }
         }
-
 
         backButton.setOnClickListener {
             onBackPressed()
@@ -97,15 +120,14 @@ class ItemNewListAdapter(val context: Context, val itemList : ArrayList<Itemnew>
     var check = -1
     var preLayout : ConstraintLayout? = null
     var flag = false
+
     inner class Holder(itemView: View?) : RecyclerView.ViewHolder(itemView!!) {
         val itemname = itemView?.findViewById<TextView>(R.id.itemlistname)
         val imagename = itemView?.findViewById<ImageView>(R.id.imagename)
         val itemclick = itemView?.findViewById<Button>(R.id.itemclick)
         val layout = itemView?.findViewById<ConstraintLayout>(R.id.ItemConstraint)
 
-
-
-        fun bind(item2: Itemnew, context: Context) {
+        fun bind(item2: Itemnew, context: Context){
             itemname?.text = item2.item_name
             if (item2.image_name != "") {
                 val resourceId = context.resources.getIdentifier(item2.image_name, "drawable", context.packageName)
@@ -113,7 +135,6 @@ class ItemNewListAdapter(val context: Context, val itemList : ArrayList<Itemnew>
             } else {
                 imagename?.setImageResource(R.mipmap.ic_launcher)
             }
-            Log.d("asbe","aesf")
             itemclick?.setOnClickListener {
                 if(check == -1){
                     check = itemList.indexOf(item2)
@@ -133,10 +154,9 @@ class ItemNewListAdapter(val context: Context, val itemList : ArrayList<Itemnew>
                 else {
                     check = -1
                     layout?.setBackgroundResource(R.drawable.state_border)
+                    flag = false
                 }
             }
-
-
         }
     }
 
