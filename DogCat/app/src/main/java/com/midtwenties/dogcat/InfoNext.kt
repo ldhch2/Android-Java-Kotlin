@@ -22,10 +22,16 @@ class InfoNext : AppCompatActivity() {
         val imagePet: ImageView = findViewById(R.id.imagePet)
         Glide.with(this).load(R.raw.doggy).into(imagePet)
 
-        val get=intent.getStringExtra("info").toString()
+        val info=intent.getStringExtra("info").toString()
 
         var next=Intent(this, RegisterActivity::class.java)
-        next.putExtra("info",String.format("%s %d 50 7 19 50 50 50 50",get,numb))
+        next.putExtra("info",String.format("%s %d 50 7 19 50 50 50 50",info,numb))
+        val arr=info.split(" ")
+        val name=arr[0]
+        val kind=arr[1].toInt()  //동물 타입
+        val month=arr[2].toInt()
+        val gender=arr[3].toInt()
+
 
         var character: Character = if (numb==0) Perfect()
         else if (numb==1) Foodfight()
