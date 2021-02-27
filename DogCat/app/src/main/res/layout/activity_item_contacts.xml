@@ -2,6 +2,7 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/ItemConstraint"
     android:layout_width="match_parent"
     android:layout_height="150dp"
     android:layout_margin="2dp"
@@ -26,13 +27,24 @@
         app:layout_constraintTop_toTopOf="@+id/guideline17" />
 
     <ImageView
-        android:id="@+id/itemimage"
+        android:id="@+id/itemimage2"
         android:layout_width="match_parent"
         android:layout_height="0dp"
+        android:background="#00ff0000"
         android:scaleType="centerInside"
         app:layout_constraintBottom_toTopOf="@+id/guideline17"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/doggum" />
+
+    <Button
+        android:id="@+id/itemclick"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="#00ff0000"
+        app:layout_constraintBottom_toBottomOf="@+id/itemlistname"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>

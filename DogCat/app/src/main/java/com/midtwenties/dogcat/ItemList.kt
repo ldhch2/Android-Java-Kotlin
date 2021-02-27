@@ -1,17 +1,14 @@
 package com.midtwenties.dogcat
 
 import android.content.Context
-import android.graphics.Color
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Button
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.GridLayoutManager
-import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import kotlinx.android.synthetic.main.activity_item_list.*
 
@@ -124,7 +121,7 @@ class ItemListAdapter(val context: Context, val itemList : ArrayList<ItemContact
         RecyclerView.Adapter<ItemListAdapter.Holder>() {
     inner class Holder(itemView: View?) : RecyclerView.ViewHolder(itemView!!) {
         val itemname = itemView?.findViewById<TextView>(R.id.itemlistname)
-        val imagename = itemView?.findViewById<ImageView>(R.id.itemimage)
+        val imagename = itemView?.findViewById<ImageView>(R.id.itemimage2)
 
         fun bind(item2: ItemContacts, context: Context) {
             itemname?.text = item2.item_name
