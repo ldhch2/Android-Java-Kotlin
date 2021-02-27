@@ -12,35 +12,22 @@ import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import kotlinx.android.synthetic.main.activity_item_list.*
 
-class ItemContacts (var item_name: String, var image_name : String)
-
 class ItemList : AppCompatActivity() {
-    var itemToylist = arrayListOf<ItemContacts>(
-            ItemContacts("공", ""),
-            ItemContacts("삑삑이", ""),
-            ItemContacts("오메가3", ""),
-            ItemContacts("밀크시슬", ""),
-            ItemContacts("글루코사민", "")
+
+    var itemToylist = arrayListOf<Iteminfo>(
+    )
+    var itemHouselist = arrayListOf<Iteminfo>(
     )
 
-    var itemHouselist = arrayListOf<ItemContacts>(
-            ItemContacts("캣타워","cattowerpre"),
-            ItemContacts("기본 쿠션","freecushion")
+    var itemHouseholdllist = arrayListOf<Iteminfo>(
+    )
+    var itemFeedlist = arrayListOf<Iteminfo>(
+    )
+    var itemClotheslist = arrayListOf<Iteminfo>(
     )
 
-    var itemBowllist = arrayListOf<ItemContacts>(
-            ItemContacts("그릇 세트",""),
-            ItemContacts("밥그릇","")
-    )
-
-    var itemFeedlist = arrayListOf<ItemContacts>(
-            ItemContacts("강아지 사료","dogyum"),
-            ItemContacts("고양이 사료","catyum")
-    )
-    var itemClotheslist = arrayListOf<ItemContacts>(
-            ItemContacts("심플 옷",""),
-            ItemContacts("목줄","")
-    )
+    val prefernce by lazy { getSharedPreferences("setting_data",Context.MODE_PRIVATE) }
+    var num=0
 
     fun reset(){
         Toy.isSelected = false
@@ -60,8 +47,40 @@ class ItemList : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_item_list)
 
+        val toy = prefernce.getString("toy",null)?.split(" ")
+        if (toy != null) {
+            for (i in 0..toy.size) {
+                itemToylist.add(Iteminfo(toy[i]))
+            }
+        }
 
+        val house = prefernce.getString("house",null)?.split(" ")
+        if (house != null) {
+            for (i in 0..house.size) {
+                itemHouselist.add(Iteminfo(house[i]))
+            }
+        }
 
+        val household = prefernce.getString("household",null)?.split(" ")
+        if (household != null) {
+            for (i in 0..household.size) {
+                itemHouseholdllist.add(Iteminfo(household[i]))
+            }
+        }
+
+        val feed = prefernce.getString("feed",null)?.split(" ")
+        if (feed != null) {
+                for (i in 0..feed.size) {
+                    itemFeedlist.add(Iteminfo(feed[i]))
+            }
+        }
+
+        val cloth = prefernce.getString("cloth",null)?.split(" ")
+        if (cloth != null) {
+            for (i in 1..cloth.size) {
+                itemClotheslist.add(Iteminfo(cloth[i]))
+            }
+        }
 
         Toy.setBackgroundResource(R.drawable.brown_button)
         val adapter = ItemListAdapter(this, itemToylist)
@@ -90,7 +109,7 @@ class ItemList : AppCompatActivity() {
         Bowl.setOnClickListener {
             reset()
             Bowl.setBackgroundResource(R.drawable.brown_button)
-            val adapter = ItemListAdapter(this, itemBowllist)
+            val adapter = ItemListAdapter(this, itemHouseholdllist)
             itemRecyclerView.adapter = adapter
             Bowl.isSelected=true
         }
@@ -117,16 +136,16 @@ class ItemList : AppCompatActivity() {
     }
 }
 
-class ItemListAdapter(val context: Context, val itemList : ArrayList<ItemContacts>) :
+class ItemListAdapter(val context: Context, val itemList : ArrayList<Iteminfo>) :
         RecyclerView.Adapter<ItemListAdapter.Holder>() {
     inner class Holder(itemView: View?) : RecyclerView.ViewHolder(itemView!!) {
         val itemname = itemView?.findViewById<TextView>(R.id.itemlistname)
         val imagename = itemView?.findViewById<ImageView>(R.id.itemimage2)
 
-        fun bind(item2: ItemContacts, context: Context) {
-            itemname?.text = item2.item_name
-            if(item2.image_name != ""){
-                val resourceId = context.resources.getIdentifier(item2.image_name,"drawable",context.packageName)
+        fun bind(item2: Iteminfo, context: Context) {
+            itemname?.text = item2.name
+            if(item2.imagename != ""){
+                val resourceId = context.resources.getIdentifier(item2.imagename,"drawable",context.packageName)
                 imagename?.setImageResource(resourceId)
             } else {
                 imagename?.setImageResource(R.mipmap.ic_launcher)
@@ -145,6 +164,6 @@ class ItemListAdapter(val context: Context, val itemList : ArrayList<ItemContact
     }
 
     override fun onBindViewHolder(holder: Holder, position: Int) {
-        holder?.bind(itemList[position], context)
+        holder.bind(itemList[position], context)
     }
 }

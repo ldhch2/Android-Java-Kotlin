@@ -12,7 +12,9 @@
         android:roundIcon="@drawable/logo"
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.NoActionBar">
-        <activity android:name=".ItemPopup"></activity>
+        <activity
+            android:name=".ItemPopup"
+            android:theme="@style/pop" />
         <activity android:name=".SplashActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -53,6 +55,15 @@
                 <action android:name="android.intent.action.SCREEN_OFF" />
             </intent-filter>
         </receiver>
+<<<<<<< HEAD
+=======
+
+        <service
+            android:name=".ScreenService"
+            android:enabled="true"
+            android:exported="false">
+        </service>
+>>>>>>> mh
     </application>
 
 </manifest>
