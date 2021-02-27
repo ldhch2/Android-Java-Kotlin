@@ -37,11 +37,13 @@ class RegisterActivity : AppCompatActivity() {
         val gender=arr[3].toInt()
 
         val now=LocalDate.now()
+
         var birth=now
         when (month) {
             1 ->  birth=now.minusMonths(1)
             25 -> birth=now.minusMonths(25)
             85 -> birth=now.minusMonths(85)
+
         }
         val birthday: String = birth.format(DateTimeFormatter.ofPattern("yyMMdd"))
 
