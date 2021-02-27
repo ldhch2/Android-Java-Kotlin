@@ -48,10 +48,12 @@
                 <action android:name="android.intent.action.SCREEN_OFF"/>
             </intent-filter>
         </receiver>
-        <service
+
+        <!--<service
             android:name=".ScreenService"
             android:enabled="true"
             android:exported="false">
         </service>
+        -->
     </application>
 </manifest>
