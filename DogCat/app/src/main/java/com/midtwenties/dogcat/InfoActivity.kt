@@ -68,7 +68,7 @@ class InfoActivity : AppCompatActivity() {
         petName.setOnKeyListener { v, keyCode, event ->
             if (event.action == KeyEvent.ACTION_DOWN && keyCode == KEYCODE_ENTER) {
                 Toast.makeText(applicationContext,"완료됐습니다",Toast.LENGTH_SHORT).show()
-                return@setOnKeyListener  true
+                return@setOnKeyListener  false
             }
             else{
                 return@setOnKeyListener false
