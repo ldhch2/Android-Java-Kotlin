@@ -13,6 +13,10 @@ class IDListActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_id_list)
 
+        supportFragmentManager.beginTransaction()
+            .replace(R.id.coin, CoinView())
+            .commit()
+
         val filename=loadFromInnerStorage("pet.txt")
         val temp=filename.split('\n')
         val pet= PetClass(loadFromInnerStorage(temp[0]))

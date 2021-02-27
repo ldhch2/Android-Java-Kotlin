@@ -8,7 +8,7 @@
     android:layout_marginTop="2dp"
     android:layout_marginEnd="4dp"
     android:layout_marginBottom="2dp"
-    android:background="@drawable/state_border"
+    android:background="@drawable/border_round"
     android:scrollbarSize="10dp"
     android:scrollbarStyle="outsideInset">
 

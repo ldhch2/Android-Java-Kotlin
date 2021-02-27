@@ -1,19 +1,17 @@
 package com.midtwenties.dogcat
 
-import android.view.animation.AnimationUtils
 import android.content.Context
 import android.content.DialogInterface
 import android.content.Intent
 import android.os.Build
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.animation.AnimationUtils
+import android.widget.LinearLayout
 import androidx.appcompat.app.AlertDialog
-import kotlinx.android.synthetic.main.activity_main.*
+import androidx.appcompat.app.AppCompatActivity
+import kotlinx.android.synthetic.main.activity_yard.*
 import java.text.SimpleDateFormat
 import java.util.*
-import kotlinx.android.synthetic.main.activity_yard.*
-import kotlinx.android.synthetic.main.activity_yard.fabMain
-import kotlinx.android.synthetic.main.activity_yard.itemButton
 
 class YardActivity : AppCompatActivity() {
 
@@ -23,6 +21,10 @@ class YardActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_yard)
+
+        supportFragmentManager.beginTransaction()
+            .replace(R.id.coin, CoinView())
+            .commit()
 
         val today = SimpleDateFormat("yyyy-MM-dd", Locale.KOREA).format(Date())
 

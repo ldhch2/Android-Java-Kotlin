@@ -62,6 +62,10 @@ class StoreItem : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_store_item)
 
+        supportFragmentManager.beginTransaction()
+            .replace(R.id.coin, CoinView())
+            .commit()
+
         val storeType = findViewById<TextView>(R.id.StoreType)
         storeType.text = "상점"
 

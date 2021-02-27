@@ -6,6 +6,17 @@
     android:layout_height="match_parent"
     android:background="@drawable/background">
 
+    <FrameLayout
+        android:id="@+id/coin"
+        android:layout_width="100dp"
+        android:layout_height="40dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginBottom="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+    </FrameLayout>
+
+
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline18"
         android:layout_width="wrap_content"
@@ -66,6 +77,9 @@
                 android:layout_height="wrap_content"
                 android:layout_margin="4dp"
                 android:background="@drawable/beige_button"
+                android:fontFamily="@font/bae"
+                android:textSize="24sp"
+                android:textStyle="bold"
                 android:text="장난감" />
 
             <Button
@@ -74,6 +88,9 @@
                 android:layout_height="wrap_content"
                 android:layout_margin="4dp"
                 android:background="@drawable/beige_button"
+                android:fontFamily="@font/bae"
+                android:textSize="24sp"
+                android:textStyle="bold"
                 android:text="집" />
 
             <Button
@@ -83,6 +100,9 @@
                 android:layout_margin="4dp"
                 android:layout_weight="1"
                 android:background="@drawable/beige_button"
+                android:fontFamily="@font/bae"
+                android:textSize="24sp"
+                android:textStyle="bold"
                 android:text="생활용품" />
 
             <Button
@@ -92,6 +112,9 @@
                 android:layout_margin="4dp"
                 android:layout_weight="1"
                 android:background="@drawable/beige_button"
+                android:fontFamily="@font/bae"
+                android:textSize="24sp"
+                android:textStyle="bold"
                 android:text="사료+간식" />
 
             <Button
@@ -101,6 +124,9 @@
                 android:layout_margin="4dp"
                 android:layout_weight="1"
                 android:background="@drawable/beige_button"
+                android:fontFamily="@font/bae"
+                android:textSize="24sp"
+                android:textStyle="bold"
                 android:text="옷" />
         </LinearLayout>
     </HorizontalScrollView>

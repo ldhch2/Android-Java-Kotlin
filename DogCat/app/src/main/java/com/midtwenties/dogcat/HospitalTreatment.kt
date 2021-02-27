@@ -11,6 +11,10 @@ class HospitalTreatment : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_hospital_treatment)
 
+        supportFragmentManager.beginTransaction()
+            .replace(R.id.coin, CoinView())
+            .commit()
+
         backButton.setOnClickListener {
             finish()
         }

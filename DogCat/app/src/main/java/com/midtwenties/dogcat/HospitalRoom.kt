@@ -31,6 +31,10 @@ class HospitalRoom : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_hospital_room)
 
+        supportFragmentManager.beginTransaction()
+            .replace(R.id.coin, CoinView())
+            .commit()
+
         backButton.setOnClickListener {
             onBackPressed()
         }

@@ -16,6 +16,10 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
+        supportFragmentManager.beginTransaction()
+            .replace(R.id.coin, CoinView())
+            .commit()
+
         val filename=loadFromInnerStorage("pet.txt")
         val temp=filename.split('\n')
         val pet= PetClass(loadFromInnerStorage(temp[0]))
@@ -58,7 +62,7 @@ class MainActivity : AppCompatActivity() {
         stateButton.setOnClickListener{
             drawerState.openDrawer(GravityCompat.START)
         }
-        homeButton.setOnClickListener(){
+        backButton.setOnClickListener(){
             onBackPressed()
         }
         hangoutButton.setOnClickListener() {

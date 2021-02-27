@@ -29,7 +29,7 @@
         android:layout_marginTop="5dp"
         android:layout_marginEnd="50dp"
         android:layout_marginRight="50dp"
-        android:background="@drawable/state_border"
+        android:background="@drawable/border"
         android:visibility="visible"
         app:layout_constraintBottom_toTopOf="@+id/saveButton"
         app:layout_constraintEnd_toEndOf="parent"

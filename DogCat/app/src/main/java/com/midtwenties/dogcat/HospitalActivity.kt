@@ -10,6 +10,10 @@ class HospitalActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_hospital)
 
+        supportFragmentManager.beginTransaction()
+            .replace(R.id.coin, CoinView())
+            .commit()
+
         backButton.setOnClickListener {
             onBackPressed()
         }

@@ -25,19 +25,21 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="@+id/guideline23" />
 
-        <com.google.android.material.floatingactionbutton.FloatingActionButton
+        <ImageButton
             android:id="@+id/backButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="8dp"
-            android:layout_marginLeft="8dp"
+            android:layout_marginTop="6dp"
+            android:layout_marginRight="6dp"
+            android:layout_gravity="end"
             android:clickable="true"
-            app:backgroundTint="#716666"
+            android:gravity="end"
+            android:tint="#716666"
+            app:backgroundTint="@android:color/transparent"
             app:fabSize="mini"
-            app:layout_constraintBottom_toTopOf="@+id/guideline23"
-            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:srcCompat="@drawable/ic_baseline_arrow_back_24" />
+            app:srcCompat="@android:drawable/ic_menu_close_clear_cancel" />
 
         <androidx.constraintlayout.widget.Guideline
             android:id="@+id/guideline23"

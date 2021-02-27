@@ -2,7 +2,6 @@ package com.midtwenties.dogcat
 
 import android.content.Context
 import android.os.Bundle
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -145,7 +144,7 @@ class ItemNewListAdapter(val context: Context, val itemList : ArrayList<Itemnew>
                 else if(check != itemList.indexOf(item2)){
                     val pre = check
                     check = itemList.indexOf(item2)
-                    preLayout?.setBackgroundResource(R.drawable.state_border_round)
+                    preLayout?.setBackgroundResource(R.drawable.border_round)
                     preLayout = itemView.ItemConstraint
 
                     layout?.setBackgroundResource(R.drawable.edge)
@@ -153,7 +152,7 @@ class ItemNewListAdapter(val context: Context, val itemList : ArrayList<Itemnew>
                 }
                 else {
                     check = -1
-                    layout?.setBackgroundResource(R.drawable.state_border_round)
+                    layout?.setBackgroundResource(R.drawable.border_round)
                     flag = false
                 }
             }

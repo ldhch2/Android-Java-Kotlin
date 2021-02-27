@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="100dp"
-    android:background="@drawable/state_border_round"
+    android:background="@drawable/border_round"
     android:visibility="visible">
 
     <TextView

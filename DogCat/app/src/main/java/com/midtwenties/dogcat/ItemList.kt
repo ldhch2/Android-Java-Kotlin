@@ -47,6 +47,10 @@ class ItemList : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_item_list)
 
+        supportFragmentManager.beginTransaction()
+            .replace(R.id.coin, CoinView())
+            .commit()
+
         val toy = prefernce.getString("toy",null)?.split(" ")
         if (toy != null) {
             for (i in 0..toy.size) {

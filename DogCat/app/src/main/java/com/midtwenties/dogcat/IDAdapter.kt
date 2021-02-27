@@ -10,6 +10,7 @@ import com.midtwenties.dogcat.R
 
 class IDAdapter(val context:Context, val IdList:ArrayList<Id>):
         RecyclerView.Adapter<IDAdapter.Holder>() {
+    var flag = false
     inner class Holder(itemView: View?) : RecyclerView.ViewHolder(itemView!!) {
         val image = itemView?.findViewById<ImageView>(R.id.idCard)
         val name = itemView?.findViewById<TextView>(R.id.idName)
