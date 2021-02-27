@@ -40,7 +40,7 @@ class MainActivity : AppCompatActivity() {
         val fabOpen = AnimationUtils.loadAnimation(this,R.anim.fab_open)
         val fabClose = AnimationUtils.loadAnimation(this,R.anim.fab_close)
 
-        hangout.setOnClickListener{
+        playplay.setOnClickListener{
             startActivity(Intent(this,HangoutPopup::class.java))
         }
         feedfeed.setOnClickListener{
@@ -52,41 +52,11 @@ class MainActivity : AppCompatActivity() {
         stateButton.setOnClickListener{
             drawerState.openDrawer(GravityCompat.START)
         }
-
-        fabMain.setOnClickListener{
-            if(isOpen){
-                storeButton.startAnimation(fabClose)
-                playButton.startAnimation(fabClose)
-                showState.startAnimation(fabClose)
-                homeButton.startAnimation(fabClose)
-
-                isOpen=false
-            }
-            else{
-                storeButton.startAnimation(fabOpen)
-                playButton.startAnimation(fabOpen)
-                showState.startAnimation(fabOpen)
-                homeButton.startAnimation(fabOpen)
-                storeButton.isClickable
-                playButton.isClickable
-                showState.isClickable
-                homeButton.isClickable
-
-                isOpen = true
-            }
-
-            homeButton.setOnClickListener(){
-                onBackPressed()
-            }
-            showState.setOnClickListener() {
-                drawerState.openDrawer(GravityCompat.START)
-            }
-            playButton.setOnClickListener {
-                startActivity(Intent(this,PlayActivity::class.java))
-            }
-            storeButton.setOnClickListener{
-                startActivity(Intent(this, StoreItem::class.java))
-            }
+        homeButton.setOnClickListener(){
+            onBackPressed()
+        }
+        hangoutButton.setOnClickListener() {
+            startActivity(Intent(this,HangoutPopup::class.java))
         }
 
     }
