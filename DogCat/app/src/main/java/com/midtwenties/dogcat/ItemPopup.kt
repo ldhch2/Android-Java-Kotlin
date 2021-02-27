@@ -145,7 +145,7 @@ class ItemNewListAdapter(val context: Context, val itemList : ArrayList<Itemnew>
                 else if(check != itemList.indexOf(item2)){
                     val pre = check
                     check = itemList.indexOf(item2)
-                    preLayout?.setBackgroundResource(R.drawable.state_border)
+                    preLayout?.setBackgroundResource(R.drawable.state_border_round)
                     preLayout = itemView.ItemConstraint
 
                     layout?.setBackgroundResource(R.drawable.edge)
@@ -153,7 +153,7 @@ class ItemNewListAdapter(val context: Context, val itemList : ArrayList<Itemnew>
                 }
                 else {
                     check = -1
-                    layout?.setBackgroundResource(R.drawable.state_border)
+                    layout?.setBackgroundResource(R.drawable.state_border_round)
                     flag = false
                 }
             }
