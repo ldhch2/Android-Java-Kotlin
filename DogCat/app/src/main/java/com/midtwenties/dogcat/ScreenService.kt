@@ -48,7 +48,7 @@ class ScreenService : Service() {
             val manager=getSystemService(Context.NOTIFICATION_SERVICE) as NotificationManager
 
             manager.createNotificationChannel(chan)
-e
+
             val builder=Notification.Builder(this,ANDROID_CHANNEL_ID).setContentTitle(getString(R.string.app_name)).setContentText("SmartTracker Running")
             val notification=builder.build()
 
