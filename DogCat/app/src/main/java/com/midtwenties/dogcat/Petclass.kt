@@ -10,7 +10,7 @@ class PetClass (info: String) { // kind: 고양이 1, 강아지 2
     var gender=0 // gender: 여자 1, 남자 2
     var character: Character = Perfect()// 성격에 따라 번호 매겨줘
     var state: PetState = PetState()
-    lateinit var card: Uri
+    var card: Uri
 
     init {
         val arr=info.split(" ")
@@ -48,7 +48,7 @@ class PetClass (info: String) { // kind: 고양이 1, 강아지 2
      */
 }
 
-open abstract class Character{
+abstract class Character{
 
     abstract var type:Int
     abstract val info:String
@@ -103,7 +103,6 @@ class Lazy: Character(){
 }
 
 class Coward: Character(){
-
     override var type: Int=5
     override var hunger_weight:Float=1.0F
     override var wash_weight:Float=3.0F
@@ -111,10 +110,7 @@ class Coward: Character(){
     override var info = "겁쟁이\n-\n겁이 많아요.\n세상을 알아가는데\n시간이 많이 필요합니다."
 }
 
-
-
 class PetState(var full:Int=0,var clean:Int=0,var excited:Int=0,var awake:Int=0,var happy:Int=0,var healthy:Int=0,var relaxed:Int=0){
-
     fun info():String{
         return String.format("%d %d %d %d %d %d %d",this.full,this.clean,this.excited,this.awake,this.happy,this.healthy,this.relaxed)
     }

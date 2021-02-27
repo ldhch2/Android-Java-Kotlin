@@ -12,25 +12,25 @@
         android:roundIcon="@drawable/logo"
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.NoActionBar">
-        <activity android:name=".Lockermain"></activity>
         <activity android:name=".SplashActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".Lockermain"/>
         <activity android:name=".HangoutPopup"/>
         <activity android:name=".HospitalActivity" />
         <activity android:name=".HospitalTreatment" />
-        <activity android:name=".HospitalNutrition" />
+        <activity android:name=".HospitalRoom" />
         <activity android:name=".MissionActivity" />
         <activity android:name=".RegisterActivity" />
         <activity android:name=".PetIDActivity" />
         <activity android:name=".PlayActivity"/>
         <activity android:name=".InfoNext" />
+        <activity android:name=".ItemList"/>
         <activity android:name=".FeedActivity" />
-        <activity android:name=".AttendancePopup" />
+        <activity android:name=".AttendancePopup" android:theme="@style/pop"/>
         <activity android:name=".StoreItem" />
         <activity android:name=".InitPet" />
         <activity android:name=".InfoActivity" />
@@ -45,8 +45,15 @@
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.BOOT_COMPLETED" />
+                <action android:name="android.intent.action.SCREEN_OFF"/>
             </intent-filter>
         </receiver>
-    </application>
 
+        <!--<service
+            android:name=".ScreenService"
+            android:enabled="true"
+            android:exported="false">
+        </service>
+        -->
+    </application>
 </manifest>

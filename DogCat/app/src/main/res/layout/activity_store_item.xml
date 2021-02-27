@@ -73,7 +73,7 @@
                 android:text="집" />
 
             <Button
-                android:id="@+id/goBowlStore"
+                android:id="@+id/goHouseholdStore"
                 android:background="@drawable/store_select"
                 android:layout_margin="4dp"
                 android:layout_width="match_parent"

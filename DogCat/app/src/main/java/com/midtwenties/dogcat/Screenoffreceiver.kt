@@ -8,14 +8,13 @@ import android.widget.Toast
 
 class Screenoffreceiver:BroadcastReceiver() {
     override fun onReceive(context: Context?, intent: Intent?) {
-        when{
-            intent?.action==Intent.ACTION_SCREEN_OFF->{
-                val intent= Intent(context, Lockermain::class.java)
+        when {
+            intent?.action == Intent.ACTION_SCREEN_OFF -> {
+                val intent = Intent(context, Lockermain::class.java)
                 intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
                 intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP)
                 context?.startActivity(intent)
             }
         }
     }
-
 }

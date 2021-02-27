@@ -11,6 +11,7 @@ class TermsOfService : AppCompatActivity() {
 
     val init = "init"
     val screen = "screen"
+    val nowpet="nowpet"
 
     val prefernce by lazy { getSharedPreferences("setting_data",Context.MODE_PRIVATE) }
 
@@ -44,6 +45,9 @@ class TermsOfService : AppCompatActivity() {
 
             prefernce.edit().putBoolean(screen,false).apply()
             prefernce.edit().putBoolean(init,true).apply()
+            prefernce.edit().putString(nowpet, String.format("%s.txt",name[0])).apply()
+
+            //장난감 집 그릇 음식 옷
 
             startActivity(next)
             finish()

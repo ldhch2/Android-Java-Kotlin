@@ -18,7 +18,6 @@ class ScreenService : Service() {
     private val ANDROID_CHANNEL_ID="com.midtwenties.dogcat"
     private val NOTIFICATION_ID=9999
 
-
     override fun onCreate() {
         super.onCreate()
 
@@ -47,12 +46,13 @@ class ScreenService : Service() {
             chan.lockscreenVisibility= Notification.VISIBILITY_PRIVATE
 
             val manager=getSystemService(Context.NOTIFICATION_SERVICE) as NotificationManager
+
             manager.createNotificationChannel(chan)
 
             val builder=Notification.Builder(this,ANDROID_CHANNEL_ID).setContentTitle(getString(R.string.app_name)).setContentText("SmartTracker Running")
             val notification=builder.build()
 
-            startForeground(NOTIFICATION_ID,notification)
+           startForeground(NOTIFICATION_ID,notification)
         }
 
         return Service.START_REDELIVER_INTENT

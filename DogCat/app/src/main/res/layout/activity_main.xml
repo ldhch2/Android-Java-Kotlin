@@ -7,9 +7,6 @@
     tools:context=".MainActivity"
     android:background="@drawable/room"
     xmlns:app="http://schemas.android.com/apk/res-auto">
-    <androidx.coordinatorlayout.widget.CoordinatorLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
@@ -22,11 +19,11 @@
                 android:layout_marginTop="80dp"
                 android:background="@drawable/washicon"
                 app:layout_constraintEnd_toStartOf="@+id/feedfeed"
-                app:layout_constraintStart_toEndOf="@+id/hangout"
+                app:layout_constraintStart_toEndOf="@+id/playplay"
                 app:layout_constraintTop_toTopOf="parent" />
 
             <ImageButton
-                android:id="@+id/hangout"
+                android:id="@+id/playplay"
                 android:layout_width="100dp"
                 android:layout_height="80dp"
                 android:layout_marginLeft="40dp"
@@ -46,6 +43,38 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toEndOf="@+id/washwash"
                 app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageButton
+                android:id="@+id/fillButton"
+                android:layout_width="239dp"
+                android:layout_height="117dp"
+                android:layout_marginTop="120dp"
+                android:adjustViewBounds="true"
+                android:background="@android:color/transparent"
+                android:gravity="center_horizontal"
+                android:rotation="14"
+                android:scaleType="fitCenter"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.593"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/ground"
+                app:srcCompat="@drawable/emptybowldog" />
+
+            <ImageView
+                android:id="@+id/fillAnimation"
+                android:layout_width="237dp"
+                android:layout_height="116dp"
+                android:layout_marginBottom="8dp"
+                android:gravity="center_horizontal"
+                app:layout_constraintBottom_toBottomOf="@id/fillButton"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.575"
+                app:layout_constraintStart_toStartOf="parent"
+                tools:srcCompat="@tools:sample/avatars" />
+
+
+
+
 
             <androidx.constraintlayout.widget.Guideline
                 android:id="@+id/guideline4"
@@ -70,7 +99,7 @@
                 app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="@+id/guideline4"
-                app:layout_constraintVertical_bias="0.0"
+                app:layout_constraintVertical_bias="1.0"
                 app:srcCompat="@color/grey" />
 
             <ImageView
@@ -105,89 +134,38 @@
                 app:layout_constraintEnd_toStartOf="@+id/guideline5"
                 app:layout_constraintTop_toTopOf="parent" />
 
+            <Button
+                android:id="@+id/homeButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="마당"
+                android:layout_marginStart="16dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginBottom="16dp"
+                android:fontFamily="@font/bae"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                android:background="@drawable/beige_button"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <Button
+                android:id="@+id/hangoutButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="16dp"
+                android:layout_marginRight="16dp"
+                android:layout_marginBottom="16dp"
+                android:fontFamily="@font/bae"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                android:text="외출"
+                android:background="@drawable/beige_button"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent" />
+
         </androidx.constraintlayout.widget.ConstraintLayout>
 
-        <com.google.android.material.floatingactionbutton.FloatingActionButton
-            android:id="@+id/fabMain"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="end|bottom"
-            android:layout_margin="16dp"
-            android:src="@drawable/ic_baseline_menu_24"
-            app:backgroundTint="#63451A"
-            app:elevation="6dp"
-            app:fabSize="normal"
-            app:pressedTranslationZ="12dp" />
-
-        <com.google.android.material.floatingactionbutton.FloatingActionButton
-            android:id="@+id/homeButton"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="end|bottom"
-            android:layout_marginRight="20dp"
-            android:layout_marginBottom="230dp"
-            app:backgroundTint="#CCB493"
-            android:clickable="true"
-            android:tint="#ffffff"
-            android:visibility="invisible"
-            app:borderWidth="0dp"
-            app:elevation="6dp"
-            app:fabSize="normal"
-            app:pressedTranslationZ="12dp"
-            app:srcCompat="@drawable/ic_baseline_house_24"
-            tools:ignore="MissingConstraints,VectorDrawableCompat" />
-
-    <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:id="@+id/storeButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="end|bottom"
-        android:layout_marginRight="20dp"
-        android:layout_marginBottom="80dp"
-        app:backgroundTint="#CCB493"
-        android:tint="#ffffff"
-        android:src="@drawable/ic_baseline_storefront_24"
-        android:visibility="invisible"
-        app:borderWidth="0dp"
-        app:elevation="6dp"
-        app:fabSize="normal"
-        app:pressedTranslationZ="12dp"
-        tools:ignore="MissingConstraints,VectorDrawableCompat" />
-
-    <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:id="@+id/playButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_above="@+id/showState"
-        android:layout_gravity="end|bottom"
-        android:layout_marginRight="20dp"
-        android:layout_marginBottom="130dp"
-        app:backgroundTint="#CCB493"
-        android:tint="#ffffff"
-        android:visibility="invisible"
-        app:borderWidth="0dp"
-        app:fabSize="normal"
-        app:srcCompat="@drawable/ic_baseline_sports_esports_24"
-        tools:ignore="MissingConstraints,VectorDrawableCompat" />
-
-        <com.google.android.material.floatingactionbutton.FloatingActionButton
-            android:id="@+id/showState"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_above="@+id/fabMain"
-            android:layout_gravity="end|bottom"
-            android:layout_marginRight="20dp"
-            android:layout_marginBottom="180dp"
-            app:backgroundTint="#CCB493"
-            android:tint="#ffffff"
-            android:visibility="invisible"
-            app:borderWidth="0dp"
-            app:fabSize="normal"
-            app:srcCompat="@drawable/ic_baseline_pets_24"
-            tools:ignore="MissingConstraints,VectorDrawableCompat" />
-
-
-    </androidx.coordinatorlayout.widget.CoordinatorLayout>
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/drawer"
@@ -196,7 +174,7 @@
         android:layout_height="match_parent"
         android:weightSum="100"
         android:layout_gravity="start"
-        android:background="@drawable/background"
+        android:background="@drawable/paper"
         android:gravity="center"
         tools:context=".MainActivity">
 
@@ -207,6 +185,7 @@
             android:text="펫 상태"
             android:fontFamily="@font/title"
             android:textColor="#777777"
+            android:textSize="20sp"
             android:textStyle="bold"
             android:layout_marginTop="20dp"
             android:layout_marginBottom="20dp"

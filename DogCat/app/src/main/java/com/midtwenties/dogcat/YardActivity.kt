@@ -61,28 +61,38 @@ class YardActivity : AppCompatActivity() {
 
         fabMain.setOnClickListener {
             if (isOpen) {
+                mainSetting.startAnimation(fabClose)
                 idcardList.startAnimation(fabClose)
                 itemButton.startAnimation(fabClose)
-                mainSetting.startAnimation(fabClose)
+                storeButton.startAnimation(fabClose)
 
                 isOpen = false
+
             } else {
+                mainSetting.startAnimation(fabOpen)
                 idcardList.startAnimation(fabOpen)
                 itemButton.startAnimation(fabOpen)
-                mainSetting.startAnimation(fabOpen)
+                storeButton.startAnimation(fabOpen)
 
+                mainSetting.isClickable
                 idcardList.isClickable
                 itemButton.isClickable
-                mainSetting.isClickable
+                storeButton.isClickable
 
                 isOpen = true
             }
 
+            mainSetting.setOnClickListener {
+                startActivity(Intent(this, MainSetting::class.java))
+            }
             idcardList.setOnClickListener {
                 startActivity(Intent(this, IDListActivity::class.java))
             }
-            mainSetting.setOnClickListener {
-                startActivity(Intent(this, MainSetting::class.java))
+            itemButton.setOnClickListener{
+                startActivity(Intent(this,ItemList::class.java))
+            }
+            storeButton.setOnClickListener {
+                startActivity(Intent(this, StoreItem::class.java))
             }
         }
     }

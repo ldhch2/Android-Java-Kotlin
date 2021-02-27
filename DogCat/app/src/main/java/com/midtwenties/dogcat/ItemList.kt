@@ -72,8 +72,8 @@ class ItemList : AppCompatActivity() {
         Toy.isSelected=true
 
 
-        close.setOnClickListener {
-            finish()
+        backButton.setOnClickListener {
+            onBackPressed()
         }
         Toy.setOnClickListener{
             reset()
@@ -117,7 +117,6 @@ class ItemList : AppCompatActivity() {
 
         val gridLayoutManager = GridLayoutManager(applicationContext,3)
         itemRecyclerView.layoutManager = gridLayoutManager
-
     }
 }
 
