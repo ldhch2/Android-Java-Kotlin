@@ -25,12 +25,12 @@ class StoreItem : AppCompatActivity() {
             StoreContacts("princesshouse", "프린세스 홈", 1000, "구매", "빨강색", "파란색", "초록색"),
             StoreContacts("cattowerpre", "[Premium] 캣타워", 2000, "구매", "빨강색", "파란색", "초록색")
     )
-    var bowlList = arrayListOf<StoreContacts>(
-            StoreContacts("", "그릇 세트", 500, "구매", "빨강색", "파란색", ""),
-            StoreContacts("", "밥그릇", 500, "구매", "빨강색", "파란색", "초록색"),
-            StoreContacts("", "물그릇", 500, "구매", "빨강색", "파란색", "초록색"),
-            StoreContacts("", "밥밥", 500, "구매", "빨강색", "파란색", "초록색"),
-            StoreContacts("", "물물", 500, "구매", "빨강색", "파란색", "초록색")
+    var householdList = arrayListOf<StoreContacts>(
+            StoreContacts("", "개샴푸", 500, "구매", "빨강색", "파란색", ""),
+            StoreContacts("", "고양이샴푸", 500, "구매", "빨강색", "파란색", "초록색"),
+            StoreContacts("", "칫솔", 500, "구매", "빨강색", "파란색", "초록색"),
+            StoreContacts("", "치약", 500, "구매", "빨강색", "파란색", "초록색"),
+            StoreContacts("", "배변패드", 500, "구매", "빨강색", "파란색", "초록색")
     )
     var feedList = arrayListOf<StoreContacts>(
             StoreContacts("dogyum", "강아지 사료", 10000, "구매", "1kg", "3kg", "5kg"),
@@ -43,14 +43,14 @@ class StoreItem : AppCompatActivity() {
             StoreContacts("pinkchu", "참치 츄르 (고양이용)", 500, "구매", "", "", "")
     )
     var clothesList = arrayListOf<StoreContacts>(
-            StoreContacts("", "심플 옷", 500, "구매", "빨강색", "파란색", ""),
-            StoreContacts("", "목줄", 500, "구매", "빨강색", "파란색", "초록색"),
+            StoreContacts("", "목줄", 500, "구매", "빨강색", "파란색", ""),
+            StoreContacts("", "심플 옷", 500, "구매", "빨강색", "파란색", "초록색"),
             StoreContacts("", "옷옷", 500, "구매", "빨강색", "파란색", "초록색")
     )
     fun reset() {
         goToyStore.isSelected=false
         goHouseStore.isSelected=false
-        goBowlStore.isSelected=false
+        goHouseholdStore.isSelected=false
         goFeedStore.isSelected=false
         goClothesStore.isSelected=false
     }
@@ -77,11 +77,11 @@ class StoreItem : AppCompatActivity() {
             StoreRecyclerview.adapter = adapter
             goHouseStore.isSelected=true
         }
-        goBowlStore.setOnClickListener{
+        goHouseholdStore.setOnClickListener{
             reset()
-            val adapter = ContactsListAdapter(this, bowlList)
+            val adapter = ContactsListAdapter(this, householdList)
             StoreRecyclerview.adapter = adapter
-            goBowlStore.isSelected=true
+            goHouseholdStore.isSelected=true
         }
         goFeedStore.setOnClickListener{
             reset()
