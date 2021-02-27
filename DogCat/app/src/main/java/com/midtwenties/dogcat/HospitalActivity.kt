@@ -16,8 +16,15 @@ class HospitalActivity : AppCompatActivity() {
         goButton1.setOnClickListener {
             startActivity(Intent(this, HospitalTreatment::class.java))
         }
+        goButton2.setOnClickListener {
+            val intent = Intent(this, HospitalRoom::class.java)
+            intent.putExtra("room", "1".toInt())
+            startActivity(intent)
+        }
         goButton3.setOnClickListener {
-            startActivity(Intent(this, HospitalNutrition::class.java))
+            val intent = Intent(this, HospitalRoom::class.java)
+            intent.putExtra("room", "2".toInt())
+            startActivity(intent)
         }
     }
 }
