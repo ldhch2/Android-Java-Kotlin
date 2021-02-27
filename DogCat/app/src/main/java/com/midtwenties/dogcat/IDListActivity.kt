@@ -4,6 +4,7 @@ import IDAdapter
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
 import kotlinx.android.synthetic.main.activity_id_list.*
 
@@ -23,12 +24,17 @@ class IDListActivity : AppCompatActivity() {
         val idAdapter=IDAdapter(this, idList)
         idRecyclerView.adapter = idAdapter
 
+        /*
         val lm = LinearLayoutManager(this)
         idRecyclerView.layoutManager = lm
         idRecyclerView.setHasFixedSize(true)
+        */
+
+        val gridLayoutManager = GridLayoutManager(applicationContext,2)
+        idRecyclerView.layoutManager = gridLayoutManager
 
         backButton.setOnClickListener{
-            startActivity(Intent(this, YardActivity::class.java))
+            onBackPressed()
         }
     }
 

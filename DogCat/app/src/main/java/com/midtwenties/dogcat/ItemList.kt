@@ -72,8 +72,8 @@ class ItemList : AppCompatActivity() {
         Toy.isSelected=true
 
 
-        close.setOnClickListener {
-            finish()
+        backButton.setOnClickListener {
+            onBackPressed()
         }
         Toy.setOnClickListener{
             reset()
