@@ -44,6 +44,38 @@
                 app:layout_constraintStart_toEndOf="@+id/washwash"
                 app:layout_constraintTop_toTopOf="parent" />
 
+            <ImageButton
+                android:id="@+id/fillButton"
+                android:layout_width="239dp"
+                android:layout_height="117dp"
+                android:layout_marginTop="120dp"
+                android:adjustViewBounds="true"
+                android:background="@android:color/transparent"
+                android:gravity="center_horizontal"
+                android:rotation="14"
+                android:scaleType="fitCenter"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.593"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/ground"
+                app:srcCompat="@drawable/emptybowldog" />
+
+            <ImageView
+                android:id="@+id/fillAnimation"
+                android:layout_width="237dp"
+                android:layout_height="116dp"
+                android:layout_marginBottom="8dp"
+                android:gravity="center_horizontal"
+                app:layout_constraintBottom_toBottomOf="@id/fillButton"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.575"
+                app:layout_constraintStart_toStartOf="parent"
+                tools:srcCompat="@tools:sample/avatars" />
+
+
+
+
+
             <androidx.constraintlayout.widget.Guideline
                 android:id="@+id/guideline4"
                 android:layout_width="wrap_content"

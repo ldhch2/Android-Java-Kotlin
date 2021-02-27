@@ -31,7 +31,7 @@
         <activity android:name=".InfoNext" />
         <activity android:name=".ItemList"/>
         <activity android:name=".FeedActivity" />
-        <activity android:name=".AttendancePopup" />
+        <activity android:name=".AttendancePopup" android:theme="@style/pop"/>
         <activity android:name=".StoreItem" />
         <activity android:name=".InitPet" />
         <activity android:name=".InfoActivity" />

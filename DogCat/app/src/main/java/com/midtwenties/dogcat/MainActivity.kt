@@ -44,7 +44,9 @@ class MainActivity : AppCompatActivity() {
             startActivity(Intent(this,HangoutPopup::class.java))
         }
         feedfeed.setOnClickListener{
-            startActivity(Intent(this, FeedActivity::class.java))
+
+
+            //startActivity(Intent(this, FeedActivity::class.java))
         }
         washwash.setOnClickListener{
             startActivity(Intent(this,WashActivity::class.java))
