@@ -24,25 +24,25 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:gravity="center"
+        android:fontFamily="@font/title"
         android:text="병원"
         android:textColor="#000000"
         android:textSize="30sp"
-        android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/guideline01"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:id="@+id/back"
+        android:id="@+id/backButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginLeft="8dp"
+        android:layout_marginStart="18dp"
+        android:layout_marginLeft="18dp"
+        android:layout_marginTop="18dp"
         android:clickable="true"
-        app:backgroundTint="#AEAAAA"
+        app:backgroundTint="#716666"
         app:fabSize="mini"
-        app:layout_constraintBottom_toTopOf="@id/guideline01"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/ic_baseline_arrow_back_24" />
@@ -105,10 +105,11 @@
         app:layout_constraintGuide_percent="0.95" />
 
     <TextView
-        android:id="@+id/textView9"
+        android:id="@+id/room1"
         android:layout_width="wrap_content"
         android:layout_height="0dp"
         android:gravity="bottom"
+        android:fontFamily="@font/title"
         android:text="진료실"
         android:textColor="@color/black"
         android:textStyle="bold"
@@ -118,10 +119,11 @@
         app:layout_constraintTop_toTopOf="@+id/guideline01" />
 
     <TextView
-        android:id="@+id/textView10"
+        android:id="@+id/room2"
         android:layout_width="wrap_content"
         android:layout_height="0dp"
         android:gravity="bottom"
+        android:fontFamily="@font/title"
         android:text="주사실"
         android:textColor="@color/black"
         android:textStyle="bold"
@@ -131,10 +133,11 @@
         app:layout_constraintTop_toTopOf="@+id/guideline01" />
 
     <TextView
-        android:id="@+id/textView11"
+        android:id="@+id/room3"
         android:layout_width="wrap_content"
         android:layout_height="0dp"
         android:gravity="bottom"
+        android:fontFamily="@font/title"
         android:text="영양제실"
         android:textColor="@color/black"
         android:textStyle="bold"
@@ -147,9 +150,10 @@
         android:id="@+id/textView12"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:fontFamily="@font/bae"
         android:text="무엇을 도와드릴까요?"
         android:textColor="@color/black"
-        android:textSize="18sp"
+        android:textSize="28sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="@+id/imageView4"
         app:layout_constraintEnd_toStartOf="@+id/guideline09"
@@ -167,8 +171,11 @@
         android:id="@+id/goButton1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:fontFamily="@font/bae"
+        android:textSize="24sp"
+        android:textStyle="bold"
         android:text="입장하기"
-        app:backgroundTint="#CCB493"
+        android:background="@drawable/beige_button"
         app:layout_constraintBottom_toTopOf="@+id/guideline04"
         app:layout_constraintEnd_toStartOf="@+id/guideline07"
         app:layout_constraintStart_toStartOf="@+id/guideline06"
@@ -178,8 +185,11 @@
         android:id="@+id/goButton2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:fontFamily="@font/bae"
+        android:textSize="24sp"
+        android:textStyle="bold"
         android:text="입장하기"
-        app:backgroundTint="#CCB493"
+        android:background="@drawable/beige_button"
         app:layout_constraintBottom_toTopOf="@+id/imageView4"
         app:layout_constraintEnd_toStartOf="@+id/guideline08"
         app:layout_constraintStart_toStartOf="@+id/guideline07"
@@ -189,8 +199,11 @@
         android:id="@+id/goButton3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:fontFamily="@font/bae"
+        android:textSize="24sp"
+        android:textStyle="bold"
         android:text="입장하기"
-        app:backgroundTint="#CCB493"
+        android:background="@drawable/beige_button"
         app:layout_constraintBottom_toTopOf="@+id/guideline04"
         app:layout_constraintEnd_toStartOf="@+id/guideline09"
         app:layout_constraintStart_toStartOf="@+id/guideline08"
@@ -198,42 +211,18 @@
 
     <ImageView
         android:id="@+id/imageView8"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/guideline09"
         app:layout_constraintStart_toStartOf="@+id/guideline06"
         app:layout_constraintTop_toBottomOf="@+id/imageView4"
-        app:srcCompat="@drawable/bara" />
-
-    <ImageView
-        android:id="@+id/imageView15"
-        android:layout_width="50dp"
-        android:layout_height="0dp"
-        android:layout_margin="3dp"
-        android:rotation="315"
-        app:layout_constraintBottom_toBottomOf="@+id/StoreType"
-        app:layout_constraintStart_toEndOf="@+id/StoreType"
-        app:layout_constraintTop_toTopOf="@+id/StoreType"
-        app:layout_constraintVertical_bias="0.0"
-        app:srcCompat="@drawable/hospital_icon" />
-
-    <ImageView
-        android:id="@+id/imageView16"
-        android:layout_width="50dp"
-        android:layout_height="0dp"
-        android:layout_margin="3dp"
-        android:rotation="315"
-        app:layout_constraintBottom_toBottomOf="@+id/StoreType"
-        app:layout_constraintEnd_toStartOf="@+id/StoreType"
-        app:layout_constraintTop_toTopOf="@+id/StoreType"
-        app:layout_constraintVertical_bias="0.0"
-        app:srcCompat="@drawable/hospital_icon" />
+        app:srcCompat="@drawable/basicdog" />
 
     <ImageView
         android:id="@+id/imageView17"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_height="0dp"
         app:layout_constraintBottom_toTopOf="@+id/guideline03"
         app:layout_constraintEnd_toStartOf="@+id/guideline07"
         app:layout_constraintTop_toTopOf="@+id/guideline02"
@@ -242,21 +231,21 @@
     <ImageView
         android:id="@+id/imageView18"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_height="0dp"
         app:layout_constraintBottom_toTopOf="@+id/guideline03"
         app:layout_constraintEnd_toStartOf="@+id/guideline08"
         app:layout_constraintStart_toStartOf="@+id/guideline07"
-        app:layout_constraintTop_toBottomOf="@+id/textView10"
+        app:layout_constraintTop_toBottomOf="@+id/room2"
         app:srcCompat="@drawable/hospitaldoor" />
 
     <ImageView
         android:id="@+id/imageView19"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_height="0dp"
         app:layout_constraintBottom_toTopOf="@+id/guideline03"
         app:layout_constraintEnd_toStartOf="@+id/guideline09"
         app:layout_constraintStart_toStartOf="@+id/guideline08"
-        app:layout_constraintTop_toBottomOf="@+id/textView11"
+        app:layout_constraintTop_toBottomOf="@+id/room3"
         app:srcCompat="@drawable/hospitaldoor" />
 
 

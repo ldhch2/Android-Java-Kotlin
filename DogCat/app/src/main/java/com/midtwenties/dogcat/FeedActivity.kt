@@ -12,8 +12,8 @@ class FeedActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_feed)
 
-        returnButton.setOnClickListener(){
-            startActivity(Intent(this,MainActivity::class.java))
+        backButton.setOnClickListener(){
+            onBackPressed()
         }
 
         feedButton.setOnClickListener(){

@@ -15,7 +15,7 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import kotlinx.android.synthetic.main.activity_item_list.*
 
-class ItemContacts (var item_name:String , var image_name : String)
+class ItemContacts (var item_name: String, var image_name : String)
 
 class ItemList : AppCompatActivity() {
     var itemToylist = arrayListOf<ItemContacts>(
@@ -72,8 +72,8 @@ class ItemList : AppCompatActivity() {
         Toy.isSelected=true
 
 
-        close.setOnClickListener {
-            finish()
+        backButton.setOnClickListener {
+            onBackPressed()
         }
         Toy.setOnClickListener{
             reset()
@@ -142,8 +142,9 @@ class ItemListAdapter(val context: Context, val itemList : ArrayList<ItemContact
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): Holder {
-        //val view = LayoutInflater.from(context).inflate(R.layout.activity_item_contacts, parent, false)
-        //return Holder(view)
+        val view =
+                LayoutInflater.from(context).inflate(R.layout.activity_item_contacts, parent, false)
+        return Holder(view)
     }
 
     override fun onBindViewHolder(holder: Holder, position: Int) {

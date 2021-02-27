@@ -11,6 +11,7 @@ class TermsOfService : AppCompatActivity() {
 
     val init = "init"
     val screen = "screen"
+    val nowpet="nowpet"
 
     val prefernce by lazy { getSharedPreferences("setting_data",Context.MODE_PRIVATE) }
 
@@ -18,37 +19,38 @@ class TermsOfService : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_terms_of_service)
 
-        var get=intent.getStringExtra("info").toString()
+        var get = intent.getStringExtra("info").toString()
+        val next = Intent(this,YardActivity::class.java)
 
-        val next=Intent(this,YardActivity::class.java)
+        yesButton.setOnClickListener {
+            get += " " + intent.getStringExtra("imageURI").toString()
 
-        checkBox1.isChecked=false;
-        checkBox2.isChecked=false;
+            val name = get.split(" ")
+            saveToInnerStorage(String.format("%s.txt", name[0]),"pet.txt")
+            saveToInnerStorage(get,String.format("%s.txt", name[0]))
 
-        checkBox1.setOnClickListener{
-            checkBox2.isChecked=false
+            prefernce.edit().putBoolean(screen,true).apply()
+            prefernce.edit().putBoolean(init,true).apply()
+
+            startActivity(next)
+            finish()
         }
 
-        checkBox2.setOnClickListener{
-            checkBox1.isChecked=false
-        }
+        noButton.setOnClickListener {
+            get += " " + intent.getStringExtra("imageURI").toString()
 
-        nextButton.setOnClickListener {
-            if(checkBox1.isChecked || checkBox2.isChecked) {
+            val name = get.split(" ")
+            saveToInnerStorage(String.format("%s.txt", name[0]),"pet.txt")
+            saveToInnerStorage(get,String.format("%s.txt", name[0]))
 
-                get+=" "+intent.getStringExtra("imageURI").toString()
+            prefernce.edit().putBoolean(screen,false).apply()
+            prefernce.edit().putBoolean(init,true).apply()
+            prefernce.edit().putString(nowpet, String.format("%s.txt",name[0])).apply()
 
-                val name= get.split(" ")
-                saveToInnerStorage(String.format("%s.txt",name[0]),"pet.txt")
-                saveToInnerStorage(get,String.format("%s.txt",name[0]))
+            //장난감 집 그릇 음식 옷
 
-                prefernce.edit().putBoolean(screen,checkBox1.isChecked).apply()
-                prefernce.edit().putBoolean(init,true).apply()
-
-                startActivity(next)
-                finish()
-            }
-            else Toast.makeText(applicationContext,"선택해주세요.",Toast.LENGTH_SHORT).show()
+            startActivity(next)
+            finish()
         }
     }
 

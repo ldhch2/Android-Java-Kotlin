@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#F1F1E0"
+    android:background="#170E00"
     tools:context=".SplashActivity">
 
 
@@ -12,44 +12,67 @@
         android:id="@+id/titleView1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="124dp"
-        android:fontFamily="@font/sdsamliphopangcheoutline"
+        android:layout_marginTop="200dp"
+        android:layout_marginRight="10dp"
+        android:fontFamily="@font/bae"
         android:gravity="center|center_horizontal"
-        android:text="멍이 냥이"
-        android:textColor="#000000"
-        android:textSize="70dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
+        android:shadowColor="#F4C99A"
+        android:shadowDx="5.0"
+        android:shadowDy="5.0"
+        android:shadowRadius="5.0"
+        android:text="멍멍"
+        android:textColor="#f1f1e0"
+        android:textSize="100dp"
+        app:layout_constraintEnd_toStartOf="@+id/guideline25"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/titleView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="232dp"
+        android:fontFamily="@font/bae"
+        android:gravity="center|center_horizontal"
+        android:shadowColor="#F4C99A"
+        android:shadowDx="5.0"
+        android:shadowDy="5.0"
+        android:shadowRadius="5.0"
+        android:text="냥냥"
+        android:textColor="#f1f1e0"
+        android:textSize="100dp"
+        android:layout_marginLeft="10dp"
+        app:layout_constraintStart_toStartOf="@+id/guideline25"
         app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
         android:id="@+id/titleImage2"
-        android:layout_width="84dp"
-        android:layout_height="0dp"
-        android:layout_marginStart="228dp"
-        android:layout_marginLeft="228dp"
-        android:layout_marginTop="27dp"
-        android:layout_marginBottom="35dp"
-        android:rotation="30"
-        app:layout_constraintBottom_toBottomOf="@+id/titleView1"
-        app:layout_constraintStart_toStartOf="@+id/titleView1"
-        app:layout_constraintTop_toTopOf="@+id/titleImage1"
-        app:layout_constraintVertical_bias="1.0"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:rotation="15"
+        app:layout_constraintBottom_toTopOf="@+id/titleView2"
+        app:layout_constraintEnd_toEndOf="@+id/titleView2"
+        app:layout_constraintStart_toEndOf="@+id/titleView2"
+        app:layout_constraintTop_toTopOf="@+id/titleView2"
         app:srcCompat="@drawable/catfoot" />
 
     <ImageView
         android:id="@+id/titleImage1"
-        android:layout_width="68dp"
-        android:layout_height="75dp"
-        android:layout_marginTop="68dp"
-        android:layout_marginBottom="75dp"
-        android:rotation="8"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:rotation="-15"
         app:layout_constraintBottom_toBottomOf="@+id/titleView1"
-        app:layout_constraintEnd_toStartOf="@+id/titleImage2"
-        app:layout_constraintHorizontal_bias="0.72"
-        app:layout_constraintStart_toStartOf="@+id/titleImage2"
-        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/titleView1"
+        app:layout_constraintHorizontal_bias="0.454"
+        app:layout_constraintStart_toStartOf="@+id/titleView1"
+        app:layout_constraintTop_toBottomOf="@+id/titleView1"
         app:srcCompat="@drawable/dogfoot" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline25"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.5"/>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

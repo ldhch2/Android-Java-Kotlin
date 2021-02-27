@@ -5,7 +5,6 @@ import android.content.Intent
 import android.os.Bundle
 import kotlinx.android.synthetic.main.activity_main.*
 import android.view.animation.AnimationUtils
-import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.GravityCompat
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -17,21 +16,18 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        val next=Intent(this, StoreItem::class.java)
-        val hospital = Intent(this, HospitalActivity::class.java)
-
         val filename=loadFromInnerStorage("pet.txt")
         val temp=filename.split('\n')
         val pet= PetClass(loadFromInnerStorage(temp[0]))
 
         var stateList = arrayListOf<State>(
-                State("hungry", "full", pet.state.full),
-                State("dirty", "clean", pet.state.clean),
-                State("bored", "excited", pet.state.excited),
-                State("sleepy", "awake", pet.state.awake),
-                State("sad", "happy", pet.state.happy),
-                State("sick", "healthy", pet.state.healthy),
-                State("anxious", "relaxed", pet.state.relaxed)
+                State("배고파요", "배불러요", pet.state.full),
+                State("찝찝해요", "개운해요", pet.state.clean),
+                State("지루해요", "신나요", pet.state.excited),
+                State("졸려요", "상쾌해요", pet.state.awake),
+                State("슬퍼요", "행복해요", pet.state.happy),
+                State("아파요", "건강해요", pet.state.healthy),
+                State("불안해요", "편안해요", pet.state.relaxed)
         )
 
         val stateAdapter=StateAdapter(this, stateList)
@@ -44,56 +40,25 @@ class MainActivity : AppCompatActivity() {
         val fabOpen = AnimationUtils.loadAnimation(this,R.anim.fab_open)
         val fabClose = AnimationUtils.loadAnimation(this,R.anim.fab_close)
 
-        walkwalk.setOnClickListener{
-
+        playplay.setOnClickListener{
+            startActivity(Intent(this,HangoutPopup::class.java))
         }
         feedfeed.setOnClickListener{
-            startActivity(Intent(this, FeedActivity::class.java))
+
+
+            //startActivity(Intent(this, FeedActivity::class.java))
         }
         washwash.setOnClickListener{
-            // startActivity(Intent(this,WashActivity::class.java))
+            startActivity(Intent(this,WashActivity::class.java))
         }
-
-        fabMain.setOnClickListener{
-            if(isOpen){
-                fab_sub1.startAnimation(fabClose)
-                fab_sub2.startAnimation(fabClose)
-                fab_sub3.startAnimation(fabClose)
-                showState.startAnimation(fabClose)
-                homeButton.startAnimation(fabClose)
-
-                isOpen=false
-            }
-            else{
-                fab_sub1.startAnimation(fabOpen)
-                fab_sub2.startAnimation(fabOpen)
-                fab_sub3.startAnimation(fabOpen)
-                showState.startAnimation(fabOpen)
-                homeButton.startAnimation(fabOpen)
-
-                fab_sub1.isClickable
-                fab_sub2.isClickable
-                fab_sub3.isClickable
-                showState.isClickable
-                homeButton.isClickable
-
-                isOpen = true
-            }
-
-            fab_sub1.setOnClickListener{
-                Toast.makeText(this,"click",Toast.LENGTH_LONG).show()
-                startActivity(next)
-            }
-            fab_sub3.setOnClickListener{
-                startActivity(hospital)
-            }
-
-            showState.setOnClickListener() {
-                drawerState.openDrawer(GravityCompat.START)
-            }
-            homeButton.setOnClickListener(){
-                startActivity(Intent(this, YardActivity::class.java))
-            }
+        stateButton.setOnClickListener{
+            drawerState.openDrawer(GravityCompat.START)
+        }
+        homeButton.setOnClickListener(){
+            onBackPressed()
+        }
+        hangoutButton.setOnClickListener() {
+            startActivity(Intent(this,HangoutPopup::class.java))
         }
 
     }

@@ -14,9 +14,10 @@
         android:layout_margin="20dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="0.4"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.6"
         app:srcCompat="@drawable/papers" />
 
     <com.github.gcacace.signaturepad.views.SignaturePad
@@ -39,7 +40,7 @@
 
 
     <ImageView
-        android:id="@+id/imageView10"
+        android:id="@+id/petImage"
         android:layout_width="100dp"
         android:layout_height="100dp"
         android:layout_marginEnd="30dp"
@@ -50,12 +51,13 @@
         app:srcCompat="@drawable/bara" />
 
     <TextView
-        android:id="@+id/textView3"
+        android:id="@+id/registerName"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="20dp"
-        android:layout_marginLeft="20dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginLeft="5dp"
         android:layout_marginTop="30dp"
+        android:fontFamily="@font/title"
         android:text="바라"
         android:textColor="#8e8e8e"
         android:textSize="24sp"
@@ -64,16 +66,17 @@
         app:layout_constraintTop_toTopOf="@+id/guideline27" />
 
     <TextView
-        android:id="@+id/textView4"
+        android:id="@+id/registerBirthday"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:fontFamily="@font/title"
         android:text="20210211"
         android:textColor="#8e8e8e"
         android:textSize="16sp"
         android:textStyle="italic"
         app:layout_constraintBottom_toTopOf="@+id/guideline28"
-        app:layout_constraintStart_toStartOf="@+id/textView3"
-        app:layout_constraintTop_toBottomOf="@+id/textView3" />
+        app:layout_constraintStart_toStartOf="@+id/registerName"
+        app:layout_constraintTop_toBottomOf="@+id/registerName" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline26"
@@ -94,7 +97,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="20dp"
-        android:text="입양신고서"
+        android:fontFamily="@font/title"
+        android:text="펫 정보"
         android:textColor="#000000"
         android:textSize="24sp"
         android:textStyle="bold"
@@ -123,6 +127,7 @@
         android:layout_height="wrap_content"
         android:layout_marginEnd="30dp"
         android:layout_marginRight="30dp"
+        android:fontFamily="@font/title"
         android:text="서명 : "
         android:textColor="#000000"
         app:layout_constraintBottom_toBottomOf="@+id/signaturePad"
@@ -141,7 +146,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.8" />
+        app:layout_constraintGuide_percent="0.78" />
 
     <Button
         android:id="@+id/clearButton"
@@ -151,7 +156,10 @@
         android:layout_marginLeft="70dp"
         android:layout_marginBottom="5dp"
         android:text="다시"
-        android:textSize="12sp"
+        android:fontFamily="@font/bae"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:background="@drawable/grey_button"
         app:layout_constraintBottom_toTopOf="@+id/guideline29"
         app:layout_constraintStart_toStartOf="parent" />
 
@@ -164,10 +172,27 @@
         android:layout_marginBottom="5dp"
         android:layout_marginTop="5dp"
         android:text="서명"
-        android:textSize="12sp"
+        android:fontFamily="@font/bae"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:background="@drawable/grey_button"
         app:layout_constraintBottom_toTopOf="@+id/guideline29"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/signaturePad" />
+
+    <TextView
+        android:id="@+id/registerGender"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginBottom="2dp"
+        android:fontFamily="@font/title"
+        android:text="성별"
+        android:textColor="#8e8e8e"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="@+id/registerName"
+        app:layout_constraintStart_toEndOf="@+id/registerName" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
