@@ -99,8 +99,9 @@ class YardActivity : AppCompatActivity() {
         }
     }
     override fun onBackPressed() {
-        val alBuilder = AlertDialog.Builder(this)
-/*        dialog = builder.create()
+        val alBuilder = AlertDialog.Builder(this,R.style.AlertDialog)
+
+        /*        dialog = builder.create()
 
         dialog.getButton(AlertDialog.BUTTON_NEGATIVE).setTextColor(WHAT);
         dialog.getButton(AlertDialog.BUTTON_POSITIVE).setTextColor(WHAT);
