@@ -41,15 +41,19 @@ class MainActivity : AppCompatActivity() {
         val fabClose = AnimationUtils.loadAnimation(this,R.anim.fab_close)
 
         playplay.setOnClickListener{
-            startActivity(Intent(this,HangoutPopup::class.java))
+            val intent = Intent(this, ItemPopup::class.java)
+            intent.putExtra("ItemType", "1".toInt())
+            startActivity(intent)
         }
         feedfeed.setOnClickListener{
-
-
-            //startActivity(Intent(this, FeedActivity::class.java))
+            val intent = Intent(this, ItemPopup::class.java)
+            intent.putExtra("ItemType", "2".toInt())
+            startActivity(intent)
         }
         washwash.setOnClickListener{
-            startActivity(Intent(this,WashActivity::class.java))
+            val intent = Intent(this, ItemPopup::class.java)
+            intent.putExtra("ItemType", "3".toInt())
+            startActivity(intent)
         }
         stateButton.setOnClickListener{
             drawerState.openDrawer(GravityCompat.START)
