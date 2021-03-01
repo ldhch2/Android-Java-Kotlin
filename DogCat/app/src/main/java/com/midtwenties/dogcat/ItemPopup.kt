@@ -1,6 +1,7 @@
 package com.midtwenties.dogcat
 
 import android.content.Context
+import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -18,7 +19,7 @@ class Itemnew (var item_name: String, var image_name : String)
 
 class ItemPopup : AppCompatActivity() {
     var itemToylist = arrayListOf<Itemnew>(
-            Itemnew("공", ""),
+            Itemnew("공", "doggum"),
             Itemnew("삑삑이", ""),
             Itemnew("오메가3", ""),
             Itemnew("밀크시슬", ""),
@@ -66,6 +67,10 @@ class ItemPopup : AppCompatActivity() {
             clickbutton.setOnClickListener {
                 if(adapter.flag) {
                     Toast.makeText(this, "선택되었습니다.", Toast.LENGTH_SHORT).show()
+                    val newintent = Intent(this, MainActivity::class.java)
+                    newintent.putExtra("imagepara",adapter.paraimagename)
+                    startActivity(newintent)
+
                 }
                 else{
                     Toast.makeText(this,"아이템을 선택해주세요.",Toast.LENGTH_SHORT).show()
@@ -82,6 +87,9 @@ class ItemPopup : AppCompatActivity() {
             clickbutton.setOnClickListener {
                 if(adapter.flag) {
                     Toast.makeText(this, "선택되었습니다.", Toast.LENGTH_SHORT).show()
+                    val newintent = Intent(this, MainActivity::class.java)
+                    newintent.putExtra("imagepara",adapter.paraimagename)
+                    startActivity(newintent)
                 }
                 else{
                     Toast.makeText(this,"아이템을 선택해주세요.",Toast.LENGTH_SHORT).show()
@@ -98,6 +106,9 @@ class ItemPopup : AppCompatActivity() {
             clickbutton.setOnClickListener {
                 if(adapter.flag) {
                     Toast.makeText(this, "선택되었습니다.", Toast.LENGTH_SHORT).show()
+                    val newintent = Intent(this, MainActivity::class.java)
+                    newintent.putExtra("imagepara",adapter.paraimagename)
+                    startActivity(newintent)
                 }
                 else{
                     Toast.makeText(this,"아이템을 선택해주세요.",Toast.LENGTH_SHORT).show()
@@ -119,7 +130,7 @@ class ItemNewListAdapter(val context: Context, val itemList : ArrayList<Itemnew>
     var check = -1
     var preLayout : ConstraintLayout? = null
     var flag = false
-
+    var paraimagename=""
     inner class Holder(itemView: View?) : RecyclerView.ViewHolder(itemView!!) {
         val itemname = itemView?.findViewById<TextView>(R.id.itemlistname)
         val imagename = itemView?.findViewById<ImageView>(R.id.imagename)
@@ -140,6 +151,7 @@ class ItemNewListAdapter(val context: Context, val itemList : ArrayList<Itemnew>
                     preLayout = itemView.ItemConstraint
                     preLayout?.setBackgroundResource(R.drawable.edge)
                     flag = true
+                    paraimagename = item2.image_name
                 }
                 else if(check != itemList.indexOf(item2)){
                     val pre = check
@@ -149,6 +161,7 @@ class ItemNewListAdapter(val context: Context, val itemList : ArrayList<Itemnew>
 
                     layout?.setBackgroundResource(R.drawable.edge)
                     flag = true
+                    paraimagename = item2.image_name
                 }
                 else {
                     check = -1

@@ -3,8 +3,11 @@ package com.midtwenties.dogcat
 import StateAdapter
 import android.content.Intent
 import android.os.Bundle
+import android.util.Log
+import android.view.View
 import kotlinx.android.synthetic.main.activity_main.*
 import android.view.animation.AnimationUtils
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.GravityCompat
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -44,20 +47,37 @@ class MainActivity : AppCompatActivity() {
         val fabOpen = AnimationUtils.loadAnimation(this,R.anim.fab_open)
         val fabClose = AnimationUtils.loadAnimation(this,R.anim.fab_close)
 
+        var newtype = intent.getStringExtra("imagepara")
+
+
+
+
+        if(newtype != null) {
+            Toast.makeText(this, "사진사진사진.", Toast.LENGTH_SHORT).show()
+            Toast.makeText(this, newtype, Toast.LENGTH_SHORT).show()
+            val resourceId = resources.getIdentifier(newtype, "drawable", this.packageName)
+            fillAnimation?.setImageResource(resourceId)
+            fillAnimation.visibility = View.VISIBLE
+        }
         playplay.setOnClickListener{
             val intent = Intent(this, ItemPopup::class.java)
             intent.putExtra("ItemType", "1".toInt())
             startActivity(intent)
+
+
         }
         feedfeed.setOnClickListener{
             val intent = Intent(this, ItemPopup::class.java)
             intent.putExtra("ItemType", "2".toInt())
             startActivity(intent)
+
+
         }
         washwash.setOnClickListener{
             val intent = Intent(this, ItemPopup::class.java)
             intent.putExtra("ItemType", "3".toInt())
             startActivity(intent)
+
         }
         stateButton.setOnClickListener{
             drawerState.openDrawer(GravityCompat.START)
