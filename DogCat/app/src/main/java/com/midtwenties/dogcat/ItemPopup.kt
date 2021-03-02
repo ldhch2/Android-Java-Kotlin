@@ -14,6 +14,7 @@ import androidx.recyclerview.widget.RecyclerView
 import kotlinx.android.synthetic.main.activity_item_contacts.view.*
 import kotlinx.android.synthetic.main.activity_item_popup.*
 import kotlinx.android.synthetic.main.activity_item_popup.backButton
+import kotlinx.android.synthetic.main.activity_main.*
 
 class Itemnew (var item_name: String, var image_name : String)
 
@@ -69,8 +70,7 @@ class ItemPopup : AppCompatActivity() {
                     Toast.makeText(this, "선택되었습니다.", Toast.LENGTH_SHORT).show()
                     val newintent = Intent(this, MainActivity::class.java)
                     newintent.putExtra("imagepara",adapter.paraimagename)
-                    startActivity(newintent)
-
+                    finish()
                 }
                 else{
                     Toast.makeText(this,"아이템을 선택해주세요.",Toast.LENGTH_SHORT).show()
@@ -89,7 +89,7 @@ class ItemPopup : AppCompatActivity() {
                     Toast.makeText(this, "선택되었습니다.", Toast.LENGTH_SHORT).show()
                     val newintent = Intent(this, MainActivity::class.java)
                     newintent.putExtra("imagepara",adapter.paraimagename)
-                    startActivity(newintent)
+                    finish()
                 }
                 else{
                     Toast.makeText(this,"아이템을 선택해주세요.",Toast.LENGTH_SHORT).show()
@@ -108,7 +108,7 @@ class ItemPopup : AppCompatActivity() {
                     Toast.makeText(this, "선택되었습니다.", Toast.LENGTH_SHORT).show()
                     val newintent = Intent(this, MainActivity::class.java)
                     newintent.putExtra("imagepara",adapter.paraimagename)
-                    startActivity(newintent)
+                    finish()
                 }
                 else{
                     Toast.makeText(this,"아이템을 선택해주세요.",Toast.LENGTH_SHORT).show()

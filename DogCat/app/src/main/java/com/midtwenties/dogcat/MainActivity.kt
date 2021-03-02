@@ -49,9 +49,6 @@ class MainActivity : AppCompatActivity() {
 
         var newtype = intent.getStringExtra("imagepara")
 
-
-
-
         if(newtype != null) {
             Toast.makeText(this, "사진사진사진.", Toast.LENGTH_SHORT).show()
             Toast.makeText(this, newtype, Toast.LENGTH_SHORT).show()
@@ -59,26 +56,26 @@ class MainActivity : AppCompatActivity() {
             fillAnimation?.setImageResource(resourceId)
             fillAnimation.visibility = View.VISIBLE
         }
+
         playplay.setOnClickListener{
             val intent = Intent(this, ItemPopup::class.java)
             intent.putExtra("ItemType", "1".toInt())
             startActivity(intent)
-
-
         }
+
         feedfeed.setOnClickListener{
             val intent = Intent(this, ItemPopup::class.java)
             intent.putExtra("ItemType", "2".toInt())
             startActivity(intent)
-
-
         }
+
         washwash.setOnClickListener{
             val intent = Intent(this, ItemPopup::class.java)
             intent.putExtra("ItemType", "3".toInt())
             startActivity(intent)
 
         }
+
         stateButton.setOnClickListener{
             drawerState.openDrawer(GravityCompat.START)
         }
