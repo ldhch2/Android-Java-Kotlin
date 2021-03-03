@@ -52,7 +52,7 @@ class Iteminfo(val name:String) {
                 this.kind = "house";this.imagename = "princesshouse";this.price = 500;this.option1 =
                     "1";this.option2 = "2";this.option3 = "3"
             }
-            "[Premium] 캣타워" -> {
+            "Premium 캣타워" -> {
                 this.kind = "house"; this.imagename = "cattowerpre";this.price = 500;this.option1 =
                     "1";this.option2 = "2";this.option3 = "3"
             }
@@ -67,29 +67,29 @@ class Iteminfo(val name:String) {
                     500;this.option1 = "1";this.option2 = "2"; this.option3 = "3"
             }
             "칫솔" -> {
-                this.kind = "household";this.imagename = null.toString();this.price =
+                this.kind = "household";this.imagename = "toothbrush";this.price =
                     500;this.option1 = "1";this.option2 = "2";this.option3 = "3"
             }
             "치약" -> {
-                this.kind = "household";this.imagename = null.toString();this.price =
+                this.kind = "household";this.imagename = "toothpaste";this.price =
                     500;this.option1 = "1";this.option2 = "2";this.option3 = "3"
             }
-            "배변푸드" -> {
-                this.kind = "household";this.imagename = null.toString();this.price =
+            "배변패드" -> {
+                this.kind = "household";this.imagename = "pad";this.price =
                     500;this.option1 = "1";this.option2 = "2";this.option3 = "3"
             }
 
 
             "목줄" -> {
-                this.kind = "cloth";this.imagename = null.toString(); this.price =
-                    500; this.option1 = "빨간색"; this.option2 = "파란색"; this.option3 = null.toString()
+                this.kind = "cloth";this.imagename = "brownlead"; this.price =
+                    500; this.option1 = "초록색"; this.option2 = "파란색"; this.option3 = "갈색"
             }
             "심플 옷" -> {
-                this.kind = "cloth"; this.imagename = null.toString(); this.price =
+                this.kind = "cloth"; this.imagename = "whitecloth"; this.price =
                     500;this.option1 = "1";this.option2 = "2"; this.option3 = "3"
             }
             "옷옷" -> {
-                this.kind = "cloth";this.imagename = null.toString();this.price = 500;this.option1 =
+                this.kind = "cloth";this.imagename = "tigercloth";this.price = 500;this.option1 =
                     "1";this.option2 = "2";this.option3 = "3"
             }
 
@@ -102,11 +102,11 @@ class Iteminfo(val name:String) {
                 this.kind = "feed";this.imagename = "catyum"; this.price = 500;this.option1 =
                     "1";this.option2 = "2"; this.option3 = "3"
             }
-            "[Premium] 강아지 사료" -> {
+            "Premium 강아지 사료" -> {
                 this.kind = "feed";this.imagename = "dogyumpre";this.price = 500;this.option1 =
                     "1";this.option2 = "2";this.option3 = "3"
             }
-            "[Premium] 고양이 사료" -> {
+            "Premium 고양이 사료" -> {
                 this.kind = "feed"; this.imagename = "catyumpre";this.price = 500;this.option1 =
                     "1";this.option2 = "2";this.option3 = "3"
             }

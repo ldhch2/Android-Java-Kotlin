@@ -22,20 +22,20 @@ var houseList = arrayListOf<Iteminfo>(
     Iteminfo("Blue 베이직 홈"),
     Iteminfo("Brown 베이직 홈"),
     Iteminfo("프린세스 홈"),
-    Iteminfo("[Premium] 캣타워")
+    Iteminfo("Premium 캣타워")
 )
 var householdList = arrayListOf<Iteminfo>(
     Iteminfo("멍샴푸"),
     Iteminfo("냥삼푸"),
     Iteminfo("칫솔"),
     Iteminfo("치약"),
-    Iteminfo("배변푸드")
+    Iteminfo("배변패드")
 )
 var feedList = arrayListOf<Iteminfo>(
     Iteminfo("강아지 사료"),
     Iteminfo("고양이 사료"),
-    Iteminfo("[Premium] 강아지 사료"),
-    Iteminfo("[Premium] 고양이 사료"),
+    Iteminfo("Premium 강아지 사료"),
+    Iteminfo("Premium 고양이 사료"),
     Iteminfo("개껌 (강아지용)"),
     Iteminfo("닭가슴살 츄르 (고양이용)"),
     Iteminfo("연어 츄르 (고양이용)"),
