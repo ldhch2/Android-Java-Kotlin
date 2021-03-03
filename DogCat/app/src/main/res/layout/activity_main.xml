@@ -42,11 +42,12 @@
             app:layout_constraintStart_toEndOf="@+id/washwash"
             app:layout_constraintTop_toTopOf="@+id/washwash" />
 
+
         <ImageButton
             android:id="@+id/fillButton"
             android:layout_width="239dp"
             android:layout_height="117dp"
-            android:layout_marginTop="120dp"
+            android:layout_marginTop="90dp"
             android:adjustViewBounds="true"
             android:background="@android:color/transparent"
             android:gravity="center_horizontal"
@@ -168,6 +169,8 @@
             android:layout_marginBottom="20dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"></FrameLayout>
+
+
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>

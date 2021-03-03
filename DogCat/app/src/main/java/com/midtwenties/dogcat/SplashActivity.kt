@@ -29,13 +29,8 @@ class SplashActivity : AppCompatActivity() {
         titleImage1.visibility= View.INVISIBLE
         titleImage2.visibility= View.INVISIBLE
 
-        //val animation1 = AnimationUtils.loadAnimation(this, R.anim.fade_in)
-
         Handler(Looper.getMainLooper()).postDelayed({
             titleView1.visibility = View.VISIBLE
-            //titleView1.startAnimation(animation1)
-            //overridePendingTransition(R.anim.fade_out, R.anim.fade_in)
-
         }, 1000)
 
         Handler(Looper.getMainLooper()).postDelayed({
@@ -45,8 +40,6 @@ class SplashActivity : AppCompatActivity() {
 
         Handler(Looper.getMainLooper()).postDelayed({
             titleView2.visibility=View.VISIBLE
-            //titleImage2.visibility= View.VISIBLE
-            //titleImage2.startAnimation(animation1)
         }, 1500)
 
         Handler(Looper.getMainLooper()).postDelayed({
