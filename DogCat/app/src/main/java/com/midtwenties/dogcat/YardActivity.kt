@@ -99,21 +99,8 @@ class YardActivity : AppCompatActivity() {
         }
     }
     override fun onBackPressed() {
-        val alBuilder = AlertDialog.Builder(this,R.style.AlertDialog)
-
-        /*        dialog = builder.create()
-
-        dialog.getButton(AlertDialog.BUTTON_NEGATIVE).setTextColor(WHAT);
-        dialog.getButton(AlertDialog.BUTTON_POSITIVE).setTextColor(WHAT);
-
- */
-        alBuilder.setMessage("즐거웠어! 다음에 또 올거지?")
-        alBuilder.setNegativeButton("금방 또 올게!" ) { dialogInterface, which -> finish() }
-        alBuilder.setPositiveButton("좀 더 있을까?", DialogInterface.OnClickListener { dialogInterface, i -> return@OnClickListener })
-        alBuilder.setTitle("안녕!")
-        alBuilder.show()
-
-        //val textView = alBuilder.findViewById(android.R.id.message)
+        val dialog=CustomDialog(this)
+        dialog.myDig()
     }
 
 
