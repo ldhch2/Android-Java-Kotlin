@@ -1,13 +1,10 @@
 package com.midtwenties.dogcat
 
 import android.content.Context
-import android.content.DialogInterface
 import android.content.Intent
 import android.os.Build
 import android.os.Bundle
 import android.view.animation.AnimationUtils
-import android.widget.LinearLayout
-import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import kotlinx.android.synthetic.main.activity_yard.*
 import java.text.SimpleDateFormat
@@ -100,7 +97,7 @@ class YardActivity : AppCompatActivity() {
     }
     override fun onBackPressed() {
         val dialog=CustomDialog(this)
-        dialog.myDig()
+        dialog.exitDig()
     }
 
 

@@ -7,17 +7,41 @@ import android.graphics.Color
 import android.graphics.drawable.ColorDrawable
 import android.view.WindowManager
 import android.widget.Button
-import kotlinx.android.synthetic.main.exit_popup.*
+import android.widget.TextView
 
-class CustomDialog (context: Context) {
+class CustomDialog(context: Context) {
     private val dialog = Dialog(context)
-
-    fun myDig(){
-        MyDig()
+    fun userDig(){
+        UserDig()
         dialog.show()
     }
 
-    fun MyDig(){
+    fun exitDig(){
+        ExitDig()
+        dialog.show()
+    }
+
+    fun UserDig(){
+        dialog.setContentView(R.layout.user_popup)
+        dialog.window!!.setBackgroundDrawable(ColorDrawable(Color.TRANSPARENT))
+        dialog.window!!.setLayout(WindowManager.LayoutParams.MATCH_PARENT, WindowManager.LayoutParams.WRAP_CONTENT)
+
+        val tellB = dialog.findViewById<Button>(R.id.tellButton)
+        tellB.setOnClickListener{
+            val myName = dialog.findViewById<TextView>(R.id.myName)
+            val name=myName.text.toString()
+            /* 이름 어떻게 저장할거지?
+
+            */
+            dialog.dismiss()
+
+        }
+
+        dialog.setCanceledOnTouchOutside(false)
+        dialog.setCancelable(false)
+    }
+
+    fun ExitDig(){
         dialog.setContentView(R.layout.exit_popup)
         dialog.window!!.setBackgroundDrawable(ColorDrawable(Color.TRANSPARENT))
         dialog.window!!.setLayout(WindowManager.LayoutParams.MATCH_PARENT, WindowManager.LayoutParams.WRAP_CONTENT)
@@ -36,6 +60,7 @@ class CustomDialog (context: Context) {
         dialog.setCancelable(true)
 
     }
+
 
 }
 
