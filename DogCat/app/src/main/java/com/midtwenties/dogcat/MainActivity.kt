@@ -50,7 +50,7 @@ class MainActivity : AppCompatActivity() {
         val fabOpen = AnimationUtils.loadAnimation(this,R.anim.fab_open)
         val fabClose = AnimationUtils.loadAnimation(this,R.anim.fab_close)
 
-        var newtype = intent.getStringExtra("imagepara")
+        /*var newtype = intent.getStringExtra("imagepara")
 
 
         if(newtype != null) {
@@ -59,7 +59,7 @@ class MainActivity : AppCompatActivity() {
             val resourceId = resources.getIdentifier(newtype, "drawable", this.packageName)
             fillAnimation?.setImageResource(resourceId)
             fillAnimation.visibility = View.VISIBLE
-        }
+        }*/
 
         playplay.setOnClickListener{
             val intent = Intent(this, ItemPopup::class.java)
@@ -73,11 +73,16 @@ class MainActivity : AppCompatActivity() {
             startActivity(intent)
         }
 
+        fillButton.setOnClickListener{
+            fillAnimation.visibility = View.VISIBLE
+            fillButton.visibility = View.INVISIBLE
+            //f
+        }
+
         washwash.setOnClickListener{
             val intent = Intent(this, ItemPopup::class.java)
             intent.putExtra("ItemType", "3".toInt())
             startActivity(intent)
-
         }
 
         stateButton.setOnClickListener{

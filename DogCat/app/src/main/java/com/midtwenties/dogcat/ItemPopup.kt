@@ -89,6 +89,7 @@ class ItemPopup : AppCompatActivity() {
                     Toast.makeText(this, "선택되었습니다.", Toast.LENGTH_SHORT).show()
                     val newintent = Intent(this, MainActivity::class.java)
                     newintent.putExtra("imagepara",adapter.paraimagename)
+                    fillButton.visibility = View.VISIBLE
                     finish()
                 }
                 else{
