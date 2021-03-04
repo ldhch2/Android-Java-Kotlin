@@ -22,6 +22,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".UserNameActivity"/>
         <activity android:name=".Lockermain" />
         <activity android:name=".HangoutPopup" />
         <activity android:name=".HospitalActivity" />
