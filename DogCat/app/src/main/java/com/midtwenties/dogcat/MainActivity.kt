@@ -19,6 +19,9 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
+        fillButton.visibility = View.INVISIBLE
+        fillAnimation.visibility = View.INVISIBLE
+
         supportFragmentManager.beginTransaction()
             .replace(R.id.coin, CoinView())
             .commit()
@@ -48,6 +51,7 @@ class MainActivity : AppCompatActivity() {
         val fabClose = AnimationUtils.loadAnimation(this,R.anim.fab_close)
 
         var newtype = intent.getStringExtra("imagepara")
+
 
         if(newtype != null) {
             Toast.makeText(this, "사진사진사진.", Toast.LENGTH_SHORT).show()
