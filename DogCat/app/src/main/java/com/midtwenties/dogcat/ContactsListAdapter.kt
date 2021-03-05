@@ -1,4 +1,5 @@
 import android.content.Context
+import android.content.Intent
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -7,8 +8,7 @@ import android.widget.ImageView
 import android.widget.RadioButton
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
-import com.midtwenties.dogcat.Iteminfo
-import com.midtwenties.dogcat.R
+import com.midtwenties.dogcat.*
 
 class ContactsListAdapter(val context: Context, val itemList : ArrayList<Iteminfo>) :
     RecyclerView.Adapter<ContactsListAdapter.Holder>()  {
@@ -32,6 +32,14 @@ class ContactsListAdapter(val context: Context, val itemList : ArrayList<Iteminf
             itemname?.text = item.name
             price?.text = item.price.toString()
             buybutton?.text="구매"
+
+            buybutton?.setOnClickListener {
+                val next = Intent(context,Buynewitem::class.java)
+                next.putExtra("item",item.name)
+                next.putExtra("option",option1?.isChecked)
+                next.putExtra("category",item.kind)
+                context.startActivity(next)
+            }
 
             if(item.option1 != "") option1?.text = item.option1
             else option1?.setVisibility(View.INVISIBLE)
