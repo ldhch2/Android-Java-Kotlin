@@ -14,7 +14,7 @@ class MainSetting : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main_setting)
 
-        switch1.isChecked= prefernce.getString("screen","false")!!.toBoolean()
+        switch1.isChecked=true
 
         button.setOnClickListener {
             prefernce.edit().putString("screen",switch1.isChecked.toString()).apply()

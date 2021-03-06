@@ -51,40 +51,21 @@ class ItemList : AppCompatActivity() {
             .replace(R.id.coin, CoinView())
             .commit()
 
-        val toy = prefernce.getString("toy",null)?.split(" ")
-        if (toy != null) {
-            for (i in 0..toy.size) {
-                itemToylist.add(Iteminfo(toy[i]))
+        val item=prefernce.getString("item",null)?.split(" ")
+
+        if (item != null) {
+            for(element in item){
+                val temp:Iteminfo= Iteminfo(element)
+                when (temp.kind_num){
+                    1->itemToylist.add(temp)
+                    2->itemHouselist.add(temp)
+                    3->itemHouseholdllist.add(temp)
+                    4->itemClotheslist.add(temp)
+                    5->itemFeedlist.add(temp)
+                }
             }
         }
 
-        val house = prefernce.getString("house",null)?.split(" ")
-        if (house != null) {
-            for (i in 0..house.size) {
-                itemHouselist.add(Iteminfo(house[i]))
-            }
-        }
-
-        val household = prefernce.getString("household",null)?.split(" ")
-        if (household != null) {
-            for (i in 0..household.size) {
-                itemHouseholdllist.add(Iteminfo(household[i]))
-            }
-        }
-
-        val feed = prefernce.getString("feed",null)?.split(" ")
-        if (feed != null) {
-                for (i in 0..feed.size) {
-                    itemFeedlist.add(Iteminfo(feed[i]))
-            }
-        }
-
-        val cloth = prefernce.getString("cloth",null)?.split(" ")
-        if (cloth != null) {
-            for (i in 1..cloth.size) {
-                itemClotheslist.add(Iteminfo(cloth[i]))
-            }
-        }
 
         Toy.setBackgroundResource(R.drawable.brown_button)
         val adapter = ItemListAdapter(this, itemToylist)

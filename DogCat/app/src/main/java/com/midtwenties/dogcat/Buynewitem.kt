@@ -15,14 +15,12 @@ class Buynewitem : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_buyitem)
 
-        val name=intent.getStringExtra("item")
-        val option=intent.getStringExtra("option")
-        val category=intent.getStringExtra("category")
+        val save=intent.getStringExtra("info")
 
-        var info = prefernce.getString(category,null)
-        if (info==null) info=String.format("%s",name)
-        else info += String.format(" %s",name)
-        prefernce.edit().putString(category,info).apply()
+        var info = prefernce.getString("item",null)
+        if (info==null) info=save
+        else info += String.format(" %s",save)
+        prefernce.edit().putString("item",info).apply()
 
         button2.setOnClickListener {
             finish()

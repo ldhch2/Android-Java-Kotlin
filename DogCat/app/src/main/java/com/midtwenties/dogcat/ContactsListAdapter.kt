@@ -35,9 +35,17 @@ class ContactsListAdapter(val context: Context, val itemList : ArrayList<Iteminf
 
             buybutton?.setOnClickListener {
                 val next = Intent(context,Buynewitem::class.java)
-                next.putExtra("item",item.name)
-                next.putExtra("option",option1?.isChecked)
-                next.putExtra("category",item.kind)
+                if (option1 != null) {
+                    if (option1.isChecked) item.option_num=1
+                }
+                if (option2 != null) {
+                   if( option2.isChecked) item.option_num = 2
+                }
+                if (option3 != null) {
+                    if( option3.isChecked) item.option_num = 3
+                }
+
+                next.putExtra("info",item.saveinfo())
                 context.startActivity(next)
             }
 
