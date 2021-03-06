@@ -57,7 +57,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.2" />
+        app:layout_constraintGuide_percent="0.18" />
 
     <HorizontalScrollView
         android:layout_width="0dp"
@@ -73,10 +73,10 @@
 
             <Button
                 android:id="@+id/Toy"
+                android:background="@drawable/store_select"
+                android:layout_margin="4dp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_margin="4dp"
-                android:background="@drawable/beige_button"
                 android:fontFamily="@font/bae"
                 android:textSize="24sp"
                 android:textStyle="bold"
@@ -84,10 +84,10 @@
 
             <Button
                 android:id="@+id/House"
+                android:background="@drawable/store_select"
+                android:layout_margin="4dp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_margin="4dp"
-                android:background="@drawable/beige_button"
                 android:fontFamily="@font/bae"
                 android:textSize="24sp"
                 android:textStyle="bold"
@@ -95,11 +95,10 @@
 
             <Button
                 android:id="@+id/Bowl"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:background="@drawable/store_select"
                 android:layout_margin="4dp"
-                android:layout_weight="1"
-                android:background="@drawable/beige_button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
                 android:fontFamily="@font/bae"
                 android:textSize="24sp"
                 android:textStyle="bold"
@@ -107,11 +106,10 @@
 
             <Button
                 android:id="@+id/Feed"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:background="@drawable/store_select"
                 android:layout_margin="4dp"
-                android:layout_weight="1"
-                android:background="@drawable/beige_button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
                 android:fontFamily="@font/bae"
                 android:textSize="24sp"
                 android:textStyle="bold"
@@ -119,11 +117,10 @@
 
             <Button
                 android:id="@+id/Cloth"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:background="@drawable/store_select"
                 android:layout_margin="4dp"
-                android:layout_weight="1"
-                android:background="@drawable/beige_button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
                 android:fontFamily="@font/bae"
                 android:textSize="24sp"
                 android:textStyle="bold"
