@@ -7,14 +7,39 @@
     android:background="@drawable/background"
     tools:context=".HospitalNutrition">
 
+
     <ImageView
-        android:id="@+id/imageView"
+        android:id="@+id/imageView6"
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:src="@drawable/hospital_icon"
+        app:layout_constraintStart_toStartOf="@+id/guideline31"
+        app:layout_constraintTop_toTopOf="@+id/guideline32" />
+
+   <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline32"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.3" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline31"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.62" />
+
+    <ImageView
+        android:id="@+id/shot"
         android:layout_width="0dp"
         android:layout_height="0dp"
         app:layout_constraintBottom_toTopOf="@+id/guideline16"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/guideline01"
+        app:layout_constraintVertical_bias="1.0"
         app:srcCompat="@drawable/basicdog" />
 
     <androidx.constraintlayout.widget.Guideline
@@ -95,6 +120,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent">
     </FrameLayout>
+
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
