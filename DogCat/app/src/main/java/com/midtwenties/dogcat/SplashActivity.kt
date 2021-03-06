@@ -29,6 +29,7 @@ class SplashActivity : AppCompatActivity() {
         titleImage1.visibility= View.INVISIBLE
         titleImage2.visibility= View.INVISIBLE
 
+
         Handler(Looper.getMainLooper()).postDelayed({
             titleView1.visibility = View.VISIBLE
         }, 1000)

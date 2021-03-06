@@ -69,6 +69,7 @@ class RegisterActivity : AppCompatActivity() {
             next.putExtra("info",info)
             next.putExtra("kind",kind)
             startActivity(next)
+            finish()
         }
     }
 

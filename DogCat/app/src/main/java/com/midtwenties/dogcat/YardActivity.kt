@@ -45,6 +45,7 @@ class YardActivity : AppCompatActivity() {
 
         when {
             preference.getBoolean("screen", false) -> {
+                preference.edit().putString("test","aaa").apply()
                 if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
                     startForegroundService(Intent(applicationContext, ScreenService::class.java))
                 } else {
