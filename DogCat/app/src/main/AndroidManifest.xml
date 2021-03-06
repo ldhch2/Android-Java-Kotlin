@@ -96,6 +96,7 @@
         <activity
             android:name=".IDListActivity"
             android:screenOrientation="portrait" />
+        <activity android:name=".DailyMission"/>
 
         <receiver
             android:name=".Receiver"
@@ -109,8 +110,7 @@
         <service
             android:name=".ScreenService"
             android:enabled="true"
-            android:exported="false"></service>
-            -->
+            android:exported="false"/> -->
     </application>
 
 </manifest>

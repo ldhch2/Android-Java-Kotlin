@@ -8,18 +8,30 @@ import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
+import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import kotlinx.android.synthetic.main.activity_daily_mission.*
+import kotlinx.android.synthetic.main.activity_daily_mission.backButton
+import kotlinx.android.synthetic.main.activity_item_popup.*
 import kotlinx.android.synthetic.main.activity_mission.*
 
 class DailyContacts(var missionContents: String, var missionComplete:String)
 
 class DailyMission: AppCompatActivity(){
     var missionlist = arrayListOf<DailyContacts>(
-        DailyContacts("ddd","seifjlaisdjlfi"),
-        DailyContacts("elaifjselifj","cliasjelfijasej")
+        DailyContacts("모든 데일리 미션 완료",""),
+        DailyContacts("산책 1회",""),
+        DailyContacts("밥 3회",""),
+        DailyContacts("놀아주기 2회",""),
+        DailyContacts("쓰다듬기 20회",""),
+        DailyContacts("yard에서 30번 움직이기",""),
+        DailyContacts("씻기 1회",""),
+        DailyContacts("영양제 섭취 1회",""),
+        DailyContacts("광고 3회 보기",""),
+        DailyContacts("검진 1회","")
     )
+
 
     override fun onCreate(savedInstanceState: Bundle?){
         super.onCreate(savedInstanceState)
@@ -32,9 +44,8 @@ class DailyMission: AppCompatActivity(){
         val dailymissionadapter = DailyMissionListAdapter(this,missionlist)
         DailyMissionRecyclerView.adapter = dailymissionadapter
 
-        val lm = LinearLayoutManager(this)
-        DailyMissionRecyclerView.layoutManager = lm
-        DailyMissionRecyclerView.setHasFixedSize(true)
+        val gridLayoutManager = GridLayoutManager(applicationContext,3)
+        DailyMissionRecyclerView.layoutManager = gridLayoutManager
 
 
     }
