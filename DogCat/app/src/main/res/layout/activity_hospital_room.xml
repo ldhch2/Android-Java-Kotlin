@@ -5,11 +5,11 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/background"
-    tools:context=".HospitalNutrition">
+    tools:context=".HospitalRoom">
 
 
     <ImageView
-        android:id="@+id/imageView6"
+        android:id="@+id/shot"
         android:layout_width="100dp"
         android:layout_height="50dp"
         android:src="@drawable/hospital_icon"
@@ -31,7 +31,7 @@
         app:layout_constraintGuide_percent="0.62" />
 
     <ImageView
-        android:id="@+id/shot"
+        android:id="@+id/imageView"
         android:layout_width="0dp"
         android:layout_height="0dp"
         app:layout_constraintBottom_toTopOf="@+id/guideline16"
@@ -121,6 +121,19 @@
         app:layout_constraintStart_toStartOf="parent">
     </FrameLayout>
 
+    <Button
+        android:id="@+id/inject"
+        android:layout_marginLeft="20dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/shadow"
+        android:fontFamily="@font/bae"
+        android:textColor="#000000"
+        android:textSize="32sp"
+        android:textStyle="bold"
+        android:text="따끔!"
+        app:layout_constraintBottom_toTopOf="@+id/shot"
+        app:layout_constraintStart_toStartOf="@+id/guideline31" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

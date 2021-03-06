@@ -3,16 +3,20 @@ package com.midtwenties.dogcat
 import android.content.Context
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.os.Handler
+import android.os.Looper
 import android.os.PersistableBundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.view.animation.AnimationUtils
 import android.widget.Button
 import android.widget.TextView
 import android.widget.Toast
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import kotlinx.android.synthetic.main.activity_hospital_room.*
+import kotlinx.android.synthetic.main.activity_user_name.*
 
 class HospitalContacts (var name: String, var price: Int, var buy : String, var effects : String)
 
@@ -37,6 +41,11 @@ class HospitalRoom : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_hospital_room)
 
+        val right = AnimationUtils.loadAnimation(this, R.anim.pull_in_right)
+        val left = AnimationUtils.loadAnimation(this, R.anim.pull_in_left)
+        shot.visibility= View.INVISIBLE
+        inject.visibility=View.INVISIBLE
+
         supportFragmentManager.beginTransaction()
             .replace(R.id.coin, CoinView())
             .commit()
@@ -55,6 +64,14 @@ class HospitalRoom : AppCompatActivity() {
             var buyItem = com.midtwenties.dogcat.buyItem()
             val adapter = NutritionListAdapter(this, injectionList, buyItem)
             NutritionRecyclerview.adapter = adapter
+
+            inject.setOnClickListener {
+                if (adapter.flag == true) {
+                    shot.visibility = View.VISIBLE
+                    shot.startAnimation(right)
+                }
+            }
+
         } else if(type == 2) {
             val roomType = findViewById<TextView>(R.id.RoomType)
             roomType.text = "영양제실"
@@ -65,13 +82,14 @@ class HospitalRoom : AppCompatActivity() {
             val adapter = NutritionListAdapter(this, nutritionList, buyItem)
             NutritionRecyclerview.adapter = adapter
 
-            if(buyItem.getName() == "") {
+            if (buyItem.getName() == "") {
                 Toast.makeText(this, "영양제를 구매해주세요.", Toast.LENGTH_LONG).show()
-            }
-            else {
+            } else {
                 Toast.makeText(this, "영양제 사용.", Toast.LENGTH_LONG).show()
             }
         }
+
+
         val lay = LinearLayoutManager(this)
         NutritionRecyclerview.layoutManager = lay
         NutritionRecyclerview.setHasFixedSize(true)

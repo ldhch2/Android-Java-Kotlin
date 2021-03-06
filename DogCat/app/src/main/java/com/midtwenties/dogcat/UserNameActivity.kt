@@ -25,7 +25,7 @@ class UserNameActivity : AppCompatActivity() {
         hi.visibility= View.INVISIBLE
         nice.visibility= View.INVISIBLE
         hiButton.visibility= View.INVISIBLE
-        click.visibility= View.INVISIBLE
+              click.visibility= View.INVISIBLE
 
         Handler(Looper.getMainLooper()).postDelayed({
             hiCat.visibility = View.VISIBLE
