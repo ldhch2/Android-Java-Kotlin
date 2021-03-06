@@ -64,7 +64,7 @@ class SplashActivity : AppCompatActivity() {
         catch (e: FileNotFoundException){
             Handler(Looper.getMainLooper()).postDelayed({
                 startActivity(Intent(this, UserNameActivity::class.java))
-                overridePendingTransition(R.anim.fade_in, R.anim.fade_out)
+                overridePendingTransition(R.anim.splash_fade_in, R.anim.splash_fade_out)
                 finish()
             }, 3000)
         }
