@@ -95,6 +95,10 @@ class MainActivity : AppCompatActivity() {
             startActivity(Intent(this,HangoutPopup::class.java))
         }
 
+        petbubble?.setText("배고파요,,")
+
+
+
     }
 
     fun loadFromInnerStorage(filename: String):String{
