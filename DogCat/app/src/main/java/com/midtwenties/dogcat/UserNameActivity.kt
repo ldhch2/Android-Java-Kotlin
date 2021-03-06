@@ -51,13 +51,12 @@ class UserNameActivity : AppCompatActivity() {
             dialog.userDig()
 
             dialog.setOnClickedListener(object: CustomDialog.CustomDialogListener{
-                override fun onStringClicked(content:String){
+                override fun onClicked(content:String){
                     name=content
                     hiButton.visibility = View.VISIBLE
                     click.visibility = View.VISIBLE
                     click.startAnimation(blink)
                 }
-                override fun onIntClicked(content:Int){}
             })
         }, 2500)
 

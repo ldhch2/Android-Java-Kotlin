@@ -52,7 +52,8 @@ class HospitalRoom : AppCompatActivity() {
             val roomText = findViewById<TextView>(R.id.RoomText)
             roomText.text = "주사를 선택해주세요."
 
-            val adapter = NutritionListAdapter(this, injectionList)
+            var buyItem = com.midtwenties.dogcat.buyItem()
+            val adapter = NutritionListAdapter(this, injectionList, buyItem)
             NutritionRecyclerview.adapter = adapter
         } else if(type == 2) {
             val roomType = findViewById<TextView>(R.id.RoomType)
@@ -60,8 +61,16 @@ class HospitalRoom : AppCompatActivity() {
             val roomText = findViewById<TextView>(R.id.RoomText)
             roomText.text = "영양제를 선택해주세요."
 
-            val adapter = NutritionListAdapter(this, nutritionList)
+            var buyItem = com.midtwenties.dogcat.buyItem()
+            val adapter = NutritionListAdapter(this, nutritionList, buyItem)
             NutritionRecyclerview.adapter = adapter
+
+            if(buyItem.getName() == "") {
+                Toast.makeText(this, "영양제를 구매해주세요.", Toast.LENGTH_LONG).show()
+            }
+            else {
+                Toast.makeText(this, "영양제 사용.", Toast.LENGTH_LONG).show()
+            }
         }
         val lay = LinearLayoutManager(this)
         NutritionRecyclerview.layoutManager = lay
@@ -70,20 +79,21 @@ class HospitalRoom : AppCompatActivity() {
 }
 
 class buyItem {
-    var itemName = ""
-    var itemPrice = 0
+    private var itemName = ""
+    private var itemPrice = 0
     fun changeName(name: String) {
         itemName = name
     }
     fun changePrice(price: Int) {
         itemPrice = price
     }
+    fun getName() : String { return itemName }
+    fun getPrice() : Int { return itemPrice }
 }
 
-class NutritionListAdapter(val context: Context, val itemList : ArrayList<HospitalContacts>) :
+class NutritionListAdapter(val context: Context, val itemList : ArrayList<HospitalContacts>, var BuyItem : buyItem) :
     RecyclerView.Adapter<NutritionListAdapter.Holder>() {
     var flag = false
-    var buyItem = com.midtwenties.dogcat.buyItem()
     inner class Holder(itemView: View?) : RecyclerView.ViewHolder(itemView!!) {
         val itemname = itemView?.findViewById<TextView>(R.id.itemname)
         val price = itemView?.findViewById<TextView>(R.id.price)
@@ -97,17 +107,24 @@ class NutritionListAdapter(val context: Context, val itemList : ArrayList<Hospit
             effects?.text = item.effects
 
             buybutton?.setOnClickListener {
+                if(flag == false) {
                     val dialog = CustomDialog(context)
-                    dialog.hospitalDig()
+                    dialog.hospitalDig(item.name, item.price.toString())
 
-                    dialog.setOnClickedListener(object: CustomDialog.CustomDialogListener {
-                        override fun onStringClicked(content: String) {
-                            effects?.text = content
-                        }
-                        override fun onIntClicked(content: Int) {
-
+                    dialog.setOnClickedListener(object : CustomDialog.CustomDialogListener {
+                        override fun onClicked(content: String) {
+                            if (content == "0") {
+                                return
+                            } else if (content == "1") {
+                                flag = true
+                                buybutton?.setBackgroundResource(R.drawable.brown_button)
+                                buybutton?.setText("구매완료")
+                                BuyItem.changeName(item.name)
+                                BuyItem.changePrice(item.price)
+                            }
                         }
                     })
+                }
             }
         }
     }
@@ -124,14 +141,5 @@ class NutritionListAdapter(val context: Context, val itemList : ArrayList<Hospit
 
     override fun onBindViewHolder(holder: Holder, position: Int) {
         holder?.bind(itemList[position], context)
-    }
-}
-
-class HospitalPopup : AppCompatActivity() {
-    override fun onCreate(savedInstanceState: Bundle?, persistentState: PersistableBundle?) {
-        super.onCreate(savedInstanceState, persistentState)
-        setContentView(R.layout.hospital_popup)
-        val text = findViewById<TextView>(R.id.buyText)
-        text.text = "사자"
     }
 }

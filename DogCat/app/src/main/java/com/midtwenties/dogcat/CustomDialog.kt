@@ -6,6 +6,7 @@ import android.graphics.Color
 import android.graphics.drawable.ColorDrawable
 import android.view.WindowManager
 import android.widget.Button
+import android.widget.ImageButton
 import android.widget.TextView
 
 class CustomDialog(context: Context) {
@@ -15,8 +16,8 @@ class CustomDialog(context: Context) {
         dialog.show()
     }
 
-    fun hospitalDig() {
-        HospitalDig()
+    fun hospitalDig(name: String, price: String) {
+        HospitalDig(name, price)
         dialog.show()
     }
 
@@ -33,7 +34,7 @@ class CustomDialog(context: Context) {
         val tellB = dialog.findViewById<Button>(R.id.tellButton)
         tellB.setOnClickListener{
             val myName = dialog.findViewById<TextView>(R.id.myName)
-            onClickedListener.onStringClicked(myName.text.toString())
+            onClickedListener.onClicked(myName.text.toString())
             dialog.dismiss()
         }
 
@@ -41,20 +42,29 @@ class CustomDialog(context: Context) {
         dialog.setCancelable(false)
     }
 
-    fun HospitalDig() {
+    fun HospitalDig(name : String, price : String) {
         dialog.setContentView(R.layout.hospital_popup)
         dialog.window!!.setBackgroundDrawable(ColorDrawable(Color.TRANSPARENT))
         dialog.window!!.setLayout(WindowManager.LayoutParams.MATCH_PARENT, WindowManager.LayoutParams.WRAP_CONTENT)
 
-        val finishB = dialog.findViewById<Button>(R.id.closeclose)
+        val finishB = dialog.findViewById<ImageButton>(R.id.closeclose)
         val buyB = dialog.findViewById<Button>(R.id.buybuy)
+        val buyText = dialog.findViewById<TextView>(R.id.buyText)
+        val priceText = dialog.findViewById<TextView>(R.id.priceText)
+
+        buyText.setText(name + "을(를) 구매하시겠습니까?")
+        priceText.setText("가격 : " + price)
 
         finishB.setOnClickListener {
-            onClickedListener.onStringClicked("0")
+            val send = "0"
+            onClickedListener.onClicked(send)
             dialog.dismiss()
         }
-
-
+        buyB.setOnClickListener {
+            val send = "1"
+            onClickedListener.onClicked(send)
+            dialog.dismiss()
+        }
         dialog.setCanceledOnTouchOutside(true)
         dialog.setCancelable(true)
     }
@@ -80,8 +90,7 @@ class CustomDialog(context: Context) {
     }
 
     interface CustomDialogListener{
-        fun onStringClicked(content:String)
-        fun onIntClicked(content:Int)
+        fun onClicked(content:String)
     }
 
     private lateinit var onClickedListener:CustomDialogListener
