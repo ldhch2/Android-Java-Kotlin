@@ -1,7 +1,6 @@
 package com.midtwenties.dogcat
 
 import android.content.Context
-import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.os.PersistableBundle
@@ -63,11 +62,6 @@ class HospitalRoom : AppCompatActivity() {
 
             val adapter = NutritionListAdapter(this, nutritionList)
             NutritionRecyclerview.adapter = adapter
-
-            if (adapter.flag == true) {
-                Toast.makeText(this, "구매햇어어어어", Toast.LENGTH_LONG).show()
-                startActivity(Intent(this, HospitalPopup::class.java))
-            }
         }
         val lay = LinearLayoutManager(this)
         NutritionRecyclerview.layoutManager = lay
@@ -96,16 +90,24 @@ class NutritionListAdapter(val context: Context, val itemList : ArrayList<Hospit
         val buybutton = itemView?.findViewById<Button>(R.id.buybutton)
         val effects = itemView?.findViewById<TextView>(R.id.effects)
 
-        fun bind(item: HospitalContacts, context: Context) {
+        fun bind(item: HospitalContacts, context2: Context) {
             itemname?.text = item.name
             price?.text = item.price.toString()
             buybutton?.text = item.buy
             effects?.text = item.effects
 
             buybutton?.setOnClickListener {
-                buyItem.changeName(item.name)
-                buyItem.changePrice(item.price)
-                flag = true
+                    val dialog = CustomDialog(context)
+                    dialog.hospitalDig()
+
+                    dialog.setOnClickedListener(object: CustomDialog.CustomDialogListener {
+                        override fun onStringClicked(content: String) {
+                            effects?.text = content
+                        }
+                        override fun onIntClicked(content: Int) {
+
+                        }
+                    })
             }
         }
     }
@@ -125,7 +127,7 @@ class NutritionListAdapter(val context: Context, val itemList : ArrayList<Hospit
     }
 }
 
-class HospitalPopup(Item: buyItem) : AppCompatActivity() {
+class HospitalPopup : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?, persistentState: PersistableBundle?) {
         super.onCreate(savedInstanceState, persistentState)
         setContentView(R.layout.hospital_popup)

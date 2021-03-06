@@ -1,6 +1,5 @@
 package com.midtwenties.dogcat
 
-
 import android.app.Dialog
 import android.content.Context
 import android.graphics.Color
@@ -13,6 +12,11 @@ class CustomDialog(context: Context) {
     private val dialog = Dialog(context)
     fun userDig(){
         UserDig()
+        dialog.show()
+    }
+
+    fun hospitalDig() {
+        HospitalDig()
         dialog.show()
     }
 
@@ -35,6 +39,24 @@ class CustomDialog(context: Context) {
 
         dialog.setCanceledOnTouchOutside(false)
         dialog.setCancelable(false)
+    }
+
+    fun HospitalDig() {
+        dialog.setContentView(R.layout.hospital_popup)
+        dialog.window!!.setBackgroundDrawable(ColorDrawable(Color.TRANSPARENT))
+        dialog.window!!.setLayout(WindowManager.LayoutParams.MATCH_PARENT, WindowManager.LayoutParams.WRAP_CONTENT)
+
+        val finishB = dialog.findViewById<Button>(R.id.closeclose)
+        val buyB = dialog.findViewById<Button>(R.id.buybuy)
+
+        finishB.setOnClickListener {
+            onClickedListener.onStringClicked("0")
+            dialog.dismiss()
+        }
+
+
+        dialog.setCanceledOnTouchOutside(true)
+        dialog.setCancelable(true)
     }
 
     fun ExitDig(){
