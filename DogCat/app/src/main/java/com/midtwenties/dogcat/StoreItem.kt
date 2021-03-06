@@ -10,41 +10,41 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import kotlinx.android.synthetic.main.activity_store_item.*
 
 var toyList = arrayListOf<Iteminfo>(
-    Iteminfo("공"),
-    Iteminfo("오뚝이"),
-    Iteminfo("터그"),
-    Iteminfo("낚시대"),
-    Iteminfo("인형")
+    Iteminfo("1_1_0"),
+    Iteminfo("1_2_0"),
+    Iteminfo("1_3_0"),
+    Iteminfo("1_4_0"),
+    Iteminfo("1_5_0")
 )
 var houseList = arrayListOf<Iteminfo>(
-    Iteminfo("기본 쿠션"),
-    Iteminfo("Pink 베이직 홈"),
-    Iteminfo("Blue 베이직 홈"),
-    Iteminfo("Brown 베이직 홈"),
-    Iteminfo("프린세스 홈"),
-    Iteminfo("Premium 캣타워")
+    Iteminfo("2_1_0"),
+    Iteminfo("2_2_0"),
+    Iteminfo("2_3_0"),
+    Iteminfo("2_4_0"),
+    Iteminfo("2_5_0"),
+    Iteminfo("2_6_0")
 )
 var householdList = arrayListOf<Iteminfo>(
-    Iteminfo("멍샴푸"),
-    Iteminfo("냥삼푸"),
-    Iteminfo("칫솔"),
-    Iteminfo("치약"),
-    Iteminfo("배변패드")
+    Iteminfo("3_1_0"),
+    Iteminfo("3_2_0"),
+    Iteminfo("3_3_0"),
+    Iteminfo("3_4_0"),
+    Iteminfo("3_5_0")
 )
 var feedList = arrayListOf<Iteminfo>(
-    Iteminfo("강아지 사료"),
-    Iteminfo("고양이 사료"),
-    Iteminfo("Premium 강아지 사료"),
-    Iteminfo("Premium 고양이 사료"),
-    Iteminfo("개껌 (강아지용)"),
-    Iteminfo("닭가슴살 츄르 (고양이용)"),
-    Iteminfo("연어 츄르 (고양이용)"),
-    Iteminfo("참치 츄르 (고양이용)")
+    Iteminfo("4_1_0"),
+    Iteminfo("4_2_0"),
+    Iteminfo("4_3_0"),
+    Iteminfo("4_4_0"),
+    Iteminfo("4_5_0"),
+    Iteminfo("4_6_0"),
+    Iteminfo("4_7_0"),
+    Iteminfo("4_8_0")
 )
 var clothesList = arrayListOf<Iteminfo>(
-    Iteminfo("목줄"),
-    Iteminfo("심플 옷"),
-    Iteminfo("옷옷")
+    Iteminfo("5_1_0"),
+    Iteminfo("5_2_0"),
+    Iteminfo("5_3_0")
 )
 
 

@@ -170,7 +170,18 @@
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"></FrameLayout>
 
-
+        <TextView
+            android:id="@+id/petbubble"
+            android:layout_width="195dp"
+            android:layout_height="100dp"
+            android:background="@drawable/bubblenew"
+            android:gravity="center"
+            android:text="TextView"
+            android:textColor="#2B2727"
+            app:layout_constraintBottom_toTopOf="@+id/imageView3"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/washwash" />
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>

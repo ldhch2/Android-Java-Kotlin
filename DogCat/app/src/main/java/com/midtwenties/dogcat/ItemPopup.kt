@@ -2,6 +2,8 @@ package com.midtwenties.dogcat
 
 import android.content.Context
 import android.content.Intent
+import android.content.pm.ActivityInfo
+import android.content.pm.ActivityInfo.SCREEN_ORIENTATION_PORTRAIT
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -41,11 +43,11 @@ class ItemPopup : AppCompatActivity() {
             Itemnew("강아지 사료","dogyum"),
             Itemnew("고양이 사료","catyum")
     )
+
     var itemClotheslist = arrayListOf<Itemnew>(
             Itemnew("심플 옷",""),
             Itemnew("목줄","")
     )
-
 
     fun loadFromInnerStorage(filename: String): String {
         val fileInputStream = openFileInput(filename)
@@ -55,6 +57,10 @@ class ItemPopup : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?){
         super.onCreate(savedInstanceState)
+        try {
+            requestedOrientation = ActivityInfo.SCREEN_ORIENTATION_PORTRAIT
+        } catch (e:IllegalStateException) { }
+
         setContentView(R.layout.activity_item_popup)
 
         var type = intent.getIntExtra("ItemType", 0)
@@ -88,8 +94,7 @@ class ItemPopup : AppCompatActivity() {
                 if(adapter.flag) {
                     Toast.makeText(this, "선택되었습니다.", Toast.LENGTH_SHORT).show()
                     val newintent = Intent(this, MainActivity::class.java)
-                    newintent.putExtra("imagepara",adapter.paraimagename)
-                    fillButton.visibility = View.VISIBLE
+                    newintent.putExtra("bowlFlag", true)
                     finish()
                 }
                 else{

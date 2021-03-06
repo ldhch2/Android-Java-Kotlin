@@ -6,6 +6,9 @@ import android.os.Build
 import android.os.Bundle
 import android.view.animation.AnimationUtils
 import androidx.appcompat.app.AppCompatActivity
+import androidx.recyclerview.widget.LinearLayoutManager
+import kotlinx.android.synthetic.main.activity_daily_mission.*
+import kotlinx.android.synthetic.main.activity_mission.*
 import kotlinx.android.synthetic.main.activity_yard.*
 import java.text.SimpleDateFormat
 import java.util.*
@@ -42,6 +45,7 @@ class YardActivity : AppCompatActivity() {
 
         when {
             preference.getBoolean("screen", false) -> {
+                preference.edit().putString("test","aaa").apply()
                 if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
                     startForegroundService(Intent(applicationContext, ScreenService::class.java))
                 } else {
@@ -94,6 +98,10 @@ class YardActivity : AppCompatActivity() {
             storeButton.setOnClickListener {
                 startActivity(Intent(this, StoreItem::class.java))
             }
+        }
+
+        DailyMissionButton.setOnClickListener {
+            startActivity(Intent(this,DailyMission::class.java))
         }
     }
     override fun onBackPressed() {
