@@ -124,7 +124,7 @@
         android:layout_height="wrap_content"
         android:background="#FFFFFF"
         android:orientation="horizontal"
-        app:layout_constraintGuide_begin="74dp" />
+        app:layout_constraintGuide_percent="0.10259918" />
 
     <ImageView
         android:layout_width="80dp"
