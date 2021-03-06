@@ -3,14 +3,18 @@ package com.midtwenties.dogcat
 import StateAdapter
 import android.content.Intent
 import android.os.Bundle
+import android.os.Handler
+import android.os.Looper
 import android.util.Log
 import android.view.View
 import kotlinx.android.synthetic.main.activity_main.*
 import android.view.animation.AnimationUtils
+import android.widget.ImageView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.GravityCompat
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.bumptech.glide.Glide
 
 class MainActivity : AppCompatActivity() {
 
@@ -29,6 +33,9 @@ class MainActivity : AppCompatActivity() {
         val filename=loadFromInnerStorage("pet.txt")
         val temp=filename.split('\n')
         val pet= PetClass(loadFromInnerStorage(temp[0]))
+        val fillAnimation: ImageView = findViewById(R.id.fillAnimation)
+        Glide.with(this).load(R.raw.fillbowl2).into(fillAnimation)
+
 
         var stateList = arrayListOf<State>(
                 State("배고파요", "배불러요", pet.state.full),
@@ -71,6 +78,14 @@ class MainActivity : AppCompatActivity() {
             val intent = Intent(this, ItemPopup::class.java)
             intent.putExtra("ItemType", "2".toInt())
             startActivity(intent)
+            var newtype = intent.getBooleanExtra("bowlFlag", false)
+            if(newtype){
+                fillButton.visibility = View.VISIBLE
+            }
+            Handler(Looper.getMainLooper()).postDelayed({
+                fillButton.visibility = View.VISIBLE
+            }, 400)
+
         }
 
         fillButton.setOnClickListener{

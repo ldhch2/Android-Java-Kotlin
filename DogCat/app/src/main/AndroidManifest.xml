@@ -14,8 +14,9 @@
         android:theme="@style/Theme.AppCompat.NoActionBar" >
         <activity
             android:name=".ItemPopup"
-            android:theme="@style/pop"
-            android:screenOrientation="portrait" />
+            android:theme="@style/pop"/>
+            /*android:screenOrientation="portrait"
+        />
         <activity
             android:name=".SplashActivity"
             android:screenOrientation="portrait">
