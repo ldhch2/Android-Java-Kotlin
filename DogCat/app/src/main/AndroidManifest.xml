@@ -15,8 +15,6 @@
         <activity
             android:name=".ItemPopup"
             android:theme="@style/pop"/>
-            /*android:screenOrientation="portrait"
-        />
         <activity
             android:name=".SplashActivity"
             android:screenOrientation="portrait">
@@ -96,7 +94,7 @@
         <activity
             android:name=".IDListActivity"
             android:screenOrientation="portrait" />
-
+        <activity android:name=".DailyMission"/>
         <receiver
             android:name=".Receiver"
             android:exported="true">
@@ -105,12 +103,11 @@
                 <action android:name="android.intent.action.SCREEN_OFF" />
             </intent-filter>
         </receiver>
-<!--
+
         <service
             android:name=".ScreenService"
             android:enabled="true"
-            android:exported="false"></service>
-            -->
+            android:exported="false"/>
     </application>
 
 </manifest>
