@@ -29,12 +29,8 @@ class CustomDialog(context: Context) {
         val tellB = dialog.findViewById<Button>(R.id.tellButton)
         tellB.setOnClickListener{
             val myName = dialog.findViewById<TextView>(R.id.myName)
-            val name=myName.text.toString()
-            /* 이름 어떻게 저장할거지?
-
-            */
+            onClickedListener.onStringClicked(myName.text.toString())
             dialog.dismiss()
-
         }
 
         dialog.setCanceledOnTouchOutside(false)
@@ -61,6 +57,16 @@ class CustomDialog(context: Context) {
 
     }
 
+    interface CustomDialogListener{
+        fun onStringClicked(content:String)
+        fun onIntClicked(content:Int)
+    }
+
+    private lateinit var onClickedListener:CustomDialogListener
+
+    fun setOnClickedListener(listener: CustomDialogListener){
+        onClickedListener=listener
+    }
 
 }
 
