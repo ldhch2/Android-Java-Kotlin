@@ -74,6 +74,7 @@ class PetIDActivity : AppCompatActivity() {
             val imageuri=cardURI.toString()
             next.putExtra("imageURI", imageuri)
             startActivity(next)
+            finish()
         }
 
     }

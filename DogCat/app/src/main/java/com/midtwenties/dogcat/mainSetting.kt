@@ -17,7 +17,7 @@ class MainSetting : AppCompatActivity() {
         switch1.isChecked=true
 
         button.setOnClickListener {
-            prefernce.edit().putString("screen",switch1.isChecked.toString()).apply()
+            prefernce.edit().putBoolean("screen",switch1.isChecked).apply()
         }
 
         backButton.setOnClickListener{

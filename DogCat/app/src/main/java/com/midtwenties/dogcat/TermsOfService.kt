@@ -31,6 +31,8 @@ class TermsOfService : AppCompatActivity() {
 
             prefernce.edit().putBoolean(screen,true).apply()
             prefernce.edit().putBoolean(init,true).apply()
+            prefernce.edit().putString(nowpet, String.format("%s.txt",name[0])).apply()
+
 
             startActivity(next)
             finish()

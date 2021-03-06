@@ -95,6 +95,8 @@ class MainActivity : AppCompatActivity() {
             startActivity(Intent(this,HangoutPopup::class.java))
         }
 
+
+
     }
 
     fun loadFromInnerStorage(filename: String):String{
