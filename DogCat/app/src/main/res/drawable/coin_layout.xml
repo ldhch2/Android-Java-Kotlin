@@ -4,9 +4,9 @@
         <corners android:radius="100dip"/>
        <gradient
         android:startColor="#FFFFFF"
-        android:centerColor="#DDDBD2"
+        android:centerColor="#E3E2E1"
         android:centerY="0.75"
-        android:endColor="#ECE9E3"
+        android:endColor="#F1F1F0"
         android:angle="270"
         />
         <stroke
