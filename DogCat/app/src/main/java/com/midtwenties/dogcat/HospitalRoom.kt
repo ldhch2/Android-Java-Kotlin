@@ -118,7 +118,7 @@ class NutritionListAdapter(val context: Context, val itemList : ArrayList<Hospit
         val buybutton = itemView?.findViewById<Button>(R.id.buybutton)
         val effects = itemView?.findViewById<TextView>(R.id.effects)
 
-        fun bind(item: HospitalContacts, context2: Context) {
+        fun bind(item: HospitalContacts, bindcontext: Context) {
             itemname?.text = item.name
             price?.text = item.price.toString()
             buybutton?.text = item.buy

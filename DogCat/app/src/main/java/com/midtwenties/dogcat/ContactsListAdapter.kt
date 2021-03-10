@@ -7,11 +7,12 @@ import android.widget.Button
 import android.widget.ImageView
 import android.widget.RadioButton
 import android.widget.TextView
+import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.RecyclerView
 import com.midtwenties.dogcat.*
 
 class ContactsListAdapter(val context: Context, val itemList : ArrayList<Iteminfo>) :
-    RecyclerView.Adapter<ContactsListAdapter.Holder>()  {
+    RecyclerView.Adapter<ContactsListAdapter.Holder>() {
     inner class Holder(itemView: View?) : RecyclerView.ViewHolder(itemView!!){
         val imagename = itemView?.findViewById<ImageView>(R.id.imagename)
         val itemname = itemView?.findViewById<TextView>(R.id.itemname)
@@ -34,19 +35,34 @@ class ContactsListAdapter(val context: Context, val itemList : ArrayList<Iteminf
             buybutton?.text="구매"
 
             buybutton?.setOnClickListener {
-                val next = Intent(context,Buynewitem::class.java)
+                // val next = Intent(context,Buynewitem::class.java)
                 if (option1 != null) {
-                    if (option1.isChecked) item.option_num=1
+                    if (option1.isChecked) item.option_num = 1
                 }
                 if (option2 != null) {
-                   if( option2.isChecked) item.option_num = 2
+                    if (option2.isChecked) item.option_num = 2
                 }
                 if (option3 != null) {
-                    if( option3.isChecked) item.option_num = 3
+                    if (option3.isChecked) item.option_num = 3
                 }
 
-                next.putExtra("info",item.saveinfo())
-                context.startActivity(next)
+                if(item.option_num == 1 || item.option_num == 2 || item.option_num == 3) {
+                    val dialog = CustomDialog(context)
+                    dialog.storeDig(item.name, item.price.toString(), item.saveinfo(), context)
+
+                    dialog.setOnClickedListener(object : CustomDialog.CustomDialogListener {
+                        override fun onClicked(content: String) {
+                            if (content == "0") {
+                                return
+                            } else if (content == "1") {
+                                buybutton?.setBackgroundResource(R.drawable.brown_button)
+                                buybutton?.setText("구매완료")
+                            }
+                        }
+                    })
+                }
+                //next.putExtra("info", item.saveinfo())
+                //context.startActivity(next)
             }
 
             if(item.option1 != "") option1?.text = item.option1
