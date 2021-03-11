@@ -22,8 +22,5 @@ class Buynewitem : AppCompatActivity() {
         else info += String.format(" %s",save)
         prefernce.edit().putString("item",info).apply()
 
-        button2.setOnClickListener {
-            finish()
-        }
     }
 }
