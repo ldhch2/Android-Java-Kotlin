@@ -4,15 +4,78 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Buynewitem">
+    android:background="@android:color/transparent">
 
-    <Button
-        android:id="@+id/button2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="280dp"
-        android:text="Button"
+    <ImageView
+        android:id="@+id/layout"
+        android:layout_width="300dp"
+        android:layout_height="200dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.499"
+        app:srcCompat="@drawable/edge" />
+
+    <ImageButton
+        android:id="@+id/StoreBuyClose"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end"
+        android:clickable="true"
+        android:gravity="end"
+        android:tint="#716666"
+        app:backgroundTint="@android:color/transparent"
+        app:fabSize="mini"
+        app:layout_constraintEnd_toEndOf="@+id/layout"
+        app:layout_constraintTop_toTopOf="@+id/layout"
+        app:srcCompat="@android:drawable/ic_menu_close_clear_cancel" />
+
+    <TextView
+        android:id="@+id/StoreBuyText"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:layout_weight="1"
+        android:fontFamily="@font/bae"
+        android:gravity="center"
+        android:text="00 상품을 구매하시겠습니까?"
+        android:textColor="@color/black"
+        android:textSize="28sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/StoreBuyBuy"
+        app:layout_constraintEnd_toEndOf="@+id/layout"
+        app:layout_constraintStart_toStartOf="@+id/layout"
+        app:layout_constraintTop_toTopOf="@+id/layout" />
+
+    <Button
+        android:id="@+id/StoreBuyBuy"
+        android:layout_width="120dp"
+        android:layout_height="40dp"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/beige_button"
+        android:fontFamily="@font/bae"
+        android:gravity="center"
+        android:text="구매"
+        android:textColor="#FFFFFF"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/layout"
+        app:layout_constraintEnd_toEndOf="@+id/layout"
+        app:layout_constraintStart_toStartOf="@+id/layout" />
+
+    <TextView
+        android:id="@+id/StorePriceText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/bae"
+        android:text="가격 : "
+        android:textColor="@color/black"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/StoreBuyBuy"
+        app:layout_constraintEnd_toEndOf="@+id/layout"
+        app:layout_constraintStart_toStartOf="@+id/layout"
+        app:layout_constraintTop_toBottomOf="@+id/StoreBuyText" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

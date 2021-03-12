@@ -1,19 +1,22 @@
 package com.midtwenties.dogcat
 
 import android.content.Context
-import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.os.Handler
+import android.os.Looper
 import android.os.PersistableBundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.view.animation.AnimationUtils
 import android.widget.Button
 import android.widget.TextView
 import android.widget.Toast
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import kotlinx.android.synthetic.main.activity_hospital_room.*
+import kotlinx.android.synthetic.main.activity_user_name.*
 
 class HospitalContacts (var name: String, var price: Int, var buy : String, var effects : String)
 
@@ -38,6 +41,11 @@ class HospitalRoom : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_hospital_room)
 
+        val right = AnimationUtils.loadAnimation(this, R.anim.pull_in_right)
+        val left = AnimationUtils.loadAnimation(this, R.anim.pull_in_left)
+        shot.visibility= View.INVISIBLE
+        inject.visibility=View.INVISIBLE
+
         supportFragmentManager.beginTransaction()
             .replace(R.id.coin, CoinView())
             .commit()
@@ -53,22 +61,35 @@ class HospitalRoom : AppCompatActivity() {
             val roomText = findViewById<TextView>(R.id.RoomText)
             roomText.text = "주사를 선택해주세요."
 
-            val adapter = NutritionListAdapter(this, injectionList)
+            var buyItem = com.midtwenties.dogcat.buyItem()
+            val adapter = NutritionListAdapter(this, injectionList, buyItem)
             NutritionRecyclerview.adapter = adapter
+
+            inject.setOnClickListener {
+                if (adapter.flag == true) {
+                    shot.visibility = View.VISIBLE
+                    shot.startAnimation(right)
+                }
+            }
+
         } else if(type == 2) {
             val roomType = findViewById<TextView>(R.id.RoomType)
             roomType.text = "영양제실"
             val roomText = findViewById<TextView>(R.id.RoomText)
             roomText.text = "영양제를 선택해주세요."
 
-            val adapter = NutritionListAdapter(this, nutritionList)
+            var buyItem = com.midtwenties.dogcat.buyItem()
+            val adapter = NutritionListAdapter(this, nutritionList, buyItem)
             NutritionRecyclerview.adapter = adapter
 
-            if (adapter.flag == true) {
-                Toast.makeText(this, "구매햇어어어어", Toast.LENGTH_LONG).show()
-                startActivity(Intent(this, HospitalPopup::class.java))
+            if (buyItem.getName() == "") {
+                Toast.makeText(this, "영양제를 구매해주세요.", Toast.LENGTH_LONG).show()
+            } else {
+                Toast.makeText(this, "영양제 사용.", Toast.LENGTH_LONG).show()
             }
         }
+
+
         val lay = LinearLayoutManager(this)
         NutritionRecyclerview.layoutManager = lay
         NutritionRecyclerview.setHasFixedSize(true)
@@ -76,36 +97,52 @@ class HospitalRoom : AppCompatActivity() {
 }
 
 class buyItem {
-    var itemName = ""
-    var itemPrice = 0
+    private var itemName = ""
+    private var itemPrice = 0
     fun changeName(name: String) {
         itemName = name
     }
     fun changePrice(price: Int) {
         itemPrice = price
     }
+    fun getName() : String { return itemName }
+    fun getPrice() : Int { return itemPrice }
 }
 
-class NutritionListAdapter(val context: Context, val itemList : ArrayList<HospitalContacts>) :
+class NutritionListAdapter(val context: Context, val itemList : ArrayList<HospitalContacts>, var BuyItem : buyItem) :
     RecyclerView.Adapter<NutritionListAdapter.Holder>() {
     var flag = false
-    var buyItem = com.midtwenties.dogcat.buyItem()
     inner class Holder(itemView: View?) : RecyclerView.ViewHolder(itemView!!) {
         val itemname = itemView?.findViewById<TextView>(R.id.itemname)
         val price = itemView?.findViewById<TextView>(R.id.price)
         val buybutton = itemView?.findViewById<Button>(R.id.buybutton)
         val effects = itemView?.findViewById<TextView>(R.id.effects)
 
-        fun bind(item: HospitalContacts, context: Context) {
+        fun bind(item: HospitalContacts, bindcontext: Context) {
             itemname?.text = item.name
             price?.text = item.price.toString()
             buybutton?.text = item.buy
             effects?.text = item.effects
 
             buybutton?.setOnClickListener {
-                buyItem.changeName(item.name)
-                buyItem.changePrice(item.price)
-                flag = true
+                if(flag == false) {
+                    val dialog = CustomDialog(context)
+                    dialog.hospitalDig(item.name, item.price.toString())
+
+                    dialog.setOnClickedListener(object : CustomDialog.CustomDialogListener {
+                        override fun onClicked(content: String) {
+                            if (content == "0") {
+                                return
+                            } else if (content == "1") {
+                                flag = true
+                                buybutton?.setBackgroundResource(R.drawable.brown_button)
+                                buybutton?.setText("구매완료")
+                                BuyItem.changeName(item.name)
+                                BuyItem.changePrice(item.price)
+                            }
+                        }
+                    })
+                }
             }
         }
     }
@@ -122,14 +159,5 @@ class NutritionListAdapter(val context: Context, val itemList : ArrayList<Hospit
 
     override fun onBindViewHolder(holder: Holder, position: Int) {
         holder?.bind(itemList[position], context)
-    }
-}
-
-class HospitalPopup(Item: buyItem) : AppCompatActivity() {
-    override fun onCreate(savedInstanceState: Bundle?, persistentState: PersistableBundle?) {
-        super.onCreate(savedInstanceState, persistentState)
-        setContentView(R.layout.hospital_popup)
-        val text = findViewById<TextView>(R.id.buyText)
-        text.text = "사자"
     }
 }

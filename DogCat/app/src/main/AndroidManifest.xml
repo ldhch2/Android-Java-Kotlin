@@ -15,8 +15,6 @@
         <activity
             android:name=".ItemPopup"
             android:theme="@style/pop"/>
-            /*android:screenOrientation="portrait"
-        />
         <activity
             android:name=".SplashActivity"
             android:screenOrientation="portrait">
@@ -48,6 +46,10 @@
             android:name=".MissionActivity"
             android:screenOrientation="portrait" />
         <activity
+            android:name=".DailyMission"
+            android:theme="@style/pop"
+            android:screenOrientation="portrait" />
+        <activity
             android:name=".RegisterActivity"
             android:screenOrientation="portrait" />
         <activity
@@ -73,6 +75,9 @@
             android:name=".StoreItem"
             android:screenOrientation="portrait" />
         <activity
+            android:name=".Buynewitem"
+            android:screenOrientation="portrait" />
+        <activity
             android:name=".InitPet"
             android:screenOrientation="portrait" />
         <activity
@@ -96,8 +101,6 @@
         <activity
             android:name=".IDListActivity"
             android:screenOrientation="portrait" />
-        <activity android:name=".DailyMission"/>
-
         <receiver
             android:name=".Receiver"
             android:exported="true">

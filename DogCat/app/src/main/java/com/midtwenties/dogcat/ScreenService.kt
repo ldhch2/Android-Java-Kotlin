@@ -70,7 +70,7 @@ class ScreenService : Service() {
             startForeground(NOTIFICATION_ID,notification)
         }
 
-        val timer = object : CountDownTimer(360 * 1000,  1000) {
+        val timer = object : CountDownTimer(60 * 1000,  1000) {
             val filename=prefernce.getString("nowpet","").toString()
             val pet= PetClass(loadFromInnerStorage(filename))
             override fun onTick(millisUntilFinished: Long) {

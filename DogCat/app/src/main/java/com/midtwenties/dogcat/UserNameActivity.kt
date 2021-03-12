@@ -25,7 +25,7 @@ class UserNameActivity : AppCompatActivity() {
         hi.visibility= View.INVISIBLE
         nice.visibility= View.INVISIBLE
         hiButton.visibility= View.INVISIBLE
-        click.visibility= View.INVISIBLE
+              click.visibility= View.INVISIBLE
 
         Handler(Looper.getMainLooper()).postDelayed({
             hiCat.visibility = View.VISIBLE
@@ -51,13 +51,12 @@ class UserNameActivity : AppCompatActivity() {
             dialog.userDig()
 
             dialog.setOnClickedListener(object: CustomDialog.CustomDialogListener{
-                override fun onStringClicked(content:String){
+                override fun onClicked(content:String){
                     name=content
                     hiButton.visibility = View.VISIBLE
                     click.visibility = View.VISIBLE
                     click.startAnimation(blink)
                 }
-                override fun onIntClicked(content:Int){}
             })
         }, 2500)
 
