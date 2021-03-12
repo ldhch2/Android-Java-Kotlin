@@ -5,32 +5,19 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.ImageView
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.GridLayoutManager
-import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import kotlinx.android.synthetic.main.activity_daily_mission.*
 import kotlinx.android.synthetic.main.activity_daily_mission.backButton
-import kotlinx.android.synthetic.main.activity_item_popup.*
-import kotlinx.android.synthetic.main.activity_mission.*
-
-class DailyContacts(var missionContents: String, var missionComplete:String)
+import java.util.*
+import kotlin.collections.ArrayList
 
 class DailyMission: AppCompatActivity(){
-    var missionlist = arrayListOf<DailyContacts>(
-        DailyContacts("모든 데일리 미션 완료",""),
-        DailyContacts("산책 1회",""),
-        DailyContacts("밥 3회",""),
-        DailyContacts("놀아주기 2회",""),
-        DailyContacts("쓰다듬기 20회",""),
-        DailyContacts("yard에서 30번 움직이기",""),
-        DailyContacts("씻기 1회",""),
-        DailyContacts("영양제 섭취 1회",""),
-        DailyContacts("광고 3회 보기",""),
-        DailyContacts("검진 1회","")
-    )
+
+    var missionlist = arrayListOf<Missionclass>()
+    val random = Random()
 
 
     override fun onCreate(savedInstanceState: Bundle?){
@@ -39,6 +26,19 @@ class DailyMission: AppCompatActivity(){
 
         backButton.setOnClickListener{
             onBackPressed()
+        }
+        var checklist = arrayListOf<Int>()
+        var i = 0
+        while (true){
+
+            var randomint = random.nextInt(9)
+            if(checklist.contains(randomint)){
+                missionlist.add(Missionclass(randomint))
+                checklist.add(randomint)
+                i++
+            }
+            if(i==5)break;
+
         }
 
         val dailymissionadapter = DailyMissionListAdapter(this,missionlist)
@@ -51,16 +51,17 @@ class DailyMission: AppCompatActivity(){
     }
 }
 
-class DailyMissionListAdapter(val context: Context, val dailylist : ArrayList<DailyContacts>):
+class DailyMissionListAdapter(val context: Context, val dailylist : ArrayList<Missionclass>):
         RecyclerView.Adapter<DailyMissionListAdapter.Holder>(){
     inner class Holder(missionView: View?) : RecyclerView.ViewHolder(missionView!!){
-        val Contents = missionView?.findViewById<TextView>(R.id.DailyMissionText)
-        val Complete = missionView?.findViewById<TextView>(R.id.DailyMissionComplete)
+        val missiontext  = missionView?.findViewById<TextView>(R.id.DailyMissionText)
+        val mission1 = missionView?.findViewById<TextView>(R.id.DailyMission1)
+        val mission2 = missionView?.findViewById<TextView>(R.id.DailyMission2)
 
-        fun bind(Missionitem : DailyContacts,context: Context){
-            Contents?.text = Missionitem.missionContents
-            Complete?.text = Missionitem.missionComplete
-
+        fun bind(Missionitem : Missionclass,context: Context){
+            missiontext?.text = Missionitem.Mission_content
+            mission1?.text = Missionitem.Mission_daily_now.toString()
+            mission2?.text = Missionitem.Mission_daily_max.toString()
         }
     }
     override fun getItemCount(): Int{
