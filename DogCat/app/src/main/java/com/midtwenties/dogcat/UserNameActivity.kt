@@ -1,5 +1,6 @@
 package com.midtwenties.dogcat
 
+import android.content.Context
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -11,6 +12,9 @@ import android.widget.Toast
 import kotlinx.android.synthetic.main.activity_user_name.*
 
 class UserNameActivity : AppCompatActivity() {
+
+    val preference by lazy { getSharedPreferences("user_data", Context.MODE_PRIVATE) }
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_user_name)
@@ -63,6 +67,7 @@ class UserNameActivity : AppCompatActivity() {
 
 
         hiButton.setOnClickListener(){
+            preference.edit().putString("name",name).apply()
             startActivity(Intent(this, InitPet::class.java))
             overridePendingTransition(R.anim.fade_in, R.anim.fade_out)
             finish()
