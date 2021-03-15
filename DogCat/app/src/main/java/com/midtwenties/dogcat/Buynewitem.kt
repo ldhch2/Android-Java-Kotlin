@@ -21,6 +21,5 @@ class Buynewitem : AppCompatActivity() {
         if (info==null) info=save
         else info += String.format(" %s",save)
         prefernce.edit().putString("item",info).apply()
-
     }
 }
