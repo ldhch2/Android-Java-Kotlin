@@ -78,13 +78,15 @@ class MainActivity : AppCompatActivity() {
             val intent = Intent(this, ItemPopup::class.java)
             intent.putExtra("ItemType", "2".toInt())
             startActivity(intent)
-            var newtype = intent.getBooleanExtra("bowlFlag", false)
-            if(newtype){
+            val bowlflag = intent.getBooleanExtra("bowlFlag", false)
+            if(bowlflag) {
                 fillButton.visibility = View.VISIBLE
             }
-            Handler(Looper.getMainLooper()).postDelayed({
-                fillButton.visibility = View.VISIBLE
-            }, 400)
+            else {}
+            /*Handler(Looper.getMainLooper()).postDelayed({
+                fillButton.visibieExtra()
+            var newtype =lity = View.VISIBLE
+            }, 400)*/
 
         }
 

@@ -10,7 +10,7 @@ android {
 
     defaultConfig {
         applicationId "com.midtwenties.dogcat"
-        minSdkVersion 16
+        minSdkVersion 21
         targetSdkVersion 30
         versionCode 1
         versionName "1.0"
@@ -52,4 +52,6 @@ dependencies {
     annotationProcessor 'com.github.bumptech.glide:compiler:4.12.0'
     implementation 'androidx.recyclerview:recyclerview:1.0.0'
     implementation 'com.github.gcacace:signature-pad:1.2.1'
+    implementation 'com.google.android.gms:play-services-ads:19.7.0'
+
 }
