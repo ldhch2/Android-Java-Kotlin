@@ -1,5 +1,4 @@
 import android.content.Context
-import android.content.Intent
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -7,7 +6,6 @@ import android.widget.Button
 import android.widget.ImageView
 import android.widget.RadioButton
 import android.widget.TextView
-import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.RecyclerView
 import com.midtwenties.dogcat.*
 
@@ -48,7 +46,6 @@ class ContactsListAdapter(val context: Context, val itemList : ArrayList<Iteminf
 
                 if(item.option_num == 1 || item.option_num == 2 || item.option_num == 3) {
                     val dialog = CustomDialog(context)
-
                     dialog.storeDig(item.name, item.price.toString(), item.saveinfo(), context)
 
                     dialog.setOnClickedListener(object : CustomDialog.CustomDialogListener {

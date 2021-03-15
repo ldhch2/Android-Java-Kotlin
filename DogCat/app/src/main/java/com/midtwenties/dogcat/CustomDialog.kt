@@ -6,6 +6,7 @@ import android.content.Intent
 import android.graphics.Color
 import android.graphics.drawable.ColorDrawable
 import android.os.Bundle
+import android.util.Log
 import android.view.WindowManager
 import android.widget.Button
 import android.widget.ImageButton
@@ -36,11 +37,12 @@ class CustomDialog(context: Context) : AppCompatActivity() {
     }
 
     // 병원에서 '구매' 버튼 연결
-    fun hospitalDig(name: String, price: String) {
-        HospitalDig(name, price)
+    fun hospitalDig(name: String, price: String, context: Context) {
+        HospitalDig(name, price, context)
         dialog.show()
     }
-    fun HospitalDig(name : String, price : String) {
+
+    fun HospitalDig(name : String, price : String, context: Context) {
         dialog.setContentView(R.layout.hospital_popup)
         dialog.window!!.setBackgroundDrawable(ColorDrawable(Color.TRANSPARENT))
         dialog.window!!.setLayout(WindowManager.LayoutParams.MATCH_PARENT, WindowManager.LayoutParams.WRAP_CONTENT)
@@ -50,7 +52,7 @@ class CustomDialog(context: Context) : AppCompatActivity() {
         val buyText = dialog.findViewById<TextView>(R.id.buyText)
         val priceText = dialog.findViewById<TextView>(R.id.priceText)
 
-        buyText.setText(name + "을(를) 구매하시겠습니까?")
+        buyText.setText(name + "을(를)")
         priceText.setText("가격 : " + price)
 
         finishB.setOnClickListener {
@@ -60,6 +62,7 @@ class CustomDialog(context: Context) : AppCompatActivity() {
         buyB.setOnClickListener {
             onClickedListener.onClicked("1")
             dialog.dismiss()
+
         }
         dialog.setCanceledOnTouchOutside(true)
         dialog.setCancelable(true)
@@ -80,21 +83,25 @@ class CustomDialog(context: Context) : AppCompatActivity() {
         val buyText = dialog.findViewById<TextView>(R.id.StoreBuyText)
         val priceText = dialog.findViewById<TextView>(R.id.StorePriceText)
 
-        buyText.setText(name + "을(를) 구매하시겠습니까?")
+        buyText.setText(name + "을(를)")
         priceText.setText("가격 : " + price)
+
 
         finishB.setOnClickListener {
             onClickedListener.onClicked("0")
             dialog.dismiss()
         }
+
+
         buyB.setOnClickListener {
             val next = Intent(storeContext, SaveStoreInfo::class.java)
             next.putExtra("info", saveInfo)
-            storeContext.startService(next)
+            storeContext.startActivity(next)
 
             onClickedListener.onClicked("1")
             dialog.dismiss()
         }
+
         dialog.setCanceledOnTouchOutside(true)
         dialog.setCancelable(true)
     }
@@ -141,12 +148,18 @@ class SaveStoreInfo : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-
+        prefernce.edit().putString("tesa","aaaa").apply()
         val save = intent.getStringExtra("info")
         var info = prefernce.getString("item",null)
         if (info == null) info = save
-        else info += String.format(" %s",save)
+        else {
+            for (a in info.split(" ")){
+                //if (a==save)
+            }
+        }
         prefernce.edit().putString("item",info).apply()
+
+        this.finish()
     }
 }
 
