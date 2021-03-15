@@ -113,11 +113,11 @@
                 <action android:name="android.intent.action.SCREEN_OFF" />
             </intent-filter>
         </receiver>
-<!--
+
         <service
             android:name=".ScreenService"
             android:enabled="true"
-            android:exported="false"/> -->
+            android:exported="false"/>
     </application>
 
 </manifest>

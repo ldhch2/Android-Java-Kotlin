@@ -39,74 +39,115 @@ class PetClass (info: String) { // kind: 고양이 1, 강아지 2
     fun filename():String{
         return String.format("%s.txt",this.name)
     }
-    /*
     fun checkstate(){
-        this.food-=this.character.hunger_weight.toInt()
-        this.wash-=this.character.wash_weight.toInt()
-        this.play-=this.character.play_weight.toInt()
+        this.state.full-=this.character.full_weight
+        this.state.clean-=this.character.clean_weight
+        this.state.excited-=this.character.excited_weight
+        this.state.awake-=this.character.awake_weight
+        this.state.happy-=this.character.happy_weight
+        this.state.healthy-=this.character.healthy_weight
+        this.state.relaxed-=this.character.relaxed_weight
     }
-     */
 }
 
 abstract class Character{
 
     abstract var type:Int
     abstract val info:String
-    abstract var hunger_weight:Float
-    abstract var wash_weight:Float
-    abstract var play_weight:Float
+
+    abstract var full_weight:Int
+    abstract var clean_weight:Int
+    abstract var excited_weight:Int
+    abstract var awake_weight:Int
+    abstract var happy_weight:Int
+    abstract var healthy_weight:Int
+    abstract var relaxed_weight:Int
 }
 
 class Perfect: Character(){
 
     override var type: Int=0
-    override var hunger_weight:Float=1.0F
-    override var wash_weight:Float=1.0F
-    override var play_weight:Float=1.0F
+
+    override var full_weight:Int=1
+    override var clean_weight:Int=1
+    override var excited_weight:Int=1
+    override var awake_weight:Int=1
+    override var happy_weight:Int=1
+    override var healthy_weight:Int=1
+    override var relaxed_weight:Int=1
     override val info= "완벽함 - 완벽한 상태입니다"
 }
 
 class Foodfight: Character() {
 
     override var type: Int=1
-    override var hunger_weight:Float=3.0F
-    override var wash_weight:Float=1.0F
-    override var play_weight:Float=1.0F
+
+    override var full_weight:Int=1
+    override var clean_weight:Int=1
+    override var excited_weight:Int=1
+    override var awake_weight:Int=1
+    override var happy_weight:Int=1
+    override var healthy_weight:Int=1
+    override var relaxed_weight:Int=1
+
     override val info="먹보\n-\n많이 먹어요.\n자주 먹여줘야합니다."
 }
 
 class Naughty: Character(){
 
     override var type: Int=2
-    override var hunger_weight:Float=1.0F
-    override var wash_weight:Float=1.0F
-    override var play_weight:Float=3.0F
+    override var full_weight:Int=1
+    override var clean_weight:Int=1
+    override var excited_weight:Int=1
+    override var awake_weight:Int=1
+    override var happy_weight:Int=1
+    override var healthy_weight:Int=1
+    override var relaxed_weight:Int=1
+
     override var info= "장난꾸러기\n-\n관심이 많이 요구됩니다."
 }
 
 class Cleaner: Character(){
 
     override var type: Int=3
-    override var hunger_weight:Float=1.0F
-    override var wash_weight:Float=3.0F
-    override var play_weight:Float=1.0F
+
+    override var full_weight:Int=1
+    override var clean_weight:Int=1
+    override var excited_weight:Int=1
+    override var awake_weight:Int=1
+    override var happy_weight:Int=1
+    override var healthy_weight:Int=1
+    override var relaxed_weight:Int=1
+
     override var info = "깔끔쟁이\n-\n지나치게 깔끔합니다.\n목욕을 자주 시켜줘야해요."
 }
 
 class Lazy: Character(){
 
     override var type: Int=4
-    override var hunger_weight:Float=1.0F
-    override var wash_weight:Float=3.0F
-    override var play_weight:Float=1.0F
+
+    override var full_weight:Int=1
+    override var clean_weight:Int=1
+    override var excited_weight:Int=1
+    override var awake_weight:Int=1
+    override var happy_weight:Int=1
+    override var healthy_weight:Int=1
+    override var relaxed_weight:Int=1
+
     override var info = "늘보\n-\n지나치게 게을러요.\n희한하게 관심을 덜 요구합니다."
 }
 
 class Coward: Character(){
     override var type: Int=5
-    override var hunger_weight:Float=1.0F
-    override var wash_weight:Float=3.0F
-    override var play_weight:Float=1.0F
+
+    override var full_weight:Int=1
+    override var clean_weight:Int=1
+    override var excited_weight:Int=1
+    override var awake_weight:Int=1
+    override var happy_weight:Int=1
+    override var healthy_weight:Int=1
+    override var relaxed_weight:Int=1
+
     override var info = "겁쟁이\n-\n겁이 많아요.\n세상을 알아가는데\n시간이 많이 필요합니다."
 }
 
