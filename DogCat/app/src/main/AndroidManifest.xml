@@ -105,6 +105,8 @@
         <activity
             android:name=".IDListActivity"
             android:screenOrientation="portrait" />
+        <activity android:name=".SaveStoreInfo"/>
+
         <receiver
             android:name=".Receiver"
             android:exported="true">

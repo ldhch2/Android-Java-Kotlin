@@ -1,5 +1,6 @@
 package com.midtwenties.dogcat
 
+import android.app.Activity
 import android.content.Context
 import android.content.Intent
 import android.content.pm.ActivityInfo
@@ -64,6 +65,7 @@ class ItemPopup : AppCompatActivity() {
         setContentView(R.layout.activity_item_popup)
 
         var type = intent.getIntExtra("ItemType", 0)
+        val intent = Intent()
 
         if(type == 1){
             val text = findViewById<TextView>(R.id.textView2)
@@ -94,7 +96,8 @@ class ItemPopup : AppCompatActivity() {
                 if(adapter.flag) {
                     Toast.makeText(this, "선택되었습니다.", Toast.LENGTH_SHORT).show()
                     val newintent = Intent(this, MainActivity::class.java)
-                    newintent.putExtra("bowlFlag", true)
+                    intent.putExtra("bowlFlag", 1)
+                    setResult(Activity.RESULT_OK, intent)
                     finish()
                 }
                 else{

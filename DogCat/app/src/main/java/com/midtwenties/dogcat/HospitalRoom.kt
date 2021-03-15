@@ -5,22 +5,24 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.os.Handler
 import android.os.Looper
-import android.os.PersistableBundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.view.animation.AnimationUtils
 import android.widget.Button
 import android.widget.TextView
-import android.widget.Toast
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import kotlinx.android.synthetic.main.activity_hospital_room.*
 import kotlinx.android.synthetic.main.activity_user_name.*
 
 class HospitalContacts (var name: String, var price: Int, var buy : String, var effects : String)
+interface BuySelectedListener {
+    fun onBuySelected(buy : Int) {
 
-class HospitalRoom : AppCompatActivity() {
+    }
+}
+class HospitalRoom : AppCompatActivity() , BuySelectedListener{
     var injectionList = arrayListOf<HospitalContacts>(
             HospitalContacts("종합예방접종", 500, "구매", "개 홍역, 전염성 간염, 파보 바이러스 장염, 파라인플루엔자성 기관지염 및 랩토스피라증 등 다섯가지 질병에 대한 예방접종이다."),
             HospitalContacts("켄넬 코프 예바아접종", 300, "구매", "강아지들이 많이 모여 있는 곳에서 주로 쉽게 감염된다. 아주 심한 마른 기침을 하며, 가끔 폐렴으로 진행되기도 한다."),
@@ -36,13 +38,12 @@ class HospitalRoom : AppCompatActivity() {
             HospitalContacts("글루코사민", 200, "구매", "글루코사민은 퇴행성 관절염과 관절 장애, 관절 통증에 효과가 있습니다."),
             HospitalContacts("항산화제",100,"구매","항산화제는 강아지 몸 속의 활성 산소를 억제합니다. 나이가 들수록 활성산소가 많아지기 때문에 나이가 들수록 항산화제를 꾸준히 먹는게 좋습니다.")
     )
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_hospital_room)
 
         val right = AnimationUtils.loadAnimation(this, R.anim.pull_in_right)
-        val left = AnimationUtils.loadAnimation(this, R.anim.pull_in_left)
+        val left = AnimationUtils.loadAnimation(this, R.anim.push_out_right)
         shot.visibility= View.INVISIBLE
         inject.visibility=View.INVISIBLE
 
@@ -55,22 +56,32 @@ class HospitalRoom : AppCompatActivity() {
         }
 
         var type = intent.getIntExtra("room", 0)
+        var injection = intent.getIntExtra("injection", 0)
+
         if(type == 1) {
             val roomType = findViewById<TextView>(R.id.RoomType)
             roomType.text = "주사실"
             val roomText = findViewById<TextView>(R.id.RoomText)
             roomText.text = "주사를 선택해주세요."
+            val injectText = findViewById<TextView>(R.id.inject)
 
-            var buyItem = com.midtwenties.dogcat.buyItem()
-            val adapter = NutritionListAdapter(this, injectionList, buyItem)
-            NutritionRecyclerview.adapter = adapter
-
-            inject.setOnClickListener {
-                if (adapter.flag == true) {
-                    shot.visibility = View.VISIBLE
-                    shot.startAnimation(right)
+            val adapter = NutritionListAdapter(this, injectionList, object: BuySelectedListener {
+                override fun onBuySelected(buy: Int) {
+                    Handler(Looper.getMainLooper()).postDelayed({
+                        shot.visibility = View.VISIBLE
+                        shot.startAnimation(right)
+                    }, 0)
+                    Handler(Looper.getMainLooper()).postDelayed({
+                        shot.startAnimation(left)
+                    }, 800)
+                    Handler(Looper.getMainLooper()).postDelayed({
+                        shot.visibility=View.INVISIBLE
+                        injectText.visibility = View.VISIBLE
+                        injectText.setText("접종 완료!")
+                    }, 1300)
                 }
-            }
+            })
+            NutritionRecyclerview.adapter = adapter
 
         } else if(type == 2) {
             val roomType = findViewById<TextView>(R.id.RoomType)
@@ -78,17 +89,9 @@ class HospitalRoom : AppCompatActivity() {
             val roomText = findViewById<TextView>(R.id.RoomText)
             roomText.text = "영양제를 선택해주세요."
 
-            var buyItem = com.midtwenties.dogcat.buyItem()
-            val adapter = NutritionListAdapter(this, nutritionList, buyItem)
+            val adapter = NutritionListAdapter(this, nutritionList, this)
             NutritionRecyclerview.adapter = adapter
-
-            if (buyItem.getName() == "") {
-                Toast.makeText(this, "영양제를 구매해주세요.", Toast.LENGTH_LONG).show()
-            } else {
-                Toast.makeText(this, "영양제 사용.", Toast.LENGTH_LONG).show()
-            }
         }
-
 
         val lay = LinearLayoutManager(this)
         NutritionRecyclerview.layoutManager = lay
@@ -96,20 +99,7 @@ class HospitalRoom : AppCompatActivity() {
     }
 }
 
-class buyItem {
-    private var itemName = ""
-    private var itemPrice = 0
-    fun changeName(name: String) {
-        itemName = name
-    }
-    fun changePrice(price: Int) {
-        itemPrice = price
-    }
-    fun getName() : String { return itemName }
-    fun getPrice() : Int { return itemPrice }
-}
-
-class NutritionListAdapter(val context: Context, val itemList : ArrayList<HospitalContacts>, var BuyItem : buyItem) :
+class NutritionListAdapter(val context: Context, val itemList : ArrayList<HospitalContacts>, private val listener: BuySelectedListener) :
     RecyclerView.Adapter<NutritionListAdapter.Holder>() {
     var flag = false
     inner class Holder(itemView: View?) : RecyclerView.ViewHolder(itemView!!) {
@@ -127,7 +117,7 @@ class NutritionListAdapter(val context: Context, val itemList : ArrayList<Hospit
             buybutton?.setOnClickListener {
                 if(flag == false) {
                     val dialog = CustomDialog(context)
-                    dialog.hospitalDig(item.name, item.price.toString())
+                    dialog.hospitalDig(item.name, item.price.toString(), context)
 
                     dialog.setOnClickedListener(object : CustomDialog.CustomDialogListener {
                         override fun onClicked(content: String) {
@@ -137,8 +127,7 @@ class NutritionListAdapter(val context: Context, val itemList : ArrayList<Hospit
                                 flag = true
                                 buybutton?.setBackgroundResource(R.drawable.brown_button)
                                 buybutton?.setText("구매완료")
-                                BuyItem.changeName(item.name)
-                                BuyItem.changePrice(item.price)
+                                listener.onBuySelected(item.price)
                             }
                         }
                     })
