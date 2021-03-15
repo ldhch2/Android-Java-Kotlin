@@ -53,8 +53,8 @@ class ContactsListAdapter(val context: Context, val itemList : ArrayList<Iteminf
                             if (content == "0") {
                                 return
                             } else if (content == "1") {
-                                buybutton?.setBackgroundResource(R.drawable.brown_button)
-                                buybutton?.setText("구매완료")
+                                buybutton.setBackgroundResource(R.drawable.brown_button)
+                                buybutton.setText("구매완료")
                             }
                         }
                     })

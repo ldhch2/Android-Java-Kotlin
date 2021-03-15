@@ -6,7 +6,6 @@ import android.content.Intent
 import android.graphics.Color
 import android.graphics.drawable.ColorDrawable
 import android.os.Bundle
-import android.util.Log
 import android.view.WindowManager
 import android.widget.Button
 import android.widget.ImageButton
@@ -37,12 +36,11 @@ class CustomDialog(context: Context) : AppCompatActivity() {
     }
 
     // 병원에서 '구매' 버튼 연결
-    fun hospitalDig(name: String, price: String, context: Context) {
-        HospitalDig(name, price, context)
+    fun hospitalDig(name: String, price: String) {
+        HospitalDig(name, price)
         dialog.show()
     }
-
-    fun HospitalDig(name : String, price : String, context: Context) {
+    fun HospitalDig(name : String, price : String) {
         dialog.setContentView(R.layout.hospital_popup)
         dialog.window!!.setBackgroundDrawable(ColorDrawable(Color.TRANSPARENT))
         dialog.window!!.setLayout(WindowManager.LayoutParams.MATCH_PARENT, WindowManager.LayoutParams.WRAP_CONTENT)
@@ -52,7 +50,7 @@ class CustomDialog(context: Context) : AppCompatActivity() {
         val buyText = dialog.findViewById<TextView>(R.id.buyText)
         val priceText = dialog.findViewById<TextView>(R.id.priceText)
 
-        buyText.setText(name + "을(를)")
+        buyText.setText(name + "을(를) 구매하시겠습니까?")
         priceText.setText("가격 : " + price)
 
         finishB.setOnClickListener {
@@ -62,7 +60,6 @@ class CustomDialog(context: Context) : AppCompatActivity() {
         buyB.setOnClickListener {
             onClickedListener.onClicked("1")
             dialog.dismiss()
-
         }
         dialog.setCanceledOnTouchOutside(true)
         dialog.setCancelable(true)
@@ -73,6 +70,7 @@ class CustomDialog(context: Context) : AppCompatActivity() {
         StoreDig(name, price, saveInfo, storeContext)
         dialog.show()
     }
+
     fun StoreDig(name: String, price: String, saveInfo: String, storeContext: Context) {
         dialog.setContentView(R.layout.activity_buyitem)
         dialog.window!!.setBackgroundDrawable(ColorDrawable(Color.TRANSPARENT))
@@ -83,25 +81,22 @@ class CustomDialog(context: Context) : AppCompatActivity() {
         val buyText = dialog.findViewById<TextView>(R.id.StoreBuyText)
         val priceText = dialog.findViewById<TextView>(R.id.StorePriceText)
 
-        buyText.setText(name + "을(를)")
+        buyText.setText(name + "을(를) 구매하시겠습니까?")
         priceText.setText("가격 : " + price)
-
 
         finishB.setOnClickListener {
             onClickedListener.onClicked("0")
             dialog.dismiss()
         }
 
-
         buyB.setOnClickListener {
             val next = Intent(storeContext, SaveStoreInfo::class.java)
             next.putExtra("info", saveInfo)
-            storeContext.startActivity(next)
+            storeContext.startService(next)
 
             onClickedListener.onClicked("1")
             dialog.dismiss()
         }
-
         dialog.setCanceledOnTouchOutside(true)
         dialog.setCancelable(true)
     }
@@ -148,18 +143,12 @@ class SaveStoreInfo : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        prefernce.edit().putString("tesa","aaaa").apply()
+
         val save = intent.getStringExtra("info")
         var info = prefernce.getString("item",null)
         if (info == null) info = save
-        else {
-            for (a in info.split(" ")){
-                //if (a==save)
-            }
-        }
+        else info += String.format(" %s",save)
         prefernce.edit().putString("item",info).apply()
-
-        this.finish()
     }
 }
 

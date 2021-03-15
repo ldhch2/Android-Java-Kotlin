@@ -12,6 +12,10 @@
         android:roundIcon="@drawable/logo"
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.NoActionBar" >
+        <meta-data
+            android:name="com.google.android.gms.ads.APPLICATION_ID"
+            android:value="ca-app-pub-3330410066303398~4816191689" />
+
         <activity
             android:name=".ItemPopup"
             android:theme="@style/pop"/>

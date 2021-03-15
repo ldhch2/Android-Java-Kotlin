@@ -1,6 +1,7 @@
 package com.midtwenties.dogcat
 
 import StateAdapter
+import android.app.Activity
 import android.content.Intent
 import android.os.Bundle
 import android.os.Handler
@@ -77,14 +78,19 @@ class MainActivity : AppCompatActivity() {
         feedfeed.setOnClickListener{
             val intent = Intent(this, ItemPopup::class.java)
             intent.putExtra("ItemType", "2".toInt())
-            startActivity(intent)
-            var newtype = intent.getBooleanExtra("bowlFlag", false)
-            if(newtype){
+            startActivityForResult(intent, 100)
+            /*
+            val bowlflag = intent.getBooleanExtra("bowlFlag", false)
+            if(bowlflag) {
                 fillButton.visibility = View.VISIBLE
             }
-            Handler(Looper.getMainLooper()).postDelayed({
-                fillButton.visibility = View.VISIBLE
-            }, 400)
+            else {}
+            /*Handler(Looper.getMainLooper()).postDelayed({
+                fillButton.visibieExtra()
+            var newtype =lity = View.VISIBLE
+            }, 400)*/
+
+             */
 
         }
 
@@ -109,6 +115,32 @@ class MainActivity : AppCompatActivity() {
         hangoutButton.setOnClickListener() {
             startActivity(Intent(this,HangoutPopup::class.java))
         }
+
+
+    }
+
+    override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
+        super.onActivityResult(requestCode, resultCode, data)
+        if(resultCode == Activity.RESULT_OK){
+            when(requestCode){
+                100 -> {
+                    val bowlflag = data!!.getIntExtra("bowlFlag", 0)
+                    if(bowlflag == 1){
+                        fillButton.visibility = View.VISIBLE
+                    }
+                }
+            }
+        }
+
+        /*
+        if(resultCode == RESULT_OK) {
+            val bowlflag = intent.getIntExtra("bowlFlag", 0)
+            if(bowlflag == 1){
+                fillButton.visibility = View.VISIBLE
+            }
+        }
+
+         */
 
 
     }
