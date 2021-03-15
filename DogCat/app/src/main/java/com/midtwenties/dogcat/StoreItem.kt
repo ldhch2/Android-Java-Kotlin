@@ -74,31 +74,31 @@ class StoreItem : AppCompatActivity() {
         }
         goToyStore.setOnClickListener{
             reset()
-            val adapter = ContactsListAdapter(this, toyList)
+            val adapter = ContactsListAdapter(this, toyList,3000)
             StoreRecyclerview.adapter = adapter
             goToyStore.isSelected=true
         }
         goHouseStore.setOnClickListener{
             reset()
-            val adapter = ContactsListAdapter(this, houseList)
+            val adapter = ContactsListAdapter(this, houseList,3000)
             StoreRecyclerview.adapter = adapter
             goHouseStore.isSelected=true
         }
         goHouseholdStore.setOnClickListener{
             reset()
-            val adapter = ContactsListAdapter(this, householdList)
+            val adapter = ContactsListAdapter(this, householdList,3000)
             StoreRecyclerview.adapter = adapter
             goHouseholdStore.isSelected=true
         }
         goFeedStore.setOnClickListener{
             reset()
-            val adapter = ContactsListAdapter(this, feedList)
+            val adapter = ContactsListAdapter(this, feedList,3000)
             StoreRecyclerview.adapter = adapter
             goFeedStore.isSelected=true
         }
         goClothesStore.setOnClickListener {
             reset()
-            val adapter = ContactsListAdapter(this, clothesList)
+            val adapter = ContactsListAdapter(this, clothesList,3000)
             StoreRecyclerview.adapter = adapter
             goClothesStore.isSelected =true
         }

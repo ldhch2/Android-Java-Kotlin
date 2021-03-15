@@ -106,6 +106,7 @@
             android:name=".IDListActivity"
             android:screenOrientation="portrait" />
         <activity android:name=".SaveStoreInfo"/>
+        <activity android:name=".getcoin"/>
 
         <receiver
             android:name=".Receiver"

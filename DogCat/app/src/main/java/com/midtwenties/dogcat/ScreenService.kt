@@ -109,6 +109,7 @@ class ScreenService : Service() {
                         message += "\n아픈 반려견을 병원에 보내주세요!"
                     }
                 }
+                /*
                 if(message != "") {
                     if(Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
                         val importance = NotificationManager.IMPORTANCE_DEFAULT
@@ -124,7 +125,8 @@ class ScreenService : Service() {
                         notificationManager.notify(ANDROID_CHANNEL_ID.toInt(), builder.build())
                     }
                     message = ""
-                }
+                  }
+                */
                 this.start()
             }
         }

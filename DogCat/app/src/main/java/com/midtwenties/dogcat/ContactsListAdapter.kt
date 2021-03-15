@@ -9,7 +9,7 @@ import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.midtwenties.dogcat.*
 
-class ContactsListAdapter(val context: Context, val itemList : ArrayList<Iteminfo>) :
+class ContactsListAdapter(val context: Context, val itemList : ArrayList<Iteminfo>,var coin:Int) :
     RecyclerView.Adapter<ContactsListAdapter.Holder>() {
     inner class Holder(itemView: View?) : RecyclerView.ViewHolder(itemView!!){
         val imagename = itemView?.findViewById<ImageView>(R.id.imagename)

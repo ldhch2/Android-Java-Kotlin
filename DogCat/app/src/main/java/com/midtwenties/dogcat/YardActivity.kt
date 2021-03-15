@@ -10,6 +10,8 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import kotlinx.android.synthetic.main.activity_daily_mission.*
 import kotlinx.android.synthetic.main.activity_mission.*
 import kotlinx.android.synthetic.main.activity_yard.*
+import kotlinx.android.synthetic.main.coin_view.view.*
+import kotlinx.android.synthetic.main.hospital_popup.*
 import java.text.SimpleDateFormat
 import java.util.*
 
@@ -22,9 +24,15 @@ class YardActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_yard)
 
+        val money=CoinView()
+        val bundle=Bundle()
+        bundle.putInt("money",3000)
+        money.arguments=bundle
+
         supportFragmentManager.beginTransaction()
-            .replace(R.id.coin, CoinView())
+            .replace(R.id.coin, money)
             .commit()
+
 
         val today = SimpleDateFormat("yyyy-MM-dd", Locale.KOREA).format(Date())
 

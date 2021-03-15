@@ -117,7 +117,7 @@ class NutritionListAdapter(val context: Context, val itemList : ArrayList<Hospit
             buybutton?.setOnClickListener {
                 if(flag == false) {
                     val dialog = CustomDialog(context)
-                    dialog.hospitalDig(item.name, item.price.toString(), context)
+                    dialog.hospitalDig(item.name, item.price.toString())
 
                     dialog.setOnClickedListener(object : CustomDialog.CustomDialogListener {
                         override fun onClicked(content: String) {
@@ -125,8 +125,8 @@ class NutritionListAdapter(val context: Context, val itemList : ArrayList<Hospit
                                 return
                             } else if (content == "1") {
                                 flag = true
-                                buybutton?.setBackgroundResource(R.drawable.brown_button)
-                                buybutton?.setText("구매완료")
+                                buybutton.setBackgroundResource(R.drawable.brown_button)
+                                buybutton.setText("구매완료")
                                 listener.onBuySelected(item.price)
                             }
                         }
