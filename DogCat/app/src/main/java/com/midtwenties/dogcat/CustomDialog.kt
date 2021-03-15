@@ -70,6 +70,7 @@ class CustomDialog(context: Context) : AppCompatActivity() {
         StoreDig(name, price, saveInfo, storeContext)
         dialog.show()
     }
+
     fun StoreDig(name: String, price: String, saveInfo: String, storeContext: Context) {
         dialog.setContentView(R.layout.activity_buyitem)
         dialog.window!!.setBackgroundDrawable(ColorDrawable(Color.TRANSPARENT))
@@ -87,6 +88,7 @@ class CustomDialog(context: Context) : AppCompatActivity() {
             onClickedListener.onClicked("0")
             dialog.dismiss()
         }
+
         buyB.setOnClickListener {
             val next = Intent(storeContext, SaveStoreInfo::class.java)
             next.putExtra("info", saveInfo)
