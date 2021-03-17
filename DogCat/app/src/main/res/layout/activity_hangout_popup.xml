@@ -80,7 +80,7 @@
                 android:fontFamily="@font/bae"
                 android:textSize="28sp"
                 android:textStyle="bold"
-                android:text="산책" />
+                android:text="운동" />
         </LinearLayout>
     </LinearLayout>
 </LinearLayout>

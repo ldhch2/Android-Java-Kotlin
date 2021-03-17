@@ -11,14 +11,18 @@
         android:label="@string/app_name"
         android:roundIcon="@drawable/logo"
         android:supportsRtl="true"
-        android:theme="@style/Theme.AppCompat.NoActionBar" >
+        android:theme="@style/Theme.AppCompat.NoActionBar">
+        <activity android:name=".ExerciseActivity">
+
+        </activity>
+
         <meta-data
             android:name="com.google.android.gms.ads.APPLICATION_ID"
             android:value="ca-app-pub-3330410066303398~4816191689" />
 
         <activity
             android:name=".ItemPopup"
-            android:theme="@style/pop"/>
+            android:theme="@style/pop" />
         <activity
             android:name=".SplashActivity"
             android:screenOrientation="portrait">
@@ -51,8 +55,8 @@
             android:screenOrientation="portrait" />
         <activity
             android:name=".DailyMission"
-            android:theme="@style/pop"
-            android:screenOrientation="portrait" />
+            android:screenOrientation="portrait"
+            android:theme="@style/pop" />
         <activity
             android:name=".RegisterActivity"
             android:screenOrientation="portrait" />
@@ -73,13 +77,10 @@
             android:screenOrientation="portrait" />
         <activity
             android:name=".AttendancePopup"
-            android:theme="@style/pop"
-            android:screenOrientation="portrait" />
+            android:screenOrientation="portrait"
+            android:theme="@style/pop" />
         <activity
             android:name=".StoreItem"
-            android:screenOrientation="portrait" />
-        <activity
-            android:name=".Buynewitem"
             android:screenOrientation="portrait" />
         <activity
             android:name=".InitPet"
@@ -105,9 +106,7 @@
         <activity
             android:name=".IDListActivity"
             android:screenOrientation="portrait" />
-        <activity android:name=".SaveStoreInfo"/>
-        <activity android:name=".getcoin"/>
-
+        <activity android:name=".SaveStoreInfo" />
         <receiver
             android:name=".Receiver"
             android:exported="true">
@@ -120,7 +119,7 @@
         <service
             android:name=".ScreenService"
             android:enabled="true"
-            android:exported="false"/>
+            android:exported="false" />
     </application>
 
 </manifest>

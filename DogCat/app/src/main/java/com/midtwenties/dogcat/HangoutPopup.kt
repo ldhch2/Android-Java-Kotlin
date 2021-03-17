@@ -15,7 +15,8 @@ class HangoutPopup : AppCompatActivity() {
             finish()
         }
         walkButton.setOnClickListener{
-            //startActivity(Intent(this, walkActivity::class.java))
+            startActivity(Intent(this, ExerciseActivity::class.java))
+            finish()
         }
     }
 }

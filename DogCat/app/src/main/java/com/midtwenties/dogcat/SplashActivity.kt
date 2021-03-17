@@ -24,6 +24,7 @@ class SplashActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_splash)
 
+        titleView.visibility= View.INVISIBLE
         titleView1.visibility= View.INVISIBLE
         titleView2.visibility=View.INVISIBLE
         titleImage1.visibility= View.INVISIBLE
@@ -38,6 +39,9 @@ class SplashActivity : AppCompatActivity() {
             titleImage1.visibility= View.VISIBLE
         }, 1100)
 
+        Handler(Looper.getMainLooper()).postDelayed({
+            titleView.visibility= View.VISIBLE
+        }, 1400)
 
         Handler(Looper.getMainLooper()).postDelayed({
             titleView2.visibility=View.VISIBLE
