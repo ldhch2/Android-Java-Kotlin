@@ -91,6 +91,9 @@ class InfoActivity : AppCompatActivity() {
         }
     }
 
+    override fun onBackPressed() {
+    }
+
     fun saveToInnerStorage(text: String, filename: String){
         val fileOutputStream = openFileOutput(filename, Context.MODE_PRIVATE)
         fileOutputStream.write(text.toByteArray())

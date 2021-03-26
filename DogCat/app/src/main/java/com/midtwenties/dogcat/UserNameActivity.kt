@@ -67,6 +67,8 @@ class UserNameActivity : AppCompatActivity() {
             finish()
         }
 
+    }
 
+    override fun onBackPressed() {
     }
 }

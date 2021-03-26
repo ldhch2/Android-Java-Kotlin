@@ -32,14 +32,14 @@ class InitPet : AppCompatActivity() {
         }
 
         SelectButton.setOnClickListener {
-            if (dogbutton.isChecked==true) {
+            if (dogbutton.isChecked) {
                 Toast.makeText(applicationContext, "멍이가 선택되었습니다.", Toast.LENGTH_SHORT).show()
                 next.putExtra("kind", 1)
                 startActivity(next)
                 overridePendingTransition(R.anim.fade_in, R.anim.fade_out)
                 finish()
             }
-            else if(catbutton.isChecked==true){
+            else if(catbutton.isChecked){
                 Toast.makeText(applicationContext,"냥이가 선택되었습니다.",Toast.LENGTH_SHORT).show()
                 next.putExtra("kind",2)
                 startActivity(next)
@@ -78,5 +78,8 @@ class InitPet : AppCompatActivity() {
                 checkdog=0
             }
         }
+    }
+
+    override fun onBackPressed() {
     }
 }

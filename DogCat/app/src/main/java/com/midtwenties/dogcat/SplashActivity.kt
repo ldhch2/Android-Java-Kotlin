@@ -76,6 +76,9 @@ class SplashActivity : AppCompatActivity() {
 
     }
 
+    override fun onBackPressed() {
+    }
+
     fun loadFromInnerStorage(filename: String):String{
         val fileInputStream = openFileInput(filename)
         if(fileInputStream==null) return "false"
