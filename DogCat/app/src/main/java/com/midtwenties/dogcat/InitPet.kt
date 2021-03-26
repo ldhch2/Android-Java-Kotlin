@@ -9,7 +9,6 @@ import androidx.core.view.isVisible
 import kotlinx.android.synthetic.main.activity_init_pet.*
 import com.bumptech.glide.Glide
 
-
 class InitPet : AppCompatActivity() {
 
 

@@ -79,19 +79,6 @@ class MainActivity : AppCompatActivity() {
             val intent = Intent(this, ItemPopup::class.java)
             intent.putExtra("ItemType", "2".toInt())
             startActivityForResult(intent, 100)
-            /*
-            val bowlflag = intent.getBooleanExtra("bowlFlag", false)
-            if(bowlflag) {
-                fillButton.visibility = View.VISIBLE
-            }
-            else {}
-            /*Handler(Looper.getMainLooper()).postDelayed({
-                fillButton.visibieExtra()
-            var newtype =lity = View.VISIBLE
-            }, 400)*/
-
-             */
-
         }
 
         fillButton.setOnClickListener{
@@ -109,9 +96,11 @@ class MainActivity : AppCompatActivity() {
         stateButton.setOnClickListener{
             drawerState.openDrawer(GravityCompat.START)
         }
+
         backButton.setOnClickListener(){
             onBackPressed()
         }
+
         hangoutButton.setOnClickListener() {
             startActivity(Intent(this,HangoutPopup::class.java))
         }

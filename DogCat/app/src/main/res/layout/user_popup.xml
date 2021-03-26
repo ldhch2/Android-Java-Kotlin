@@ -46,6 +46,8 @@
         android:textColorHint="#8e8e8e"
         android:textCursorDrawable="@drawable/cursor_color"
         android:textSize="24dp"
+        android:singleLine="true"
+        android:imeOptions= "actionDone"
         app:backgroundTint="#A17432"
         app:layout_constraintBottom_toTopOf="@+id/tellButton"
         app:layout_constraintEnd_toEndOf="@+id/imageView5"
