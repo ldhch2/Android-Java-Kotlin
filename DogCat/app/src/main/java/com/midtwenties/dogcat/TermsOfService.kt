@@ -2,6 +2,7 @@ package com.midtwenties.dogcat
 
 import android.content.Context
 import android.content.Intent
+import android.graphics.Point
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
@@ -21,6 +22,15 @@ class TermsOfService : AppCompatActivity() {
 
         var get = intent.getStringExtra("info").toString()
         val next = Intent(this,YardActivity::class.java)
+
+        val display = windowManager.defaultDisplay
+        val size = Point()
+        display.getRealSize(size)
+        val widthScreen = size.x
+        val heightScreen = size.y
+
+        prefernce.edit().putInt("widthScreen",widthScreen)
+        prefernce.edit().putInt("heightScreen",heightScreen)
 
         yesButton.setOnClickListener {
             get += " " + intent.getStringExtra("imageURI").toString()

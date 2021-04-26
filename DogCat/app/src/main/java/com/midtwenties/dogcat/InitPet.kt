@@ -1,6 +1,7 @@
 package com.midtwenties.dogcat
 
 import android.content.Intent
+import android.graphics.Point
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View

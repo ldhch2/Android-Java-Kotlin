@@ -2,8 +2,10 @@ package com.midtwenties.dogcat
 
 import android.content.Context
 import android.content.Intent
+import android.graphics.Point
 import android.os.Build
 import android.os.Bundle
+import android.util.DisplayMetrics
 import android.view.animation.AnimationUtils
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -32,7 +34,6 @@ class YardActivity : AppCompatActivity() {
         supportFragmentManager.beginTransaction()
             .replace(R.id.coin, money)
             .commit()
-
 
         val today = SimpleDateFormat("yyyy-MM-dd", Locale.KOREA).format(Date())
 
@@ -66,52 +67,60 @@ class YardActivity : AppCompatActivity() {
         val fabOpen = AnimationUtils.loadAnimation(this, R.anim.fab_open)
         val fabClose = AnimationUtils.loadAnimation(this, R.anim.fab_close)
 
-        pet01.setOnClickListener {
-            startActivity(Intent(this, MainActivity::class.java))
-            overridePendingTransition(R.anim.fade_in, R.anim.fade_out)
+
+        val widthScreen = preference.getInt("widthScreen", 0)
+        val heightScreen = preference.getInt("heightScreen", 0)
+
+       // while(true) {
+
+            pet01.setOnClickListener {
+                startActivity(Intent(this, MainActivity::class.java))
+                overridePendingTransition(R.anim.fade_in, R.anim.fade_out)
+            }
+
+            fabMain.setOnClickListener {
+                if (isOpen) {
+                    mainSetting.startAnimation(fabClose)
+                    idcardList.startAnimation(fabClose)
+                    itemButton.startAnimation(fabClose)
+                    storeButton.startAnimation(fabClose)
+
+                    isOpen = false
+
+                } else {
+                    mainSetting.startAnimation(fabOpen)
+                    idcardList.startAnimation(fabOpen)
+                    itemButton.startAnimation(fabOpen)
+                    storeButton.startAnimation(fabOpen)
+
+                    mainSetting.isClickable
+                    idcardList.isClickable
+                    itemButton.isClickable
+                    storeButton.isClickable
+
+                    isOpen = true
+                }
+
+                mainSetting.setOnClickListener {
+                    startActivity(Intent(this, MainSetting::class.java))
+                }
+                idcardList.setOnClickListener {
+                    startActivity(Intent(this, IDListActivity::class.java))
+                }
+                itemButton.setOnClickListener {
+                    startActivity(Intent(this, ItemList::class.java))
+                }
+                storeButton.setOnClickListener {
+                    startActivity(Intent(this, StoreItem::class.java))
+                }
+            }
+
+            DailyMissionButton.setOnClickListener {
+                startActivity(Intent(this, DailyMission::class.java))
+            }
         }
+    //}
 
-        fabMain.setOnClickListener {
-            if (isOpen) {
-                mainSetting.startAnimation(fabClose)
-                idcardList.startAnimation(fabClose)
-                itemButton.startAnimation(fabClose)
-                storeButton.startAnimation(fabClose)
-
-                isOpen = false
-
-            } else {
-                mainSetting.startAnimation(fabOpen)
-                idcardList.startAnimation(fabOpen)
-                itemButton.startAnimation(fabOpen)
-                storeButton.startAnimation(fabOpen)
-
-                mainSetting.isClickable
-                idcardList.isClickable
-                itemButton.isClickable
-                storeButton.isClickable
-
-                isOpen = true
-            }
-
-            mainSetting.setOnClickListener {
-                startActivity(Intent(this, MainSetting::class.java))
-            }
-            idcardList.setOnClickListener {
-                startActivity(Intent(this, IDListActivity::class.java))
-            }
-            itemButton.setOnClickListener{
-                startActivity(Intent(this,ItemList::class.java))
-            }
-            storeButton.setOnClickListener {
-                startActivity(Intent(this, StoreItem::class.java))
-            }
-        }
-
-        DailyMissionButton.setOnClickListener {
-            startActivity(Intent(this,DailyMission::class.java))
-        }
-    }
     override fun onBackPressed() {
         val dialog=CustomDialog(this)
         dialog.exitDig()
