@@ -49,8 +49,6 @@ class TermsOfService : AppCompatActivity() {
             prefernce.edit().putBoolean(init,true).apply()
             prefernce.edit().putString(nowpet, String.format("%s.txt",name[0])).apply()
 
-            //장난감 집 그릇 음식 옷
-
             startActivity(next)
             finish()
         }

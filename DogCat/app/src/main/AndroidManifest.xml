@@ -77,7 +77,6 @@
             android:screenOrientation="portrait" />
         <activity
             android:name=".AttendancePopup"
-            android:screenOrientation="portrait"
             android:theme="@style/pop" />
         <activity
             android:name=".StoreItem"

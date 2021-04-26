@@ -2,6 +2,7 @@ package com.midtwenties.dogcat
 
 import android.annotation.SuppressLint
 import android.content.Intent
+import android.content.pm.ActivityInfo
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.MotionEvent
@@ -13,6 +14,10 @@ class AttendancePopup : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        try {
+            requestedOrientation = ActivityInfo.SCREEN_ORIENTATION_PORTRAIT
+        } catch (e:IllegalStateException) { }
+
         // 타이틀바 없애기
         requestWindowFeature(Window.FEATURE_NO_TITLE)
         setContentView(R.layout.activity_attendance_popup)
